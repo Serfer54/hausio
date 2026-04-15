@@ -33,7 +33,17 @@
       materials: { no: 0, small: 25, med: 60, large: 0 },
     },
     frequency: { 'one-off': 1, weekly: 0.9, fortnightly: 0.95, monthly: 1 },
+    congestionCharge: 18, // Central London access surcharge
   };
+
+  // Postcode prefixes inside (or overlapping) the Central London Congestion Zone
+  const CENTRAL_POSTCODES = ['EC1', 'EC2', 'EC3', 'EC4', 'WC1', 'WC2', 'W1', 'SW1', 'SE1', 'NW1', 'N1C'];
+
+  function isCentralLondon(postcode) {
+    if (!postcode) return false;
+    const p = postcode.toUpperCase().replace(/\s+/g, '');
+    return CENTRAL_POSTCODES.some(prefix => p.startsWith(prefix));
+  }
 
   /* ---------- Navigation ---------- */
   function showStep(n) {
@@ -173,6 +183,13 @@
         lines.push([`${labelFreq(freqEl.value)} discount`, '-£' + saving]);
         total = discounted;
       }
+    }
+
+    // Central London congestion surcharge (step 3 postcode)
+    const postcodeEl = form.postcode;
+    if (postcodeEl && isCentralLondon(postcodeEl.value)) {
+      lines.push(['Central London access', '£' + PRICES.congestionCharge]);
+      total += PRICES.congestionCharge;
     }
 
     renderSummary(lines, total);

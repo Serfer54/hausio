@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Book a service — Hausio London</title>
+<meta name="description" content="Book cleaning, removals, handyman or gardening in London. Get an instant quote in 60 seconds." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-book">
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 44" fill="none"><path d="M6 24 L24 8 L42 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 22 V38 H38 V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="26" width="8" height="8" stroke="currentColor" stroke-width="1.5"/></svg>
+      </span>
+      <span class="brand-name">HAUSIO</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html" class="link-muted">← Back to home</a>
+    </div>
+  </div>
+</header>
+
+<main class="booking-wrap">
+  <div class="container booking-grid">
+    <section class="booking">
+      <header class="booking-head">
+        <h1>Get your instant quote</h1>
+        <p>Four quick steps. No sign-up needed.</p>
+      </header>
+
+      <ol class="progress" aria-label="Booking progress">
+        <li class="is-active" data-step="1"><span>1</span> Service</li>
+        <li data-step="2"><span>2</span> Details</li>
+        <li data-step="3"><span>3</span> Schedule</li>
+        <li data-step="4"><span>4</span> Confirm</li>
+      </ol>
+
+      <form id="booking-form" novalidate>
+
+        <!-- STEP 1 -->
+        <fieldset class="step is-active" data-step="1">
+          <legend class="step-title">Choose your service</legend>
+          <div class="option-grid service-options">
+            <label class="option">
+              <input type="radio" name="service" value="cleaning" required />
+              <span class="option-body">
+                <b>Cleaning</b>
+                <small>from £22/hr</small>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="service" value="removals" />
+              <span class="option-body">
+                <b>Removals</b>
+                <small>from £55/hr</small>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="service" value="handyman" />
+              <span class="option-body">
+                <b>Handyman</b>
+                <small>from £65 /1st hr</small>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="service" value="gardening" />
+              <span class="option-body">
+                <b>Gardening</b>
+                <small>from £40/hr</small>
+              </span>
+            </label>
+          </div>
+
+          <div class="step-actions">
+            <span></span>
+            <button type="button" class="btn btn-dark" data-next>Continue →</button>
+          </div>
+        </fieldset>
+
+        <!-- STEP 2 -->
+        <fieldset class="step" data-step="2">
+          <legend class="step-title">Tell us about the job</legend>
+
+          <!-- Cleaning details -->
+          <div class="service-panel" data-for="cleaning">
+            <label class="field">
+              <span>Type of clean</span>
+              <select name="clean-type">
+                <option value="regular">Regular clean — £22/hr</option>
+                <option value="one-off">One-off clean — £26/hr</option>
+                <option value="deep">Deep clean — £28/hr</option>
+                <option value="eot">End of tenancy — £32/hr</option>
+                <option value="builders">After-builders — £30/hr</option>
+              </select>
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Bedrooms</span>
+                <select name="clean-bed">
+                  <option value="1">Studio / 1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5+</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Bathrooms</span>
+                <select name="clean-bath">
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4+</option>
+                </select>
+              </label>
+            </div>
+            <label class="field">
+              <span>Duration</span>
+              <select name="clean-hours">
+                <option value="2">2 hours (minimum)</option>
+                <option value="3" selected>3 hours</option>
+                <option value="4">4 hours</option>
+                <option value="5">5 hours</option>
+                <option value="6">6 hours</option>
+                <option value="8">8 hours (full day)</option>
+              </select>
+            </label>
+            <div class="extras">
+              <p class="field-label">Extras</p>
+              <label class="check"><input type="checkbox" name="clean-extra" value="oven" /> Oven cleaning (+£25)</label>
+              <label class="check"><input type="checkbox" name="clean-extra" value="fridge" /> Inside fridge (+£15)</label>
+              <label class="check"><input type="checkbox" name="clean-extra" value="windows" /> Inside windows (+£20)</label>
+              <label class="check"><input type="checkbox" name="clean-extra" value="ironing" /> Ironing service (+£20)</label>
+              <label class="check"><input type="checkbox" name="clean-extra" value="laundry" /> Laundry (+£15)</label>
+            </div>
+          </div>
+
+          <!-- Removals details -->
+          <div class="service-panel" data-for="removals">
+            <label class="field">
+              <span>Job type</span>
+              <select name="move-type">
+                <option value="manvan">Man & van / single items</option>
+                <option value="studio">Studio / 1-bed move</option>
+                <option value="2bed">2-bed home move</option>
+                <option value="3bed">3-bed home move</option>
+                <option value="office">Office relocation</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Crew size</span>
+              <select name="move-crew">
+                <option value="1">1 mover + van — £55/hr</option>
+                <option value="2" selected>2 movers + van — £85/hr</option>
+                <option value="3">3 movers + van — £115/hr</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Estimated duration</span>
+              <select name="move-hours">
+                <option value="2">2 hours (minimum)</option>
+                <option value="3" selected>3 hours</option>
+                <option value="4">4 hours</option>
+                <option value="5">5 hours</option>
+                <option value="6">6 hours</option>
+                <option value="8">8 hours</option>
+              </select>
+            </label>
+            <div class="extras">
+              <p class="field-label">Extras</p>
+              <label class="check"><input type="checkbox" name="move-extra" value="luton" /> Large Luton van (+£15/hr)</label>
+              <label class="check"><input type="checkbox" name="move-extra" value="packing" /> Packing service (+£40)</label>
+              <label class="check"><input type="checkbox" name="move-extra" value="materials" /> Boxes & materials (+£35)</label>
+              <label class="check"><input type="checkbox" name="move-extra" value="dismantle" /> Furniture dismantle/reassembly (+£30)</label>
+            </div>
+          </div>
+
+          <!-- Handyman details -->
+          <div class="service-panel" data-for="handyman">
+            <label class="field">
+              <span>Type of work</span>
+              <select name="handy-type">
+                <option value="general">General repairs & assembly</option>
+                <option value="mount">TV / shelf mounting</option>
+                <option value="plumb">Minor plumbing</option>
+                <option value="elec">Minor electrics</option>
+                <option value="paint">Painting & decorating</option>
+                <option value="door">Door / lock fitting</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Estimated duration</span>
+              <select name="handy-hours">
+                <option value="1">1 hour — £65</option>
+                <option value="2" selected>2 hours — £115</option>
+                <option value="3">3 hours — £165</option>
+                <option value="4">Half day (4h) — £215</option>
+                <option value="6">6 hours — £315</option>
+                <option value="8">Full day (8h) — £395</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Materials needed?</span>
+              <select name="handy-materials">
+                <option value="no">No, I'll provide them</option>
+                <option value="small">Yes — small (+£25)</option>
+                <option value="med">Yes — medium (+£60)</option>
+                <option value="large">Yes — estimate on-site</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- Gardening details -->
+          <div class="service-panel" data-for="gardening">
+            <label class="field">
+              <span>Type of work</span>
+              <select name="garden-type">
+                <option value="maint">General maintenance — £40/hr</option>
+                <option value="hedge">Hedge trimming — £45/hr</option>
+                <option value="tidy">One-off tidy-up — £45/hr</option>
+                <option value="seasonal">Seasonal package — from £150</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Garden size</span>
+              <select name="garden-size">
+                <option value="small">Small (up to 30m²)</option>
+                <option value="med" selected>Medium (30–80m²)</option>
+                <option value="large">Large (80m²+)</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Duration</span>
+              <select name="garden-hours">
+                <option value="2">2 hours (minimum)</option>
+                <option value="3" selected>3 hours</option>
+                <option value="4">4 hours</option>
+                <option value="6">6 hours</option>
+                <option value="8">Full day</option>
+              </select>
+            </label>
+            <div class="extras">
+              <p class="field-label">Extras</p>
+              <label class="check"><input type="checkbox" name="garden-extra" value="waste" /> Green waste removal (+£35)</label>
+              <label class="check"><input type="checkbox" name="garden-extra" value="jetwash" /> Patio jet-wash (+£45)</label>
+              <label class="check"><input type="checkbox" name="garden-extra" value="weed" /> Deep weeding (+£30)</label>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-ghost" data-prev>← Back</button>
+            <button type="button" class="btn btn-dark" data-next>Continue →</button>
+          </div>
+        </fieldset>
+
+        <!-- STEP 3 -->
+        <fieldset class="step" data-step="3">
+          <legend class="step-title">When & where?</legend>
+          <div class="field-row">
+            <label class="field">
+              <span>Preferred date</span>
+              <input type="date" name="date" required />
+            </label>
+            <label class="field">
+              <span>Preferred time</span>
+              <select name="time">
+                <option value="08:00">8:00 am</option>
+                <option value="09:00" selected>9:00 am</option>
+                <option value="10:00">10:00 am</option>
+                <option value="11:00">11:00 am</option>
+                <option value="12:00">12:00 pm</option>
+                <option value="13:00">1:00 pm</option>
+                <option value="14:00">2:00 pm</option>
+                <option value="15:00">3:00 pm</option>
+                <option value="16:00">4:00 pm</option>
+                <option value="17:00">5:00 pm</option>
+              </select>
+            </label>
+          </div>
+          <label class="field">
+            <span>Postcode</span>
+            <input type="text" name="postcode" placeholder="e.g. SW1A 1AA" required />
+          </label>
+          <label class="field">
+            <span>Address</span>
+            <input type="text" name="address" placeholder="Street, building, flat number" required />
+          </label>
+          <label class="field">
+            <span>Frequency</span>
+            <select name="frequency">
+              <option value="one-off">One-off booking</option>
+              <option value="weekly">Weekly (save 10%)</option>
+              <option value="fortnightly">Fortnightly (save 5%)</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </label>
+          <div class="step-actions">
+            <button type="button" class="btn btn-ghost" data-prev>← Back</button>
+            <button type="button" class="btn btn-dark" data-next>Continue →</button>
+          </div>
+        </fieldset>
+
+        <!-- STEP 4 -->
+        <fieldset class="step" data-step="4">
+          <legend class="step-title">Your contact details</legend>
+          <div class="field-row">
+            <label class="field">
+              <span>Full name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input type="tel" name="phone" required />
+            </label>
+          </div>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label class="field">
+            <span>Anything we should know?</span>
+            <textarea name="notes" rows="3" placeholder="Parking, access codes, pets, priorities..."></textarea>
+          </label>
+          <label class="check check-big">
+            <input type="checkbox" name="terms" required />
+            I agree to the terms of service and privacy policy.
+          </label>
+          <div class="step-actions">
+            <button type="button" class="btn btn-ghost" data-prev>← Back</button>
+            <button type="submit" class="btn btn-dark">Confirm booking →</button>
+          </div>
+        </fieldset>
+
+        <!-- SUCCESS -->
+        <div class="step success" data-step="success">
+          <div class="success-inner">
+            <div class="success-icon">✓</div>
+            <h2>Booking received!</h2>
+            <p>Thank you — we've sent a confirmation to your email. A member of the Hausio team will call you within 15 minutes to finalise the details.</p>
+            <a href="index.html" class="btn btn-dark">Back to home</a>
+          </div>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- SIDEBAR SUMMARY -->
+    <aside class="summary" aria-label="Booking summary">
+      <div class="summary-inner">
+        <h3>Your booking</h3>
+        <ul class="summary-list" id="summary-list">
+          <li class="summary-empty">Select a service to see your live quote.</li>
+        </ul>
+        <div class="summary-total">
+          <span>Estimated total</span>
+          <b id="summary-total">£0</b>
+        </div>
+        <p class="summary-note">Final quote is confirmed after our team reviews your request. No payment is taken until the job is complete.</p>
+        <ul class="summary-trust">
+          <li>✓ Fully insured</li>
+          <li>✓ DBS-checked team</li>
+          <li>✓ Free cancellation until noon the day before</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer compact">
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> Hausio Ltd. London, United Kingdom.</small>
+    <small>hello@hausio.co.uk</small>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/booking.js" defer></script>
+</body>
+</html>

@@ -17,6 +17,7 @@
     cleaning: {
       regular: 22, 'one-off': 26, deep: 28, eot: 32, builders: 30,
       extras: { oven: 25, fridge: 15, windows: 20, ironing: 20, laundry: 15 },
+      supplies: { own: 0, hausio: 15 },
       bedroomSurcharge: 4,   // per bedroom beyond 2
       bathroomSurcharge: 5,  // per bathroom beyond 1
     },
@@ -126,6 +127,12 @@
       if (bedExtra) { lines.push([`${beds} bedrooms surcharge`, '£' + bedExtra]); total += bedExtra; }
       const bathExtra = Math.max(0, baths - 1) * PRICES.cleaning.bathroomSurcharge * hours;
       if (bathExtra) { lines.push([`${baths} bathrooms surcharge`, '£' + bathExtra]); total += bathExtra; }
+      const supplies = form['clean-supplies'].value;
+      const suppliesAmt = PRICES.cleaning.supplies[supplies] || 0;
+      if (suppliesAmt) {
+        lines.push(['Eco-friendly products', '£' + suppliesAmt]);
+        total += suppliesAmt;
+      }
       form.querySelectorAll('input[name="clean-extra"]:checked').forEach(c => {
         const amt = PRICES.cleaning.extras[c.value] || 0;
         lines.push([labelExtra(c.value), '£' + amt]);

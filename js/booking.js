@@ -32,11 +32,6 @@
       fullDay: 395,
       materials: { no: 0, small: 25, med: 60, large: 0 },
     },
-    gardening: {
-      maint: 40, hedge: 45, tidy: 45, seasonal: 150, // seasonal treated as flat start
-      sizeMultiplier: { small: 0.9, med: 1, large: 1.25 },
-      extras: { waste: 35, jetwash: 45, weed: 30 },
-    },
     frequency: { 'one-off': 1, weekly: 0.9, fortnightly: 0.95, monthly: 1 },
   };
 
@@ -168,27 +163,6 @@
       if (matAmt) { lines.push(['Materials', '£' + matAmt]); total += matAmt; }
     }
 
-    if (service === 'gardening') {
-      const type = form['garden-type'].value;
-      const hours = Number(form['garden-hours'].value);
-      const size = form['garden-size'].value;
-      const baseRate = PRICES.gardening[type] || 40;
-      let subtotal;
-      if (type === 'seasonal') {
-        subtotal = Math.round(PRICES.gardening.seasonal * (PRICES.gardening.sizeMultiplier[size] || 1));
-        lines.push(['Seasonal package · ' + labelGardenSize(size), '£' + subtotal]);
-      } else {
-        subtotal = Math.round(baseRate * hours * (PRICES.gardening.sizeMultiplier[size] || 1));
-        lines.push([`${labelGardenType(type)} · ${hours}h`, '£' + subtotal]);
-      }
-      total += subtotal;
-      form.querySelectorAll('input[name="garden-extra"]:checked').forEach(c => {
-        const amt = PRICES.gardening.extras[c.value] || 0;
-        lines.push([labelExtra(c.value), '£' + amt]);
-        total += amt;
-      });
-    }
-
     // Frequency discount (step 3)
     const freqEl = form.frequency;
     if (freqEl && freqEl.value) {
@@ -220,18 +194,11 @@
   function labelCleanType(v) {
     return ({ regular: 'Regular clean', 'one-off': 'One-off clean', deep: 'Deep clean', eot: 'End of tenancy', builders: 'After-builders' })[v] || v;
   }
-  function labelGardenType(v) {
-    return ({ maint: 'Maintenance', hedge: 'Hedge trimming', tidy: 'Tidy-up', seasonal: 'Seasonal package' })[v] || v;
-  }
-  function labelGardenSize(v) {
-    return ({ small: 'Small garden', med: 'Medium garden', large: 'Large garden' })[v] || v;
-  }
   function labelExtra(v) {
     return ({
       oven: 'Oven cleaning', fridge: 'Inside fridge', windows: 'Inside windows',
       ironing: 'Ironing', laundry: 'Laundry',
       luton: 'Large Luton van', packing: 'Packing service', materials: 'Boxes & materials', dismantle: 'Dismantle/reassemble',
-      waste: 'Green waste removal', jetwash: 'Patio jet-wash', weed: 'Deep weeding',
     })[v] || v;
   }
   function labelFreq(v) {

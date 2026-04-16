@@ -698,35 +698,49 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .coverage {
   padding: 80px 0;
   background: var(--linen);
+  overflow: hidden;
 }
-.coverage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-.coverage-grid .hero-quote { margin-top: 28px; }
-.coverage-zones {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px 24px;
-}
-.coverage-zones li {
-  padding: 10px 0;
+
+/* Ticker / marquee */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  font-size: .92rem;
-  color: var(--ink-2);
-  position: relative;
-  padding-left: 20px;
+  background: rgba(255,255,255,.4);
 }
-.coverage-zones li::before {
-  content: "✓";
+.ticker {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+  width: max-content;
+}
+.ticker span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 32px;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: .04em;
+  position: relative;
+}
+.ticker span::after {
+  content: "·";
   position: absolute;
-  left: 0;
+  right: 0;
   color: var(--gold);
+  font-size: 1.4rem;
+}
+.ticker-wrap:hover .ticker {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ---------- FAQ ---------- */

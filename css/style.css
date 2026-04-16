@@ -1145,7 +1145,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 @media (max-width: 900px) {
   .hero { padding: 64px 0 80px; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
-  .hero-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 18px; }
+  .hero-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 10px; }
   .hero-top { grid-column: 1; grid-row: 1; text-align: center; }
   .hero-visual { grid-column: 1; grid-row: 2; display: flex; justify-content: center; }
   .hero-bottom { grid-column: 1; grid-row: 3; text-align: center; }

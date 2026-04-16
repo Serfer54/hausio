@@ -467,28 +467,67 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0 0 44px;
+  counter-reset: step;
 }
-.steps li {
-  text-align: left;
-  padding: 24px 0 0;
-  border-top: 1px solid var(--ink);
+.step-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
   position: relative;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.step-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  color: var(--ink);
+}
+.step-icon svg { width: 100%; height: 100%; }
 .step-num {
   display: block;
-  font-family: var(--serif);
-  font-size: .95rem;
-  color: var(--muted);
-  margin-bottom: 12px;
-  letter-spacing: .1em;
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--gold);
+  margin-bottom: 10px;
 }
-.steps h3 { margin-bottom: 8px; }
-.steps p { color: var(--muted); font-size: .95rem; margin: 0; }
+.steps h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+.steps p {
+  color: var(--muted);
+  font-size: .9rem;
+  margin: 0;
+  line-height: 1.55;
+}
 .how-cta { text-align: center; }
+
+/* Connector line between cards on desktop */
+@media (min-width: 901px) {
+  .step-card:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: var(--line);
+    z-index: 1;
+  }
+}
 
 /* ---------- Pricing ---------- */
 .pricing { padding: 80px 0; }

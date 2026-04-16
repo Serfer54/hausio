@@ -251,6 +251,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 }
 .hero-quote {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   background: #fff;
   padding: 6px;
@@ -259,6 +260,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   max-width: 520px;
   margin-bottom: 22px;
   box-shadow: var(--shadow-sm);
+  position: relative;
 }
 .hero-quote input {
   flex: 1;
@@ -272,6 +274,25 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 }
 .hero-quote input::placeholder { color: var(--muted); }
 .hero-quote .btn { flex-shrink: 0; }
+
+/* 5% off badge */
+.quote-badge {
+  position: absolute;
+  top: -13px;
+  left: 16px;
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
 
 .hero-trust {
   display: flex;
@@ -1088,8 +1109,12 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 @media (max-width: 900px) {
   .hero { padding: 64px 0 80px; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
-  .hero-visual { order: -1; }
-  .hero-photo { max-width: 480px; aspect-ratio: 4 / 3; }
+  .hero-visual { order: -1; display: flex; justify-content: center; }
+  .hero-photo { max-width: 480px; aspect-ratio: 4 / 3; margin: 0 auto; }
+  .hero-copy { text-align: center; }
+  .hero-quote { margin-left: auto; margin-right: auto; }
+  .quote-badge { left: 50%; transform: translateX(-50%); }
+  .hero-trust { justify-content: center; }
   .lede { max-width: 100%; }
 
   .price-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1140,7 +1165,8 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   .nav-cta .btn { padding: 11px 18px; font-size: .82rem; }
 
   /* Hero */
-  .hero-photo { max-width: 100%; aspect-ratio: 4 / 3; }
+  .hero-photo { max-width: 100%; aspect-ratio: 3 / 2; border-radius: var(--radius-lg); }
+  .hero-copy { text-align: center; }
   .hero-quote {
     flex-direction: column;
     padding: 10px;

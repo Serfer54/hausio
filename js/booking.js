@@ -45,6 +45,13 @@
     return CENTRAL_POSTCODES.some(prefix => p.startsWith(prefix));
   }
 
+  /* ---------- Analytics helper ---------- */
+  function track(name, params) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params || {});
+    }
+  }
+
   /* ---------- Navigation ---------- */
   function showStep(n) {
     current = n;
@@ -58,6 +65,7 @@
       li.classList.toggle('is-done', step < n);
     });
     window.scrollTo({ top: document.querySelector('.booking').offsetTop - 80, behavior: 'smooth' });
+    track('booking_step', { step_number: n });
   }
 
   function showSuccess() {
@@ -105,7 +113,10 @@
     calculate();
   }
   form.querySelectorAll('input[name="service"]').forEach(r =>
-    r.addEventListener('change', updatePanels)
+    r.addEventListener('change', () => {
+      updatePanels();
+      if (r.checked) track('select_service', { service: r.value });
+    })
   );
 
   /* ---------- Price calculation ---------- */
@@ -227,14 +238,51 @@
   form.addEventListener('input', calculate);
 
   /* ---------- Submit ---------- */
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!form.terms.checked) {
       alert('Please accept the terms to continue.');
       return;
     }
-    // TODO: POST to backend / email endpoint
-    showSuccess();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.textContent : '';
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting...'; }
+
+    const chosenService = form.querySelector('input[name="service"]:checked');
+    const serviceVal = chosenService ? chosenService.value : '';
+    const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
+    const totalNum = Number(totalStr) || 0;
+
+    const formData = new FormData(form);
+    formData.set('form-name', 'booking');
+    formData.append('estimated-total', '£' + totalNum);
+    formData.append('submitted-from', location.href);
+
+    try {
+      const resp = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+
+      track('generate_lead', {
+        service: serviceVal,
+        value: totalNum,
+        currency: 'GBP'
+      });
+      track('booking_submitted', {
+        service: serviceVal,
+        value: totalNum,
+        currency: 'GBP'
+      });
+      showSuccess();
+    } catch (err) {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel || 'Confirm booking →'; }
+      alert("Sorry, we couldn't submit your booking right now. Please try again, or call us on +44 7304 330 614.");
+      track('booking_submit_error', { error: String(err && err.message || err) });
+    }
   });
 
   /* ---------- Prefill from URL ---------- */

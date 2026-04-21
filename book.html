@@ -8,13 +8,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RN3TRV4');</script>
 <!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWJDVWFL7V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
   gtag('js', new Date());
-
   gtag('config', 'G-WWJDVWFL7V');
 </script>
 <meta charset="utf-8" />
@@ -66,7 +74,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li data-step="4"><span>4</span> Confirm</li>
       </ol>
 
-      <form id="booking-form" novalidate>
+      <form id="booking-form" name="booking" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="booking" />
+        <p hidden><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
 
         <!-- STEP 1 -->
         <fieldset class="step is-active" data-step="1">
@@ -318,7 +328,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </label>
           <label class="check check-big">
             <input type="checkbox" name="terms" required />
-            I agree to the terms of service and privacy policy.
+            I agree to the <a href="privacy.html" target="_blank">terms of service and privacy policy</a>.
           </label>
           <div class="step-actions">
             <button type="button" class="btn btn-ghost" data-prev>← Back</button>
@@ -368,7 +378,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to analyse site usage and improve your experience. <a href="privacy.html">Learn more</a></p>
+    <div class="cookie-banner-actions">
+      <button type="button" id="cookie-reject" class="btn btn-ghost">Reject</button>
+      <button type="button" id="cookie-accept" class="btn btn-dark">Accept</button>
+    </div>
+  </div>
+</div>
+
 <script src="js/main.js" defer></script>
 <script src="js/booking.js" defer></script>
+<script src="js/consent.js" defer></script>
 </body>
 </html>

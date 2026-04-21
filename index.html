@@ -8,13 +8,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RN3TRV4');</script>
 <!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWJDVWFL7V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
   gtag('js', new Date());
-
   gtag('config', 'G-WWJDVWFL7V');
 </script>
 <meta charset="utf-8" />
@@ -341,6 +349,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to analyse site usage and improve your experience. <a href="privacy.html">Learn more</a></p>
+    <div class="cookie-banner-actions">
+      <button type="button" id="cookie-reject" class="btn btn-ghost">Reject</button>
+      <button type="button" id="cookie-accept" class="btn btn-dark">Accept</button>
+    </div>
+  </div>
+</div>
+
 <script src="js/main.js" defer></script>
+<script src="js/consent.js" defer></script>
 </body>
 </html>

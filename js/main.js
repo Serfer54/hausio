@@ -29,10 +29,14 @@
     });
   });
 
-  // GA4 event tracking
+  // GA4 event tracking (also pushes to dataLayer so GTM can fire Google Ads conversions)
   function track(name, params) {
-    if (typeof window.gtag !== 'function') return;
-    window.gtag('event', name, params || {});
+    var p = params || {};
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, p);
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: name }, p));
   }
 
   document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function (a) {

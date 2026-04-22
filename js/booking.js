@@ -47,9 +47,12 @@
 
   /* ---------- Analytics helper ---------- */
   function track(name, params) {
+    const p = params || {};
     if (typeof window.gtag === 'function') {
-      window.gtag('event', name, params || {});
+      window.gtag('event', name, p);
     }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: name }, p));
   }
 
   /* ---------- Navigation ---------- */

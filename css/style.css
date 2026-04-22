@@ -1538,3 +1538,55 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+.legal-content ol {
+  padding-left: 22px;
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.legal-content ol li {
+  margin-bottom: 8px;
+}
+.legal-content hr {
+  border: none;
+  border-top: 1px solid #d9d3c6;
+  margin: 44px 0 28px;
+}
+.legal-content code {
+  background: #f0ece3;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 22px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.legal-table th,
+.legal-table td {
+  border: 1px solid #d9d3c6;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.legal-table th {
+  background: #f0ece3;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .legal-table,
+  .legal-table thead,
+  .legal-table tbody,
+  .legal-table tr,
+  .legal-table th,
+  .legal-table td {
+    display: block;
+    width: 100%;
+  }
+  .legal-table th { border-bottom: none; }
+  .legal-table td { border-top: none; }
+  .legal-table tr { margin-bottom: 12px; }
+}

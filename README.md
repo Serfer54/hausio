@@ -33,7 +33,7 @@ python -m http.server -d Hausio 8000
 
 ## To customise
 
-- **Contact info** — search for `tel:+44` and `hello@hausio.co.uk` in both HTML files, replace when ready
+- **Contact info** — search for `tel:+44` and `hausio.co.uk@proton.me` in both HTML files, replace when ready
 - **Pricing** — edit the `PRICES` object at the top of `js/booking.js`; also update the matching `£` labels in `index.html` (Services section + Pricing section)
 - **Booking submission** — currently the submit just shows a success message. Hook to a backend / form service (Formspree, Getform, Netlify Forms, your own endpoint) in `js/booking.js` → `form.addEventListener('submit', …)`
 - **Logo** — the SVG is inline so it renders crisp at any size. To swap for a PNG of the real logo, replace the `.brand-mark svg` blocks in both HTML files with `<img src="assets/logo.png">`

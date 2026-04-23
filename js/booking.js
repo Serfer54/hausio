@@ -257,18 +257,27 @@
     const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
     const totalNum = Number(totalStr) || 0;
 
+    const payload = {};
     const formData = new FormData(form);
-    formData.set('form-name', 'booking');
-    formData.append('estimated-total', '£' + totalNum);
-    formData.append('submitted-from', location.href);
+    formData.forEach((v, k) => { payload[k] = v; });
+    payload['estimated-total'] = '£' + totalNum;
+    payload['submitted-from'] = location.href;
+    payload._subject = 'New Hausio booking: ' + (serviceVal || 'unknown') + ' · £' + totalNum;
+    payload._template = 'table';
+    payload._captcha = 'false';
 
     try {
-      const resp = await fetch('/', {
+      const resp = await fetch('https://formsubmit.co/ajax/hello@hausio.co.uk', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
       });
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json().catch(() => ({}));
+      if (data && data.success === 'false') throw new Error(data.message || 'FormSubmit error');
 
       track('generate_lead', {
         service: serviceVal,

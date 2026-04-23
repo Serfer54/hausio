@@ -267,7 +267,7 @@
     payload._captcha = 'false';
 
     try {
-      const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+      const resp = await fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

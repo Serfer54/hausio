@@ -211,8 +211,21 @@
         alert('Please fill in the date, postcode, and address.');
         return false;
       }
+      if (isRemovals()) {
+        const dPostcode = (form['dropoff-postcode'] && form['dropoff-postcode'].value || '').trim();
+        const dAddress = (form['dropoff-address'] && form['dropoff-address'].value || '').trim();
+        if (!dPostcode || !dAddress) {
+          alert('Please fill in the dropoff postcode and address for the removal.');
+          return false;
+        }
+      }
     }
     return true;
+  }
+
+  function isRemovals() {
+    const chosen = form.querySelector('input[name="service"]:checked');
+    return !!(chosen && chosen.value === 'removals');
   }
 
   form.querySelectorAll('[data-next]').forEach(btn => {
@@ -232,7 +245,33 @@
     const chosen = form.querySelector('input[name="service"]:checked');
     const val = chosen ? chosen.value : null;
     panels.forEach(p => p.classList.toggle('is-active', p.dataset.for === val));
+    applyRemovalsLayout(val === 'removals');
     calculate();
+  }
+
+  function applyRemovalsLayout(isMove) {
+    // Re-label the existing postcode/address pair so it reads "Pickup …" for removals
+    // and reverts to "Postcode" / "Address" for cleaning + handyman jobs.
+    const postcodeLabel = form.querySelector('[data-label-for-postcode]');
+    const addressLabel = form.querySelector('[data-label-for-address]');
+    if (postcodeLabel) postcodeLabel.textContent = isMove ? 'Pickup postcode' : 'Postcode';
+    if (addressLabel) addressLabel.textContent = isMove ? 'Pickup address' : 'Address';
+
+    // Show / hide the dropoff block and toggle required on its inputs.
+    form.querySelectorAll('[data-removals-only]').forEach(el => {
+      el.hidden = !isMove;
+      el.querySelectorAll('input, select').forEach(input => {
+        if (input.name === 'dropoff-postcode' || input.name === 'dropoff-address') {
+          input.required = isMove;
+        }
+      });
+    });
+
+    // Removals are one-off jobs by definition, so the frequency picker is meaningless there.
+    form.querySelectorAll('[data-removals-hidden]').forEach(el => {
+      el.hidden = isMove;
+    });
+    if (isMove && form.frequency) form.frequency.value = 'one-off';
   }
   form.querySelectorAll('input[name="service"]').forEach(r =>
     r.addEventListener('change', () => {

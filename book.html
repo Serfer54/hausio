@@ -304,15 +304,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </label>
           </div>
           <label class="field">
-            <span>Postcode</span>
+            <span data-label-for-postcode>Postcode</span>
             <input type="text" name="postcode" placeholder="e.g. SW1A 1AA" required />
             <small class="field-hint">Central London postcodes (EC, WC, W1, SW1, SE1) include a £18 congestion access charge.</small>
           </label>
           <label class="field">
-            <span>Address</span>
+            <span data-label-for-address>Address</span>
             <input type="text" name="address" placeholder="Street, building, flat number" required />
           </label>
-          <label class="field">
+
+          <!-- Removals: pickup floor + dropoff address (only shown when service=removals) -->
+          <div class="removals-fields" data-removals-only hidden>
+            <div class="field-row">
+              <label class="field">
+                <span>Pickup floor</span>
+                <select name="pickup-floor">
+                  <option value="ground">Ground floor</option>
+                  <option value="1">1st floor</option>
+                  <option value="2">2nd floor</option>
+                  <option value="3">3rd floor</option>
+                  <option value="4+">4th+ floor</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Pickup lift?</span>
+                <select name="pickup-lift">
+                  <option value="na">N/A (ground)</option>
+                  <option value="yes">Yes — there's a lift</option>
+                  <option value="no">No — stairs only</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Dropoff postcode</span>
+              <input type="text" name="dropoff-postcode" placeholder="e.g. E14 5AB" />
+            </label>
+            <label class="field">
+              <span>Dropoff address</span>
+              <input type="text" name="dropoff-address" placeholder="Street, building, flat number" />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Dropoff floor</span>
+                <select name="dropoff-floor">
+                  <option value="ground">Ground floor</option>
+                  <option value="1">1st floor</option>
+                  <option value="2">2nd floor</option>
+                  <option value="3">3rd floor</option>
+                  <option value="4+">4th+ floor</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Dropoff lift?</span>
+                <select name="dropoff-lift">
+                  <option value="na">N/A (ground)</option>
+                  <option value="yes">Yes — there's a lift</option>
+                  <option value="no">No — stairs only</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <label class="field" data-removals-hidden>
             <span>Frequency</span>
             <select name="frequency">
               <option value="one-off">One-off booking</option>

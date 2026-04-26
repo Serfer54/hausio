@@ -1,4 +1,4 @@
-// Hausio — multi-step booking flow + live price calculator
+// Hausio — multi-step booking flow + live price calculator + Stripe £50 deposit
 (function () {
   const form = document.getElementById('booking-form');
   if (!form) return;
@@ -11,6 +11,21 @@
 
   let current = 1;
   const maxSteps = 4;
+
+  /* ---------- Stripe config ---------- */
+  // Publishable key is safe to expose. Replace this with the live key when ready.
+  // Env-aware: hostname switch keeps test keys on Netlify previews / localhost and live keys on hausio.co.uk
+  const STRIPE_PUBLISHABLE_KEY_TEST = 'pk_test_REPLACE_ME';
+  const STRIPE_PUBLISHABLE_KEY_LIVE = 'pk_live_REPLACE_ME';
+  const isProd = location.hostname === 'hausio.co.uk' || location.hostname === 'www.hausio.co.uk';
+  const STRIPE_PUBLISHABLE_KEY = isProd ? STRIPE_PUBLISHABLE_KEY_LIVE : STRIPE_PUBLISHABLE_KEY_TEST;
+
+  let stripe = null;
+  let stripeElements = null;
+  let paymentElement = null;
+  let paymentIntentId = null;
+  let paymentReady = false;
+  let paymentInitInFlight = false;
 
   /* ---------- Pricing model ---------- */
   const PRICES = {
@@ -74,6 +89,102 @@
     });
     window.scrollTo({ top: document.querySelector('.booking').offsetTop - 80, behavior: 'smooth' });
     track('booking_step', { step_number: n });
+    if (n === maxSteps) initPayment();
+  }
+
+  /* ---------- Stripe payment ---------- */
+  function setPaymentError(msg) {
+    const el = document.getElementById('payment-error');
+    if (!el) return;
+    if (!msg) { el.hidden = true; el.textContent = ''; return; }
+    el.hidden = false;
+    el.textContent = msg;
+  }
+
+  async function initPayment() {
+    if (paymentReady || paymentInitInFlight) return;
+    if (typeof window.Stripe !== 'function') return; // Stripe.js not loaded yet
+    if (!STRIPE_PUBLISHABLE_KEY || /REPLACE_ME/i.test(STRIPE_PUBLISHABLE_KEY)) {
+      setPaymentError('Payment is not configured yet. Please call us on +44 7304 330 614 to book.');
+      return;
+    }
+    paymentInitInFlight = true;
+
+    try {
+      const formData = new FormData(form);
+      const chosenService = form.querySelector('input[name="service"]:checked');
+      const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
+
+      const payload = {
+        service: chosenService ? chosenService.value : '',
+        fullName: formData.get('name') || '',
+        email: formData.get('email') || '',
+        phone: formData.get('phone') || '',
+        postcode: formData.get('postcode') || '',
+        address: formData.get('address') || '',
+        date: formData.get('date') || '',
+        time: formData.get('time') || '',
+        frequency: formData.get('frequency') || '',
+        estimatedTotal: '£' + (Number(totalStr) || 0),
+      };
+
+      const resp = await fetch('/api/payment-intent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!resp.ok) {
+        const text = await resp.text().catch(() => '');
+        throw new Error('Payment setup failed (HTTP ' + resp.status + ') ' + text.slice(0, 200));
+      }
+      const data = await resp.json();
+      if (!data.clientSecret) throw new Error('Payment setup did not return a client secret.');
+      paymentIntentId = data.paymentIntentId;
+
+      stripe = window.Stripe(STRIPE_PUBLISHABLE_KEY);
+      stripeElements = stripe.elements({
+        clientSecret: data.clientSecret,
+        appearance: {
+          theme: 'flat',
+          variables: {
+            colorPrimary: '#1f1f1f',
+            colorBackground: '#ffffff',
+            colorText: '#1f1f1f',
+            colorDanger: '#b13030',
+            fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
+            spacingUnit: '4px',
+            borderRadius: '8px',
+          },
+        },
+      });
+      paymentElement = stripeElements.create('payment', { layout: { type: 'tabs', defaultCollapsed: false } });
+      paymentElement.mount('#payment-element');
+      paymentReady = true;
+      track('add_payment_info', { value: 50, currency: 'GBP' });
+    } catch (err) {
+      setPaymentError(err.message || 'Could not initialise payment. Please try again or call us.');
+      track('payment_init_error', { error: String(err && err.message || err) });
+    } finally {
+      paymentInitInFlight = false;
+    }
+  }
+
+  async function confirmPaymentBeforeSubmit() {
+    if (!paymentReady || !stripe || !stripeElements) {
+      throw new Error('Payment is still loading — please wait a second and try again.');
+    }
+    setPaymentError('');
+    const result = await stripe.confirmPayment({
+      elements: stripeElements,
+      redirect: 'if_required',
+      confirmParams: {
+        return_url: location.origin + '/book.html?payment=return',
+      },
+    });
+    if (result.error) {
+      throw new Error(result.error.message || 'Payment was declined.');
+    }
+    return result.paymentIntent;
   }
 
   function showSuccess() {
@@ -252,19 +363,40 @@
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalLabel = submitBtn ? submitBtn.textContent : '';
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting...'; }
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Processing payment…'; }
+    setPaymentError('');
 
     const chosenService = form.querySelector('input[name="service"]:checked');
     const serviceVal = chosenService ? chosenService.value : '';
     const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
     const totalNum = Number(totalStr) || 0;
 
+    let paidIntent = null;
+    try {
+      paidIntent = await confirmPaymentBeforeSubmit();
+    } catch (err) {
+      setPaymentError(err.message || 'Payment failed. Please try a different card.');
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel || 'Pay £50 deposit & confirm →'; }
+      track('payment_failed', { error: String(err && err.message || err) });
+      return;
+    }
+    track('purchase', {
+      transaction_id: (paidIntent && paidIntent.id) || paymentIntentId || '',
+      value: 50,
+      currency: 'GBP',
+      items: [{ item_name: 'Hausio booking deposit', item_category: serviceVal, quantity: 1, price: 50 }],
+    });
+
+    if (submitBtn) submitBtn.textContent = 'Submitting…';
+
     const payload = {};
     const formData = new FormData(form);
     formData.forEach((v, k) => { payload[k] = v; });
     payload['estimated-total'] = '£' + totalNum;
+    payload['deposit-paid'] = '£50';
+    payload['stripe-payment-intent'] = (paidIntent && paidIntent.id) || paymentIntentId || '';
     payload['submitted-from'] = location.href;
-    payload._subject = 'New Hausio booking: ' + (serviceVal || 'unknown') + ' · £' + totalNum;
+    payload._subject = 'New Hausio booking: ' + (serviceVal || 'unknown') + ' · £' + totalNum + ' · deposit paid';
     payload._template = 'table';
     payload._captcha = 'false';
 
@@ -293,9 +425,10 @@
       });
       showSuccess();
     } catch (err) {
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel || 'Confirm booking →'; }
-      alert("Sorry, we couldn't submit your booking right now. Please try again, or call us on +44 7304 330 614.");
-      track('booking_submit_error', { error: String(err && err.message || err) });
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel || 'Pay £50 deposit & confirm →'; }
+      // The card has already been charged at this point, so escalate clearly.
+      alert("Your deposit was charged, but we couldn't finalise the booking record. Please call us on +44 7304 330 614 with this reference: " + ((paidIntent && paidIntent.id) || paymentIntentId || 'n/a'));
+      track('booking_submit_error', { error: String(err && err.message || err), payment_intent: (paidIntent && paidIntent.id) || paymentIntentId || '' });
     }
   });
 

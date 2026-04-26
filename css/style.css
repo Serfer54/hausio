@@ -1437,6 +1437,64 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .main-nav.is-open a:last-child { border: none; }
 
 /* =========================================================
+   Payment block (booking step 4)
+   ========================================================= */
+.payment-block {
+  margin: 28px 0 8px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--cream);
+}
+.payment-summary h3 {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.payment-summary p {
+  margin: 0 0 12px;
+  color: var(--ink-2);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+.payment-summary ul {
+  margin: 0 0 18px;
+  padding-left: 18px;
+  color: var(--ink-2);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+.payment-summary ul li { margin-bottom: 4px; }
+.payment-element {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  min-height: 60px;
+}
+.payment-loading {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: center;
+}
+.payment-error {
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: #fdecec;
+  color: #b13030;
+  font-size: .92rem;
+  border: 1px solid #f3c4c4;
+}
+@media (max-width: 720px) {
+  .payment-block { padding: 18px; }
+  .payment-element { padding: 12px; }
+}
+
+/* =========================================================
    Cookie consent banner
    ========================================================= */
 .cookie-banner {

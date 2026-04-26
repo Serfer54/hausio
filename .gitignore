@@ -5,3 +5,7 @@ desktop.ini
 .vscode/
 .idea/
 node_modules/
+.netlify/
+.env
+.env.*
+!.env.example

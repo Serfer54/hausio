@@ -30,14 +30,13 @@
       laterHour: 50,
       halfDay: 215,
       fullDay: 395,
-      materials: { no: 0, small: 25, med: 60, large: 0 },
     },
     frequency: { 'one-off': 1, weekly: 0.9, fortnightly: 0.95, monthly: 1 },
     congestionCharge: 18, // Central London access surcharge
   };
 
-  // Postcode prefixes inside (or overlapping) the Central London Congestion Zone
-  const CENTRAL_POSTCODES = ['EC1', 'EC2', 'EC3', 'EC4', 'WC1', 'WC2', 'W1', 'SW1', 'SE1', 'NW1', 'N1C'];
+  // Postcode prefixes mostly inside the Central London Congestion Zone (TfL)
+  const CENTRAL_POSTCODES = ['EC1', 'EC2', 'EC3', 'EC4', 'WC1', 'WC2', 'W1', 'SW1', 'SE1'];
 
   function isCentralLondon(postcode) {
     if (!postcode) return false;
@@ -176,15 +175,12 @@
 
     if (service === 'handyman') {
       const hours = Number(form['handy-hours'].value);
-      const mat = form['handy-materials'].value;
       let subtotal;
       if (hours === 4) subtotal = PRICES.handyman.halfDay;
       else if (hours === 8) subtotal = PRICES.handyman.fullDay;
       else subtotal = PRICES.handyman.firstHour + Math.max(0, hours - 1) * PRICES.handyman.laterHour;
       lines.push([`Handyman · ${hours}h`, '£' + subtotal]);
       total += subtotal;
-      const matAmt = PRICES.handyman.materials[mat] || 0;
-      if (matAmt) { lines.push(['Materials', '£' + matAmt]); total += matAmt; }
     }
 
     // Frequency discount (step 3)

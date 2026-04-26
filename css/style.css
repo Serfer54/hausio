@@ -1246,9 +1246,11 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   .eyebrow { font-size: .72rem; letter-spacing: .18em; margin-bottom: 12px; }
 
   /* Header */
-  .nav { min-height: 62px; gap: 12px; }
-  .brand-mark { width: 28px; height: 26px; }
-  .brand-name { font-size: 1.1rem; letter-spacing: .22em; }
+  .nav { min-height: 56px; gap: 12px; }
+  .brand-mark { width: 24px; height: 22px; }
+  .brand-name { font-size: 1.05rem; letter-spacing: .12em; }
+  .nav-wa { width: 32px; height: 32px; }
+  .nav-wa svg { width: 16px; height: 16px; }
   .nav-cta .btn { padding: 11px 18px; font-size: .82rem; }
 
   /* Hero */
@@ -1396,7 +1398,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   h1 { font-size: 1.95rem; }
   h2 { font-size: 1.5rem; }
   .nav-cta .btn { padding: 10px 14px; font-size: .78rem; }
-  .brand-name { font-size: 1rem; letter-spacing: .2em; }
+  .brand-name { font-size: .95rem; letter-spacing: .1em; }
 }
 
 /* Mobile nav (toggled via JS) */

@@ -157,31 +157,31 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  min-height: 78px;
+  gap: 24px;
+  min-height: 64px;
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--ink);
   flex-shrink: 0;
 }
 .brand-mark {
-  width: 34px; height: 30px;
+  width: 28px; height: 26px;
   display: inline-flex;
   color: var(--ink);
 }
 .brand-mark svg { width: 100%; height: 100%; }
 .brand-name {
   font-family: var(--serif);
-  font-size: 1.55rem;
-  font-weight: 400;
-  letter-spacing: .3em;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: .14em;
 }
 .main-nav {
   display: flex;
-  gap: 36px;
+  gap: 28px;
   font-size: .9rem;
   color: var(--ink-2);
   font-weight: 400;
@@ -199,24 +199,24 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   transition: width .3s ease;
 }
 .main-nav a:hover::after { width: 100%; }
-.nav-cta { display: flex; align-items: center; gap: 20px; }
+.nav-cta { display: flex; align-items: center; gap: 14px; }
 .nav-wa {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: #25D366;
   color: #fff;
   transition: transform .2s ease, background .2s ease;
 }
 .nav-wa:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   background: #1ebe57;
   color: #fff;
 }
-.nav-wa svg { width: 20px; height: 20px; }
+.nav-wa svg { width: 18px; height: 18px; }
 
 .nav-toggle {
   display: none;
@@ -310,25 +310,6 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 }
 .hero-quote input::placeholder { color: var(--muted); }
 .hero-quote .btn { flex-shrink: 0; }
-
-/* 5% off badge */
-.quote-badge {
-  position: absolute;
-  top: -13px;
-  left: 16px;
-  background: var(--ink);
-  color: var(--cream);
-  font-family: var(--sans);
-  font-size: .7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  padding: 4px 14px;
-  border-radius: 20px;
-  line-height: 1.4;
-  white-space: nowrap;
-  box-shadow: var(--shadow-sm);
-}
 
 .hero-trust {
   display: flex;
@@ -1265,9 +1246,11 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   .eyebrow { font-size: .72rem; letter-spacing: .18em; margin-bottom: 12px; }
 
   /* Header */
-  .nav { min-height: 62px; gap: 12px; }
-  .brand-mark { width: 28px; height: 26px; }
-  .brand-name { font-size: 1.1rem; letter-spacing: .22em; }
+  .nav { min-height: 56px; gap: 12px; }
+  .brand-mark { width: 24px; height: 22px; }
+  .brand-name { font-size: 1.05rem; letter-spacing: .12em; }
+  .nav-wa { width: 32px; height: 32px; }
+  .nav-wa svg { width: 16px; height: 16px; }
   .nav-cta .btn { padding: 11px 18px; font-size: .82rem; }
 
   /* Hero */
@@ -1415,7 +1398,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   h1 { font-size: 1.95rem; }
   h2 { font-size: 1.5rem; }
   .nav-cta .btn { padding: 10px 14px; font-size: .78rem; }
-  .brand-name { font-size: 1rem; letter-spacing: .2em; }
+  .brand-name { font-size: .95rem; letter-spacing: .1em; }
 }
 
 /* Mobile nav (toggled via JS) */

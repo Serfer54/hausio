@@ -35,13 +35,19 @@
     congestionCharge: 18, // Central London access surcharge
   };
 
-  // Postcode prefixes mostly inside the Central London Congestion Zone (TfL)
-  const CENTRAL_POSTCODES = ['EC1', 'EC2', 'EC3', 'EC4', 'WC1', 'WC2', 'W1', 'SW1', 'SE1'];
+  // Outward codes inside the TfL Central London Congestion Zone.
+  // Allow EC1-4 + sub-district letter, WC1-2 + sub-district letter, and the exact W1/SW1/SE1 areas
+  // (with optional sub-district letter) so that W10-W14, SW2-SW20, SE2-SE28 are NOT matched.
+  const CENTRAL_OUTWARD = /^(EC[1-4][A-Z]?|WC[12][A-Z]?|W1[A-Z]?|SW1[A-Z]?|SE1[A-Z]?)$/;
 
   function isCentralLondon(postcode) {
     if (!postcode) return false;
-    const p = postcode.toUpperCase().replace(/\s+/g, '');
-    return CENTRAL_POSTCODES.some(prefix => p.startsWith(prefix));
+    const p = postcode.toUpperCase().trim();
+    // Extract the outward code (e.g. "W14", "SW1", "EC1V") from a full or partial UK postcode.
+    let m = p.match(/^([A-Z]{1,2}[0-9][A-Z0-9]?)\s*[0-9][A-Z]{2}$/);
+    if (!m) m = p.match(/^([A-Z]{1,2}[0-9][A-Z0-9]?)$/);
+    if (!m) return false;
+    return CENTRAL_OUTWARD.test(m[1]);
   }
 
   /* ---------- Analytics helper ---------- */

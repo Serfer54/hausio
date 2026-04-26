@@ -31,7 +31,7 @@
       halfDay: 215,
       fullDay: 395,
     },
-    frequency: { 'one-off': 1, weekly: 0.9, fortnightly: 0.95, monthly: 1 },
+    frequency: { 'one-off': 1, weekly: 1, fortnightly: 1, monthly: 1 },
     congestionCharge: 18, // Central London access surcharge
   };
 
@@ -189,18 +189,6 @@
       total += subtotal;
     }
 
-    // Frequency discount (step 3)
-    const freqEl = form.frequency;
-    if (freqEl && freqEl.value) {
-      const mult = PRICES.frequency[freqEl.value] || 1;
-      if (mult < 1) {
-        const discounted = Math.round(total * mult);
-        const saving = total - discounted;
-        lines.push([`${labelFreq(freqEl.value)} discount`, '-£' + saving]);
-        total = discounted;
-      }
-    }
-
     // Central London congestion surcharge (step 3 postcode)
     const postcodeEl = form.postcode;
     if (postcodeEl && isCentralLondon(postcodeEl.value)) {
@@ -233,9 +221,6 @@
       ironing: 'Ironing', laundry: 'Laundry',
       luton: 'Large Luton van', packing: 'Packing service', materials: 'Boxes & materials', dismantle: 'Dismantle/reassemble',
     })[v] || v;
-  }
-  function labelFreq(v) {
-    return ({ weekly: 'Weekly', fortnightly: 'Fortnightly' })[v] || v;
   }
 
   /* ---------- Live recalculate ---------- */

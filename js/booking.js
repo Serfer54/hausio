@@ -253,13 +253,12 @@
     payload._template = 'table';
     payload._captcha = 'false';
     // Backup recipient — keeps a copy on personal Gmail in case Proton bounces.
-    // Proton inbox is the eventual home for booking notifications, but FormSubmit only delivers
-    // to a recipient once their activation link is clicked. Until that's done we keep Gmail as
-    // the active endpoint and copy Proton via CC so it gets the activation email.
-    payload._cc = 'hausio.co.uk@proton.me';
+    // Proton is now the activated primary recipient for booking notifications; Gmail stays on
+    // _cc as a personal backup in case Proton ever bounces or filters us into spam silently.
+    payload._cc = 'serfer7501@gmail.com';
 
     try {
-      const resp = await fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
+      const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

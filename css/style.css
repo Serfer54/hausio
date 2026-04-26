@@ -157,31 +157,31 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  min-height: 78px;
+  gap: 24px;
+  min-height: 64px;
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--ink);
   flex-shrink: 0;
 }
 .brand-mark {
-  width: 34px; height: 30px;
+  width: 28px; height: 26px;
   display: inline-flex;
   color: var(--ink);
 }
 .brand-mark svg { width: 100%; height: 100%; }
 .brand-name {
   font-family: var(--serif);
-  font-size: 1.55rem;
-  font-weight: 400;
-  letter-spacing: .3em;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: .14em;
 }
 .main-nav {
   display: flex;
-  gap: 36px;
+  gap: 28px;
   font-size: .9rem;
   color: var(--ink-2);
   font-weight: 400;
@@ -199,24 +199,24 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   transition: width .3s ease;
 }
 .main-nav a:hover::after { width: 100%; }
-.nav-cta { display: flex; align-items: center; gap: 20px; }
+.nav-cta { display: flex; align-items: center; gap: 14px; }
 .nav-wa {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: #25D366;
   color: #fff;
   transition: transform .2s ease, background .2s ease;
 }
 .nav-wa:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   background: #1ebe57;
   color: #fff;
 }
-.nav-wa svg { width: 20px; height: 20px; }
+.nav-wa svg { width: 18px; height: 18px; }
 
 .nav-toggle {
   display: none;

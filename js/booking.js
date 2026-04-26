@@ -387,11 +387,9 @@
     payload._subject = 'New Hausio booking: ' + (serviceVal || 'unknown') + ' · £' + totalNum + ' · deposit paid';
     payload._template = 'table';
     payload._captcha = 'false';
-    // Backup recipient — keeps a copy on personal Gmail in case Proton bounces.
-    // Proton inbox is the eventual home for booking notifications, but the FormSubmit endpoint
-    // only delivers after the recipient clicks the activation link. Until that's done we keep
-    // Gmail as the active endpoint and copy Proton via CC so it gets the activation email.
-    payload._cc = 'hausio.co.uk@proton.me';
+    // Proton is the activated primary recipient for booking notifications; Gmail stays on _cc
+    // as a personal backup in case Proton ever bounces or filters us into spam silently.
+    payload._cc = 'serfer7501@gmail.com';
 
     // Once the deposit is captured the booking is real even if the email notification fails —
     // every field already lives on the Stripe PaymentIntent metadata, so the success screen is
@@ -401,7 +399,7 @@
     showSuccess();
 
     try {
-      const resp = await fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
+      const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

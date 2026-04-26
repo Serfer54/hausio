@@ -388,10 +388,20 @@
     payload._template = 'table';
     payload._captcha = 'false';
     // Backup recipient — keeps a copy on personal Gmail in case Proton bounces.
-    payload._cc = 'serfer7501@gmail.com';
+    // Proton inbox is the eventual home for booking notifications, but the FormSubmit endpoint
+    // only delivers after the recipient clicks the activation link. Until that's done we keep
+    // Gmail as the active endpoint and copy Proton via CC so it gets the activation email.
+    payload._cc = 'hausio.co.uk@proton.me';
+
+    // Once the deposit is captured the booking is real even if the email notification fails —
+    // every field already lives on the Stripe PaymentIntent metadata, so the success screen is
+    // the right thing to show, and the FormSubmit hiccup just gets reported in analytics.
+    track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
+    track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
+    showSuccess();
 
     try {
-      const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+      const resp = await fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -402,23 +412,11 @@
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       const data = await resp.json().catch(() => ({}));
       if (data && data.success === 'false') throw new Error(data.message || 'FormSubmit error');
-
-      track('generate_lead', {
-        service: serviceVal,
-        value: totalNum,
-        currency: 'GBP'
-      });
-      track('booking_submitted', {
-        service: serviceVal,
-        value: totalNum,
-        currency: 'GBP'
-      });
-      showSuccess();
     } catch (err) {
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel || 'Pay £50 deposit & confirm →'; }
-      // The card has already been charged at this point, so escalate clearly.
-      alert("Your deposit was charged, but we couldn't finalise the booking record. Please call us on +44 7304 330 614 with this reference: " + ((paidIntent && paidIntent.id) || paymentIntentId || 'n/a'));
-      track('booking_submit_error', { error: String(err && err.message || err), payment_intent: (paidIntent && paidIntent.id) || paymentIntentId || '' });
+      track('booking_email_error', {
+        error: String(err && err.message || err),
+        payment_intent: (paidIntent && paidIntent.id) || paymentIntentId || '',
+      });
     }
   });
 

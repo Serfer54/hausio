@@ -53,6 +53,12 @@ exports.handler = async (event) => {
         time: clip(body.time, 10),
         frequency: clip(body.frequency, 20),
         estimated_total: clip(body.estimatedTotal, 20),
+        dropoff_postcode: clip(body.dropoffPostcode, 12),
+        dropoff_address: clip(body.dropoffAddress, 200),
+        pickup_floor: clip(body.pickupFloor, 10),
+        pickup_lift: clip(body.pickupLift, 10),
+        dropoff_floor: clip(body.dropoffFloor, 10),
+        dropoff_lift: clip(body.dropoffLift, 10),
       },
     });
 

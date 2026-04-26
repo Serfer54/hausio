@@ -118,6 +118,7 @@
       const chosenService = form.querySelector('input[name="service"]:checked');
       const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
 
+      const isMove = chosenService && chosenService.value === 'removals';
       const payload = {
         service: chosenService ? chosenService.value : '',
         fullName: formData.get('name') || '',
@@ -130,6 +131,14 @@
         frequency: formData.get('frequency') || '',
         estimatedTotal: '£' + (Number(totalStr) || 0),
       };
+      if (isMove) {
+        payload.dropoffPostcode = formData.get('dropoff-postcode') || '';
+        payload.dropoffAddress = formData.get('dropoff-address') || '';
+        payload.pickupFloor = formData.get('pickup-floor') || '';
+        payload.pickupLift = formData.get('pickup-lift') || '';
+        payload.dropoffFloor = formData.get('dropoff-floor') || '';
+        payload.dropoffLift = formData.get('dropoff-lift') || '';
+      }
 
       const resp = await fetch('/api/payment-intent', {
         method: 'POST',

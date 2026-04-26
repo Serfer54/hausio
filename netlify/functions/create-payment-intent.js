@@ -14,7 +14,10 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
 
-  const secret = process.env.STRIPE_SECRET_KEY;
+  // Defensively strip whitespace and trailing '=' that frequently gets pasted in by accident.
+  // Stripe API keys are alphanumeric, never contain whitespace, and never end in '=', so this is safe.
+  const rawSecret = process.env.STRIPE_SECRET_KEY || '';
+  const secret = rawSecret.trim().replace(/[=\s]+$/, '');
   if (!secret) {
     return {
       statusCode: 500,

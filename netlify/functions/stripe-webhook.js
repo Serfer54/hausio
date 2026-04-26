@@ -5,8 +5,11 @@
 const Stripe = require('stripe');
 
 exports.handler = async (event) => {
-  const secret = process.env.STRIPE_SECRET_KEY;
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  // Same defensive trim as create-payment-intent (strip whitespace + trailing '=' from copy-paste).
+  const rawSecret = process.env.STRIPE_SECRET_KEY || '';
+  const secret = rawSecret.trim().replace(/[=\s]+$/, '');
+  const rawWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET || '';
+  const webhookSecret = rawWebhookSecret.trim().replace(/[=\s]+$/, '');
 
   if (!secret || !webhookSecret) {
     return { statusCode: 500, body: 'Stripe webhook is not configured.' };

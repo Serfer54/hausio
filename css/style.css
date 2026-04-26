@@ -359,12 +359,12 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .hero-photo {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 560px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--line);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
 }
 .hero-photo img {
   width: 100%;

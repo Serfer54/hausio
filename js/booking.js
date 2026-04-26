@@ -267,9 +267,11 @@
     payload._subject = 'New Hausio booking: ' + (serviceVal || 'unknown') + ' · £' + totalNum;
     payload._template = 'table';
     payload._captcha = 'false';
+    // Backup recipient — keeps a copy on personal Gmail in case Proton bounces.
+    payload._cc = 'serfer7501@gmail.com';
 
     try {
-      const resp = await fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
+      const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

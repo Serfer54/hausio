@@ -311,25 +311,6 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .hero-quote input::placeholder { color: var(--muted); }
 .hero-quote .btn { flex-shrink: 0; }
 
-/* 5% off badge */
-.quote-badge {
-  position: absolute;
-  top: -13px;
-  left: 16px;
-  background: var(--ink);
-  color: var(--cream);
-  font-family: var(--sans);
-  font-size: .7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  padding: 4px 14px;
-  border-radius: 20px;
-  line-height: 1.4;
-  white-space: nowrap;
-  box-shadow: var(--shadow-sm);
-}
-
 .hero-trust {
   display: flex;
   flex-wrap: wrap;

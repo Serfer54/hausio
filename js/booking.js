@@ -16,7 +16,7 @@
   // Publishable key is safe to expose. Replace the live key when KYC is approved.
   // Env-aware: hostname switch keeps test keys on Netlify previews / localhost and live keys on hausio.co.uk.
   const STRIPE_PUBLISHABLE_KEY_TEST = 'pk_test_51TQYaXBp2mUKaF4LCtsL9tX1IFnbbCWj7PzxyfHLqNeFtptFW14OJtJ4LOaaKs5rSpiF4TR5CYJYxOpl5liyBGfF00kyehqJAg';
-  const STRIPE_PUBLISHABLE_KEY_LIVE = 'pk_live_REPLACE_ME';
+  const STRIPE_PUBLISHABLE_KEY_LIVE = 'pk_live_51TQYaOBINurifU5hOJ3SirOeXMPxjfjuzjYC8sZhzhmTJRxZn3H7mpu5k4VYxMVMnTqXoXQ9jEwD5hNdA8bCXUtZ00m8Gw0Mq5';
   const isProd = location.hostname === 'hausio.co.uk' || location.hostname === 'www.hausio.co.uk';
   // Until the live key is wired in, fall back to the test key on production too so the flow stays demo-able instead of breaking.
   const STRIPE_PUBLISHABLE_KEY = isProd

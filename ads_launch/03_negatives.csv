@@ -1,0 +1,67 @@
+Negative Keyword,Match Type,Reason
+jobs,Broad,Job seekers
+job,Broad,Job seekers
+career,Broad,Job seekers
+careers,Broad,Job seekers
+hiring,Broad,Job seekers
+recruit,Broad,Job seekers
+recruitment,Broad,Job seekers
+vacancy,Broad,Job seekers
+vacancies,Broad,Job seekers
+salary,Broad,Job seekers
+wage,Broad,Job seekers
+cv,Broad,Job seekers
+resume,Broad,Job seekers
+apprenticeship,Broad,Job seekers
+training course,Phrase,Trainees
+training courses,Phrase,Trainees
+diy,Broad,Information seekers
+tutorial,Broad,Information seekers
+how to,Phrase,Information seekers
+guide,Broad,Information seekers
+tips,Broad,Information seekers
+youtube,Broad,Wrong intent
+reddit,Broad,Wrong intent
+forum,Broad,Wrong intent
+blog,Broad,Wrong intent
+wikipedia,Broad,Wrong intent
+template,Broad,DIY seekers
+checklist free,Phrase,Cheap seekers
+quote calculator,Phrase,Researchers
+free,Broad,Cheap seekers
+cheap,Broad,Cheap seekers
+cheapest,Broad,Cheap seekers
+discount only,Phrase,Cheap seekers
+coupon,Broad,Cheap seekers
+voucher only,Phrase,Cheap seekers
+budget,Broad,Cheap seekers
+low cost,Phrase,Cheap seekers
+carpet cleaning,Phrase,Wrong vertical
+window cleaning only,Phrase,Wrong vertical
+gutter cleaning,Phrase,Wrong vertical
+oven cleaning only,Phrase,Wrong vertical
+dry cleaning,Phrase,Wrong vertical
+laundry service,Phrase,Wrong vertical
+car cleaning,Phrase,Wrong vertical
+car wash,Phrase,Wrong vertical
+jet wash,Phrase,Wrong vertical
+pressure wash,Phrase,Wrong vertical
+international removals,Phrase,Wrong vertical
+shipping container,Phrase,Wrong vertical
+storage abroad,Phrase,Wrong vertical
+moving abroad,Phrase,Wrong vertical
+self storage,Phrase,Wrong vertical
+construction company,Phrase,Wrong vertical
+builder needed,Phrase,Wrong vertical
+architect,Broad,Wrong vertical
+gas safe engineer,Phrase,Wrong vertical
+fantastic services,Phrase,Competitor
+anyvan,Broad,Competitor
+pickfords,Broad,Competitor
+britannia movers,Phrase,Competitor
+domestic cleaning agency,Phrase,Competitor
+time to clean,Phrase,Competitor
+housekeep,Broad,Competitor
+handy,Phrase,Competitor
+tasker,Broad,Competitor
+airtasker,Broad,Competitor

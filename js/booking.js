@@ -12,23 +12,12 @@
   let current = 1;
   const maxSteps = 4;
 
-  /* ---------- Stripe config ---------- */
-  // Publishable key is safe to expose. Replace the live key when KYC is approved.
-  // Env-aware: hostname switch keeps test keys on Netlify previews / localhost and live keys on hausio.co.uk.
-  const STRIPE_PUBLISHABLE_KEY_TEST = 'pk_test_51TQYaXBp2mUKaF4LCtsL9tX1IFnbbCWj7PzxyfHLqNeFtptFW14OJtJ4LOaaKs5rSpiF4TR5CYJYxOpl5liyBGfF00kyehqJAg';
-  const STRIPE_PUBLISHABLE_KEY_LIVE = 'pk_live_51TQYaOBINurifU5hOJ3SirOeXMPxjfjuzjYC8sZhzhmTJRxZn3H7mpu5k4VYxMVMnTqXoXQ9jEwD5hNdA8bCXUtZ00m8Gw0Mq5';
-  const isProd = location.hostname === 'hausio.co.uk' || location.hostname === 'www.hausio.co.uk';
-  // Until the live key is wired in, fall back to the test key on production too so the flow stays demo-able instead of breaking.
-  const STRIPE_PUBLISHABLE_KEY = isProd
-    ? (STRIPE_PUBLISHABLE_KEY_LIVE.indexOf('REPLACE_ME') === -1 ? STRIPE_PUBLISHABLE_KEY_LIVE : STRIPE_PUBLISHABLE_KEY_TEST)
-    : STRIPE_PUBLISHABLE_KEY_TEST;
-
-  let stripe = null;
-  let stripeElements = null;
-  let paymentElement = null;
-  let paymentIntentId = null;
-  let paymentReady = false;
-  let paymentInitInFlight = false;
+  /* ---------- Checkout session state ---------- */
+  // The £50 deposit is charged through Stripe-hosted Checkout. The session is
+  // created on /api/checkout-session and we redirect to session.url; the secret
+  // key never touches the browser.
+  const CHECKOUT_STATE_KEY = 'hausio_pending_booking';
+  let checkoutInFlight = false;
 
   /* ---------- Pricing model ---------- */
   const PRICES = {
@@ -92,10 +81,9 @@
     });
     window.scrollTo({ top: document.querySelector('.booking').offsetTop - 80, behavior: 'smooth' });
     track('booking_step', { step_number: n });
-    if (n === maxSteps) initPayment();
   }
 
-  /* ---------- Stripe payment ---------- */
+  /* ---------- Stripe Checkout ---------- */
   function setPaymentError(msg) {
     const el = document.getElementById('payment-error');
     if (!el) return;
@@ -104,99 +92,45 @@
     el.textContent = msg;
   }
 
-  async function initPayment() {
-    if (paymentReady || paymentInitInFlight) return;
-    if (typeof window.Stripe !== 'function') return; // Stripe.js not loaded yet
-    if (!STRIPE_PUBLISHABLE_KEY || /REPLACE_ME/i.test(STRIPE_PUBLISHABLE_KEY)) {
-      setPaymentError('Payment is not configured yet. Please call us on +44 7304 330 614 to book.');
-      return;
+  function buildBookingPayload() {
+    const formData = new FormData(form);
+    const chosenService = form.querySelector('input[name="service"]:checked');
+    const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
+    const totalNum = Number(totalStr) || 0;
+
+    const isMove = chosenService && chosenService.value === 'removals';
+    const checkoutPayload = {
+      service: chosenService ? chosenService.value : '',
+      fullName: formData.get('name') || '',
+      email: formData.get('email') || '',
+      phone: formData.get('phone') || '',
+      postcode: formData.get('postcode') || '',
+      address: formData.get('address') || '',
+      date: formData.get('date') || '',
+      time: formData.get('time') || '',
+      frequency: formData.get('frequency') || '',
+      estimatedTotal: '£' + totalNum,
+    };
+    if (isMove) {
+      checkoutPayload.dropoffPostcode = formData.get('dropoff-postcode') || '';
+      checkoutPayload.dropoffAddress = formData.get('dropoff-address') || '';
+      checkoutPayload.pickupFloor = formData.get('pickup-floor') || '';
+      checkoutPayload.pickupLift = formData.get('pickup-lift') || '';
+      checkoutPayload.dropoffFloor = formData.get('dropoff-floor') || '';
+      checkoutPayload.dropoffLift = formData.get('dropoff-lift') || '';
     }
-    paymentInitInFlight = true;
 
-    try {
-      const formData = new FormData(form);
-      const chosenService = form.querySelector('input[name="service"]:checked');
-      const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
+    const formSubmitPayload = {};
+    formData.forEach((v, k) => { formSubmitPayload[k] = v; });
+    formSubmitPayload['estimated-total'] = '£' + totalNum;
+    formSubmitPayload['deposit-paid'] = '£50';
+    formSubmitPayload['submitted-from'] = location.href;
+    formSubmitPayload._subject = 'New Hausio booking: ' + (checkoutPayload.service || 'unknown') + ' · £' + totalNum + ' · deposit paid';
+    formSubmitPayload._template = 'table';
+    formSubmitPayload._captcha = 'false';
+    formSubmitPayload._cc = 'serfer7501@gmail.com';
 
-      const isMove = chosenService && chosenService.value === 'removals';
-      const payload = {
-        service: chosenService ? chosenService.value : '',
-        fullName: formData.get('name') || '',
-        email: formData.get('email') || '',
-        phone: formData.get('phone') || '',
-        postcode: formData.get('postcode') || '',
-        address: formData.get('address') || '',
-        date: formData.get('date') || '',
-        time: formData.get('time') || '',
-        frequency: formData.get('frequency') || '',
-        estimatedTotal: '£' + (Number(totalStr) || 0),
-      };
-      if (isMove) {
-        payload.dropoffPostcode = formData.get('dropoff-postcode') || '';
-        payload.dropoffAddress = formData.get('dropoff-address') || '';
-        payload.pickupFloor = formData.get('pickup-floor') || '';
-        payload.pickupLift = formData.get('pickup-lift') || '';
-        payload.dropoffFloor = formData.get('dropoff-floor') || '';
-        payload.dropoffLift = formData.get('dropoff-lift') || '';
-      }
-
-      const resp = await fetch('/api/payment-intent', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      if (!resp.ok) {
-        const text = await resp.text().catch(() => '');
-        throw new Error('Payment setup failed (HTTP ' + resp.status + ') ' + text.slice(0, 200));
-      }
-      const data = await resp.json();
-      if (!data.clientSecret) throw new Error('Payment setup did not return a client secret.');
-      paymentIntentId = data.paymentIntentId;
-
-      stripe = window.Stripe(STRIPE_PUBLISHABLE_KEY);
-      stripeElements = stripe.elements({
-        clientSecret: data.clientSecret,
-        appearance: {
-          theme: 'flat',
-          variables: {
-            colorPrimary: '#1f1f1f',
-            colorBackground: '#ffffff',
-            colorText: '#1f1f1f',
-            colorDanger: '#b13030',
-            fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
-            spacingUnit: '4px',
-            borderRadius: '8px',
-          },
-        },
-      });
-      paymentElement = stripeElements.create('payment', { layout: { type: 'tabs', defaultCollapsed: false } });
-      paymentElement.mount('#payment-element');
-      paymentReady = true;
-      track('add_payment_info', { value: 50, currency: 'GBP' });
-    } catch (err) {
-      setPaymentError(err.message || 'Could not initialise payment. Please try again or call us.');
-      track('payment_init_error', { error: String(err && err.message || err) });
-    } finally {
-      paymentInitInFlight = false;
-    }
-  }
-
-  async function confirmPaymentBeforeSubmit() {
-    if (!paymentReady || !stripe || !stripeElements) {
-      throw new Error('Payment is still loading — please wait a second and try again.');
-    }
-    setPaymentError('');
-    const result = await stripe.confirmPayment({
-      elements: stripeElements,
-      redirect: 'if_required',
-      confirmParams: {
-        return_url: location.origin + '/book.html?payment=return',
-      },
-    });
-    if (result.error) {
-      throw new Error(result.error.message || 'Payment was declined.');
-    }
-    return result.paymentIntent;
+    return { checkoutPayload, formSubmitPayload, totalNum, service: checkoutPayload.service };
   }
 
   function showSuccess() {
@@ -396,75 +330,117 @@
       alert('Please accept the terms to continue.');
       return;
     }
+    if (checkoutInFlight) return;
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalLabel = submitBtn ? submitBtn.textContent : '';
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Processing payment…'; }
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Redirecting to secure payment…'; }
     setPaymentError('');
+    checkoutInFlight = true;
 
-    const chosenService = form.querySelector('input[name="service"]:checked');
-    const serviceVal = chosenService ? chosenService.value : '';
-    const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
-    const totalNum = Number(totalStr) || 0;
+    const { checkoutPayload, formSubmitPayload, totalNum, service: serviceVal } = buildBookingPayload();
 
-    let paidIntent = null;
+    // Persist booking details for the post-payment success page so we can render
+    // the confirmation, fire conversion events, and email the team after the
+    // Stripe redirect.
     try {
-      paidIntent = await confirmPaymentBeforeSubmit();
+      sessionStorage.setItem(CHECKOUT_STATE_KEY, JSON.stringify({
+        formSubmitPayload,
+        service: serviceVal,
+        total: totalNum,
+        savedAt: Date.now(),
+      }));
     } catch (err) {
-      setPaymentError(err.message || 'Payment failed. Please try a different card.');
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel || 'Pay £50 deposit & confirm →'; }
-      track('payment_failed', { error: String(err && err.message || err) });
+      // sessionStorage can throw in private modes; the booking still works,
+      // we just lose the FormSubmit notification on return.
+    }
+
+    track('add_payment_info', { value: 50, currency: 'GBP', service: serviceVal });
+
+    try {
+      const resp = await fetch('/api/checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(checkoutPayload),
+      });
+      if (!resp.ok) {
+        const text = await resp.text().catch(() => '');
+        throw new Error('Checkout setup failed (HTTP ' + resp.status + ') ' + text.slice(0, 200));
+      }
+      const data = await resp.json();
+      if (!data.url) throw new Error('Checkout did not return a redirect URL.');
+      window.location.assign(data.url);
+    } catch (err) {
+      setPaymentError(err.message || 'Could not start checkout. Please try again or call us.');
+      track('payment_init_error', { error: String(err && err.message || err) });
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel || 'Pay £50 deposit securely →'; }
+      checkoutInFlight = false;
+    }
+  });
+
+  /* ---------- Return from Stripe Checkout ---------- */
+  async function handleCheckoutReturn() {
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get('payment');
+    if (!status) return;
+
+    if (status === 'cancelled') {
+      setPaymentError('Payment was cancelled. Your booking is not confirmed yet — please try again.');
+      track('payment_failed', { reason: 'cancelled' });
+      // Strip the query so a refresh doesn't keep showing the banner.
+      history.replaceState(null, '', location.pathname);
       return;
     }
+
+    if (status !== 'success') return;
+
+    let stored = null;
+    try {
+      const raw = sessionStorage.getItem(CHECKOUT_STATE_KEY);
+      stored = raw ? JSON.parse(raw) : null;
+    } catch (err) {
+      stored = null;
+    }
+
+    const sessionId = params.get('session_id') || '';
+    const serviceVal = (stored && stored.service) || '';
+    const totalNum = (stored && Number(stored.total)) || 0;
+
     track('purchase', {
-      transaction_id: (paidIntent && paidIntent.id) || paymentIntentId || '',
+      transaction_id: sessionId,
       value: 50,
       currency: 'GBP',
       items: [{ item_name: 'Hausio booking deposit', item_category: serviceVal, quantity: 1, price: 50 }],
     });
-
-    if (submitBtn) submitBtn.textContent = 'Submitting…';
-
-    const payload = {};
-    const formData = new FormData(form);
-    formData.forEach((v, k) => { payload[k] = v; });
-    payload['estimated-total'] = '£' + totalNum;
-    payload['deposit-paid'] = '£50';
-    payload['stripe-payment-intent'] = (paidIntent && paidIntent.id) || paymentIntentId || '';
-    payload['submitted-from'] = location.href;
-    payload._subject = 'New Hausio booking: ' + (serviceVal || 'unknown') + ' · £' + totalNum + ' · deposit paid';
-    payload._template = 'table';
-    payload._captcha = 'false';
-    // Proton is the activated primary recipient for booking notifications; Gmail stays on _cc
-    // as a personal backup in case Proton ever bounces or filters us into spam silently.
-    payload._cc = 'serfer7501@gmail.com';
-
-    // Once the deposit is captured the booking is real even if the email notification fails —
-    // every field already lives on the Stripe PaymentIntent metadata, so the success screen is
-    // the right thing to show, and the FormSubmit hiccup just gets reported in analytics.
     track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
     track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
     showSuccess();
 
-    try {
-      const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
+    if (stored && stored.formSubmitPayload) {
+      const payload = Object.assign({}, stored.formSubmitPayload, {
+        'stripe-checkout-session': sessionId,
       });
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const data = await resp.json().catch(() => ({}));
-      if (data && data.success === 'false') throw new Error(data.message || 'FormSubmit error');
-    } catch (err) {
-      track('booking_email_error', {
-        error: String(err && err.message || err),
-        payment_intent: (paidIntent && paidIntent.id) || paymentIntentId || '',
-      });
+      try {
+        const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const data = await resp.json().catch(() => ({}));
+        if (data && data.success === 'false') throw new Error(data.message || 'FormSubmit error');
+      } catch (err) {
+        track('booking_email_error', {
+          error: String(err && err.message || err),
+          checkout_session: sessionId,
+        });
+      }
     }
-  });
+
+    try { sessionStorage.removeItem(CHECKOUT_STATE_KEY); } catch (_) { /* ignore */ }
+    history.replaceState(null, '', location.pathname);
+  }
+  handleCheckoutReturn();
 
   /* ---------- Prefill from URL ---------- */
   const params = new URLSearchParams(window.location.search);

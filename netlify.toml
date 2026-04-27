@@ -7,6 +7,11 @@
 
 # Friendlier paths for the Stripe endpoints
 [[redirects]]
+  from = "/api/checkout-session"
+  to = "/.netlify/functions/create-checkout-session"
+  status = 200
+
+[[redirects]]
   from = "/api/payment-intent"
   to = "/.netlify/functions/create-payment-intent"
   status = 200

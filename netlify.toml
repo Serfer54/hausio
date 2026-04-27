@@ -15,3 +15,8 @@
   from = "/api/stripe-webhook"
   to = "/.netlify/functions/stripe-webhook"
   status = 200
+
+[[redirects]]
+  from = "/api/check-apple-pay"
+  to = "/.netlify/functions/check-apple-pay"
+  status = 200

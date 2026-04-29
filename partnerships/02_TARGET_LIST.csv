@@ -1,0 +1,47 @@
+borough,agent_brand,branch,address,phone,segment,priority,branch_manager_lookup,notes
+Camden,Foxtons,Camden,164-167 Camden High Street NW1 0NU,020 7428 7300,corporate,1,linkedin foxtons camden branch manager,High EoT volume — student leases UCL/RVC. Pitch June + September peak.
+Camden,Dexters,Camden,89 Bayham Street NW1 0AG,020 3372 9120,corporate,1,linkedin dexters camden,Multi-branch chain. Approach via head of branches first.
+Camden,Knight Frank,Hampstead,4 Heath Street NW3 6TE,020 7431 8686,premium,2,linkedin knight frank hampstead,Premium NW3 — focus marble-friendly cleaning.
+Camden,Hamptons,Hampstead,7 Perrins Court NW3 1QS,020 7717 5474,premium,2,linkedin hamptons hampstead,Affluent. Strategic-tier potential.
+Camden,Currell,Camden,162 Royal College Street NW1 0SP,020 7424 1144,boutique,1,call branch ask for manager,Independent. Faster decision-making — easier first sale.
+Camden,Winkworth,Kentish Town,2 Highgate Road NW5 1NJ,020 7485 9210,boutique,2,call branch ask for manager,Owner-operator branch.
+Camden,Greene & Co,Camden,46 Camden High Street NW1 0LU,020 7388 1500,boutique,2,call branch ask for manager,Local independent.
+Camden,Black Katz,Camden,Various NW1 NW3 NW5,020 7794 1414,boutique,1,call branch ask for manager,Camden specialist boutique. High-touch service angle.
+Hackney,Foxtons,Shoreditch,71-73 Curtain Road EC2A 3PT,020 7426 7400,corporate,1,linkedin foxtons shoreditch,High HMO turnover.
+Hackney,Foxtons,Hackney Central,367 Mare Street E8 1HY,020 8533 9988,corporate,1,linkedin foxtons hackney,Highest E8 EoT volume in chain.
+Hackney,Currell,Hackney,12 Stoke Newington Church Street N16 0LU,020 7359 9777,boutique,1,call branch ask for manager,Independent — N16 / E8 specialist.
+Hackney,Stirling Ackroyd,Shoreditch,46 Old Street EC1V 9AS,020 7549 0700,corporate,1,linkedin stirling ackroyd shoreditch,Tech-property focus. Warehouse conversions.
+Hackney,Stirling Ackroyd,Bethnal Green,1 Cambridge Heath Road E1 5LL,020 7613 4555,corporate,2,linkedin stirling ackroyd bethnal,High HMO volume.
+Hackney,M&M Property,Stoke Newington,127 Stoke Newington Church Street N16 0UH,020 7923 7700,boutique,2,call branch ask for manager,Independent — specialist N16.
+Hackney,Hunters,Hackney,Multiple branches E8 N16,020 8533 9876,corporate,2,linkedin hunters hackney,National chain.
+Hackney,Keatons,Hackney,55 Mare Street E8 4RP,020 7012 1500,boutique,2,call branch ask for manager,East London independent.
+Islington,Foxtons,Angel,Camden Passage N1 8DY,020 7704 5022,corporate,1,linkedin foxtons angel,High EoT — King's Cross redev catchment.
+Islington,Foxtons,Highbury,29 Upper Street N1 0PJ,020 7704 6600,corporate,1,linkedin foxtons highbury,N5 family + young pro mix.
+Islington,Currell,Islington,321 Upper Street N1 2XQ,020 7226 4200,boutique,1,call branch ask for manager,Independent — strong Canonbury/Barnsbury Georgian listings.
+Islington,Hamptons,Islington,148 Upper Street N1 1RA,020 7226 8333,premium,2,linkedin hamptons islington,Premium.
+Islington,Knight Frank,Islington,346 Upper Street N1 0PD,020 3641 6890,premium,2,linkedin knight frank islington,Premium — listed Georgian focus.
+Islington,Winkworth,Islington,103 Upper Street N1 1QN,020 7359 1188,boutique,2,call branch ask for manager,Owner-operator.
+Islington,Daniels,Islington,156 Holloway Road N7 8DD,020 7607 7660,boutique,2,call branch ask for manager,N7 specialist.
+Islington,Holland Estates,Clerkenwell,5-9 Eyre Street Hill EC1R 5ET,020 7833 1000,corporate,2,linkedin holland estates,EC1 commercial-residential mix.
+Wandsworth,Foxtons,Battersea,38 Battersea Park Road SW11 4NN,020 7228 9000,corporate,1,linkedin foxtons battersea,Battersea Power Station catchment.
+Wandsworth,Foxtons,Clapham,2 The Pavement SW4 0JA,020 7720 8077,corporate,1,linkedin foxtons clapham,Nappy Valley — high family clean volume.
+Wandsworth,Foxtons,Putney,131 Putney High Street SW15 1SR,020 8780 0000,corporate,1,linkedin foxtons putney,SW15 Putney Bridge specialist.
+Wandsworth,John D Wood,Battersea,79 Northcote Road SW11 6PJ,020 7228 0174,premium,1,linkedin john d wood battersea,Premium Northcote Road — Nappy Valley.
+Wandsworth,Marsh & Parsons,Battersea,113 Northcote Road SW11 6PW,020 7223 6655,premium,2,linkedin marsh parsons battersea,Local specialist.
+Wandsworth,Marsh & Parsons,Clapham,1 The Pavement SW4 0HY,020 7501 3000,premium,2,linkedin marsh parsons clapham,Clapham specialist.
+Wandsworth,Marsh & Parsons,Balham,67-69 Balham High Road SW12 9AY,020 8772 1700,premium,2,linkedin marsh parsons balham,SW12 Balham specialist.
+Wandsworth,Hamptons,Wandsworth,5 Bellevue Road SW17 7EG,020 8682 6900,premium,2,linkedin hamptons wandsworth,Premium SW17/SW18.
+Wandsworth,Daniel Cobb,Battersea,83 Northcote Road SW11 6PJ,020 7228 0174,boutique,1,call branch ask for manager,Independent boutique.
+Wandsworth,Stones,Battersea,148 Battersea Park Road SW11 4NB,020 7501 3000,boutique,2,call branch ask for manager,Local independent.
+Westminster,Foxtons,Marylebone,82-84 Marylebone High Street W1U 4PZ,020 7935 8000,corporate,1,linkedin foxtons marylebone,W1 EoT — high mansion block volume.
+Westminster,Foxtons,Pimlico,32 Belgrave Road SW1V 1RG,020 7821 8000,corporate,1,linkedin foxtons pimlico,SW1 stuccos.
+Westminster,Knight Frank,Mayfair,55 Baker Street W1U 8AN,020 7861 1717,premium,1,linkedin knight frank mayfair,Mayfair townhouses — listed buildings.
+Westminster,Knight Frank,Belgravia,82 Brompton Road SW1X 7BA,020 3641 5959,premium,1,linkedin knight frank belgravia,Belgravia mansion-blocks. Strategic tier.
+Westminster,Savills,Mayfair,33 Margaret Street W1G 0JD,020 7499 8644,premium,1,linkedin savills mayfair,Premium W1 — strategic tier potential.
+Westminster,Savills,Pimlico,139 Sloane Street SW1X 9AY,020 7730 0822,premium,2,linkedin savills pimlico,SW1.
+Westminster,Hamptons,Marylebone,16 Devonshire Street W1G 7AF,020 7493 6932,premium,2,linkedin hamptons marylebone,Premium.
+Westminster,Chestertons,Bayswater,75-77 Westbourne Grove W2 4UL,020 7298 5900,premium,2,linkedin chestertons bayswater,W2 mansion blocks.
+Westminster,Strutt & Parker,Mayfair,13 Hill Street W1J 5LQ,020 7629 7282,premium,2,linkedin strutt parker mayfair,Premium W1.
+Westminster,Lurot Brand,Mayfair,99 Mount Street W1K 2TF,020 7629 0303,boutique,2,call branch ask for manager,Mayfair mews specialist boutique. Niche fit.
+Westminster,Druce,Marylebone,9 Wigmore Street W1U 1RP,020 7935 9512,boutique,2,call branch ask for manager,Independent W1.
+Westminster,Best Gapp,Belgravia,81 Elizabeth Street SW1W 9PJ,020 7730 9253,boutique,2,call branch ask for manager,Belgravia specialist. Diplomatic / HNW network.

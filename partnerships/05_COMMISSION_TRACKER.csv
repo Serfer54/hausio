@@ -1,0 +1,11 @@
+partner_branch,referral_code,booking_id,booking_date,clean_completed_date,service_type,property_type,gross_value_gbp,commission_rate,commission_gbp,paid_date,bacs_reference,notes
+EXAMPLE_Foxtons_Camden,FOX-CAM,2026-001,2026-05-15,2026-05-18,end_of_tenancy,2_bed_flat,320,0.20,64,2026-06-05,FOX-CAM-202605,first referral
+EXAMPLE_Currell_Islington,CUR-ISL,2026-002,2026-05-17,2026-05-20,deep_clean,3_bed_house,450,0.22,99,2026-06-05,CUR-ISL-202605,Preferred tier upgrade triggered after 30 cleans
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,

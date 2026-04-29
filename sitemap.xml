@@ -84,6 +84,40 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://hausio.co.uk/blog/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hausio.co.uk/blog/end-of-tenancy-cleaning-london-cost-2026.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/service-cleaning.jpg</image:loc>
+      <image:title>End of tenancy cleaning London 2026 price guide</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hausio.co.uk/blog/london-ulez-congestion-charge-cleaning-removals-2026.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hausio.co.uk/blog/renters-rights-act-end-of-tenancy-cleaning-2026.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hausio.co.uk/blog/spring-deep-clean-checklist-london-2026.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hausio.co.uk/book.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>

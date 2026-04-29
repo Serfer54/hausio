@@ -1725,3 +1725,106 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   border-bottom-color: var(--gold);
 }
 
+/* ---------- Blog ---------- */
+.blog-article {
+  padding: 32px 28px 64px;
+  max-width: 760px;
+}
+.blog-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.blog-header h1 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin: 8px 0 18px;
+}
+.blog-header .lede {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: 18px;
+}
+.blog-meta {
+  font-size: .85rem;
+  color: var(--muted);
+  letter-spacing: .04em;
+  margin: 0 0 6px;
+  font-style: italic;
+}
+
+.blog-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.blog-content h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+  margin: 44px 0 16px;
+  letter-spacing: .005em;
+}
+.blog-content h3 {
+  font-size: 1.2rem;
+  margin: 32px 0 12px;
+  font-weight: 500;
+}
+.blog-content p { margin: 0 0 1.1em; }
+.blog-content ul, .blog-content ol {
+  margin: 0 0 1.4em 1.4em;
+  padding: 0;
+}
+.blog-content li {
+  margin-bottom: .5em;
+  line-height: 1.6;
+}
+.blog-content a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  transition: border-color .2s ease, color .2s ease;
+}
+.blog-content a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+.blog-content strong { font-weight: 600; }
+.blog-content em { font-style: italic; }
+
+.blog-content .price-grid {
+  margin: 32px 0;
+}
+.blog-content .why-list {
+  margin-left: 0;
+}
+
+.blog-cta {
+  max-width: 760px;
+  margin: 56px auto;
+  padding: 36px 32px;
+  background: var(--linen);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+.blog-cta h2 {
+  font-size: 1.5rem;
+  margin: 0 0 12px;
+}
+.blog-cta p {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
+/* Blog hub grid uses .service-grid but tweaks card text-alignment */
+.blog-grid .service-card {
+  text-align: left;
+}
+.blog-grid .service-card h3 {
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin-top: 6px;
+}
+.blog-grid .service-card .blog-meta {
+  margin-bottom: 10px;
+}
+

@@ -102,6 +102,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "addressRegion": "Greater London",
         "addressCountry": "GB"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.50735,
+        "longitude": -0.12776
+      },
       "areaServed": [
         { "@type": "City", "name": "London" },
         { "@type": "AdministrativeArea", "name": "Greater London" }
@@ -180,10 +185,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "How much do home services cost in London?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hausio London prices: cleaning from £22/hour (regular), £28/hour (deep), £32/hour (end-of-tenancy). Removals from £55/hour (1 man + van), £85/hour (2 men + van). Handyman £65 first hour, £50/hour after, with half-day at £215 and full-day at £395. All inclusive of insurance, supplies and equipment. Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover all 32 London boroughs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Hausio covers all 32 London boroughs and the City of London. Same-day availability is best in Zones 1–3 (central). For Zones 4–6 we recommend booking at least 24 hours ahead. Within the M25, pickup and drop-off are included in the hourly rate; outside the M25 we charge £1.20 per mile each way."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Are your team members vetted and insured?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Every Hausio team member is DBS-checked, interviewed in person, and we carry £2M public liability insurance on every job."
+            "text": "Yes. Every Hausio team member is DBS-checked, interviewed in person, reference-verified, and we carry £2M public liability insurance plus £25,000 goods-in-transit cover on every job."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a same-day Hausio booking in London?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same-day bookings made before 11:00 are usually fulfilled the same afternoon in central London (Zones 1–3). A £15 same-day surcharge applies. For guaranteed availability, book at least 24 hours in advance via hausio.co.uk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you charge extra inside the Congestion Charge zone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge. This bundles the £15 daily Congestion Charge plus ULEZ for the day, regardless of how many trips. Every Hausio van is Euro 6 ULEZ-compliant — no surprise non-compliance fines on your invoice."
           }
         },
         {
@@ -191,7 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "name": "What if I need to cancel or reschedule?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Free cancellation up to noon the day before. Same-day cancellations carry a 50% fee to cover our team's time."
+            "text": "Free cancellation up to noon the day before. Same-day cancellations carry a 50% fee to cover our team's time. Rescheduling is free at any notice — we always try to swap your slot rather than cancel."
           }
         },
         {
@@ -199,15 +236,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "name": "Do I need to provide cleaning supplies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No — we bring eco-friendly products and all equipment. If you'd prefer we use your own, just select 'I'll provide my own' when booking (saves £15)."
+            "text": "No — we bring eco-friendly EU Ecolabel products and all equipment. If you'd prefer we use your own (for sensitivities or sustainability reasons), tick 'I'll provide my own' when booking and we deduct £15 from the total."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I pay?",
+          "name": "How do I pay Hausio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Securely by card after the job is completed. No upfront payment, no cash required."
+            "text": "A £50 refundable deposit holds your slot at booking, paid by Apple Pay, Google Pay or card. The balance is settled by card after the job is complete — no cash required, no upfront full payment."
           }
         }
       ]
@@ -290,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="service-photo">
           <img src="assets/service-cleaning.jpg" alt="Hausio professional cleaning service" loading="lazy" />
         </div>
-        <h3>Cleaning</h3>
+        <h3><a href="cleaning-london.html">Cleaning</a></h3>
         <p>Regular, one-off, deep and end-of-tenancy cleaning by vetted professionals using eco-friendly products.</p>
         <ul class="service-list">
           <li>Regular weekly & fortnightly</li>
@@ -306,7 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="service-photo">
           <img src="assets/service-removals.jpg" alt="Hausio removals team with branded van in London" loading="lazy" />
         </div>
-        <h3>Removals</h3>
+        <h3><a href="removals-london.html">Removals</a></h3>
         <p>Man & van, flat moves, office relocations and single-item delivery across London — careful, punctual, fully insured.</p>
         <ul class="service-list">
           <li>Man & van hire</li>
@@ -322,7 +359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="service-photo">
           <img src="assets/service-handyman.jpg" alt="Hausio handyman service" loading="lazy" />
         </div>
-        <h3>Handyman</h3>
+        <h3><a href="handyman-london.html">Handyman</a></h3>
         <p>Repairs, assembly, mounting, small plumbing and electrical jobs — everything on your "to fix" list, handled in one visit.</p>
         <ul class="service-list">
           <li>Furniture assembly</li>
@@ -440,16 +477,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<section class="coverage">
+<section class="coverage" id="coverage">
   <div class="container">
     <header class="section-head">
       <p class="eyebrow">Coverage</p>
+      <p class="section-lede">Borough pages with local intelligence — parking, listed-building rules, lift bookings, what we do most.</p>
     </header>
+    <div class="area-links">
+      <a href="areas/camden.html">Camden →</a>
+      <a href="areas/hackney.html">Hackney →</a>
+      <a href="areas/islington.html">Islington →</a>
+      <a href="areas/wandsworth.html">Wandsworth →</a>
+      <a href="areas/westminster.html">Westminster →</a>
+    </div>
   </div>
   <div class="ticker-wrap">
     <div class="ticker">
       <span>Central London</span><span>Islington</span><span>Camden</span><span>Hackney</span><span>Shoreditch</span><span>Kensington</span><span>Chelsea</span><span>Notting Hill</span><span>Clapham</span><span>Battersea</span><span>Fulham</span><span>Hammersmith</span><span>Wandsworth</span><span>Greenwich</span><span>Canary Wharf</span><span>Stratford</span><span>Wimbledon</span><span>Richmond</span><span>Ealing</span><span>Brixton</span><span>Peckham</span><span>Dulwich</span><span>Maida Vale</span><span>Paddington</span>
       <span>Central London</span><span>Islington</span><span>Camden</span><span>Hackney</span><span>Shoreditch</span><span>Kensington</span><span>Chelsea</span><span>Notting Hill</span><span>Clapham</span><span>Battersea</span><span>Fulham</span><span>Hammersmith</span><span>Wandsworth</span><span>Greenwich</span><span>Canary Wharf</span><span>Stratford</span><span>Wimbledon</span><span>Richmond</span><span>Ealing</span><span>Brixton</span><span>Peckham</span><span>Dulwich</span><span>Maida Vale</span><span>Paddington</span>
+    </div>
+  </div>
+  <div class="container map-wrap">
+    <div class="map-frame" id="coverage-map" data-src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d158859.7!2d-0.187!3d51.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" aria-label="Map of Greater London — Hausio coverage area">
+      <noscript><a href="https://www.google.com/maps/place/London/" rel="noopener">View Hausio's London coverage on Google Maps</a></noscript>
     </div>
   </div>
 </section>
@@ -461,20 +511,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
     <div class="faq-list">
       <details>
+        <summary>How much do home services cost in London?</summary>
+        <p>Hausio London prices: cleaning from £22/hr (regular), £28/hr (deep), £32/hr (end-of-tenancy). Removals from £55/hr (1 man + van), £85/hr (2 men + van). Handyman £65 first hour, £50/hr after, with half-day at £215 and full-day at £395. All-inclusive of insurance, supplies and equipment. Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge.</p>
+      </details>
+      <details>
+        <summary>Do you cover all 32 London boroughs?</summary>
+        <p>Yes — Hausio covers all 32 London boroughs and the City of London. Same-day availability is best in Zones 1–3 (central). For Zones 4–6 we recommend booking 24 hours ahead. Within the M25, pickup and drop-off are included in the hourly rate; outside the M25 we charge £1.20 per mile each way.</p>
+      </details>
+      <details>
         <summary>Are your team members vetted and insured?</summary>
-        <p>Yes. Every Hausio team member is DBS-checked, interviewed in person, and we carry £2M public liability insurance on every job.</p>
+        <p>Yes. Every Hausio team member is DBS-checked, interviewed in person, reference-verified, and we carry £2M public liability insurance plus £25,000 goods-in-transit cover on every job.</p>
+      </details>
+      <details>
+        <summary>Can I get a same-day Hausio booking in London?</summary>
+        <p>Same-day bookings made before 11:00 are usually fulfilled the same afternoon in Zones 1–3. A £15 same-day surcharge applies. For guaranteed availability, book at least 24 hours in advance.</p>
+      </details>
+      <details>
+        <summary>Do you charge extra inside the Congestion Charge zone?</summary>
+        <p>Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge. This bundles the £15 daily Congestion Charge plus ULEZ for the day. Every Hausio van is Euro 6 ULEZ-compliant — no surprise non-compliance fines on your invoice.</p>
       </details>
       <details>
         <summary>What if I need to cancel or reschedule?</summary>
-        <p>Free cancellation up to noon the day before. Same-day cancellations carry a 50% fee to cover our team's time.</p>
+        <p>Free cancellation up to noon the day before. Same-day cancellations carry a 50% fee to cover our team's time. Rescheduling is free at any notice — we always try to swap your slot rather than cancel.</p>
       </details>
       <details>
         <summary>Do I need to provide cleaning supplies?</summary>
-        <p>No — we bring eco-friendly products and all equipment. If you'd prefer we use your own, just select "I'll provide my own" when booking (saves £15).</p>
+        <p>No — we bring eco-friendly EU Ecolabel products and all equipment. If you'd prefer we use your own (for sensitivities or sustainability reasons), tick "I'll provide my own" when booking and we deduct £15 from the total.</p>
       </details>
       <details>
-        <summary>How do I pay?</summary>
-        <p>Securely by card after the job is completed. No upfront payment, no cash required.</p>
+        <summary>How do I pay Hausio?</summary>
+        <p>A £50 refundable deposit holds your slot at booking, paid by Apple Pay, Google Pay or card. The balance is settled by card after the job is complete — no cash required, no upfront full payment.</p>
       </details>
     </div>
   </div>
@@ -505,18 +571,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <h4>Services</h4>
       <ul>
-        <li><a href="book.html?service=cleaning">Cleaning</a></li>
-        <li><a href="book.html?service=removals">Removals</a></li>
-        <li><a href="book.html?service=handyman">Handyman</a></li>
+        <li><a href="cleaning-london.html">Cleaning</a></li>
+        <li><a href="removals-london.html">Removals</a></li>
+        <li><a href="handyman-london.html">Handyman</a></li>
       </ul>
     </div>
     <div>
-      <h4>Company</h4>
+      <h4>Areas</h4>
       <ul>
-        <li><a href="#why">About us</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="areas/camden.html">Camden</a></li>
+        <li><a href="areas/hackney.html">Hackney</a></li>
+        <li><a href="areas/islington.html">Islington</a></li>
+        <li><a href="areas/wandsworth.html">Wandsworth</a></li>
+        <li><a href="areas/westminster.html">Westminster</a></li>
       </ul>
     </div>
     <div>

@@ -1,0 +1,35 @@
+tier,priority,platform,submission_url,da,sab_friendly,verification_method,effort_min,status,profile_url,date_submitted,date_verified,nap_match,notes
+1,1,Google Business Profile,https://business.google.com/create,100,yes,postcard or video,30,pending,,,,,Primary local pack signal — do first
+1,2,Bing Places for Business,https://www.bingplaces.com/,95,yes,phone or postcard,15,pending,,,,,Powers ChatGPT + Copilot. Import from GBP if possible
+1,3,Apple Business Connect,https://businessconnect.apple.com/,100,yes,email + phone,20,pending,,,,,Powers Apple Maps + Siri
+1,4,Yell.com,https://www.yell.com/,80,yes,phone,20,pending,,,,,UK #1 directory
+1,5,Yelp UK,https://biz.yelp.co.uk/signup,91,yes,phone,15,pending,,,,,Critical for ChatGPT scraping
+1,6,Trustpilot,https://business.trustpilot.com/signup,92,yes,domain ownership,20,pending,,,,,Free tier 100 review invites/mo
+1,7,Facebook Business Page,https://www.facebook.com/business/pages/set-up,100,yes,phone,30,pending,,,,,Allows Book Now CTA to /book.html
+2,8,FreeIndex.co.uk,https://www.freeindex.co.uk/add_business.htm,53,yes,email,15,pending,,,,,Use XL description
+2,9,Cylex UK,https://www.cylex-uk.co.uk/Account/Register,51,yes,email,15,pending,,,,,Auto-distributes
+2,10,Hotfrog UK,https://www.hotfrog.co.uk/AddYourBusiness.aspx,60,yes,email,15,pending,,,,,Feeds data aggregator chain
+2,11,Scoot.co.uk,https://www.scoot.co.uk/add-business,58,yes,phone,15,pending,,,,,One submission = 4 listings
+2,12,Thomson Local,https://www.thomsonlocal.com/add-business,56,yes,phone,15,pending,,,,,Mostly nofollow
+2,13,192.com,https://www.192.com/business-directory/,73,yes,email,15,pending,,,,,Strong UK trust score
+2,14,The Sun Local,https://www.thesun.co.uk/local/,78,yes,email,20,pending,,,,,Find borough page first
+2,15,Tupalo,https://tupalo.com/en/london/businesses/add,50,yes,email,10,pending,,,,,Quick add
+2,16,Brownbook.net,https://www.brownbook.net/business/add,44,yes,email,10,pending,,,,,Lower quality
+2,17,AskMap.net,https://www.askmap.net/AddListing.aspx,35,yes,email,10,pending,,,,,Optional
+2,18,N49,https://www.n49.com/find/index/londonuk,45,yes,email,15,pending,,,,,UK local pack
+2,19,EnRoll Business,https://www.enrollbusiness.com/,41,yes,email,10,pending,,,,,Multi-country
+3,20,Bark.com,https://www.bark.com/en/gb/seller-signup/,67,yes,phone + ID,30,pending,,,,,Set lead budget to £0 initially
+3,21,MyBuilder,https://www.mybuilder.com/signup-tradesman,64,yes,ID + insurance,45,pending,,,,,Best for handyman + gardening
+3,22,Rated People,https://www.ratedpeople.com/sign-up/tradesperson,60,yes,ID + insurance,45,pending,,,,,Similar to MyBuilder
+3,23,Checkatrade Search,https://www.checkatrade.com/join,71,yes,phone,30,pending,,,,,Free Search-only profile available
+3,24,Plentific,https://www.plentific.com/uk/become-a-pro,52,yes,ID,30,pending,,,,,Property services focus
+3,25,Bidvine,https://www.bidvine.com/pro-signup,49,yes,email,20,pending,,,,,Multi-service
+3,26,AnyVan,https://www.anyvan.com/become-a-driver,71,yes,ID + vehicle docs,45,pending,,,,,Removals only
+3,27,Helpling UK,https://www.helpling.co.uk/cleaner-signup,55,yes,ID,45,pending,,,,,Marketplace - check commercial fit
+4,28,Nextdoor for Business,https://business.nextdoor.com/local-deals/login,89,yes,community membership,30,pending,,,,,Requires existing personal Nextdoor account
+4,29,Open Camden,https://opencamden.com/,38,yes,email,15,pending,,,,,Borough-level
+4,30,Hackney business directory,search hackney business directory,35,yes,email,15,pending,,,,,Find official council site
+4,31,Westminster business directory,search westminster business directory,40,yes,email,15,pending,,,,,Find official council site
+4,32,Time Out London (PR pitch),https://www.timeout.com/london,87,yes,editorial pitch,60,pending,,,,,Long-shot editorial pitch
+A,A1,Foursquare Places (aggregator),https://business.foursquare.com/,90,yes,email,20,pending,,,,,Powers Apple Maps and many others
+A,A2,Data Axle Express Update,https://www.expressupdate.com/,75,yes,email,15,pending,,,,,Feeds 100+ downstream directories

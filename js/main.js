@@ -65,4 +65,26 @@
       track('postcode_submit', { postcode_entered: pc });
     });
   }
+
+  // Lazy-load Google Maps iframe via IntersectionObserver (no Maps JS until in view)
+  var mapFrames = document.querySelectorAll('.map-frame[data-src]');
+  if (mapFrames.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var iframe = document.createElement('iframe');
+        iframe.src = el.dataset.src;
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('aria-label', el.getAttribute('aria-label') || 'Map');
+        iframe.style.cssText = 'width:100%;height:100%;border:0;display:block;';
+        el.appendChild(iframe);
+        el.removeAttribute('data-src');
+        obs.unobserve(el);
+      });
+    }, { rootMargin: '200px' });
+    mapFrames.forEach(function (m) { obs.observe(m); });
+  }
 })();

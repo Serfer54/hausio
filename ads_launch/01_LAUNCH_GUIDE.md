@@ -358,7 +358,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 8. `5% Off First Booking` *(if you ever re-add the promo)*
 9. `Vetted London Cleaners`
 10. `Book Today, Done Tomorrow`
-11. `£50 Refundable Deposit`
+11. `Pay After The Job · No Deposit`
 12. `Trusted by 100+ Households` *(remove if not yet true)*
 13. `No Hidden Fees`
 14. `Eco-Friendly Products`
@@ -366,7 +366,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 
 **Descriptions (4):**
 1. `Move-out cleaning that meets every agency checklist. Fully insured, DBS-checked, fixed pricing — no surprises on the invoice.`
-2. `Online booking in 60 seconds. £50 refundable deposit holds your slot, balance after the job. Same-day London availability.`
+2. `Online booking in 60 seconds. £0 today — pay after the job is done. Same-day London availability.`
 3. `Eco-friendly products, 2-hour minimum, fully equipped team. Free re-clean if your landlord disputes the standard.`
 4. `Get the deposit back without the stress. Tenancy-ready clean, photo report, agency-grade finish. Book online today.`
 
@@ -394,7 +394,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 **Descriptions (4):**
 1. `Top-to-bottom deep clean by London's most-vetted team. Eco-friendly products, fixed pricing, free re-clean guarantee.`
 2. `Whether it's a spring refresh or a pre-event scrub, we go where regular cleans don't. Book online in 60 seconds.`
-3. `Vetted, DBS-checked cleaners. £2M public liability insurance. £50 refundable deposit, balance settled after the job.`
+3. `Vetted, DBS-checked cleaners. £2M public liability insurance. £0 today — pay after the job is complete.`
 4. `Specialists in bathroom limescale, oven grease, fridge interiors, behind-furniture dust. Add-ons available.`
 
 ### 6.3 Cleaning · Regular Cleaning
@@ -421,7 +421,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 **Descriptions (4):**
 1. `Weekly or fortnightly cleaning by the same vetted, DBS-checked cleaner each visit. No contracts, cancel free until noon the day before.`
 2. `Reclaim your weekends. Eco-friendly products included, fully insured team, fixed pricing — no nasty surprises.`
-3. `Book online in 60 seconds. £50 refundable deposit holds your first slot, balance settled after the job is done.`
+3. `Book online in 60 seconds. £0 today — your first slot is confirmed instantly, you pay after the job is done.`
 4. `Same trusted cleaner every visit. Get to know your team, never explain the apartment twice. Background-checked, insured, friendly.`
 
 ### 6.4 Removals · Man & Van
@@ -447,7 +447,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 
 **Descriptions (4):**
 1. `Reliable man-and-van service across London. From single-item delivery to full-flat moves — vetted team, insured van, fixed pricing.`
-2. `Book online in 60 seconds. £50 refundable deposit secures your slot, balance after the job. No surprise fees.`
+2. `Book online in 60 seconds. £0 today, pay after the move is done. No surprise fees.`
 3. `Need IKEA or furniture delivered? Need a flat moved this weekend? We do both. Choose 1, 2, or 3 movers + a Luton van.`
 4. `Add packing, dismantle/reassemble, or boxes & materials at booking. £2M public liability insurance covers your move.`
 
@@ -474,7 +474,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 
 **Descriptions (4):**
 1. `Full house and flat removals across London. Vetted team, insured Luton van, packing add-on, dismantle service. Fixed pricing.`
-2. `Book online in 60 seconds. Tell us pickup, dropoff, floors, lifts — we quote up front. £50 refundable deposit holds the slot.`
+2. `Book online in 60 seconds. Tell us pickup, dropoff, floors, lifts — we quote up front. £0 today, pay after the move.`
 3. `Stress-free moving day with a vetted, DBS-checked team. £2M liability cover. No hidden fees, no time-watch on the day.`
 4. `Need to move this weekend? Same-day London slots available. We pack, dismantle, drive, reassemble — you just open the new door.`
 
@@ -502,7 +502,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 **Descriptions (4):**
 1. `Local London handyman for repairs, assembly, mounting, painting, small plumbing and electrical jobs. Vetted, insured team.`
 2. `From a leaking tap to a full day of odd jobs. £65 first hour, £50/hr after. Half-day £215, full day £395 — pay after.`
-3. `Book online in 60 seconds. £50 refundable deposit holds the slot, balance after the job. No surprise charges.`
+3. `Book online in 60 seconds. £0 today, pay after the job is complete. No surprise charges.`
 4. `DBS-checked, fully insured handymen. Same-day slots, friendly punctual team, every tool on the van. Trusted across London.`
 
 ### 6.7 Handyman · Specific Tasks
@@ -528,7 +528,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 
 **Descriptions (4):**
 1. `IKEA flatpacks, TV wall mounting, shelves, mirrors, curtain poles. Vetted London team, every tool included, online booking.`
-2. `Book online in 60 seconds. £65 first hour, £50/hr after. £50 refundable deposit, balance settled after the job.`
+2. `Book online in 60 seconds. £65 first hour, £50/hr after. £0 today — pay only when the job is done.`
 3. `Same-day London availability. DBS-checked, insured handyman, tidy work. Pictures hung, shelves up, TV mounted, no fuss.`
 4. `From a single Billy bookcase to a full living room of flatpacks. Half-day and full-day rates available. Pay after.`
 
@@ -540,7 +540,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 
 | Title | Description line 1 | Description line 2 | Final URL |
 |---|---|---|---|
-| Get an instant quote | 60-second online booking | £50 refundable deposit | https://hausio.co.uk/book.html |
+| Get an instant quote | 60-second online booking | £0 today, pay after the job | https://hausio.co.uk/book.html |
 | All London services | Cleaning · Removals · Handyman | One vetted London team | https://hausio.co.uk/#services |
 | Pricing | Flat hourly rates | No hidden fees | https://hausio.co.uk/#pricing |
 | FAQ | Insured · DBS-checked | Pay after the job | https://hausio.co.uk/#faq |

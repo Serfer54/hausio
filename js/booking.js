@@ -1,4 +1,4 @@
-// Hausio — multi-step booking flow + live price calculator + Stripe £50 deposit
+// Hausio — multi-step booking flow + live price calculator + (optional) Stripe £50 deposit
 (function () {
   const form = document.getElementById('booking-form');
   if (!form) return;
@@ -12,10 +12,15 @@
   let current = 1;
   const maxSteps = 4;
 
+  // Feature flag — set to true to re-enable the £50 Stripe deposit at booking.
+  // Off by default while building review velocity (post-job billing only).
+  // Re-enable after ~50 reviews + 4.5+ Trustpilot/Google rating.
+  const DEPOSIT_ENABLED = false;
+
   /* ---------- Checkout session state ---------- */
-  // The £50 deposit is charged through Stripe-hosted Checkout. The session is
-  // created on /api/checkout-session and we redirect to session.url; the secret
-  // key never touches the browser.
+  // When DEPOSIT_ENABLED is true, the £50 deposit is charged through Stripe-
+  // hosted Checkout. The session is created on /api/checkout-session and we
+  // redirect to session.url; the secret key never touches the browser.
   const CHECKOUT_STATE_KEY = 'hausio_pending_booking';
   let checkoutInFlight = false;
 
@@ -123,9 +128,10 @@
     const formSubmitPayload = {};
     formData.forEach((v, k) => { formSubmitPayload[k] = v; });
     formSubmitPayload['estimated-total'] = '£' + totalNum;
-    formSubmitPayload['deposit-paid'] = '£50';
+    formSubmitPayload['deposit-paid'] = DEPOSIT_ENABLED ? '£50' : '£0 (pay-after-job)';
     formSubmitPayload['submitted-from'] = location.href;
-    formSubmitPayload._subject = 'New Hausio booking: ' + (checkoutPayload.service || 'unknown') + ' · £' + totalNum + ' · deposit paid';
+    const subjectTail = DEPOSIT_ENABLED ? ' · deposit paid' : ' · pay after job';
+    formSubmitPayload._subject = 'New Hausio booking: ' + (checkoutPayload.service || 'unknown') + ' · £' + totalNum + subjectTail;
     formSubmitPayload._template = 'table';
     formSubmitPayload._captcha = 'false';
     formSubmitPayload._cc = 'serfer7501@gmail.com';
@@ -334,11 +340,37 @@
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalLabel = submitBtn ? submitBtn.textContent : '';
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Redirecting to secure payment…'; }
     setPaymentError('');
     checkoutInFlight = true;
 
     const { checkoutPayload, formSubmitPayload, totalNum, service: serviceVal } = buildBookingPayload();
+
+    // ---- Pay-after-job flow (DEPOSIT_ENABLED = false) ----
+    if (!DEPOSIT_ENABLED) {
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending booking…'; }
+      try {
+        const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(formSubmitPayload),
+        });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const data = await resp.json().catch(() => ({}));
+        if (data && data.success === 'false') throw new Error(data.message || 'Submission error');
+      } catch (err) {
+        track('booking_email_error', { error: String(err && err.message || err) });
+        // Still show success to the user — the office WhatsApp gets the call
+        // record from the GA4/dataLayer event below even if FormSubmit fails.
+      }
+      track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
+      track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
+      showSuccess();
+      checkoutInFlight = false;
+      return;
+    }
+
+    // ---- Deposit flow (DEPOSIT_ENABLED = true) ----
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Redirecting to secure payment…'; }
 
     // Persist booking details for the post-payment success page so we can render
     // the confirmation, fire conversion events, and email the team after the

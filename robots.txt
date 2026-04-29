@@ -1,4 +1,55 @@
+# Hausio — robots.txt
+# Default: allow all well-behaved crawlers
 User-agent: *
+Allow: /
+Disallow: /.netlify/
+Disallow: /api/
+
+# --- AI search crawlers (allow — they bring traffic via ChatGPT, Perplexity, Claude, Copilot) ---
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://hausio.co.uk/sitemap.xml

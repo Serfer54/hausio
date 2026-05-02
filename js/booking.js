@@ -348,19 +348,24 @@
     // ---- Pay-after-job flow (DEPOSIT_ENABLED = false) ----
     if (!DEPOSIT_ENABLED) {
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending booking…'; }
-      try {
-        // Netlify Forms — triggers submission-created function (Resend email)
-        const params = new URLSearchParams({ 'form-name': 'booking', ...formSubmitPayload }).toString();
-        const resp = await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: params,
-        });
-        if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      } catch (err) {
-        track('booking_email_error', { error: String(err && err.message || err) });
-        // Still show success — Netlify retains submission even if our notify fails.
-      }
+
+      // Dual delivery: FormSubmit.co (proven email) + Netlify Forms (backup
+      // inbox + triggers submission-created function for Sheets/Resend)
+      const fsCall = fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(formSubmitPayload),
+      }).catch(err => { track('booking_email_error', { error: String(err && err.message || err) }); });
+
+      const netlifyParams = new URLSearchParams({ 'form-name': 'booking', ...formSubmitPayload }).toString();
+      const nfCall = fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: netlifyParams,
+      }).catch(err => { track('booking_netlify_error', { error: String(err && err.message || err) }); });
+
+      // Wait for whichever finishes; do not block the user on a slow one
+      await Promise.race([Promise.all([fsCall, nfCall]), new Promise(r => setTimeout(r, 3500))]);
       track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
       track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
       showSuccess();
@@ -451,7 +456,13 @@
       const payload = Object.assign({}, stored.formSubmitPayload, {
         'stripe-checkout-session': sessionId,
       });
+      // Dual delivery on post-Stripe success too
       try {
+        await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        }).catch(() => {});
         const params = new URLSearchParams({ 'form-name': 'booking', ...payload }).toString();
         const resp = await fetch('/', {
           method: 'POST',

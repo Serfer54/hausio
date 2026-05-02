@@ -1658,6 +1658,31 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 }
 .page-hero .eyebrow { margin-bottom: 12px; }
 
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.page-hero-visual {
+  display: flex;
+  justify-content: center;
+}
+.page-hero-visual .hero-photo {
+  max-width: 480px;
+  aspect-ratio: 4 / 3;
+}
+@media (max-width: 900px) {
+  .page-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .page-hero-visual .hero-photo {
+    max-width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+}
+
 .hero-ctas {
   display: flex;
   gap: 14px;

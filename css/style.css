@@ -400,6 +400,29 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+/* Auto-compact: when grid has 4+ cards, switch to balanced 2x2 layout
+   with a 2-column inner list to halve vertical height per card */
+.service-grid:has(.service-card:nth-child(4)) {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.service-grid:has(.service-card:nth-child(4)) .service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 22px;
+  row-gap: 0;
+}
+@media (max-width: 760px) {
+  .service-grid:has(.service-card:nth-child(4)) {
+    grid-template-columns: 1fr;
+  }
+  .service-grid:has(.service-card:nth-child(4)) .service-list {
+    grid-template-columns: 1fr;
+  }
+}
 .service-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -1662,7 +1685,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .breadcrumbs span[aria-hidden] { margin: 0 8px; opacity: .6; }
 
 .page-hero {
-  padding: 56px 0 72px;
+  padding: 40px 0 56px;
   background: var(--cream);
   border-bottom: 1px solid var(--line);
 }

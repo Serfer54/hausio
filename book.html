@@ -470,6 +470,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </main>
 
+<!-- Netlify Forms detection: hidden static form so Netlify's build-time
+     scanner sees every field name the JS multi-step form will ever submit.
+     Without this, dynamically-rendered fields are missed and Netlify drops
+     the submission silently. -->
+<form name="booking" data-netlify="true" data-netlify-honeypot="bot-field" hidden aria-hidden="true">
+  <input name="bot-field" />
+  <input name="form-name" value="booking" />
+  <input name="service" />
+  <input name="name" />
+  <input name="email" />
+  <input name="phone" />
+  <input name="postcode" />
+  <input name="preferred_date" />
+  <input name="notes" />
+  <input name="estimated-total" />
+  <input name="deposit-paid" />
+  <input name="job-list" />
+  <input name="clean-type" />
+  <input name="clean-bed" />
+  <input name="clean-bath" />
+  <input name="frequency" />
+  <input name="removal-type" />
+  <input name="from-address" />
+  <input name="to-address" />
+  <input name="hours" />
+  <input name="bedrooms" />
+  <input name="movers" />
+  <input name="van-size" />
+  <input name="handyman-task" />
+  <input name="duration" />
+  <input name="terms" />
+  <input name="contact-method" />
+  <input name="time-slot" />
+</form>
+
 <footer class="site-footer compact">
   <div class="container footer-bottom">
     <small>© <span id="year"></span> Hausio Ltd. London, United Kingdom.</small>

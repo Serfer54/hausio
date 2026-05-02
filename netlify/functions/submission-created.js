@@ -33,7 +33,19 @@ exports.handler = async (event) => {
   const SKIP = new Set(['bot-field', 'form-name']);
   const fields = Object.entries(data).filter(([k]) => !SKIP.has(k));
 
-  // Run email + sheets in parallel
+  // === LEAD STORAGE #1 — Netlify Function Logs (always visible, no setup) ===
+  // Open https://app.netlify.com/projects/celebrated-babka-f215f3/logs/functions
+  // and search for [LEAD] to see every submission with all fields.
+  console.log('========== [LEAD] new ' + formName + ' submission ==========');
+  fields.forEach(([k, v]) => console.log('[LEAD] ' + k + ': ' + (typeof v === 'object' ? JSON.stringify(v) : v)));
+  console.log('[LEAD] received_at: ' + new Date().toISOString());
+  console.log('[LEAD] ============================================');
+
+  // === LEAD STORAGE #2 — Netlify Forms inbox (always on) ===
+  // Open https://app.netlify.com/projects/celebrated-babka-f215f3/forms
+  // and click on the "booking" form.
+
+  // === LEAD STORAGE #3 + #4 — Email + Sheets (parallel, optional) ===
   const tasks = [];
   if (process.env.RESEND_API_KEY) tasks.push(sendResendEmail(formName, data, fields));
   else console.warn('[submission-created] RESEND_API_KEY missing — skipping email');

@@ -407,12 +407,32 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, opacity .6s ease;
 }
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--ink);
+}
+
+/* Scroll-reveal: cards fade up in sequence as they enter viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal:nth-child(1) { transition-delay: 0s; }
+.reveal:nth-child(2) { transition-delay: .08s; }
+.reveal:nth-child(3) { transition-delay: .16s; }
+.reveal:nth-child(4) { transition-delay: .24s; }
+.reveal:nth-child(5) { transition-delay: .32s; }
+.reveal:nth-child(6) { transition-delay: .4s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
 }
 .service-card:hover .service-photo img { transform: scale(1.05); }
 .service-photo {

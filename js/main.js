@@ -96,6 +96,20 @@
     });
   }
 
+  // Scroll reveal: auto-tag service cards + work snippets, fade in when visible
+  if ('IntersectionObserver' in window) {
+    var revealTargets = document.querySelectorAll('.service-grid .service-card, .work-snippets .work-snippet, .why-list-centered li');
+    revealTargets.forEach(function (el) { el.classList.add('reveal'); });
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-visible');
+        revealObs.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    revealTargets.forEach(function (el) { revealObs.observe(el); });
+  }
+
   // Lazy-load Google Maps iframe via IntersectionObserver (no Maps JS until in view)
   var mapFrames = document.querySelectorAll('.map-frame[data-src]');
   if (mapFrames.length && 'IntersectionObserver' in window) {

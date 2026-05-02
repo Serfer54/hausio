@@ -349,18 +349,17 @@
     if (!DEPOSIT_ENABLED) {
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending booking…'; }
       try {
-        const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+        // Netlify Forms — triggers submission-created function (Resend email)
+        const params = new URLSearchParams({ 'form-name': 'booking', ...formSubmitPayload }).toString();
+        const resp = await fetch('/', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(formSubmitPayload),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: params,
         });
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
-        const data = await resp.json().catch(() => ({}));
-        if (data && data.success === 'false') throw new Error(data.message || 'Submission error');
       } catch (err) {
         track('booking_email_error', { error: String(err && err.message || err) });
-        // Still show success to the user — the office WhatsApp gets the call
-        // record from the GA4/dataLayer event below even if FormSubmit fails.
+        // Still show success — Netlify retains submission even if our notify fails.
       }
       track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
       track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
@@ -453,10 +452,11 @@
         'stripe-checkout-session': sessionId,
       });
       try {
-        const resp = await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+        const params = new URLSearchParams({ 'form-name': 'booking', ...payload }).toString();
+        const resp = await fetch('/', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: params,
         });
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
         const data = await resp.json().catch(() => ({}));

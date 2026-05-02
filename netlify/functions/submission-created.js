@@ -4,15 +4,16 @@
 // Required env var: RESEND_API_KEY
 // Optional env vars:
 //   FORM_NOTIFY_TO     (default: hausio.co.uk@proton.me)
-//   FORM_NOTIFY_FROM   (default: Hausio Bookings <bookings@hausio.co.uk>)
+//   FORM_NOTIFY_FROM   (default: Hausio Bookings <onboarding@resend.dev>)
 //
-// IMPORTANT: the default FROM address requires hausio.co.uk to be verified
-// in Resend (Domains tab). Until verified, override with env var:
-//   FORM_NOTIFY_FROM = "Hausio <onboarding@resend.dev>"
-// (testing sender — only delivers to the email you signed up to Resend with)
+// IMPORTANT (Resend free tier):
+//   Default FROM = onboarding@resend.dev only delivers to the email you used
+//   to sign up to Resend. After verifying hausio.co.uk in Resend Domains, set:
+//     FORM_NOTIFY_FROM = "Hausio Bookings <bookings@hausio.co.uk>"
+//   Then any recipient (including the proton inbox) will receive emails.
 
 const RECIPIENT = process.env.FORM_NOTIFY_TO || 'hausio.co.uk@proton.me';
-const SENDER    = process.env.FORM_NOTIFY_FROM || 'Hausio Bookings <bookings@hausio.co.uk>';
+const SENDER    = process.env.FORM_NOTIFY_FROM || 'Hausio Bookings <onboarding@resend.dev>';
 
 exports.handler = async (event) => {
   console.log('[submission-created] invoked');

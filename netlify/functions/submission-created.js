@@ -4,27 +4,40 @@
 // Required env var: RESEND_API_KEY
 // Optional env vars:
 //   FORM_NOTIFY_TO     (default: hausio.co.uk@proton.me)
-//   FORM_NOTIFY_FROM   (default: Hausio Bookings <onboarding@resend.dev>)
+//   FORM_NOTIFY_FROM   (default: Hausio Bookings <bookings@hausio.co.uk>)
+//
+// IMPORTANT: the default FROM address requires hausio.co.uk to be verified
+// in Resend (Domains tab). Until verified, override with env var:
+//   FORM_NOTIFY_FROM = "Hausio <onboarding@resend.dev>"
+// (testing sender — only delivers to the email you signed up to Resend with)
 
 const RECIPIENT = process.env.FORM_NOTIFY_TO || 'hausio.co.uk@proton.me';
-const SENDER    = process.env.FORM_NOTIFY_FROM || 'Hausio Bookings <onboarding@resend.dev>';
+const SENDER    = process.env.FORM_NOTIFY_FROM || 'Hausio Bookings <bookings@hausio.co.uk>';
 
 exports.handler = async (event) => {
+  console.log('[submission-created] invoked');
+
   let payload;
   try {
-    payload = JSON.parse(event.body).payload;
-  } catch {
+    const parsed = JSON.parse(event.body);
+    payload = parsed.payload;
+    console.log('[submission-created] form_name:', payload && payload.form_name);
+  } catch (err) {
+    console.error('[submission-created] payload parse error:', err.message);
     return { statusCode: 400, body: 'Invalid payload' };
+  }
+
+  if (!payload || !payload.data) {
+    console.error('[submission-created] no payload.data');
+    return { statusCode: 400, body: 'No data' };
   }
 
   const formName = payload.form_name || 'unknown';
   const data = payload.data || {};
 
-  // Skip the honeypot/internal fields
   const SKIP = new Set(['bot-field', 'form-name']);
   const fields = Object.entries(data).filter(([k]) => !SKIP.has(k));
 
-  // Plain-text body for proton-friendly rendering
   const textLines = [
     `New ${formName} submission from hausio.co.uk`,
     '',
@@ -34,7 +47,6 @@ exports.handler = async (event) => {
     payload.site_url ? `Site: ${payload.site_url}` : '',
   ].filter(Boolean);
 
-  // Lightweight HTML version
   const htmlRows = fields
     .map(([k, v]) => `<tr><td style="padding:6px 14px;color:#777;">${k}</td><td style="padding:6px 14px;"><b>${
       typeof v === 'object' ? JSON.stringify(v) : String(v).replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]))
@@ -47,15 +59,17 @@ exports.handler = async (event) => {
   </div>`;
 
   const apiKey = process.env.RESEND_API_KEY;
+  console.log('[submission-created] env check — RESEND_API_KEY present:', !!apiKey, '| FROM:', SENDER, '| TO:', RECIPIENT);
+
   if (!apiKey) {
-    console.warn('RESEND_API_KEY not set — submission saved by Netlify but email not sent');
+    console.warn('[submission-created] RESEND_API_KEY missing — submission saved by Netlify but no email sent');
     return { statusCode: 200, body: 'OK (no email — RESEND_API_KEY missing)' };
   }
 
-  // Use customer email as reply-to so you can reply directly from inbox
   const replyTo = data.email || data.contact_email || undefined;
 
   try {
+    console.log('[submission-created] calling Resend API…');
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -72,14 +86,17 @@ exports.handler = async (event) => {
       }),
     });
 
+    const respBody = await res.text();
+    console.log('[submission-created] Resend response:', res.status, respBody.slice(0, 500));
+
     if (!res.ok) {
-      const errText = await res.text();
-      console.error('Resend send failed', res.status, errText);
+      console.error('[submission-created] Resend rejected the email');
       return { statusCode: 200, body: `Email failed (${res.status})` };
     }
+    console.log('[submission-created] email sent OK');
     return { statusCode: 200, body: 'OK' };
   } catch (err) {
-    console.error('submission-created error', err);
+    console.error('[submission-created] fetch threw:', err.message);
     return { statusCode: 200, body: 'OK (email threw)' };
   }
 };

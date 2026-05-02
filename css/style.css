@@ -782,7 +782,8 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   animation: ticker-scroll 60s linear infinite;
   width: max-content;
 }
-.ticker span {
+.ticker span,
+.ticker a {
   display: inline-flex;
   align-items: center;
   padding: 0 28px;
@@ -790,10 +791,11 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   font-size: 1.05rem;
   color: var(--ink-2);
   letter-spacing: .02em;
+  text-decoration: none;
+  transition: color .2s ease;
 }
-.ticker span + span {
-  border-left: 1px solid var(--line);
-}
+.ticker a:hover { color: var(--gold); }
+.ticker > *:not(:first-child) { border-left: 1px solid var(--line); }
 .ticker-wrap:hover .ticker {
   animation-play-state: paused;
 }

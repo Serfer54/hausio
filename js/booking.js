@@ -125,8 +125,22 @@
       checkoutPayload.dropoffLift = formData.get('dropoff-lift') || '';
     }
 
+    // Filter to only fields relevant to the chosen service so the email is clean
+    const svc = checkoutPayload.service;
+    const COMMON = new Set([
+      'service', 'frequency', 'date', 'time', 'postcode', 'address',
+      'name', 'email', 'phone', 'notes', 'terms',
+    ]);
+    const SERVICE_FIELDS = {
+      cleaning: ['clean-type', 'clean-bed', 'clean-bath', 'clean-hours', 'clean-supplies', 'clean-extra'],
+      removals: ['move-type', 'move-crew', 'move-hours', 'move-extra',
+                 'pickup-postcode', 'pickup-address', 'pickup-floor', 'pickup-lift',
+                 'dropoff-postcode', 'dropoff-address', 'dropoff-floor', 'dropoff-lift'],
+      handyman: ['handy-type', 'handy-hours', 'handy-extra'],
+    };
+    const allowed = new Set([...COMMON, ...(SERVICE_FIELDS[svc] || [])]);
     const formSubmitPayload = {};
-    formData.forEach((v, k) => { formSubmitPayload[k] = v; });
+    formData.forEach((v, k) => { if (allowed.has(k) && v !== '' && v !== null && v !== undefined) formSubmitPayload[k] = v; });
     formSubmitPayload['estimated-total'] = '£' + totalNum;
     formSubmitPayload['deposit-paid'] = DEPOSIT_ENABLED ? '£50' : '£0 (pay-after-job)';
     formSubmitPayload['submitted-from'] = location.href;

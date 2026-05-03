@@ -349,12 +349,16 @@
     if (!DEPOSIT_ENABLED) {
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending booking…'; }
 
-      // Dual delivery: FormSubmit.co (proven email) + Netlify Forms (backup
-      // inbox + triggers submission-created function for Sheets/Resend)
-      const fsCall = fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
+      // Dual delivery: Web3Forms (primary email via SendGrid - delivers to proton)
+      // + Netlify Forms (backup inbox + triggers submission-created Resend function)
+      const w3Payload = Object.assign(
+        { access_key: '2037c101-86d9-46c3-804d-883183a79376', subject: 'New Hausio booking: ' + (serviceVal || 'unknown'), from_name: 'Hausio Website' },
+        formSubmitPayload
+      );
+      const fsCall = fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formSubmitPayload),
+        body: JSON.stringify(w3Payload),
       }).catch(err => { track('booking_email_error', { error: String(err && err.message || err) }); });
 
       const netlifyParams = new URLSearchParams({ 'form-name': 'booking', ...formSubmitPayload }).toString();
@@ -456,12 +460,16 @@
       const payload = Object.assign({}, stored.formSubmitPayload, {
         'stripe-checkout-session': sessionId,
       });
-      // Dual delivery on post-Stripe success too
+      // Dual delivery on post-Stripe success too (Web3Forms + Netlify Forms)
       try {
-        await fetch('https://formsubmit.co/ajax/serfer7501@gmail.com', {
+        const w3p = Object.assign(
+          { access_key: '2037c101-86d9-46c3-804d-883183a79376', subject: 'New Hausio booking (paid): ' + (payload.service || 'unknown'), from_name: 'Hausio Website' },
+          payload
+        );
+        await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(w3p),
         }).catch(() => {});
         const params = new URLSearchParams({ 'form-name': 'booking', ...payload }).toString();
         const resp = await fetch('/', {

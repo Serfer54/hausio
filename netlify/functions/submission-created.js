@@ -30,8 +30,12 @@ exports.handler = async (event) => {
 
   const formName = payload.form_name || 'unknown';
   const data = payload.data || {};
+  // Drop framework noise + empty values so the email/log only shows fields
+  // the customer actually filled in (handyman bookings shouldn't show empty
+  // cleaning/removals fields, and vice versa).
   const SKIP = new Set(['bot-field', 'form-name']);
-  const fields = Object.entries(data).filter(([k]) => !SKIP.has(k));
+  const isEmpty = v => v === '' || v == null || (Array.isArray(v) && v.length === 0);
+  const fields = Object.entries(data).filter(([k, v]) => !SKIP.has(k) && !isEmpty(v));
 
   // === LEAD STORAGE #1 — Netlify Function Logs (always visible, no setup) ===
   // Open https://app.netlify.com/projects/celebrated-babka-f215f3/logs/functions

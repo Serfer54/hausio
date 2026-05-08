@@ -58,30 +58,13 @@ exports.handler = async (event) => {
   else console.warn('[submission-created] SHEETS_WEBHOOK_URL missing — skipping Sheets');
 
   const results = await Promise.allSettled(tasks);
-  const debug = {
-    env: {
-      RESEND_API_KEY: process.env.RESEND_API_KEY ? 'SET (' + process.env.RESEND_API_KEY.slice(0,8) + '...)' : 'MISSING',
-      RESEND_KEY: process.env.RESEND_KEY ? 'SET' : 'MISSING',
-      FORM_NOTIFY_TO: process.env.FORM_NOTIFY_TO || '(default)',
-      FORM_NOTIFY_FROM: process.env.FORM_NOTIFY_FROM || '(default)',
-    },
-    sender_used: SENDER,
-    recipient_used: RECIPIENT,
-    tasks_run: tasks.length,
-    results: results.map((r, i) => ({
-      i,
-      status: r.status,
-      value: r.value || null,
-      error: r.reason && r.reason.message || null,
-    })),
-  };
   results.forEach((r, i) => {
     const label = i === 0 && process.env.RESEND_API_KEY ? 'email' : 'sheets';
     if (r.status === 'fulfilled') console.log(`[submission-created] ${label}: OK`, r.value || '');
     else console.error(`[submission-created] ${label}: FAILED`, r.reason && r.reason.message);
   });
 
-  return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(debug) };
+  return { statusCode: 200, body: 'OK' };
 };
 
 async function sendResendEmail(formName, data, fields) {

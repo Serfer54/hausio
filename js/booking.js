@@ -10,7 +10,7 @@
   const summaryTotal = document.getElementById('summary-total');
 
   let current = 1;
-  const maxSteps = 4;
+  const maxSteps = 2;
 
   // Feature flag — set to true to re-enable the £50 Stripe deposit at booking.
   // Off by default while building review velocity (post-job billing only).
@@ -128,7 +128,7 @@
     // Filter to only fields relevant to the chosen service so the email is clean
     const svc = checkoutPayload.service;
     const COMMON = new Set([
-      'service', 'frequency', 'date', 'time', 'postcode', 'address',
+      'service', 'date', 'time', 'postcode', 'address',
       'name', 'email', 'phone', 'notes', 'terms',
     ]);
     const SERVICE_FIELDS = {
@@ -166,12 +166,19 @@
       if (!chosen) { alert('Please choose a service to continue.'); return false; }
       return true;
     }
-    if (n === 3) {
+    if (n === 2) {
       const date = form.date.value;
       const postcode = form.postcode.value.trim();
       const address = form.address.value.trim();
+      const name = (form.name && form.name.value || '').trim();
+      const email = (form.email && form.email.value || '').trim();
+      const phone = (form.phone && form.phone.value || '').trim();
       if (!date || !postcode || !address) {
         alert('Please fill in the date, postcode, and address.');
+        return false;
+      }
+      if (!name || !email || !phone) {
+        alert('Please fill in your name, email, and phone.');
         return false;
       }
       if (isRemovals()) {

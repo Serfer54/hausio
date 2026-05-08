@@ -103,21 +103,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="booking">
       <header class="booking-head">
         <h1>Get your instant quote</h1>
-        <p>Four quick steps. No sign-up needed.</p>
+        <p>Two quick steps. No sign-up needed.</p>
       </header>
 
       <ol class="progress" aria-label="Booking progress">
-        <li class="is-active" data-step="1"><span>1</span> Service</li>
-        <li data-step="2"><span>2</span> Details</li>
-        <li data-step="3"><span>3</span> Schedule</li>
-        <li data-step="4"><span>4</span> Confirm</li>
+        <li class="is-active" data-step="1"><span>1</span> Service & details</li>
+        <li data-step="2"><span>2</span> Schedule & contact</li>
       </ol>
 
       <form id="booking-form" name="booking" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="booking" />
         <p hidden><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
 
-        <!-- STEP 1 -->
+        <!-- STEP 1: Service + details -->
         <fieldset class="step is-active" data-step="1">
           <legend class="step-title">Choose your service</legend>
           <div class="option-grid service-options">
@@ -143,16 +141,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </span>
             </label>
           </div>
-
-          <div class="step-actions">
-            <span></span>
-            <button type="button" class="btn btn-dark" data-next>Continue →</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 2 -->
-        <fieldset class="step" data-step="2">
-          <legend class="step-title">Tell us about the job</legend>
 
           <!-- Cleaning details -->
           <div class="service-panel" data-for="cleaning">
@@ -282,24 +270,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="step-actions">
-            <button type="button" class="btn btn-ghost" data-prev>← Back</button>
+            <span></span>
             <button type="button" class="btn btn-dark" data-next>Continue →</button>
           </div>
         </fieldset>
 
-        <!-- STEP 3 -->
-        <fieldset class="step" data-step="3">
-          <legend class="step-title">When & where?</legend>
+        <!-- STEP 2: Schedule + contact -->
+        <fieldset class="step" data-step="2">
+          <legend class="step-title">When, where & contact</legend>
           <div class="field-row">
             <label class="field">
               <span>Preferred date</span>
               <input type="date" name="date" required />
             </label>
             <label class="field">
-              <span>Preferred time</span>
+              <span>Preferred time <small style="color:#888;font-weight:normal;">(optional)</small></span>
               <select name="time">
+                <option value="" selected>No preference — we'll call to confirm</option>
                 <option value="08:00">8:00 am</option>
-                <option value="09:00" selected>9:00 am</option>
+                <option value="09:00">9:00 am</option>
                 <option value="10:00">10:00 am</option>
                 <option value="11:00">11:00 am</option>
                 <option value="12:00">12:00 pm</option>
@@ -374,46 +363,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
 
-          <label class="field" data-removals-hidden>
-            <span>Frequency</span>
-            <select name="frequency">
-              <option value="one-off">One-off booking</option>
-              <option value="weekly">Weekly</option>
-              <option value="fortnightly">Fortnightly</option>
-              <option value="monthly">Monthly</option>
-            </select>
-          </label>
-          <div class="step-actions">
-            <button type="button" class="btn btn-ghost" data-prev>← Back</button>
-            <button type="button" class="btn btn-dark" data-next>Continue →</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 4 -->
-        <fieldset class="step" data-step="4">
-          <legend class="step-title">Your contact details</legend>
-          <div class="field-row">
+          <!-- Contact details (merged into this step) -->
+          <div class="contact-block">
+            <div class="field-row">
+              <label class="field">
+                <span>Full name</span>
+                <input type="text" name="name" required />
+              </label>
+              <label class="field">
+                <span>Phone</span>
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
             <label class="field">
-              <span>Full name</span>
-              <input type="text" name="name" required />
+              <span>Email</span>
+              <input type="email" name="email" required />
             </label>
             <label class="field">
-              <span>Phone</span>
-              <input type="tel" name="phone" required />
+              <span>Anything we should know? <small style="color:#888;font-weight:normal;">(optional)</small></span>
+              <textarea name="notes" rows="3" placeholder="Parking, access codes, pets, priorities..."></textarea>
+            </label>
+            <label class="check check-big">
+              <input type="checkbox" name="terms" required />
+              I agree to the <a href="privacy.html" target="_blank">terms of service and privacy policy</a>.
             </label>
           </div>
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" required />
-          </label>
-          <label class="field">
-            <span>Anything we should know?</span>
-            <textarea name="notes" rows="3" placeholder="Parking, access codes, pets, priorities..."></textarea>
-          </label>
-          <label class="check check-big">
-            <input type="checkbox" name="terms" required />
-            I agree to the <a href="privacy.html" target="_blank">terms of service and privacy policy</a>.
-          </label>
 
           <div class="payment-block" id="payment-block">
             <div class="payment-summary">
@@ -430,7 +404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <div class="step-actions">
             <button type="button" class="btn btn-ghost" data-prev>← Back</button>
-            <button type="submit" class="btn btn-dark" id="pay-button">Confirm booking →</button>
+            <button type="submit" class="btn btn-dark" id="submit-button">Confirm booking →</button>
           </div>
         </fieldset>
 
@@ -523,7 +497,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script src="js/main.js" defer></script>
-<script src="js/booking.js?v=5" defer></script>
+<script src="js/booking.js?v=6" defer></script>
 <script src="js/consent.js" defer></script>
 </body>
 </html>

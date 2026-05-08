@@ -69,20 +69,30 @@ exports.handler = async (event) => {
 
 async function sendResendEmail(formName, data, fields) {
   const replyTo = data.email || data.contact_email || undefined;
+  const total = data['estimated-total'] || data.estimated_total || data.total || data.price || '';
+  const service = data.service || '';
+  const subjectParts = [`New ${formName}`, service, total].filter(Boolean);
+  const subject = subjectParts.join(' · ');
+
   const textLines = [
     `New ${formName} submission from hausio.co.uk`,
+    total ? `Total: ${total}` : '',
     '',
     ...fields.map(([k, v]) => `${k}: ${typeof v === 'object' ? JSON.stringify(v) : v}`),
     '',
     `Submitted: ${new Date().toISOString()}`,
-  ];
+  ].filter(Boolean);
   const htmlRows = fields
     .map(([k, v]) => `<tr><td style="padding:6px 14px;color:#777;">${k}</td><td style="padding:6px 14px;"><b>${
       typeof v === 'object' ? JSON.stringify(v) : String(v).replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]))
     }</b></td></tr>`).join('');
+  const totalBanner = total
+    ? `<div style="background:#111;color:#fff;padding:14px 18px;border-radius:8px;margin:0 0 16px;font-size:18px;"><b>Total: ${total}</b>${service ? ` · ${service}` : ''}</div>`
+    : '';
   const html = `<div style="font-family:system-ui,-apple-system,sans-serif;max-width:560px;">
     <h2 style="margin:0 0 8px;">New ${formName} submission</h2>
     <p style="color:#777;margin:0 0 16px;">From hausio.co.uk · ${new Date().toLocaleString('en-GB',{timeZone:'Europe/London'})}</p>
+    ${totalBanner}
     <table style="border-collapse:collapse;width:100%;border:1px solid #eee;">${htmlRows}</table>
   </div>`;
 
@@ -93,7 +103,7 @@ async function sendResendEmail(formName, data, fields) {
       from: SENDER,
       to: [RECIPIENT],
       ...(replyTo ? { reply_to: replyTo } : {}),
-      subject: `New ${formName}: ${data.service || data.name || 'Hausio'}`,
+      subject,
       text: textLines.join('\n'),
       html,
     }),

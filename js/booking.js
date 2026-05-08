@@ -363,18 +363,10 @@
     if (!DEPOSIT_ENABLED) {
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending booking…'; }
 
-      // Dual delivery: Web3Forms (primary email via SendGrid - delivers to proton)
-      // + Netlify Forms (backup inbox + triggers submission-created Resend function)
-      const w3Payload = Object.assign(
-        { access_key: '2037c101-86d9-46c3-804d-883183a79376', subject: 'New Hausio booking: ' + (serviceVal || 'unknown'), from_name: 'Hausio Website' },
-        formSubmitPayload
-      );
-      const fsCall = fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(w3Payload),
-      }).catch(err => { track('booking_email_error', { error: String(err && err.message || err) }); });
-
+      // Same-origin POST to Netlify Forms. Netlify catches the submission
+      // and submission-created.js delivers the email via Resend.
+      // No third-party endpoints from the browser — keeps client-side AV
+      // (Avast, Kaspersky, ESET) from blocking the submit.
       const netlifyParams = new URLSearchParams({ 'form-name': 'booking', ...formSubmitPayload }).toString();
       const nfCall = fetch('/', {
         method: 'POST',
@@ -382,8 +374,8 @@
         body: netlifyParams,
       }).catch(err => { track('booking_netlify_error', { error: String(err && err.message || err) }); });
 
-      // Wait for whichever finishes; do not block the user on a slow one
-      await Promise.race([Promise.all([fsCall, nfCall]), new Promise(r => setTimeout(r, 3500))]);
+      // Cap the wait — never block the user UI on a slow network.
+      await Promise.race([nfCall, new Promise(r => setTimeout(r, 3500))]);
       track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
       track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
       showSuccess();
@@ -474,17 +466,8 @@
       const payload = Object.assign({}, stored.formSubmitPayload, {
         'stripe-checkout-session': sessionId,
       });
-      // Dual delivery on post-Stripe success too (Web3Forms + Netlify Forms)
+      // Same-origin POST to Netlify Forms; submission-created.js → Resend → email
       try {
-        const w3p = Object.assign(
-          { access_key: '2037c101-86d9-46c3-804d-883183a79376', subject: 'New Hausio booking (paid): ' + (payload.service || 'unknown'), from_name: 'Hausio Website' },
-          payload
-        );
-        await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(w3p),
-        }).catch(() => {});
         const params = new URLSearchParams({ 'form-name': 'booking', ...payload }).toString();
         const resp = await fetch('/', {
           method: 'POST',
@@ -492,8 +475,6 @@
           body: params,
         });
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
-        const data = await resp.json().catch(() => ({}));
-        if (data && data.success === 'false') throw new Error(data.message || 'FormSubmit error');
       } catch (err) {
         track('booking_email_error', {
           error: String(err && err.message || err),

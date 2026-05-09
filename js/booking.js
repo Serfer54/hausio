@@ -98,6 +98,18 @@
   }
 
   function buildBookingPayload() {
+    // Populate hidden inputs first so FormData picks them up — Netlify Forms
+    // only captures fields that exist as inputs in the form's HTML schema,
+    // not fields appended later to the URLSearchParams body.
+    const totalStr0 = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';
+    const totalNum0 = Number(totalStr0) || 0;
+    const hiddenTotal = document.getElementById('hidden-estimated-total');
+    const hiddenDeposit = document.getElementById('hidden-deposit-paid');
+    const hiddenFrom = document.getElementById('hidden-submitted-from');
+    if (hiddenTotal) hiddenTotal.value = '£' + totalNum0;
+    if (hiddenDeposit) hiddenDeposit.value = DEPOSIT_ENABLED ? '£50' : '£0 (pay-after-job)';
+    if (hiddenFrom) hiddenFrom.value = location.href;
+
     const formData = new FormData(form);
     const chosenService = form.querySelector('input[name="service"]:checked');
     const totalStr = summaryTotal ? summaryTotal.textContent.replace(/[^0-9.]/g, '') : '0';

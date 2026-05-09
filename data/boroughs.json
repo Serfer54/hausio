@@ -1,0 +1,422 @@
+{
+  "tower-hamlets": {
+    "name": "Tower Hamlets",
+    "slug": "tower-hamlets",
+    "geoCode": "GB-TWH",
+    "postcodes": ["E1", "E2", "E14", "E3"],
+    "headlinePostcodes": "E1 · E2 · E14",
+    "neighborhoods": ["Whitechapel", "Stepney", "Bethnal Green", "Mile End", "Bow", "Poplar", "Canary Wharf", "Wapping", "Limehouse", "Spitalfields", "Shadwell", "Isle of Dogs"],
+    "boundary": ["City of London", "Hackney", "Newham", "Greenwich"],
+    "linkedBoroughs": ["hackney", "newham", "southwark"],
+    "snippets": [
+      {"pc": "E14", "title": "Canary Wharf goods lifts", "body": "Tower-block moves in Canary Wharf need pre-booked goods-lift slots — porter coordination 24–48h ahead. We make the call."},
+      {"pc": "E1", "title": "Brick Lane & Spitalfields markets", "body": "Sundays 09:00–17:00 the Truman Brewery and Brick Lane road closures kick in. We slot moves at 07:00–09:00 or after 18:00."},
+      {"pc": "E14", "title": "Isle of Dogs security", "body": "Island Gardens and Cubitt Town high-rises run 24/7 concierge. Bring photo ID; we send the team's details ahead."},
+      {"pc": "E1 · E2", "title": "Conservation areas", "body": "Spitalfields and Wapping conservation — reversible fixings on listed brickwork; no façade changes without LBC."},
+      {"pc": "E1", "title": "Queen Mary student moves", "body": "September and June end-of-tenancy spike around Mile End and Stepney. Book 10–14 days ahead for an early slot."},
+      {"pc": "E14", "title": "Crossrail / Elizabeth line", "body": "Stratford and Canary Wharf moves benefit from off-peak van access via the Limehouse Link tunnel — we plan around peak gridlock."}
+    ],
+    "faq": [
+      {"q": "Do you cover Canary Wharf high-rises?", "a": "Yes — we work all the major Canary Wharf and Isle of Dogs towers (One Park Drive, Pan Peninsula, Landmark, New Providence Wharf, Wood Wharf). We co-ordinate goods-lift booking with concierge 24–48 hours ahead, bring our own floor protection and lift padding, and our team carries Construction Skills Certification Scheme (CSCS) cards for sites that ask."},
+      {"q": "What's parking like for jobs in Tower Hamlets?", "a": "Most of E1, E2 and E3 is CPZ-controlled by Tower Hamlets — our quote includes a tradesperson permit (~£10 half-day). Around Brick Lane and Spitalfields on Sundays, road closures kick in 09:00–17:00 for the markets, so we typically slot moves at 07:00 or after 18:00 instead."},
+      {"q": "Do you handle end-of-tenancy cleans for Queen Mary students?", "a": "Yes — June and September are our busiest end-of-tenancy weeks in Mile End, Bow and Stepney because of the Queen Mary cycle. We follow the inventory checklists used by the main Tower Hamlets student-let agents (RentalGate, Foxtons Tower Hamlets, Aspire) and offer a free 72-hour re-clean if your check-out clerk flags an issue."}
+    ],
+    "serviceFraming": {
+      "cleaning": "End-of-tenancy peaks around Queen Mary University in June and September drive most of our Mile End and Bethnal Green bookings. Regular fortnightly cleans are biggest in Canary Wharf high-rises, where porters often coordinate keys.",
+      "removals": "Tower Hamlets means goods-lift bookings in Canary Wharf, narrow Victorian terraces in Bow and Stepney, and Sunday market closures around Brick Lane. We plan the route before we arrive and pre-book lift slots so the team isn't waiting.",
+      "handyman": "Pax wardrobe builds in tiny E1 conversions and TV mounting in Canary Wharf show flats are our two most-booked Tower Hamlets jobs. Spitalfields conservation properties need reversible fixings; Wapping warehouse conversions often need brick-suitable anchors."
+    }
+  },
+  "southwark": {
+    "name": "Southwark",
+    "slug": "southwark",
+    "geoCode": "GB-SWK",
+    "postcodes": ["SE1", "SE15", "SE17", "SE5", "SE16"],
+    "headlinePostcodes": "SE1 · SE15 · SE17",
+    "neighborhoods": ["Borough", "Bermondsey", "Peckham", "Camberwell", "Walworth", "Elephant & Castle", "London Bridge", "Rotherhithe", "Surrey Quays", "Nunhead", "Dulwich (north)"],
+    "boundary": ["Lambeth", "Lewisham", "Tower Hamlets", "City of London"],
+    "linkedBoroughs": ["lambeth", "lewisham", "tower-hamlets"],
+    "snippets": [
+      {"pc": "SE1", "title": "Borough Market access", "body": "Wednesday–Saturday Borough Market closes Stoney Street and Bedale Street. We slot SE1 moves at 06:30–09:00 or after 18:00 for clean access."},
+      {"pc": "SE16", "title": "Rotherhithe warehouse conversions", "body": "Surrey Quays and Bermondsey warehouse flats — period steel-frame fixings need specialist anchors; we carry a kit on the van."},
+      {"pc": "SE15", "title": "Peckham Rye high streets", "body": "Rye Lane and Bellenden Road are bus-route narrow. Larger 3-mover Luton vans need a side-street unloading point — we walk it day before."},
+      {"pc": "SE1", "title": "Conservation: Bermondsey Street", "body": "Bermondsey Street and Borough High Street conservation areas — listed shopfronts, reversible internal fixings only."},
+      {"pc": "SE17", "title": "Elephant & Castle redevelopment", "body": "New towers around Elephant Park have concierge + goods-lift booking. Strata, Trafalgar, One The Elephant — we know the lift teams."},
+      {"pc": "SE1", "title": "London Bridge office moves", "body": "Office relocations into More London or The Shard need security passes. Allow 24h for the building's access process."}
+    ],
+    "faq": [
+      {"q": "Do you do moves into the Southwark high-rises (One The Elephant, Strata, etc.)?", "a": "Yes — we move into the major Elephant & Castle and Bermondsey towers regularly (Strata SE1, One The Elephant, Trafalgar, Hawkins\\Brown blocks). Each requires goods-lift booking 24h ahead and concierge sign-in; our team brings CSCS cards and ID. Move days are typically 09:00–17:00 because most blocks restrict moves outside business hours."},
+      {"q": "How do you handle Borough Market days for SE1 moves?", "a": "Borough Market runs Wednesday afternoon through Saturday — Stoney Street and Bedale Street are pedestrianised those days. We schedule SE1 jobs near the market either before 09:00 or after 18:00, or use Park Street as the load point if your address is on Bedale Street itself."},
+      {"q": "Do you do end-of-tenancy cleans for Goldsmiths students?", "a": "Goldsmiths is just over the border in Lewisham (New Cross), but a lot of student lets are in SE15 (Peckham), SE5 (Camberwell) and SE14 (New Cross Gate). We do a high volume of end-of-tenancy cleans there in June and September following the Goldsmiths agent inventory checklists, with a free 72-hour re-clean guarantee."}
+    ],
+    "serviceFraming": {
+      "cleaning": "End-of-tenancy is our highest-volume Southwark service — June and September spikes around Goldsmiths, King's College Denmark Hill, and South Bank University. Bermondsey Street loft conversions need specialist deep-cleans (exposed brick, polished concrete).",
+      "removals": "Southwark moves split between SE1 high-rise concierge buildings and SE15/SE5 Victorian terraced houses. Borough Market days, London Bridge security, and Elephant & Castle goods-lift coordination — we plan all three before quote.",
+      "handyman": "Bermondsey warehouse-flat fixings (steel I-beams, concrete walls) are a Southwark specialty — we carry the right anchors. Peckham terrace gardens, Camberwell sash window restoration, and Elephant & Castle new-build snagging round out the regular handyman work."
+    }
+  },
+  "lambeth": {
+    "name": "Lambeth",
+    "slug": "lambeth",
+    "geoCode": "GB-LBH",
+    "postcodes": ["SE11", "SW8", "SW9", "SW2", "SW4"],
+    "headlinePostcodes": "SE11 · SW8 · SW9",
+    "neighborhoods": ["Brixton", "Clapham (north)", "Vauxhall", "Stockwell", "Kennington", "Streatham", "West Norwood", "Herne Hill", "Tulse Hill"],
+    "boundary": ["Wandsworth", "Southwark", "Westminster", "Croydon"],
+    "linkedBoroughs": ["wandsworth", "southwark", "westminster"],
+    "snippets": [
+      {"pc": "SW9", "title": "Brixton market days", "body": "Tuesday–Sunday Electric Avenue and Brixton Station Road are pedestrianised. Best window for SW9 moves is 06:00–09:00 or after 18:00."},
+      {"pc": "SW8", "title": "Vauxhall riverside towers", "body": "Embassy Gardens, St George Wharf, One Nine Elms — concierge + goods-lift booking required, 24–48h notice. We coordinate."},
+      {"pc": "SE11", "title": "Kennington conservation", "body": "Kennington Park Road and Cleaver Square conservation — Georgian terraces, reversible fixings, no exterior alterations without LBC."},
+      {"pc": "SW9", "title": "King's College Denmark Hill", "body": "King's medical campus at Denmark Hill drives SW9/SE5 student lets. End-of-tenancy spikes June and September."},
+      {"pc": "SW2", "title": "Brixton Hill walk-ups", "body": "Many Victorian conversions in SW2 are 3rd/4th floor walk-ups. No surcharge but allow +30–60 min per floor on quote."},
+      {"pc": "SW4", "title": "Clapham North CPZ", "body": "Lambeth CPZ runs Mon–Fri 09:00–17:00. After-hours and weekend moves often skip the permit cost entirely."}
+    ],
+    "faq": [
+      {"q": "Do you handle moves into the Vauxhall riverside towers?", "a": "Yes — we work all the major Nine Elms / Vauxhall developments: Embassy Gardens, St George Wharf, One Nine Elms, Riverlight, Battersea Power Station (technically Wandsworth boundary). All require goods-lift bookings 24–48h ahead and concierge sign-in. We bring our own floor protection and our team carries ID."},
+      {"q": "How do Brixton market days affect moves?", "a": "Brixton Market runs Tuesday–Sunday with Electric Avenue and Brixton Station Road pedestrianised 09:00–18:00. For SW9 jobs near the market we slot at 06:30–09:00 or after 18:00. For everywhere else in Lambeth, market days don't matter."},
+      {"q": "Do you do end-of-tenancy cleans for King's College medics?", "a": "Yes — Denmark Hill (King's medical campus) drives a lot of student lets in SW9, SE5 and SE22. June and August are peak end-of-tenancy weeks. We follow the standard Lambeth student-let agent checklists and offer a free 72-hour re-clean if anything's flagged."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Lambeth cleaning splits between Vauxhall high-rise regular cleans (Embassy Gardens, St George Wharf — fortnightly is the norm) and SW9/SE5 end-of-tenancy spikes around King's College Denmark Hill in June and September.",
+      "removals": "Vauxhall tower lift coordination, Brixton market-day timing, and SW2 walk-up planning — Lambeth needs route prep before the van arrives. We do the recce so you don't get a 'we couldn't fit' on the day.",
+      "handyman": "Brixton Victorian conversion fixings (lath-and-plaster needs specialist anchors), Clapham sash window restoration, and Vauxhall new-build snagging are our three Lambeth handyman regulars. Conservation work in Kennington Park / Cleaver Square needs reversible fixings."
+    }
+  },
+  "kensington-chelsea": {
+    "name": "Kensington & Chelsea",
+    "slug": "kensington-chelsea",
+    "geoCode": "GB-KEC",
+    "postcodes": ["SW3", "SW5", "SW7", "SW10", "W8", "W11", "W14"],
+    "headlinePostcodes": "SW3 · SW7 · W8 · W11",
+    "neighborhoods": ["South Kensington", "Chelsea", "Notting Hill", "Earl's Court", "Knightsbridge (north)", "Holland Park", "World's End", "Brompton", "Ladbroke Grove (south)"],
+    "boundary": ["Westminster", "Hammersmith & Fulham"],
+    "linkedBoroughs": ["westminster", "hammersmith-fulham"],
+    "snippets": [
+      {"pc": "SW3 · SW7", "title": "Conservation everywhere", "body": "Almost all of Chelsea, South Ken and Brompton is in a conservation area. Façade work needs LBC; internal fixings reversible only."},
+      {"pc": "SW3", "title": "Mews-house access", "body": "Cheyne Mews, Pavilion Road, Wilbraham Place — narrow cobbled streets, no Luton vans. We use 2-person Transit + multiple trips."},
+      {"pc": "W8", "title": "Mansion-block lifts", "body": "Kensington Court, Albert Court, Iverna Court — porter lift booking 48h ahead. Most blocks restrict moves to 09:00–16:00 weekdays only."},
+      {"pc": "W11", "title": "Notting Hill Carnival", "body": "August Bank Holiday weekend — total road closure across W11. We don't book Notting Hill moves Friday–Tuesday of Carnival weekend."},
+      {"pc": "SW7", "title": "Imperial College & RCM", "body": "Imperial College and Royal College of Music drive student lets in SW7. End-of-tenancy spikes June and September."},
+      {"pc": "SW3", "title": "Sloane Square retail deliveries", "body": "Saturdays around King's Road and Sloane Square are gridlocked. Move slots before 09:00 or after 19:00."}
+    ],
+    "faq": [
+      {"q": "Do you work in mews houses and listed Chelsea properties?", "a": "Yes — most of Chelsea (SW3) and South Kensington (SW7) is in a conservation area or has Listed status. We use reversible internal fixings, floor protection on period parquet, and lift rather than drag furniture out of period staircases. For Listed Building Consent issues (façade work, external alterations) we route those through our Part-P / surveyor partners, not ourselves."},
+      {"q": "How do you handle the big mansion blocks (Kensington Court, Albert Hall Mansions)?", "a": "Mansion-block moves in W8 and SW7 require porter coordination — most blocks let us book the lift 48 hours ahead, restrict moves to 09:00–16:00 weekdays only (no weekends), and require ground-floor parking permits we arrange via the porter. Our team carries CSCS cards and ID for sign-in."},
+      {"q": "Are your prices the same as outer London?", "a": "Same hourly rates — £22/hr cleaning, £55/hr man-and-van, £65 first hour handyman. The total often runs higher in Kensington & Chelsea because of (a) congestion-charge access (£18 added for SW3, SW7, SW10, W8, W14 inside the central zone), (b) parking permits the borough charges at premium rates, and (c) mansion-block coordination time. We quote everything up front, no surprises."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Premium regular cleans dominate K&C — fortnightly and weekly with the same trusted cleaner each visit, in mansion blocks across Knightsbridge, Kensington and Chelsea. End-of-tenancy spikes around Imperial College in June. Eco-friendly products are standard request.",
+      "removals": "K&C means mews-house access challenges (no Luton vans on Cheyne Mews), mansion-block lift coordination (Kensington Court, Albert Hall Mansions), and Notting Hill Carnival blackout weekends. We plan all three before quote.",
+      "handyman": "Listed-building friendly handyman work — reversible fixings, period-correct hardware, conservation-area aware. Sash window restoration in Notting Hill terraces, Pax wardrobe builds in K&C compact flats, and TV mounting that doesn't damage Georgian cornicing."
+    }
+  },
+  "hammersmith-fulham": {
+    "name": "Hammersmith & Fulham",
+    "slug": "hammersmith-fulham",
+    "geoCode": "GB-HMF",
+    "postcodes": ["SW6", "W6", "W12", "W14"],
+    "headlinePostcodes": "SW6 · W6 · W12",
+    "neighborhoods": ["Hammersmith", "Fulham", "Shepherd's Bush", "White City", "Parsons Green", "Sands End", "Brook Green", "Ravenscourt Park", "Barons Court", "Fulham Broadway"],
+    "boundary": ["Kensington & Chelsea", "Wandsworth", "Brent", "Ealing"],
+    "linkedBoroughs": ["kensington-chelsea", "wandsworth", "brent"],
+    "snippets": [
+      {"pc": "W12", "title": "Westfield London traffic", "body": "Saturdays around Westfield are gridlocked from 11:00. W12 moves slot before 10:00 or after 19:30."},
+      {"pc": "SW6", "title": "Fulham Road CPZ", "body": "H&F CPZ Mon–Sat 08:30–18:30. Sundays free. Most weekend moves skip the permit cost."},
+      {"pc": "W6", "title": "Hammersmith Apollo events", "body": "Eventim Apollo gig days affect Queen Caroline Street and Talgarth Road — we check the listing before quoting evening moves."},
+      {"pc": "W12", "title": "BBC TV Centre redevelopment", "body": "The new W12 residential conversion (Television Centre) has goods-lift booking and concierge. Pre-booked move slots only."},
+      {"pc": "SW6", "title": "Fulham FC / Chelsea FC matchdays", "body": "Craven Cottage (SW6) and Stamford Bridge (SW6 boundary) — matchday Saturdays affect SW6 access. We check the fixture list."},
+      {"pc": "SW6", "title": "Parsons Green family moves", "body": "School-run streets (St John's Walham Green, Lady Margaret) — we avoid 08:00–09:00 and 15:00–16:00 windows."}
+    ],
+    "faq": [
+      {"q": "Do you work in the Television Centre redevelopment (W12)?", "a": "Yes — the new BBC Television Centre residential blocks (Helios, Crescent, etc.) have goods-lift booking, concierge sign-in and dedicated move-in slots. We coordinate with the building team 24–48h ahead and bring CSCS cards. Move-in days at TV Centre are typically 09:00–17:00 weekdays."},
+      {"q": "How do you handle Westfield traffic for W12 moves?", "a": "Westfield London (Shepherd's Bush) is gridlocked Saturdays from about 11:00 onwards. For W12 moves we slot before 10:00 or after 19:30 — and we use Wood Lane access from the north rather than fighting through Shepherd's Bush Green."},
+      {"q": "Do you handle Fulham FC / Chelsea matchdays in SW6?", "a": "Yes — we check the fixture list before quoting any SW6 evening or Saturday move. Craven Cottage matchdays close Stevenage Road and parts of Fulham Palace Road; Chelsea matchdays affect Fulham Broadway. We slot moves to avoid the kickoff window (typically 14:00–17:00 for 15:00 kickoffs)."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Family-home regular cleans dominate Fulham (SW6) — weekly cleans for school-run families is the biggest category. End-of-tenancy spikes around Imperial College students in W6/W12 in June and September.",
+      "removals": "H&F means matchday awareness (Fulham FC, Chelsea), Westfield traffic on Saturdays, and the new Television Centre lift coordination. We check fixtures and concert listings before quoting any evening or weekend job.",
+      "handyman": "Fulham family-home handyman work is high volume — kid-proofing (drawer locks, corner protectors), garden-shed assembly, fence repair. Hammersmith mansion-block fixings, Shepherd's Bush new-build snagging, and Westfield-area furniture delivery+assembly round it out."
+    }
+  },
+  "greenwich": {
+    "name": "Greenwich",
+    "slug": "greenwich",
+    "geoCode": "GB-GRE",
+    "postcodes": ["SE3", "SE10", "SE18", "SE7", "SE9"],
+    "headlinePostcodes": "SE3 · SE10 · SE18",
+    "neighborhoods": ["Greenwich", "Blackheath", "Charlton", "Woolwich", "Eltham", "Kidbrooke", "New Eltham", "Royal Arsenal", "Greenwich Peninsula"],
+    "boundary": ["Lewisham", "Bexley", "Tower Hamlets (river)", "Newham (river)"],
+    "linkedBoroughs": ["lewisham", "tower-hamlets"],
+    "snippets": [
+      {"pc": "SE10", "title": "Greenwich World Heritage", "body": "Old Royal Naval College, Maritime Museum and Cutty Sark area — heavy tourist Saturdays. We slot SE10 moves before 09:00 or after 18:00."},
+      {"pc": "SE10", "title": "Greenwich Peninsula towers", "body": "Upper Riverside, Lower Riverside, Greenwich Reach — concierge + goods-lift booking. We work all major peninsula buildings."},
+      {"pc": "SE18", "title": "Royal Arsenal Riverside", "body": "Berkeley Homes Royal Arsenal development — secured access, 24h move-in window booking. We've done 100+ moves here."},
+      {"pc": "SE3", "title": "Blackheath Village conservation", "body": "Blackheath conservation area — Georgian terraces around the heath, reversible fixings, listed-building friendly."},
+      {"pc": "SE10", "title": "ULEZ extended zone", "body": "Greenwich is now inside the extended ULEZ. Our vans are ULEZ-compliant — no surcharge for you."},
+      {"pc": "SE7 · SE18", "title": "Charlton & Woolwich Crossrail", "body": "Elizabeth line drove Charlton/Woolwich gentrification. Many new high-spec rentals — premium handyman finish expected."}
+    ],
+    "faq": [
+      {"q": "Do you work in the Greenwich Peninsula towers?", "a": "Yes — Upper Riverside, Lower Riverside, Greenwich Reach, Aspen, Plimsoll Building. All require goods-lift booking 24–48h ahead and concierge sign-in. Our team carries CSCS cards. The peninsula is well-organised — most blocks have dedicated weekday move-in slots."},
+      {"q": "Are you ULEZ-compliant for Greenwich jobs?", "a": "Yes — all our vans are ULEZ-compliant, so there's no extra charge for you. The extended ULEZ now covers all Greenwich addresses, but we don't pass any compliance cost on."},
+      {"q": "How do you handle Cutty Sark tourist traffic on Saturdays?", "a": "Saturdays around Cutty Sark, the Old Royal Naval College and Greenwich Market are gridlocked 11:00–17:00. We slot SE10 town-centre moves either before 09:00 or after 18:00. For Greenwich Peninsula and Blackheath Village (no tourist gridlock) any time works."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Greenwich Peninsula tower regular cleans (Upper Riverside, Plimsoll Building) and Blackheath family-home weekly cleans are the two main Greenwich cleaning categories. End-of-tenancy spikes are smaller here than Camden or Tower Hamlets — fewer student lets.",
+      "removals": "Greenwich = peninsula tower lift coordination, Royal Arsenal secured access, Cutty Sark Saturday traffic, and ULEZ-compliant vans. Inbound Crossrail-driven moves into Charlton and Woolwich Riverside have grown ~40% in 2 years.",
+      "handyman": "Royal Arsenal new-build snagging is a Greenwich specialty — we've done 100+ jobs across the development. Greenwich Peninsula fitouts (TV mounting, Pax assembly), Blackheath sash window restoration, and Charlton family handyman work round it out."
+    }
+  },
+  "lewisham": {
+    "name": "Lewisham",
+    "slug": "lewisham",
+    "geoCode": "GB-LEW",
+    "postcodes": ["SE4", "SE6", "SE8", "SE13", "SE14", "SE23", "SE26"],
+    "headlinePostcodes": "SE4 · SE13 · SE14",
+    "neighborhoods": ["Lewisham", "Brockley", "Catford", "Deptford", "Forest Hill", "New Cross", "Sydenham", "Honor Oak", "Crofton Park", "Hither Green"],
+    "boundary": ["Greenwich", "Southwark", "Bromley"],
+    "linkedBoroughs": ["greenwich", "southwark"],
+    "snippets": [
+      {"pc": "SE14", "title": "Goldsmiths University", "body": "Goldsmiths drives huge end-of-tenancy spikes in SE14 (New Cross), SE15 (Peckham boundary), and SE4 (Brockley) every June. Book 14 days ahead."},
+      {"pc": "SE4", "title": "Brockley conservation area", "body": "Brockley conservation — Victorian terraces with original sashes, reversible fixings, no façade changes without LBC."},
+      {"pc": "SE13", "title": "Lewisham Shopping Centre redevelopment", "body": "Major regeneration around Lewisham station. Construction traffic Mon–Fri 07:00–17:00 affects SE13 access — we plan around it."},
+      {"pc": "SE23", "title": "Forest Hill walk-ups", "body": "Honor Oak Park Victorian conversions — many 3rd/4th floor walk-ups. Allow +30–60 min per floor."},
+      {"pc": "SE8", "title": "Deptford Convoys Wharf", "body": "Convoys Wharf and Cannon Wharf riverside developments — secured access, goods-lift booking required."},
+      {"pc": "SE6", "title": "Catford friendlier rates", "body": "Outside the central congestion zone — no £18 access charge for SE6 jobs. Often the most cost-effective Lewisham postcode."}
+    ],
+    "faq": [
+      {"q": "Do you do Goldsmiths student end-of-tenancy cleans?", "a": "Yes — Goldsmiths in New Cross drives our highest-volume end-of-tenancy weeks in SE14, SE15 boundary and SE4. We follow the inventory checklists used by the major Lewisham/Goldsmiths student-let agents (Foxtons, Acorn, Atkinson McLeod) and offer a free 72-hour re-clean if your check-out clerk flags an issue."},
+      {"q": "Are Lewisham postcodes outside the congestion charge?", "a": "Most of Lewisham (SE4, SE6, SE8, SE13, SE14, SE23, SE26) is outside the central congestion zone — so no £18 access surcharge. Some SE14 addresses very close to the Old Kent Road / Bermondsey boundary may be inside. We confirm at quote stage based on the exact postcode."},
+      {"q": "How does Brockley conservation affect handyman work?", "a": "Brockley conservation area covers most of SE4. We use reversible fixings on original lath-and-plaster, lift up rather than drag heavy furniture across original parquet, and route any external alteration through Listed Building Consent specialists rather than doing it ourselves."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Goldsmiths drives the Lewisham cleaning calendar — end-of-tenancy spikes June and August in SE14, SE4 and the SE15 boundary. Regular weekly cleans grow steadily in Brockley and Forest Hill family postcodes.",
+      "removals": "Lewisham removals = Goldsmiths student moves June/September, Brockley conservation-area Victorian terraces, and the new Convoys Wharf / Cannon Wharf riverside developments. Catford and Sydenham are the most cost-effective postcodes (no congestion charge).",
+      "handyman": "Brockley sash window restoration (specialty), Forest Hill garden-shed assembly, and Lewisham high-rise fitouts are the three biggest handyman categories. We carry conservation-area-friendly fixings as standard."
+    }
+  },
+  "brent": {
+    "name": "Brent",
+    "slug": "brent",
+    "geoCode": "GB-BEN",
+    "postcodes": ["NW2", "NW6", "NW9", "NW10", "HA0", "HA9"],
+    "headlinePostcodes": "NW2 · NW6 · NW10",
+    "neighborhoods": ["Wembley", "Kilburn", "Willesden", "Cricklewood", "Queens Park", "Kensal Green", "Harlesden", "Neasden", "Kingsbury", "Brondesbury"],
+    "boundary": ["Camden", "Westminster", "Kensington & Chelsea", "Ealing", "Harrow", "Barnet"],
+    "linkedBoroughs": ["camden", "ealing", "barnet"],
+    "snippets": [
+      {"pc": "HA9", "title": "Wembley event days", "body": "Wembley Stadium event days (England matches, concerts, NFL) — total parking restrictions across HA9. We don't book Wembley moves on event Saturdays/Sundays."},
+      {"pc": "NW10", "title": "Park Royal industrial routes", "body": "Park Royal HGV restrictions Mon–Fri 07:00–10:00 and 15:00–18:30. We use Luton vans which fit the rules; full HGV moves slot off-peak."},
+      {"pc": "NW6", "title": "Queens Park conservation", "body": "Queens Park conservation area — Victorian terraces with original features, reversible internal fixings, no façade changes."},
+      {"pc": "HA9", "title": "Wembley Park towers", "body": "Quintain Wembley Park development — 30+ residential towers, dedicated move-in scheduling, concierge sign-in. We've done 200+ moves here."},
+      {"pc": "NW2 · NW10", "title": "Brent Cross redevelopment", "body": "Brent Cross station rebuild affects NW2/NW10 access from M1. We plan around weekend road closures."},
+      {"pc": "NW6", "title": "Kilburn High Road parking", "body": "Brent CPZ on Kilburn High Road — tradesperson permits ~£10/half-day. Sundays mostly free."}
+    ],
+    "faq": [
+      {"q": "Can you handle moves into Wembley Park (the Quintain blocks)?", "a": "Yes — we've done over 200 moves across Wembley Park (Tipi, Repton, Beton, Quintain Living, Canada Gardens). All blocks require goods-lift booking 24–48h ahead via the resident services team. We bring our own padding and floor protection. Our team carries CSCS cards for sign-in."},
+      {"q": "Do you avoid Wembley event days?", "a": "Yes — for HA9 jobs we check the Wembley Stadium fixture/event list before quoting. England matches, FA Cup finals, NFL games, and major concerts close most parking around the stadium 4 hours either side of kickoff. We slot HA9 moves around the schedule."},
+      {"q": "Do you do moves between Brent and outer Heathrow areas?", "a": "Yes — we do a lot of Brent to Hayes / Heathrow / Slough corridor moves (corporate relocations near LHR). Standard hourly rates apply, and we account for the M1/M4 connection routes (Western Avenue, North Circular) in time estimates."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Wembley Park regular cleans (fortnightly is the norm in Quintain blocks) and Queens Park / Kilburn family-home weekly cleans dominate Brent's cleaning category. End-of-tenancy spikes are smaller here — fewer student lets than Camden or Tower Hamlets.",
+      "removals": "Wembley Park goods-lift coordination, Wembley event-day awareness, and Park Royal HGV restrictions are the three Brent removals must-knows. We've done 200+ Wembley Park moves — we know the resident services teams.",
+      "handyman": "Wembley Park new-build snagging is a Brent specialty (200+ jobs done). Queens Park sash window restoration, Kilburn family-home repairs, and Park Royal warehouse-conversion fixings round it out."
+    }
+  },
+  "haringey": {
+    "name": "Haringey",
+    "slug": "haringey",
+    "geoCode": "GB-HRY",
+    "postcodes": ["N4", "N8", "N10", "N15", "N17", "N22"],
+    "headlinePostcodes": "N4 · N8 · N17",
+    "neighborhoods": ["Wood Green", "Tottenham", "Crouch End", "Hornsey", "Muswell Hill", "Highgate (north)", "Stroud Green", "Harringay", "Bowes Park", "Bruce Grove"],
+    "boundary": ["Camden", "Islington", "Hackney", "Waltham Forest", "Enfield", "Barnet"],
+    "linkedBoroughs": ["camden", "islington", "waltham-forest"],
+    "snippets": [
+      {"pc": "N17", "title": "Tottenham Hotspur matchdays", "body": "Tottenham Stadium matchday afternoons — parking suspension across N17. We check the fixture list before quoting Saturday/Sunday moves."},
+      {"pc": "N8", "title": "Crouch End hill access", "body": "Crouch End hill (Park Road, Crouch Hill) — narrow Victorian streets, hill gradient. Larger Luton vans need careful 3-point access; 2-mover Transit is often better."},
+      {"pc": "N10", "title": "Muswell Hill conservation", "body": "Muswell Hill conservation area — Edwardian terraces, original features, reversible internal fixings."},
+      {"pc": "N4", "title": "Stroud Green walk-ups", "body": "Many SN4 conversions are 3rd/4th floor walk-ups. Allow +30–60 min per floor."},
+      {"pc": "N22", "title": "Wood Green Mall traffic", "body": "Saturdays around The Mall Wood Green — High Road gridlocked 11:00–17:00. We slot N22 moves before 10:00 or after 18:00."},
+      {"pc": "N6", "title": "Highgate Village conservation", "body": "Highgate conservation area (boundary with Camden) — Georgian/Victorian, listed buildings, conservation-area-friendly handyman fixings only."}
+    ],
+    "faq": [
+      {"q": "Do you check Tottenham Stadium matchdays for N17 moves?", "a": "Yes — Tottenham Hotspur Stadium matchdays close most parking around High Road and Park Lane 4 hours either side of kickoff. For N17 moves we check the fixture list before quoting weekend or evening jobs and slot accordingly. Midweek matchdays affect mostly evenings."},
+      {"q": "Can you handle Crouch End hill access?", "a": "Yes — we know the gradient and access challenges across Park Road, Crouch Hill, and Crouch End Broadway. For larger moves we use 2 Transit vans rather than one Luton, which gives us better turning circles on the steep narrow streets. No surcharge."},
+      {"q": "Do you do moves in Highgate Village?", "a": "Highgate Village is technically split between Haringey (N6) and Camden (N6) — we cover both halves. Conservation area applies, so we use reversible fixings and lift rather than drag period furniture. Listed-building work routes through specialist surveyors."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Crouch End and Muswell Hill weekly family cleans are Haringey's biggest category. End-of-tenancy spikes around Stroud Green N4 (City University commuter belt) are seasonal but smaller than borough averages.",
+      "removals": "Haringey removals = Tottenham matchday awareness, Crouch End hill-and-narrow-street planning, and Wood Green Mall Saturday timing. We use 2-Transit splits for the steeper Crouch End streets where Luton vans don't fit.",
+      "handyman": "Muswell Hill Edwardian sash window restoration (specialty), Crouch End conversion work, and Tottenham new-build snagging (Hale Village, Tottenham Hale developments) are the three biggest Haringey handyman categories."
+    }
+  },
+  "newham": {
+    "name": "Newham",
+    "slug": "newham",
+    "geoCode": "GB-NWM",
+    "postcodes": ["E6", "E13", "E15", "E16", "E20"],
+    "headlinePostcodes": "E15 · E16 · E20",
+    "neighborhoods": ["Stratford", "East Ham", "Plaistow", "Beckton", "Custom House", "Royal Docks", "Canning Town", "West Ham", "Forest Gate", "Manor Park", "Olympic Park"],
+    "boundary": ["Tower Hamlets", "Waltham Forest", "Redbridge", "Barking & Dagenham", "Greenwich (river)"],
+    "linkedBoroughs": ["tower-hamlets", "waltham-forest"],
+    "snippets": [
+      {"pc": "E20", "title": "Olympic Park / East Village", "body": "East Village (Olympicopolis area) — Get Living developments. Goods-lift booking via concierge 24–48h ahead. We've done 150+ moves here."},
+      {"pc": "E16", "title": "ExCeL exhibition days", "body": "ExCeL Royal Docks event days (CES London, Comic Con, Sleep Expo) — total Royal Docks gridlock. We check the events calendar."},
+      {"pc": "E15", "title": "Westfield Stratford traffic", "body": "Saturdays around Westfield Stratford City — A12/Romford Road gridlocked 11:00–18:00. We slot E15 moves before 10:00 or after 19:30."},
+      {"pc": "E16", "title": "Royal Docks tower blocks", "body": "Royal Wharf, City Island (technically E14 boundary), Britannia Village — secured access, dedicated move-in slots, concierge."},
+      {"pc": "E15", "title": "Stratford Crossrail boost", "body": "Elizabeth line cut Stratford to Bond Street to 11 minutes. Inbound moves into E15 grew sharply 2022–2024."},
+      {"pc": "E6", "title": "East Ham CPZ", "body": "Newham CPZ Mon–Sat 09:00–17:00. Sundays free; many weekend moves skip the permit."}
+    ],
+    "faq": [
+      {"q": "Do you handle East Village (Olympic Park) moves?", "a": "Yes — Get Living East Village (Glasshouse Gardens, Victory Plaza, Liberty Bridge Road) and the surrounding Olympicopolis blocks. We've done over 150 East Village moves. All require goods-lift booking 24–48h ahead via Get Living concierge. Our team carries CSCS cards. Move slots typically 09:00–17:00 weekdays."},
+      {"q": "Do you check ExCeL event days for Royal Docks moves?", "a": "Yes — ExCeL major events (CES London, IFSEC, Sleep Expo, Comic Con) close most parking around Royal Victoria Dock. For E16 jobs near the Royal Docks we check the events calendar and slot moves around the event window."},
+      {"q": "How does Stratford Westfield affect E15 moves?", "a": "Westfield Stratford City is gridlocked Saturdays 11:00–18:00. For E15 moves near the Westfield (Romford Road, the Stratford gyratory) we slot before 10:00 or after 19:30. Stratford station-side addresses are usually fine because we use the south-side approach via Carpenters Road."}
+    ],
+    "serviceFraming": {
+      "cleaning": "East Village (Get Living) regular cleans dominate — fortnightly is the standard cycle for the Olympicopolis blocks. End-of-tenancy spikes around Forest Gate and Stratford in June/September. Royal Wharf and City Island grow steadily.",
+      "removals": "Newham = East Village goods-lift coordination, ExCeL event awareness, Westfield Saturday timing, and Royal Wharf concierge access. The Crossrail-driven inbound move volume into Stratford has grown ~50% over 2 years.",
+      "handyman": "East Village new-build snagging (150+ jobs), Royal Wharf fitouts, Stratford studio-flat space-saving installations, and Forest Gate/Manor Park family-home work are the four main Newham handyman categories."
+    }
+  },
+  "waltham-forest": {
+    "name": "Waltham Forest",
+    "slug": "waltham-forest",
+    "geoCode": "GB-WFT",
+    "postcodes": ["E4", "E10", "E11", "E17"],
+    "headlinePostcodes": "E10 · E11 · E17",
+    "neighborhoods": ["Walthamstow", "Leyton", "Leytonstone", "Chingford", "Highams Park", "Wood Street", "Walthamstow Village", "Whipps Cross"],
+    "boundary": ["Haringey", "Hackney", "Newham", "Redbridge", "Enfield"],
+    "linkedBoroughs": ["haringey", "newham"],
+    "snippets": [
+      {"pc": "E17", "title": "Walthamstow Village conservation", "body": "Walthamstow Village conservation area — original Victorian shop fronts, Vestry House Museum lanes. Reversible internal fixings, no façade changes."},
+      {"pc": "E10", "title": "Leyton Mini Holland", "body": "Mini Holland scheme — many E10 streets are LTN-restricted (Low Traffic Neighbourhood) with bollards/cameras. We use the approved access routes."},
+      {"pc": "E17", "title": "Borough of Culture legacy", "body": "Walthamstow's 2019 Borough of Culture status drove gentrification — many new-build flats need premium fitout work."},
+      {"pc": "E11", "title": "Leytonstone family streets", "body": "School-run streets (Davies Lane, Bushwood) — we avoid 08:00–09:00 and 15:00–16:00 windows."},
+      {"pc": "E10 · E17", "title": "ULTL & ULEZ extension", "body": "Waltham Forest is now inside extended ULEZ. Our vans are ULEZ-compliant — no surcharge passed on."},
+      {"pc": "E4", "title": "Chingford Mount commuter routes", "body": "Larger detached homes in Chingford E4 — typical move volume bigger than central E17. Allow extra time for full-house jobs."}
+    ],
+    "faq": [
+      {"q": "Do you handle Mini Holland LTN restrictions in Leyton?", "a": "Yes — we use the council-approved access routes through the Leyton Mini Holland LTN zone (Francis Road, Murchison Road, etc.). Some streets have bollards or rising barriers we can't cross; we drop closer than 100m from the address and use a sack truck for the final leg. No surcharge."},
+      {"q": "Are Waltham Forest postcodes ULEZ?", "a": "Yes — extended ULEZ now covers all of E4, E10, E11, E17. Our vans are fully ULEZ-compliant, so there's no daily charge passed on to you."},
+      {"q": "Do you cover Chingford E4?", "a": "Yes — Chingford and Highams Park are within our standard service area. The houses are typically larger than central Waltham Forest (semi-detached, detached) so move-day allowances are bigger. Standard hourly rates apply."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Walthamstow E17 (especially the Village) and Leyton E10 family-home weekly cleans dominate. End-of-tenancy spikes are smaller than university boroughs but seasonal in E11 (Queen Mary commuter belt).",
+      "removals": "Waltham Forest = Mini Holland LTN navigation, Walthamstow Village conservation, ULEZ-compliant vans, and Chingford larger-home full-day moves. We know the LTN access points by heart.",
+      "handyman": "Walthamstow new-build snagging from the Borough of Culture-driven development boom is the biggest handyman category. Leyton family-home repairs and Chingford garden-shed/fence work round it out."
+    }
+  },
+  "ealing": {
+    "name": "Ealing",
+    "slug": "ealing",
+    "geoCode": "GB-EAL",
+    "postcodes": ["W3", "W5", "W7", "W13", "NW10", "UB1"],
+    "headlinePostcodes": "W3 · W5 · W13",
+    "neighborhoods": ["Ealing", "Acton", "Hanwell", "Northolt", "Greenford", "Southall", "West Ealing", "Park Royal", "South Ealing"],
+    "boundary": ["Hammersmith & Fulham", "Hounslow", "Hillingdon", "Brent"],
+    "linkedBoroughs": ["hammersmith-fulham", "brent"],
+    "snippets": [
+      {"pc": "W5", "title": "Ealing Broadway Crossrail", "body": "Elizabeth line at Ealing Broadway cut central London commute to 12 minutes. Inbound move volume into W5 grew sharply 2022+."},
+      {"pc": "UB1", "title": "Southall family homes", "body": "Larger semis and detached homes in Southall — typical move volume bigger than central Ealing. Multi-generational households common."},
+      {"pc": "W3", "title": "Acton conservation pockets", "body": "Bedford Park (W4 boundary) and Acton Green conservation areas — reversible fixings, listed-building friendly."},
+      {"pc": "NW10", "title": "Park Royal industrial corridor", "body": "Park Royal HGV restrictions Mon–Fri 07:00–10:00 and 15:00–18:30. Luton vans fit the rules."},
+      {"pc": "W5", "title": "Ealing Studios area parking", "body": "Streets around Ealing Studios filming days — temporary parking suspensions. We check the council bulletin before quoting."},
+      {"pc": "W13", "title": "West Ealing redevelopment", "body": "New residential blocks around West Ealing station — concierge + goods-lift booking. We work with the dev managers."}
+    ],
+    "faq": [
+      {"q": "Do you do moves to/from Heathrow corridor (UB1, UB2)?", "a": "Yes — Ealing is our westernmost regular service area. UB1 (Southall), UB2 (Norwood Green), and the Hayes/Hounslow corridor are all standard rates. We do a lot of corporate relocation work near Heathrow."},
+      {"q": "How does the Elizabeth line affect Ealing moves?", "a": "Inbound move volume into W5 (Ealing Broadway) and W7 (Hanwell) jumped sharply when Elizabeth line opened — central London commuters trading flat-share central for a bigger Ealing flat. Most jobs are SW/W boundary to W5/W7. Standard rates."},
+      {"q": "Do you handle Southall family-size moves?", "a": "Yes — Southall (UB1, UB2) typically means larger semi-detached or detached homes, often multi-generational. We allow 6–8 hours for a 3-bed Southall house move with 3 movers and a Luton, vs 4 hours for a similar central London 3-bed flat. Standard hourly rates."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Ealing family-home weekly cleans are the biggest category. Crossrail-driven move-ins into W5 and W7 drove a 30% jump in end-of-tenancy + first-clean bookings in 2023–2024.",
+      "removals": "Ealing means Crossrail-corridor inbound moves, Park Royal HGV restrictions, Ealing Studios filming-day parking awareness, and Southall family-home full-day jobs.",
+      "handyman": "Ealing handyman work splits between W5/W7 modern-flat fitouts (Crossrail-driven new-builds), Acton/Bedford Park conservation work, and Southall family-home repairs (fence, garden, cosmetic)."
+    }
+  },
+  "richmond": {
+    "name": "Richmond upon Thames",
+    "slug": "richmond",
+    "geoCode": "GB-RIC",
+    "postcodes": ["TW1", "TW9", "TW10", "TW11", "KT2"],
+    "headlinePostcodes": "TW9 · TW10 · KT2",
+    "neighborhoods": ["Richmond", "Twickenham", "Kew", "Mortlake", "Ham", "Petersham", "St Margarets", "Teddington", "East Sheen", "Barnes (boundary)"],
+    "boundary": ["Hounslow", "Wandsworth", "Kingston upon Thames"],
+    "linkedBoroughs": ["wandsworth"],
+    "snippets": [
+      {"pc": "TW1", "title": "Twickenham Stadium event days", "body": "Twickenham Stadium rugby and concert days (England matches, Six Nations) — total parking suspension across TW1. We don't book Twickenham moves on event Saturdays."},
+      {"pc": "TW9", "title": "Kew Gardens area", "body": "Kew Bridge and Kew Gardens — heavy weekend tourist traffic. Saturdays 11:00–17:00 we slot moves before 09:00 or after 18:00."},
+      {"pc": "TW10", "title": "Richmond Hill conservation", "body": "Richmond Hill protected view (Petersham, Star and Garter Hill) — listed building rules, reversible fixings only."},
+      {"pc": "TW11", "title": "Teddington Lock area", "body": "Narrow river-side roads (Manor Road, Broom Road) — Luton vans need careful planning. We do recce day before."},
+      {"pc": "KT2", "title": "Kingston boundary", "body": "Kingston (KT2) addresses are technically Kingston borough but adjacent to Richmond — we cover both at standard rates."},
+      {"pc": "TW10", "title": "Petersham/Ham private land", "body": "Some Petersham/Ham roads are private (Sudbrook estate). Resident permits needed; we coordinate with house manager."}
+    ],
+    "faq": [
+      {"q": "Do you avoid Twickenham rugby days?", "a": "Yes — Twickenham Stadium event days (Six Nations, autumn internationals, Premiership Rugby Cup) close most parking around the stadium 4 hours either side of kickoff. For TW1 jobs near the stadium we check the fixture list before quoting weekend moves and slot accordingly."},
+      {"q": "Do you cover Kingston (KT2) too?", "a": "Yes — we cover Kingston-side of the Richmond border (KT2) at standard rates. The geographic boundary is the river; KT2 addresses are adjacent and fit our regular Richmond round."},
+      {"q": "Are Richmond Hill listed-building moves a problem?", "a": "Not at all — most of Richmond Hill (Petersham, Star and Garter, Terrace Walk) is listed or in a protected view. We use reversible internal fixings, lift rather than drag heavy furniture out of period staircases, and route any external alteration work through Listed Building Consent specialists rather than doing it ourselves."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Richmond cleaning is dominated by premium weekly family-home cleans (Richmond Hill, Petersham, St Margarets). End-of-tenancy spikes around Richmond/Mortlake commuter rentals in March (corporate move season).",
+      "removals": "Richmond = Twickenham rugby-day awareness, Kew Gardens weekend tourist traffic, Richmond Hill listed-building care, and Petersham private-estate access permits.",
+      "handyman": "Richmond Hill Georgian sash window restoration is a Richmond specialty. St Margarets conservation work, Twickenham family-home repairs, and Kew/Mortlake garden-shed work round it out."
+    }
+  },
+  "merton": {
+    "name": "Merton",
+    "slug": "merton",
+    "geoCode": "GB-MRT",
+    "postcodes": ["SW19", "SW20", "CR4", "SW17"],
+    "headlinePostcodes": "SW19 · SW20 · CR4",
+    "neighborhoods": ["Wimbledon", "Mitcham", "Morden", "Raynes Park", "Colliers Wood", "South Wimbledon", "Wimbledon Village", "Wimbledon Park"],
+    "boundary": ["Wandsworth", "Lambeth", "Croydon", "Sutton", "Kingston upon Thames"],
+    "linkedBoroughs": ["wandsworth", "lambeth"],
+    "snippets": [
+      {"pc": "SW19", "title": "Wimbledon fortnight", "body": "Wimbledon Championships (last week of June + first week of July) — total Wimbledon Village/Park gridlock. We don't book SW19 moves during the fortnight."},
+      {"pc": "SW19", "title": "Wimbledon Common conservation", "body": "Common-side roads (Parkside, Calonne Road) protected views. Listed houses common; reversible fixings only."},
+      {"pc": "SW20", "title": "Raynes Park family streets", "body": "School-run streets (West Barnes Lane, Coombe Lane) — we avoid 08:00–09:00 and 15:00–16:00 windows."},
+      {"pc": "CR4", "title": "Mitcham CPZ light", "body": "CR4 has limited CPZ — most streets free parking. Move-day savings vs central."},
+      {"pc": "SW19", "title": "Wimbledon Village access", "body": "High Street Wimbledon Village — narrow Victorian street, no Luton vans Mon–Fri lunchtime. We use Transit + multiple trips."},
+      {"pc": "SW17", "title": "Tooting boundary", "body": "Tooting (SW17) is half Wandsworth, half Merton. Standard rates either side; we cover both."}
+    ],
+    "faq": [
+      {"q": "Do you avoid Wimbledon Championships fortnight?", "a": "Yes — for SW19 (Wimbledon Park, Wimbledon Village) we don't book moves during Championships fortnight (last week of June + first week of July). The road closures and parking suspensions make moves impossible. SW20 Raynes Park is far enough from the All England Club to be unaffected."},
+      {"q": "Do you cover Mitcham (CR4)?", "a": "Yes — Mitcham, Pollards Hill and Tooting boundary are all within our standard Merton service area. CR4 has lighter CPZ enforcement than central London — usually free street parking, which keeps move-day total cost a bit lower."},
+      {"q": "Can you handle Wimbledon Village's narrow High Street?", "a": "Yes — Wimbledon Village High Street and the surrounding lanes (Lingfield Road, Marryat Road) are too narrow for full-size Luton vans during weekday business hours. We use 2 Transit-size vans + multiple trips, or we book a bigger Luton for early morning (07:00–09:00) before the village wakes up. No surcharge either way."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Wimbledon Village and Wimbledon Park premium family weekly cleans dominate Merton's cleaning calendar. End-of-tenancy spikes are smaller than central London — fewer student lets, more long-term family rentals.",
+      "removals": "Merton = Wimbledon fortnight blackout, Wimbledon Common protected-view listed buildings, Wimbledon Village narrow-street planning (Transit vs Luton), and lighter CPZ in Mitcham CR4.",
+      "handyman": "Wimbledon Village Victorian/Edwardian sash window restoration (specialty), Wimbledon Park family-home garden work, and Raynes Park kid-proofing/garden-shed assembly are the three main Merton handyman categories."
+    }
+  },
+  "barnet": {
+    "name": "Barnet",
+    "slug": "barnet",
+    "geoCode": "GB-BNE",
+    "postcodes": ["NW4", "NW7", "NW9", "EN5", "N3", "N12", "N20"],
+    "headlinePostcodes": "NW4 · NW7 · N3",
+    "neighborhoods": ["Edgware", "Hendon", "Finchley", "Mill Hill", "Whetstone", "High Barnet", "Cricklewood (boundary)", "Burnt Oak", "East Finchley", "Friern Barnet"],
+    "boundary": ["Brent", "Camden", "Haringey", "Enfield", "Harrow"],
+    "linkedBoroughs": ["brent", "camden", "haringey"],
+    "snippets": [
+      {"pc": "N20", "title": "Whetstone family homes", "body": "Larger detached and semi-detached homes (Friary Park, Totteridge boundary). Typical move-day budget bigger than central Barnet."},
+      {"pc": "NW4", "title": "Hendon Brent Cross redevelopment", "body": "Brent Cross station rebuild + Brent Cross Town development — major works affect NW4 and NW2 access. We plan around weekend road closures."},
+      {"pc": "NW7", "title": "Mill Hill conservation", "body": "Mill Hill Village conservation area (Page Street, The Ridgeway) — listed Georgian/Victorian, reversible internal fixings."},
+      {"pc": "EN5", "title": "Barnet Hill traffic", "body": "Great North Road (A1000) through High Barnet — congestion peak 07:30–09:30 and 16:30–19:00. We slot moves outside peak."},
+      {"pc": "N3", "title": "Finchley Central CPZ", "body": "Barnet CPZ Mon–Fri 09:00–17:00. Free Saturdays/Sundays — most weekend moves skip the permit."},
+      {"pc": "NW4", "title": "Hendon Jewish community moves", "body": "Friday afternoon and Saturday moves rare in NW4/NW11 (Sabbath observance). Sundays our busiest day in the area."}
+    ],
+    "faq": [
+      {"q": "Do you cover the larger Barnet houses (Whetstone, Totteridge, Mill Hill)?", "a": "Yes — Barnet is geographically the largest London borough by area, and many of our jobs there are full 4-bed/5-bed family-home moves rather than central-London flats. We typically allow 7–9 hours with 3 movers and a Luton for a 4-bed Whetstone or Totteridge house. Standard hourly rates apply."},
+      {"q": "Are Friday afternoon / Saturday moves available in NW4 / NW11?", "a": "We respect Sabbath observance in the NW4 (Hendon) and NW11 (Golders Green / Hampstead Garden Suburb — technically Barnet) Jewish communities. We don't book Friday afternoon or Saturday moves there by default. Sunday is our busiest day in those postcodes. Other areas of Barnet (N3, EN5, NW7) we book Saturday normally."},
+      {"q": "How does the Brent Cross development affect NW4 moves?", "a": "Major construction at Brent Cross (station rebuild + Brent Cross Town residential development) affects NW4 and NW2 access on weekends. We check the council's road-closure bulletin before quoting any NW4 weekend move and route via the North Circular if the A41 is closed."}
+    ],
+    "serviceFraming": {
+      "cleaning": "Family-home weekly cleans dominate Barnet — bigger houses, longer cleaning visits, often with regular fortnightly schedules. End-of-tenancy is a smaller category here than central London.",
+      "removals": "Barnet = larger family homes (4-5 bed common), Brent Cross construction-zone awareness, Sabbath-observant Friday/Saturday scheduling in NW4/NW11, and Mill Hill conservation. We allow longer days and bigger crews vs. central jobs.",
+      "handyman": "Family-home handyman work dominates — fence repair, garden-shed assembly, kid-proofing, garage/loft conversions. Mill Hill conservation work and Hendon kosher-kitchen fitouts (specialty) round it out."
+    }
+  }
+}

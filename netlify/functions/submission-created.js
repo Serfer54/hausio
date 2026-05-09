@@ -49,17 +49,33 @@ exports.handler = async (event) => {
   // Open https://app.netlify.com/projects/celebrated-babka-f215f3/forms
   // and click on the "booking" form.
 
-  // === LEAD STORAGE #3 + #4 — Email + Sheets (parallel, optional) ===
+  // === LEAD STORAGE #3 + #4 + #5 — Email to operator + Sheets + scheduled review request ===
   const tasks = [];
-  if (process.env.RESEND_API_KEY) tasks.push(sendResendEmail(formName, data, fields));
-  else console.warn('[submission-created] RESEND_API_KEY missing — skipping email');
+  const taskLabels = [];
+  if (process.env.RESEND_API_KEY) {
+    tasks.push(sendResendEmail(formName, data, fields));
+    taskLabels.push('lead-email');
+  } else console.warn('[submission-created] RESEND_API_KEY missing — skipping lead email');
 
-  if (process.env.SHEETS_WEBHOOK_URL) tasks.push(sendToSheets(formName, data, payload));
-  else console.warn('[submission-created] SHEETS_WEBHOOK_URL missing — skipping Sheets');
+  if (process.env.SHEETS_WEBHOOK_URL) {
+    tasks.push(sendToSheets(formName, data, payload));
+    taskLabels.push('sheets');
+  } else console.warn('[submission-created] SHEETS_WEBHOOK_URL missing — skipping Sheets');
+
+  // Schedule a review-request email to the customer for +48h after booking.
+  // Skip if Resend key missing, customer email missing, or review URLs not configured.
+  if (process.env.RESEND_API_KEY && data.email && (process.env.REVIEW_TRUSTPILOT_URL || process.env.REVIEW_GOOGLE_URL)) {
+    tasks.push(scheduleReviewRequest(data));
+    taskLabels.push('review-request');
+  } else if (!data.email) {
+    console.warn('[submission-created] customer email missing — skipping review request');
+  } else if (!process.env.REVIEW_TRUSTPILOT_URL && !process.env.REVIEW_GOOGLE_URL) {
+    console.warn('[submission-created] REVIEW_TRUSTPILOT_URL / REVIEW_GOOGLE_URL missing — skipping review request');
+  }
 
   const results = await Promise.allSettled(tasks);
   results.forEach((r, i) => {
-    const label = i === 0 && process.env.RESEND_API_KEY ? 'email' : 'sheets';
+    const label = taskLabels[i] || 'task' + i;
     if (r.status === 'fulfilled') console.log(`[submission-created] ${label}: OK`, r.value || '');
     else console.error(`[submission-created] ${label}: FAILED`, r.reason && r.reason.message);
   });
@@ -131,4 +147,63 @@ async function sendToSheets(formName, data, payload) {
     throw new Error(`Sheets ${res.status}: ${body.slice(0, 300)}`);
   }
   return `status ${res.status}`;
+}
+
+// Schedule a single review-request email to the customer for ~48h after booking.
+// Resend handles the delay via `scheduled_at` — no cron, no Blobs, no state on
+// our side. Default delay is 48h; override with REVIEW_DELAY_HOURS env.
+async function scheduleReviewRequest(data) {
+  const trustpilotUrl = process.env.REVIEW_TRUSTPILOT_URL || '';
+  const googleUrl = process.env.REVIEW_GOOGLE_URL || '';
+  const delayHours = Number(process.env.REVIEW_DELAY_HOURS) || 48;
+  const sendAt = new Date(Date.now() + delayHours * 3600 * 1000).toISOString();
+  const customerName = (data.name || '').split(' ')[0] || 'there';
+  const service = data.service || 'booking';
+
+  const ctaButtons = [];
+  if (googleUrl) ctaButtons.push(`<a href="${googleUrl}" style="display:inline-block;background:#4285f4;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:600;margin:6px;">⭐ Leave a Google review</a>`);
+  if (trustpilotUrl) ctaButtons.push(`<a href="${trustpilotUrl}" style="display:inline-block;background:#00b67a;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:600;margin:6px;">⭐ Review on Trustpilot</a>`);
+
+  const html = `<div style="font-family:system-ui,-apple-system,sans-serif;max-width:560px;line-height:1.55;">
+    <h2 style="margin:0 0 12px;color:#111;">Hi ${customerName},</h2>
+    <p>Thanks for booking your <b>${service}</b> with Hausio. We hope the team did a great job.</p>
+    <p>If you've got 30 seconds, a quick review helps another Londoner find us — and tells our team they nailed it.</p>
+    <div style="text-align:center;margin:24px 0;">
+      ${ctaButtons.join('')}
+    </div>
+    <p style="color:#666;font-size:14px;">If anything wasn't perfect, please <a href="mailto:hausio.co.uk@proton.me">reply to this email</a> first — we'd rather hear from you and fix it than read about it on a 3-star review.</p>
+    <p style="color:#666;font-size:14px;margin-top:32px;">— The Hausio team<br/>+44 7304 330 614 · <a href="https://hausio.co.uk">hausio.co.uk</a></p>
+  </div>`;
+
+  const textLines = [
+    `Hi ${customerName},`,
+    '',
+    `Thanks for booking your ${service} with Hausio. We hope the team did a great job.`,
+    '',
+    `If you've got 30 seconds, a quick review helps another Londoner find us:`,
+    googleUrl ? `Google: ${googleUrl}` : '',
+    trustpilotUrl ? `Trustpilot: ${trustpilotUrl}` : '',
+    '',
+    `If anything wasn't perfect, please reply to this email first.`,
+    '',
+    `— The Hausio team`,
+    `+44 7304 330 614 · https://hausio.co.uk`,
+  ].filter(Boolean);
+
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: SENDER,
+      to: [data.email],
+      reply_to: 'hausio.co.uk@proton.me',
+      subject: `How was your Hausio ${service}? (30 seconds — really)`,
+      text: textLines.join('\n'),
+      html,
+      scheduled_at: sendAt,
+    }),
+  });
+  const body = await res.text();
+  if (!res.ok) throw new Error(`Resend (review) ${res.status}: ${body.slice(0, 300)}`);
+  return `scheduled for ${sendAt}`;
 }

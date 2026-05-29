@@ -8,6 +8,12 @@
 //   FORM_NOTIFY_TO        — email recipient (default: hausio.co.uk@proton.me)
 //   FORM_NOTIFY_FROM      — email sender   (default: Hausio Bookings <onboarding@resend.dev>)
 //   SHEETS_WEBHOOK_URL    — Google Apps Script Web App URL — appends rows to a Sheet
+//   TURNSTILE_SECRET_KEY  — Cloudflare Turnstile secret. If set, submissions
+//                           without a valid cf-turnstile-response token are
+//                           silently dropped (no email, no Sheets, no review).
+//                           Submission still appears in Netlify Forms dashboard
+//                           for audit. Without this env var, verification is
+//                           skipped (useful in dev / before Cloudflare setup).
 
 const RECIPIENT = process.env.FORM_NOTIFY_TO || 'hausio.co.uk@proton.me';
 const SENDER    = process.env.FORM_NOTIFY_FROM || 'Hausio Bookings <onboarding@resend.dev>';
@@ -30,10 +36,30 @@ exports.handler = async (event) => {
 
   const formName = payload.form_name || 'unknown';
   const data = payload.data || {};
+
+  // === BOT GATE — Cloudflare Turnstile token verification ===
+  // Spam bots can submit Netlify Forms even with honeypot in place. The
+  // Turnstile token, attached client-side by the widget on book.html /
+  // popup.js, is verified here BEFORE we send any operator notification.
+  // Invalid token → log + drop. Submission still lands in Netlify Forms
+  // dashboard so legitimate-looking ones can be reviewed manually.
+  if (process.env.TURNSTILE_SECRET_KEY) {
+    const token = data['cf-turnstile-response'] || data['cf_turnstile_response'] || '';
+    const ip = (payload.human_fields && payload.human_fields.ip) || payload.remote_ip || '';
+    const ok = await verifyTurnstile(token, ip);
+    if (!ok) {
+      console.warn(`[submission-created] turnstile FAILED for ${formName} — dropping notifications. Submission still stored in Netlify Forms.`);
+      return { statusCode: 200, body: 'Dropped by Turnstile' };
+    }
+    console.log('[submission-created] turnstile OK');
+  } else {
+    console.warn('[submission-created] TURNSTILE_SECRET_KEY missing — skipping bot verification');
+  }
+
   // Drop framework noise + empty values so the email/log only shows fields
   // the customer actually filled in (handyman bookings shouldn't show empty
-  // cleaning/removals fields, and vice versa).
-  const SKIP = new Set(['bot-field', 'form-name']);
+  // cleaning/man-and-van fields, and vice versa).
+  const SKIP = new Set(['bot-field', 'form-name', 'cf-turnstile-response']);
   const isEmpty = v => v === '' || v == null || (Array.isArray(v) && v.length === 0);
   const fields = Object.entries(data).filter(([k, v]) => !SKIP.has(k) && !isEmpty(v));
 
@@ -82,6 +108,37 @@ exports.handler = async (event) => {
 
   return { statusCode: 200, body: 'OK' };
 };
+
+// Verify a Cloudflare Turnstile token against siteverify.
+// Returns true if Cloudflare confirms the challenge passed, false otherwise.
+// Network errors fail closed (return false) so a Cloudflare outage stops
+// spam dropping into the inbox — operator can still review in Netlify dashboard.
+async function verifyTurnstile(token, ip) {
+  if (!token) return false;
+  try {
+    const params = new URLSearchParams();
+    params.append('secret', process.env.TURNSTILE_SECRET_KEY);
+    params.append('response', token);
+    if (ip) params.append('remoteip', ip);
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString(),
+    });
+    if (!res.ok) {
+      console.error(`[turnstile] siteverify HTTP ${res.status}`);
+      return false;
+    }
+    const json = await res.json();
+    if (!json.success) {
+      console.warn('[turnstile] siteverify rejected:', JSON.stringify(json['error-codes'] || []));
+    }
+    return !!json.success;
+  } catch (err) {
+    console.error('[turnstile] verify error:', err.message);
+    return false;
+  }
+}
 
 async function sendResendEmail(formName, data, fields) {
   const replyTo = data.email || data.contact_email || undefined;

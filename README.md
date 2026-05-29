@@ -1,6 +1,6 @@
 # Hausio — London Home Services Website
 
-Static marketing site + multi-step online booking for **Hausio**, a London home services company (cleaning, removals, handyman, gardening).
+Static marketing site + multi-step online booking for **Hausio**, a London home services company (cleaning, man and van, handyman, gardening).
 
 ## Files
 
@@ -45,9 +45,9 @@ python -m http.server -d Hausio 8000
 | Cleaning (regular)     | £22/hr |
 | Cleaning (deep)        | £28/hr |
 | Cleaning (end of tenancy) | £32/hr |
-| Removals (1 man + van) | £55/hr |
-| Removals (2 men + van) | £85/hr |
-| Removals (3 men + van) | £115/hr |
+| Man and Van (1 man + van) | £55/hr |
+| Man and Van (2 men + van) | £85/hr |
+| Man and Van (3 men + van) | £115/hr |
 | Handyman (1st hour)    | £65 |
 | Handyman (subsequent)  | £50/hr |
 | Gardening              | £40/hr |

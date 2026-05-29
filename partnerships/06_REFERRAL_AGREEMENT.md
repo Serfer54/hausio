@@ -19,7 +19,7 @@ Email: {email} · Phone: {phone}
 
 ## 1. Purpose
 
-This Agreement sets out the basis on which the Partner will refer end-of-tenancy cleaning, removals, handyman and related home services to Hausio's customers, and on which Hausio will pay the Partner a commission for completed services delivered through those referrals.
+This Agreement sets out the basis on which the Partner will refer end-of-tenancy cleaning, man and van, handyman and related home services to Hausio's customers, and on which Hausio will pay the Partner a commission for completed services delivered through those referrals.
 
 ## 2. Referral mechanism
 

@@ -2,7 +2,7 @@
   "name": "hausio",
   "version": "1.0.0",
   "private": true,
-  "description": "Hausio London — home services site (cleaning, removals, handyman). Static site + Netlify Functions for Stripe deposits.",
+  "description": "Hausio London — home services site (cleaning, man and van, handyman). Static site + Netlify Functions for Stripe deposits.",
   "scripts": {
     "dev": "netlify dev",
     "deploy": "netlify deploy --prod"

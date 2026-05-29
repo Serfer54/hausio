@@ -3,27 +3,87 @@
     "name": "Tower Hamlets",
     "slug": "tower-hamlets",
     "geoCode": "GB-TWH",
-    "postcodes": ["E1", "E2", "E14", "E3"],
+    "postcodes": [
+      "E1",
+      "E2",
+      "E14",
+      "E3"
+    ],
     "headlinePostcodes": "E1 · E2 · E14",
-    "neighborhoods": ["Whitechapel", "Stepney", "Bethnal Green", "Mile End", "Bow", "Poplar", "Canary Wharf", "Wapping", "Limehouse", "Spitalfields", "Shadwell", "Isle of Dogs"],
-    "boundary": ["City of London", "Hackney", "Newham", "Greenwich"],
-    "linkedBoroughs": ["hackney", "newham", "southwark"],
+    "neighborhoods": [
+      "Whitechapel",
+      "Stepney",
+      "Bethnal Green",
+      "Mile End",
+      "Bow",
+      "Poplar",
+      "Canary Wharf",
+      "Wapping",
+      "Limehouse",
+      "Spitalfields",
+      "Shadwell",
+      "Isle of Dogs"
+    ],
+    "boundary": [
+      "City of London",
+      "Hackney",
+      "Newham",
+      "Greenwich"
+    ],
+    "linkedBoroughs": [
+      "hackney",
+      "newham",
+      "southwark"
+    ],
     "snippets": [
-      {"pc": "E14", "title": "Canary Wharf goods lifts", "body": "Tower-block moves in Canary Wharf need pre-booked goods-lift slots — porter coordination 24–48h ahead. We make the call."},
-      {"pc": "E1", "title": "Brick Lane & Spitalfields markets", "body": "Sundays 09:00–17:00 the Truman Brewery and Brick Lane road closures kick in. We slot moves at 07:00–09:00 or after 18:00."},
-      {"pc": "E14", "title": "Isle of Dogs security", "body": "Island Gardens and Cubitt Town high-rises run 24/7 concierge. Bring photo ID; we send the team's details ahead."},
-      {"pc": "E1 · E2", "title": "Conservation areas", "body": "Spitalfields and Wapping conservation — reversible fixings on listed brickwork; no façade changes without LBC."},
-      {"pc": "E1", "title": "Queen Mary student moves", "body": "September and June end-of-tenancy spike around Mile End and Stepney. Book 10–14 days ahead for an early slot."},
-      {"pc": "E14", "title": "Crossrail / Elizabeth line", "body": "Stratford and Canary Wharf moves benefit from off-peak van access via the Limehouse Link tunnel — we plan around peak gridlock."}
+      {
+        "pc": "E14",
+        "title": "Canary Wharf goods lifts",
+        "body": "Tower-block moves in Canary Wharf need pre-booked goods-lift slots — porter coordination 24–48h ahead. We make the call."
+      },
+      {
+        "pc": "E1",
+        "title": "Brick Lane & Spitalfields markets",
+        "body": "Sundays 09:00–17:00 the Truman Brewery and Brick Lane road closures kick in. We slot moves at 07:00–09:00 or after 18:00."
+      },
+      {
+        "pc": "E14",
+        "title": "Isle of Dogs security",
+        "body": "Island Gardens and Cubitt Town high-rises run 24/7 concierge. Bring photo ID; we send the team's details ahead."
+      },
+      {
+        "pc": "E1 · E2",
+        "title": "Conservation areas",
+        "body": "Spitalfields and Wapping conservation — reversible fixings on listed brickwork; no façade changes without LBC."
+      },
+      {
+        "pc": "E1",
+        "title": "Queen Mary student moves",
+        "body": "September and June end-of-tenancy spike around Mile End and Stepney. Book 10–14 days ahead for an early slot."
+      },
+      {
+        "pc": "E14",
+        "title": "Crossrail / Elizabeth line",
+        "body": "Stratford and Canary Wharf moves benefit from off-peak van access via the Limehouse Link tunnel — we plan around peak gridlock."
+      }
     ],
     "faq": [
-      {"q": "Do you cover Canary Wharf high-rises?", "a": "Yes — we work all the major Canary Wharf and Isle of Dogs towers (One Park Drive, Pan Peninsula, Landmark, New Providence Wharf, Wood Wharf). We co-ordinate goods-lift booking with concierge 24–48 hours ahead, bring our own floor protection and lift padding, and our team carries Construction Skills Certification Scheme (CSCS) cards for sites that ask."},
-      {"q": "What's parking like for jobs in Tower Hamlets?", "a": "Most of E1, E2 and E3 is CPZ-controlled by Tower Hamlets — our quote includes a tradesperson permit (~£10 half-day). Around Brick Lane and Spitalfields on Sundays, road closures kick in 09:00–17:00 for the markets, so we typically slot moves at 07:00 or after 18:00 instead."},
-      {"q": "Do you handle end-of-tenancy cleans for Queen Mary students?", "a": "Yes — June and September are our busiest end-of-tenancy weeks in Mile End, Bow and Stepney because of the Queen Mary cycle. We follow the inventory checklists used by the main Tower Hamlets student-let agents (RentalGate, Foxtons Tower Hamlets, Aspire) and offer a free 72-hour re-clean if your check-out clerk flags an issue."}
+      {
+        "q": "Do you cover Canary Wharf high-rises?",
+        "a": "Yes — we work all the major Canary Wharf and Isle of Dogs towers (One Park Drive, Pan Peninsula, Landmark, New Providence Wharf, Wood Wharf). We co-ordinate goods-lift booking with concierge 24–48 hours ahead, bring our own floor protection and lift padding, and our team carries Construction Skills Certification Scheme (CSCS) cards for sites that ask."
+      },
+      {
+        "q": "What's parking like for jobs in Tower Hamlets?",
+        "a": "Most of E1, E2 and E3 is CPZ-controlled by Tower Hamlets — our quote includes a tradesperson permit (~£10 half-day). Around Brick Lane and Spitalfields on Sundays, road closures kick in 09:00–17:00 for the markets, so we typically slot moves at 07:00 or after 18:00 instead."
+      },
+      {
+        "q": "Do you handle end-of-tenancy cleans for Queen Mary students?",
+        "a": "Yes — June and September are our busiest end-of-tenancy weeks in Mile End, Bow and Stepney because of the Queen Mary cycle. We follow the inventory checklists used by the main Tower Hamlets student-let agents (RentalGate, Foxtons Tower Hamlets, Aspire) and offer a free 72-hour re-clean if your check-out clerk flags an issue."
+      }
     ],
     "serviceFraming": {
       "cleaning": "End-of-tenancy peaks around Queen Mary University in June and September drive most of our Mile End and Bethnal Green bookings. Regular fortnightly cleans are biggest in Canary Wharf high-rises, where porters often coordinate keys.",
-      "removals": "Tower Hamlets means goods-lift bookings in Canary Wharf, narrow Victorian terraces in Bow and Stepney, and Sunday market closures around Brick Lane. We plan the route before we arrive and pre-book lift slots so the team isn't waiting.",
+      "man-and-van": "Tower Hamlets man and van work means goods-lift bookings in Canary Wharf high-rises, narrow Victorian terraces in Bow and Stepney, and Sunday market closures around Brick Lane. We pre-book lift slots, plan the route the night before, and time around the markets — so the team isn't waiting on the kerb. Same-day slots usually available outside Sunday market hours.",
       "handyman": "Pax wardrobe builds in tiny E1 conversions and TV mounting in Canary Wharf show flats are our two most-booked Tower Hamlets jobs. Spitalfields conservation properties need reversible fixings; Wapping warehouse conversions often need brick-suitable anchors."
     }
   },
@@ -31,27 +91,87 @@
     "name": "Southwark",
     "slug": "southwark",
     "geoCode": "GB-SWK",
-    "postcodes": ["SE1", "SE15", "SE17", "SE5", "SE16"],
+    "postcodes": [
+      "SE1",
+      "SE15",
+      "SE17",
+      "SE5",
+      "SE16"
+    ],
     "headlinePostcodes": "SE1 · SE15 · SE17",
-    "neighborhoods": ["Borough", "Bermondsey", "Peckham", "Camberwell", "Walworth", "Elephant & Castle", "London Bridge", "Rotherhithe", "Surrey Quays", "Nunhead", "Dulwich (north)"],
-    "boundary": ["Lambeth", "Lewisham", "Tower Hamlets", "City of London"],
-    "linkedBoroughs": ["lambeth", "lewisham", "tower-hamlets"],
+    "neighborhoods": [
+      "Borough",
+      "Bermondsey",
+      "Peckham",
+      "Camberwell",
+      "Walworth",
+      "Elephant & Castle",
+      "London Bridge",
+      "Rotherhithe",
+      "Surrey Quays",
+      "Nunhead",
+      "Dulwich (north)"
+    ],
+    "boundary": [
+      "Lambeth",
+      "Lewisham",
+      "Tower Hamlets",
+      "City of London"
+    ],
+    "linkedBoroughs": [
+      "lambeth",
+      "lewisham",
+      "tower-hamlets"
+    ],
     "snippets": [
-      {"pc": "SE1", "title": "Borough Market access", "body": "Wednesday–Saturday Borough Market closes Stoney Street and Bedale Street. We slot SE1 moves at 06:30–09:00 or after 18:00 for clean access."},
-      {"pc": "SE16", "title": "Rotherhithe warehouse conversions", "body": "Surrey Quays and Bermondsey warehouse flats — period steel-frame fixings need specialist anchors; we carry a kit on the van."},
-      {"pc": "SE15", "title": "Peckham Rye high streets", "body": "Rye Lane and Bellenden Road are bus-route narrow. Larger 3-mover Luton vans need a side-street unloading point — we walk it day before."},
-      {"pc": "SE1", "title": "Conservation: Bermondsey Street", "body": "Bermondsey Street and Borough High Street conservation areas — listed shopfronts, reversible internal fixings only."},
-      {"pc": "SE17", "title": "Elephant & Castle redevelopment", "body": "New towers around Elephant Park have concierge + goods-lift booking. Strata, Trafalgar, One The Elephant — we know the lift teams."},
-      {"pc": "SE1", "title": "London Bridge office moves", "body": "Office relocations into More London or The Shard need security passes. Allow 24h for the building's access process."}
+      {
+        "pc": "SE1",
+        "title": "Borough Market access",
+        "body": "Wednesday–Saturday Borough Market closes Stoney Street and Bedale Street. We slot SE1 moves at 06:30–09:00 or after 18:00 for clean access."
+      },
+      {
+        "pc": "SE16",
+        "title": "Rotherhithe warehouse conversions",
+        "body": "Surrey Quays and Bermondsey warehouse flats — period steel-frame fixings need specialist anchors; we carry a kit on the van."
+      },
+      {
+        "pc": "SE15",
+        "title": "Peckham Rye high streets",
+        "body": "Rye Lane and Bellenden Road are bus-route narrow. Larger 3-mover Luton vans need a side-street unloading point — we walk it day before."
+      },
+      {
+        "pc": "SE1",
+        "title": "Conservation: Bermondsey Street",
+        "body": "Bermondsey Street and Borough High Street conservation areas — listed shopfronts, reversible internal fixings only."
+      },
+      {
+        "pc": "SE17",
+        "title": "Elephant & Castle redevelopment",
+        "body": "New towers around Elephant Park have concierge + goods-lift booking. Strata, Trafalgar, One The Elephant — we know the lift teams."
+      },
+      {
+        "pc": "SE1",
+        "title": "London Bridge office moves",
+        "body": "Office relocations into More London or The Shard need security passes. Allow 24h for the building's access process."
+      }
     ],
     "faq": [
-      {"q": "Do you do moves into the Southwark high-rises (One The Elephant, Strata, etc.)?", "a": "Yes — we move into the major Elephant & Castle and Bermondsey towers regularly (Strata SE1, One The Elephant, Trafalgar, Hawkins\\Brown blocks). Each requires goods-lift booking 24h ahead and concierge sign-in; our team brings CSCS cards and ID. Move days are typically 09:00–17:00 because most blocks restrict moves outside business hours."},
-      {"q": "How do you handle Borough Market days for SE1 moves?", "a": "Borough Market runs Wednesday afternoon through Saturday — Stoney Street and Bedale Street are pedestrianised those days. We schedule SE1 jobs near the market either before 09:00 or after 18:00, or use Park Street as the load point if your address is on Bedale Street itself."},
-      {"q": "Do you do end-of-tenancy cleans for Goldsmiths students?", "a": "Goldsmiths is just over the border in Lewisham (New Cross), but a lot of student lets are in SE15 (Peckham), SE5 (Camberwell) and SE14 (New Cross Gate). We do a high volume of end-of-tenancy cleans there in June and September following the Goldsmiths agent inventory checklists, with a free 72-hour re-clean guarantee."}
+      {
+        "q": "Do you do moves into the Southwark high-rises (One The Elephant, Strata, etc.)?",
+        "a": "Yes — we move into the major Elephant & Castle and Bermondsey towers regularly (Strata SE1, One The Elephant, Trafalgar, Hawkins\\Brown blocks). Each requires goods-lift booking 24h ahead and concierge sign-in; our team brings CSCS cards and ID. Move days are typically 09:00–17:00 because most blocks restrict moves outside business hours."
+      },
+      {
+        "q": "How do you handle Borough Market days for SE1 moves?",
+        "a": "Borough Market runs Wednesday afternoon through Saturday — Stoney Street and Bedale Street are pedestrianised those days. We schedule SE1 jobs near the market either before 09:00 or after 18:00, or use Park Street as the load point if your address is on Bedale Street itself."
+      },
+      {
+        "q": "Do you do end-of-tenancy cleans for Goldsmiths students?",
+        "a": "Goldsmiths is just over the border in Lewisham (New Cross), but a lot of student lets are in SE15 (Peckham), SE5 (Camberwell) and SE14 (New Cross Gate). We do a high volume of end-of-tenancy cleans there in June and September following the Goldsmiths agent inventory checklists, with a free 72-hour re-clean guarantee."
+      }
     ],
     "serviceFraming": {
       "cleaning": "End-of-tenancy is our highest-volume Southwark service — June and September spikes around Goldsmiths, King's College Denmark Hill, and South Bank University. Bermondsey Street loft conversions need specialist deep-cleans (exposed brick, polished concrete).",
-      "removals": "Southwark moves split between SE1 high-rise concierge buildings and SE15/SE5 Victorian terraced houses. Borough Market days, London Bridge security, and Elephant & Castle goods-lift coordination — we plan all three before quote.",
+      "man-and-van": "Southwark man and van splits between SE1 high-rise concierge buildings around Elephant & Castle and London Bridge, and SE15/SE5 Victorian terraced houses around Peckham and Camberwell. Borough Market trading days (Wed–Sat), London Bridge office security passes, and Elephant & Castle goods-lift coordination — we handle all three before the quote lands. Same-day available outside market hours.",
       "handyman": "Bermondsey warehouse-flat fixings (steel I-beams, concrete walls) are a Southwark specialty — we carry the right anchors. Peckham terrace gardens, Camberwell sash window restoration, and Elephant & Castle new-build snagging round out the regular handyman work."
     }
   },
@@ -59,27 +179,85 @@
     "name": "Lambeth",
     "slug": "lambeth",
     "geoCode": "GB-LBH",
-    "postcodes": ["SE11", "SW8", "SW9", "SW2", "SW4"],
+    "postcodes": [
+      "SE11",
+      "SW8",
+      "SW9",
+      "SW2",
+      "SW4"
+    ],
     "headlinePostcodes": "SE11 · SW8 · SW9",
-    "neighborhoods": ["Brixton", "Clapham (north)", "Vauxhall", "Stockwell", "Kennington", "Streatham", "West Norwood", "Herne Hill", "Tulse Hill"],
-    "boundary": ["Wandsworth", "Southwark", "Westminster", "Croydon"],
-    "linkedBoroughs": ["wandsworth", "southwark", "westminster"],
+    "neighborhoods": [
+      "Brixton",
+      "Clapham (north)",
+      "Vauxhall",
+      "Stockwell",
+      "Kennington",
+      "Streatham",
+      "West Norwood",
+      "Herne Hill",
+      "Tulse Hill"
+    ],
+    "boundary": [
+      "Wandsworth",
+      "Southwark",
+      "Westminster",
+      "Croydon"
+    ],
+    "linkedBoroughs": [
+      "wandsworth",
+      "southwark",
+      "westminster"
+    ],
     "snippets": [
-      {"pc": "SW9", "title": "Brixton market days", "body": "Tuesday–Sunday Electric Avenue and Brixton Station Road are pedestrianised. Best window for SW9 moves is 06:00–09:00 or after 18:00."},
-      {"pc": "SW8", "title": "Vauxhall riverside towers", "body": "Embassy Gardens, St George Wharf, One Nine Elms — concierge + goods-lift booking required, 24–48h notice. We coordinate."},
-      {"pc": "SE11", "title": "Kennington conservation", "body": "Kennington Park Road and Cleaver Square conservation — Georgian terraces, reversible fixings, no exterior alterations without LBC."},
-      {"pc": "SW9", "title": "King's College Denmark Hill", "body": "King's medical campus at Denmark Hill drives SW9/SE5 student lets. End-of-tenancy spikes June and September."},
-      {"pc": "SW2", "title": "Brixton Hill walk-ups", "body": "Many Victorian conversions in SW2 are 3rd/4th floor walk-ups. No surcharge but allow +30–60 min per floor on quote."},
-      {"pc": "SW4", "title": "Clapham North CPZ", "body": "Lambeth CPZ runs Mon–Fri 09:00–17:00. After-hours and weekend moves often skip the permit cost entirely."}
+      {
+        "pc": "SW9",
+        "title": "Brixton market days",
+        "body": "Tuesday–Sunday Electric Avenue and Brixton Station Road are pedestrianised. Best window for SW9 moves is 06:00–09:00 or after 18:00."
+      },
+      {
+        "pc": "SW8",
+        "title": "Vauxhall riverside towers",
+        "body": "Embassy Gardens, St George Wharf, One Nine Elms — concierge + goods-lift booking required, 24–48h notice. We coordinate."
+      },
+      {
+        "pc": "SE11",
+        "title": "Kennington conservation",
+        "body": "Kennington Park Road and Cleaver Square conservation — Georgian terraces, reversible fixings, no exterior alterations without LBC."
+      },
+      {
+        "pc": "SW9",
+        "title": "King's College Denmark Hill",
+        "body": "King's medical campus at Denmark Hill drives SW9/SE5 student lets. End-of-tenancy spikes June and September."
+      },
+      {
+        "pc": "SW2",
+        "title": "Brixton Hill walk-ups",
+        "body": "Many Victorian conversions in SW2 are 3rd/4th floor walk-ups. No surcharge but allow +30–60 min per floor on quote."
+      },
+      {
+        "pc": "SW4",
+        "title": "Clapham North CPZ",
+        "body": "Lambeth CPZ runs Mon–Fri 09:00–17:00. After-hours and weekend moves often skip the permit cost entirely."
+      }
     ],
     "faq": [
-      {"q": "Do you handle moves into the Vauxhall riverside towers?", "a": "Yes — we work all the major Nine Elms / Vauxhall developments: Embassy Gardens, St George Wharf, One Nine Elms, Riverlight, Battersea Power Station (technically Wandsworth boundary). All require goods-lift bookings 24–48h ahead and concierge sign-in. We bring our own floor protection and our team carries ID."},
-      {"q": "How do Brixton market days affect moves?", "a": "Brixton Market runs Tuesday–Sunday with Electric Avenue and Brixton Station Road pedestrianised 09:00–18:00. For SW9 jobs near the market we slot at 06:30–09:00 or after 18:00. For everywhere else in Lambeth, market days don't matter."},
-      {"q": "Do you do end-of-tenancy cleans for King's College medics?", "a": "Yes — Denmark Hill (King's medical campus) drives a lot of student lets in SW9, SE5 and SE22. June and August are peak end-of-tenancy weeks. We follow the standard Lambeth student-let agent checklists and offer a free 72-hour re-clean if anything's flagged."}
+      {
+        "q": "Do you handle moves into the Vauxhall riverside towers?",
+        "a": "Yes — we work all the major Nine Elms / Vauxhall developments: Embassy Gardens, St George Wharf, One Nine Elms, Riverlight, Battersea Power Station (technically Wandsworth boundary). All require goods-lift bookings 24–48h ahead and concierge sign-in. We bring our own floor protection and our team carries ID."
+      },
+      {
+        "q": "How do Brixton market days affect moves?",
+        "a": "Brixton Market runs Tuesday–Sunday with Electric Avenue and Brixton Station Road pedestrianised 09:00–18:00. For SW9 jobs near the market we slot at 06:30–09:00 or after 18:00. For everywhere else in Lambeth, market days don't matter."
+      },
+      {
+        "q": "Do you do end-of-tenancy cleans for King's College medics?",
+        "a": "Yes — Denmark Hill (King's medical campus) drives a lot of student lets in SW9, SE5 and SE22. June and August are peak end-of-tenancy weeks. We follow the standard Lambeth student-let agent checklists and offer a free 72-hour re-clean if anything's flagged."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Lambeth cleaning splits between Vauxhall high-rise regular cleans (Embassy Gardens, St George Wharf — fortnightly is the norm) and SW9/SE5 end-of-tenancy spikes around King's College Denmark Hill in June and September.",
-      "removals": "Vauxhall tower lift coordination, Brixton market-day timing, and SW2 walk-up planning — Lambeth needs route prep before the van arrives. We do the recce so you don't get a 'we couldn't fit' on the day.",
+      "man-and-van": "Lambeth man and van work means Vauxhall riverside-tower lift coordination (Embassy Gardens, St George Wharf, One Nine Elms), Brixton market-day timing on SW9, and SW2 walk-up planning on Brixton Hill. We do the route recce before quote so you don't get a 'can't fit the van' on the day. Same-day slots available across SE11, SW8, SW9, SW2 and SW4.",
       "handyman": "Brixton Victorian conversion fixings (lath-and-plaster needs specialist anchors), Clapham sash window restoration, and Vauxhall new-build snagging are our three Lambeth handyman regulars. Conservation work in Kennington Park / Cleaver Square needs reversible fixings."
     }
   },
@@ -87,27 +265,84 @@
     "name": "Kensington & Chelsea",
     "slug": "kensington-chelsea",
     "geoCode": "GB-KEC",
-    "postcodes": ["SW3", "SW5", "SW7", "SW10", "W8", "W11", "W14"],
+    "postcodes": [
+      "SW3",
+      "SW5",
+      "SW7",
+      "SW10",
+      "W8",
+      "W11",
+      "W14"
+    ],
     "headlinePostcodes": "SW3 · SW7 · W8 · W11",
-    "neighborhoods": ["South Kensington", "Chelsea", "Notting Hill", "Earl's Court", "Knightsbridge (north)", "Holland Park", "World's End", "Brompton", "Ladbroke Grove (south)"],
-    "boundary": ["Westminster", "Hammersmith & Fulham"],
-    "linkedBoroughs": ["westminster", "hammersmith-fulham"],
+    "neighborhoods": [
+      "South Kensington",
+      "Chelsea",
+      "Notting Hill",
+      "Earl's Court",
+      "Knightsbridge (north)",
+      "Holland Park",
+      "World's End",
+      "Brompton",
+      "Ladbroke Grove (south)"
+    ],
+    "boundary": [
+      "Westminster",
+      "Hammersmith & Fulham"
+    ],
+    "linkedBoroughs": [
+      "westminster",
+      "hammersmith-fulham"
+    ],
     "snippets": [
-      {"pc": "SW3 · SW7", "title": "Conservation everywhere", "body": "Almost all of Chelsea, South Ken and Brompton is in a conservation area. Façade work needs LBC; internal fixings reversible only."},
-      {"pc": "SW3", "title": "Mews-house access", "body": "Cheyne Mews, Pavilion Road, Wilbraham Place — narrow cobbled streets, no Luton vans. We use 2-person Transit + multiple trips."},
-      {"pc": "W8", "title": "Mansion-block lifts", "body": "Kensington Court, Albert Court, Iverna Court — porter lift booking 48h ahead. Most blocks restrict moves to 09:00–16:00 weekdays only."},
-      {"pc": "W11", "title": "Notting Hill Carnival", "body": "August Bank Holiday weekend — total road closure across W11. We don't book Notting Hill moves Friday–Tuesday of Carnival weekend."},
-      {"pc": "SW7", "title": "Imperial College & RCM", "body": "Imperial College and Royal College of Music drive student lets in SW7. End-of-tenancy spikes June and September."},
-      {"pc": "SW3", "title": "Sloane Square retail deliveries", "body": "Saturdays around King's Road and Sloane Square are gridlocked. Move slots before 09:00 or after 19:00."}
+      {
+        "pc": "SW3 · SW7",
+        "title": "Conservation everywhere",
+        "body": "Almost all of Chelsea, South Ken and Brompton is in a conservation area. Façade work needs LBC; internal fixings reversible only."
+      },
+      {
+        "pc": "SW3",
+        "title": "Mews-house access",
+        "body": "Cheyne Mews, Pavilion Road, Wilbraham Place — narrow cobbled streets, no Luton vans. We use 2-person Transit + multiple trips."
+      },
+      {
+        "pc": "W8",
+        "title": "Mansion-block lifts",
+        "body": "Kensington Court, Albert Court, Iverna Court — porter lift booking 48h ahead. Most blocks restrict moves to 09:00–16:00 weekdays only."
+      },
+      {
+        "pc": "W11",
+        "title": "Notting Hill Carnival",
+        "body": "August Bank Holiday weekend — total road closure across W11. We don't book Notting Hill moves Friday–Tuesday of Carnival weekend."
+      },
+      {
+        "pc": "SW7",
+        "title": "Imperial College & RCM",
+        "body": "Imperial College and Royal College of Music drive student lets in SW7. End-of-tenancy spikes June and September."
+      },
+      {
+        "pc": "SW3",
+        "title": "Sloane Square retail deliveries",
+        "body": "Saturdays around King's Road and Sloane Square are gridlocked. Move slots before 09:00 or after 19:00."
+      }
     ],
     "faq": [
-      {"q": "Do you work in mews houses and listed Chelsea properties?", "a": "Yes — most of Chelsea (SW3) and South Kensington (SW7) is in a conservation area or has Listed status. We use reversible internal fixings, floor protection on period parquet, and lift rather than drag furniture out of period staircases. For Listed Building Consent issues (façade work, external alterations) we route those through our Part-P / surveyor partners, not ourselves."},
-      {"q": "How do you handle the big mansion blocks (Kensington Court, Albert Hall Mansions)?", "a": "Mansion-block moves in W8 and SW7 require porter coordination — most blocks let us book the lift 48 hours ahead, restrict moves to 09:00–16:00 weekdays only (no weekends), and require ground-floor parking permits we arrange via the porter. Our team carries CSCS cards and ID for sign-in."},
-      {"q": "Are your prices the same as outer London?", "a": "Same hourly rates — £22/hr cleaning, £55/hr man-and-van, £65 first hour handyman. The total often runs higher in Kensington & Chelsea because of (a) congestion-charge access (£18 added for SW3, SW7, SW10, W8, W14 inside the central zone), (b) parking permits the borough charges at premium rates, and (c) mansion-block coordination time. We quote everything up front, no surprises."}
+      {
+        "q": "Do you work in mews houses and listed Chelsea properties?",
+        "a": "Yes — most of Chelsea (SW3) and South Kensington (SW7) is in a conservation area or has Listed status. We use reversible internal fixings, floor protection on period parquet, and lift rather than drag furniture out of period staircases. For Listed Building Consent issues (façade work, external alterations) we route those through our Part-P / surveyor partners, not ourselves."
+      },
+      {
+        "q": "How do you handle the big mansion blocks (Kensington Court, Albert Hall Mansions)?",
+        "a": "Mansion-block moves in W8 and SW7 require porter coordination — most blocks let us book the lift 48 hours ahead, restrict moves to 09:00–16:00 weekdays only (no weekends), and require ground-floor parking permits we arrange via the porter. Our team carries CSCS cards and ID for sign-in."
+      },
+      {
+        "q": "Are your prices the same as outer London?",
+        "a": "Same hourly rates — £22/hr cleaning, £55/hr man-and-van, £65 first hour handyman. The total often runs higher in Kensington & Chelsea because of (a) congestion-charge access (£18 added for SW3, SW7, SW10, W8, W14 inside the central zone), (b) parking permits the borough charges at premium rates, and (c) mansion-block coordination time. We quote everything up front, no surprises."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Premium regular cleans dominate K&C — fortnightly and weekly with the same trusted cleaner each visit, in mansion blocks across Knightsbridge, Kensington and Chelsea. End-of-tenancy spikes around Imperial College in June. Eco-friendly products are standard request.",
-      "removals": "K&C means mews-house access challenges (no Luton vans on Cheyne Mews), mansion-block lift coordination (Kensington Court, Albert Hall Mansions), and Notting Hill Carnival blackout weekends. We plan all three before quote.",
+      "man-and-van": "Kensington & Chelsea man and van means mews-house access challenges (no Luton vans on Cheyne Mews or Pavilion Road — we use Transit + multiple trips), mansion-block porter coordination (Kensington Court, Albert Hall Mansions, Iverna Court), and Notting Hill Carnival blackout over the August Bank Holiday weekend. We plan around all three before quote, never on the day. Central-zone £18 congestion access included in transparent pricing.",
       "handyman": "Listed-building friendly handyman work — reversible fixings, period-correct hardware, conservation-area aware. Sash window restoration in Notting Hill terraces, Pax wardrobe builds in K&C compact flats, and TV mounting that doesn't damage Georgian cornicing."
     }
   },
@@ -115,27 +350,85 @@
     "name": "Hammersmith & Fulham",
     "slug": "hammersmith-fulham",
     "geoCode": "GB-HMF",
-    "postcodes": ["SW6", "W6", "W12", "W14"],
+    "postcodes": [
+      "SW6",
+      "W6",
+      "W12",
+      "W14"
+    ],
     "headlinePostcodes": "SW6 · W6 · W12",
-    "neighborhoods": ["Hammersmith", "Fulham", "Shepherd's Bush", "White City", "Parsons Green", "Sands End", "Brook Green", "Ravenscourt Park", "Barons Court", "Fulham Broadway"],
-    "boundary": ["Kensington & Chelsea", "Wandsworth", "Brent", "Ealing"],
-    "linkedBoroughs": ["kensington-chelsea", "wandsworth", "brent"],
+    "neighborhoods": [
+      "Hammersmith",
+      "Fulham",
+      "Shepherd's Bush",
+      "White City",
+      "Parsons Green",
+      "Sands End",
+      "Brook Green",
+      "Ravenscourt Park",
+      "Barons Court",
+      "Fulham Broadway"
+    ],
+    "boundary": [
+      "Kensington & Chelsea",
+      "Wandsworth",
+      "Brent",
+      "Ealing"
+    ],
+    "linkedBoroughs": [
+      "kensington-chelsea",
+      "wandsworth",
+      "brent"
+    ],
     "snippets": [
-      {"pc": "W12", "title": "Westfield London traffic", "body": "Saturdays around Westfield are gridlocked from 11:00. W12 moves slot before 10:00 or after 19:30."},
-      {"pc": "SW6", "title": "Fulham Road CPZ", "body": "H&F CPZ Mon–Sat 08:30–18:30. Sundays free. Most weekend moves skip the permit cost."},
-      {"pc": "W6", "title": "Hammersmith Apollo events", "body": "Eventim Apollo gig days affect Queen Caroline Street and Talgarth Road — we check the listing before quoting evening moves."},
-      {"pc": "W12", "title": "BBC TV Centre redevelopment", "body": "The new W12 residential conversion (Television Centre) has goods-lift booking and concierge. Pre-booked move slots only."},
-      {"pc": "SW6", "title": "Fulham FC / Chelsea FC matchdays", "body": "Craven Cottage (SW6) and Stamford Bridge (SW6 boundary) — matchday Saturdays affect SW6 access. We check the fixture list."},
-      {"pc": "SW6", "title": "Parsons Green family moves", "body": "School-run streets (St John's Walham Green, Lady Margaret) — we avoid 08:00–09:00 and 15:00–16:00 windows."}
+      {
+        "pc": "W12",
+        "title": "Westfield London traffic",
+        "body": "Saturdays around Westfield are gridlocked from 11:00. W12 moves slot before 10:00 or after 19:30."
+      },
+      {
+        "pc": "SW6",
+        "title": "Fulham Road CPZ",
+        "body": "H&F CPZ Mon–Sat 08:30–18:30. Sundays free. Most weekend moves skip the permit cost."
+      },
+      {
+        "pc": "W6",
+        "title": "Hammersmith Apollo events",
+        "body": "Eventim Apollo gig days affect Queen Caroline Street and Talgarth Road — we check the listing before quoting evening moves."
+      },
+      {
+        "pc": "W12",
+        "title": "BBC TV Centre redevelopment",
+        "body": "The new W12 residential conversion (Television Centre) has goods-lift booking and concierge. Pre-booked move slots only."
+      },
+      {
+        "pc": "SW6",
+        "title": "Fulham FC / Chelsea FC matchdays",
+        "body": "Craven Cottage (SW6) and Stamford Bridge (SW6 boundary) — matchday Saturdays affect SW6 access. We check the fixture list."
+      },
+      {
+        "pc": "SW6",
+        "title": "Parsons Green family moves",
+        "body": "School-run streets (St John's Walham Green, Lady Margaret) — we avoid 08:00–09:00 and 15:00–16:00 windows."
+      }
     ],
     "faq": [
-      {"q": "Do you work in the Television Centre redevelopment (W12)?", "a": "Yes — the new BBC Television Centre residential blocks (Helios, Crescent, etc.) have goods-lift booking, concierge sign-in and dedicated move-in slots. We coordinate with the building team 24–48h ahead and bring CSCS cards. Move-in days at TV Centre are typically 09:00–17:00 weekdays."},
-      {"q": "How do you handle Westfield traffic for W12 moves?", "a": "Westfield London (Shepherd's Bush) is gridlocked Saturdays from about 11:00 onwards. For W12 moves we slot before 10:00 or after 19:30 — and we use Wood Lane access from the north rather than fighting through Shepherd's Bush Green."},
-      {"q": "Do you handle Fulham FC / Chelsea matchdays in SW6?", "a": "Yes — we check the fixture list before quoting any SW6 evening or Saturday move. Craven Cottage matchdays close Stevenage Road and parts of Fulham Palace Road; Chelsea matchdays affect Fulham Broadway. We slot moves to avoid the kickoff window (typically 14:00–17:00 for 15:00 kickoffs)."}
+      {
+        "q": "Do you work in the Television Centre redevelopment (W12)?",
+        "a": "Yes — the new BBC Television Centre residential blocks (Helios, Crescent, etc.) have goods-lift booking, concierge sign-in and dedicated move-in slots. We coordinate with the building team 24–48h ahead and bring CSCS cards. Move-in days at TV Centre are typically 09:00–17:00 weekdays."
+      },
+      {
+        "q": "How do you handle Westfield traffic for W12 moves?",
+        "a": "Westfield London (Shepherd's Bush) is gridlocked Saturdays from about 11:00 onwards. For W12 moves we slot before 10:00 or after 19:30 — and we use Wood Lane access from the north rather than fighting through Shepherd's Bush Green."
+      },
+      {
+        "q": "Do you handle Fulham FC / Chelsea matchdays in SW6?",
+        "a": "Yes — we check the fixture list before quoting any SW6 evening or Saturday move. Craven Cottage matchdays close Stevenage Road and parts of Fulham Palace Road; Chelsea matchdays affect Fulham Broadway. We slot moves to avoid the kickoff window (typically 14:00–17:00 for 15:00 kickoffs)."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Family-home regular cleans dominate Fulham (SW6) — weekly cleans for school-run families is the biggest category. End-of-tenancy spikes around Imperial College students in W6/W12 in June and September.",
-      "removals": "H&F means matchday awareness (Fulham FC, Chelsea), Westfield traffic on Saturdays, and the new Television Centre lift coordination. We check fixtures and concert listings before quoting any evening or weekend job.",
+      "man-and-van": "Hammersmith & Fulham man and van must-knows: Fulham FC and Chelsea matchday awareness on SW6 (we check the fixture list), Westfield Saturday gridlock on W12 (slot before 10am or after 19:30), and the new BBC Television Centre lift coordination on White City. Hammersmith Apollo gig nights affect Talgarth Road and Queen Caroline Street. Same-day slots available across SW6, W6, W12 and W14.",
       "handyman": "Fulham family-home handyman work is high volume — kid-proofing (drawer locks, corner protectors), garden-shed assembly, fence repair. Hammersmith mansion-block fixings, Shepherd's Bush new-build snagging, and Westfield-area furniture delivery+assembly round it out."
     }
   },
@@ -143,27 +436,84 @@
     "name": "Greenwich",
     "slug": "greenwich",
     "geoCode": "GB-GRE",
-    "postcodes": ["SE3", "SE10", "SE18", "SE7", "SE9"],
+    "postcodes": [
+      "SE3",
+      "SE10",
+      "SE18",
+      "SE7",
+      "SE9"
+    ],
     "headlinePostcodes": "SE3 · SE10 · SE18",
-    "neighborhoods": ["Greenwich", "Blackheath", "Charlton", "Woolwich", "Eltham", "Kidbrooke", "New Eltham", "Royal Arsenal", "Greenwich Peninsula"],
-    "boundary": ["Lewisham", "Bexley", "Tower Hamlets (river)", "Newham (river)"],
-    "linkedBoroughs": ["lewisham", "tower-hamlets"],
+    "neighborhoods": [
+      "Greenwich",
+      "Blackheath",
+      "Charlton",
+      "Woolwich",
+      "Eltham",
+      "Kidbrooke",
+      "New Eltham",
+      "Royal Arsenal",
+      "Greenwich Peninsula"
+    ],
+    "boundary": [
+      "Lewisham",
+      "Bexley",
+      "Tower Hamlets (river)",
+      "Newham (river)"
+    ],
+    "linkedBoroughs": [
+      "lewisham",
+      "tower-hamlets"
+    ],
     "snippets": [
-      {"pc": "SE10", "title": "Greenwich World Heritage", "body": "Old Royal Naval College, Maritime Museum and Cutty Sark area — heavy tourist Saturdays. We slot SE10 moves before 09:00 or after 18:00."},
-      {"pc": "SE10", "title": "Greenwich Peninsula towers", "body": "Upper Riverside, Lower Riverside, Greenwich Reach — concierge + goods-lift booking. We work all major peninsula buildings."},
-      {"pc": "SE18", "title": "Royal Arsenal Riverside", "body": "Berkeley Homes Royal Arsenal development — secured access, 24h move-in window booking. We've done 100+ moves here."},
-      {"pc": "SE3", "title": "Blackheath Village conservation", "body": "Blackheath conservation area — Georgian terraces around the heath, reversible fixings, listed-building friendly."},
-      {"pc": "SE10", "title": "ULEZ extended zone", "body": "Greenwich is now inside the extended ULEZ. Our vans are ULEZ-compliant — no surcharge for you."},
-      {"pc": "SE7 · SE18", "title": "Charlton & Woolwich Crossrail", "body": "Elizabeth line drove Charlton/Woolwich gentrification. Many new high-spec rentals — premium handyman finish expected."}
+      {
+        "pc": "SE10",
+        "title": "Greenwich World Heritage",
+        "body": "Old Royal Naval College, Maritime Museum and Cutty Sark area — heavy tourist Saturdays. We slot SE10 moves before 09:00 or after 18:00."
+      },
+      {
+        "pc": "SE10",
+        "title": "Greenwich Peninsula towers",
+        "body": "Upper Riverside, Lower Riverside, Greenwich Reach — concierge + goods-lift booking. We work all major peninsula buildings."
+      },
+      {
+        "pc": "SE18",
+        "title": "Royal Arsenal Riverside",
+        "body": "Berkeley Homes Royal Arsenal development — secured access, 24h move-in window booking. We've done 100+ moves here."
+      },
+      {
+        "pc": "SE3",
+        "title": "Blackheath Village conservation",
+        "body": "Blackheath conservation area — Georgian terraces around the heath, reversible fixings, listed-building friendly."
+      },
+      {
+        "pc": "SE10",
+        "title": "ULEZ extended zone",
+        "body": "Greenwich is now inside the extended ULEZ. Our vans are ULEZ-compliant — no surcharge for you."
+      },
+      {
+        "pc": "SE7 · SE18",
+        "title": "Charlton & Woolwich Crossrail",
+        "body": "Elizabeth line drove Charlton/Woolwich gentrification. Many new high-spec rentals — premium handyman finish expected."
+      }
     ],
     "faq": [
-      {"q": "Do you work in the Greenwich Peninsula towers?", "a": "Yes — Upper Riverside, Lower Riverside, Greenwich Reach, Aspen, Plimsoll Building. All require goods-lift booking 24–48h ahead and concierge sign-in. Our team carries CSCS cards. The peninsula is well-organised — most blocks have dedicated weekday move-in slots."},
-      {"q": "Are you ULEZ-compliant for Greenwich jobs?", "a": "Yes — all our vans are ULEZ-compliant, so there's no extra charge for you. The extended ULEZ now covers all Greenwich addresses, but we don't pass any compliance cost on."},
-      {"q": "How do you handle Cutty Sark tourist traffic on Saturdays?", "a": "Saturdays around Cutty Sark, the Old Royal Naval College and Greenwich Market are gridlocked 11:00–17:00. We slot SE10 town-centre moves either before 09:00 or after 18:00. For Greenwich Peninsula and Blackheath Village (no tourist gridlock) any time works."}
+      {
+        "q": "Do you work in the Greenwich Peninsula towers?",
+        "a": "Yes — Upper Riverside, Lower Riverside, Greenwich Reach, Aspen, Plimsoll Building. All require goods-lift booking 24–48h ahead and concierge sign-in. Our team carries CSCS cards. The peninsula is well-organised — most blocks have dedicated weekday move-in slots."
+      },
+      {
+        "q": "Are you ULEZ-compliant for Greenwich jobs?",
+        "a": "Yes — all our vans are ULEZ-compliant, so there's no extra charge for you. The extended ULEZ now covers all Greenwich addresses, but we don't pass any compliance cost on."
+      },
+      {
+        "q": "How do you handle Cutty Sark tourist traffic on Saturdays?",
+        "a": "Saturdays around Cutty Sark, the Old Royal Naval College and Greenwich Market are gridlocked 11:00–17:00. We slot SE10 town-centre moves either before 09:00 or after 18:00. For Greenwich Peninsula and Blackheath Village (no tourist gridlock) any time works."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Greenwich Peninsula tower regular cleans (Upper Riverside, Plimsoll Building) and Blackheath family-home weekly cleans are the two main Greenwich cleaning categories. End-of-tenancy spikes are smaller here than Camden or Tower Hamlets — fewer student lets.",
-      "removals": "Greenwich = peninsula tower lift coordination, Royal Arsenal secured access, Cutty Sark Saturday traffic, and ULEZ-compliant vans. Inbound Crossrail-driven moves into Charlton and Woolwich Riverside have grown ~40% in 2 years.",
+      "man-and-van": "Greenwich man and van work centres on the Peninsula towers (Upper Riverside, Lower Riverside, Plimsoll Building, Greenwich Reach), Royal Arsenal secured access on SE18, and Cutty Sark Saturday tourist gridlock on SE10. All our vans are ULEZ-compliant — no surcharge passed on. Crossrail-driven inbound moves into Charlton and Woolwich Riverside have grown ~40% over two years. Same-day slots common in SE3 Blackheath and SE9 Eltham.",
       "handyman": "Royal Arsenal new-build snagging is a Greenwich specialty — we've done 100+ jobs across the development. Greenwich Peninsula fitouts (TV mounting, Pax assembly), Blackheath sash window restoration, and Charlton family handyman work round it out."
     }
   },
@@ -171,27 +521,86 @@
     "name": "Lewisham",
     "slug": "lewisham",
     "geoCode": "GB-LEW",
-    "postcodes": ["SE4", "SE6", "SE8", "SE13", "SE14", "SE23", "SE26"],
+    "postcodes": [
+      "SE4",
+      "SE6",
+      "SE8",
+      "SE13",
+      "SE14",
+      "SE23",
+      "SE26"
+    ],
     "headlinePostcodes": "SE4 · SE13 · SE14",
-    "neighborhoods": ["Lewisham", "Brockley", "Catford", "Deptford", "Forest Hill", "New Cross", "Sydenham", "Honor Oak", "Crofton Park", "Hither Green"],
-    "boundary": ["Greenwich", "Southwark", "Bromley"],
-    "linkedBoroughs": ["greenwich", "southwark"],
+    "neighborhoods": [
+      "Lewisham",
+      "Brockley",
+      "Catford",
+      "Deptford",
+      "Forest Hill",
+      "New Cross",
+      "Sydenham",
+      "Honor Oak",
+      "Crofton Park",
+      "Hither Green"
+    ],
+    "boundary": [
+      "Greenwich",
+      "Southwark",
+      "Bromley"
+    ],
+    "linkedBoroughs": [
+      "greenwich",
+      "southwark"
+    ],
     "snippets": [
-      {"pc": "SE14", "title": "Goldsmiths University", "body": "Goldsmiths drives huge end-of-tenancy spikes in SE14 (New Cross), SE15 (Peckham boundary), and SE4 (Brockley) every June. Book 14 days ahead."},
-      {"pc": "SE4", "title": "Brockley conservation area", "body": "Brockley conservation — Victorian terraces with original sashes, reversible fixings, no façade changes without LBC."},
-      {"pc": "SE13", "title": "Lewisham Shopping Centre redevelopment", "body": "Major regeneration around Lewisham station. Construction traffic Mon–Fri 07:00–17:00 affects SE13 access — we plan around it."},
-      {"pc": "SE23", "title": "Forest Hill walk-ups", "body": "Honor Oak Park Victorian conversions — many 3rd/4th floor walk-ups. Allow +30–60 min per floor."},
-      {"pc": "SE8", "title": "Deptford Convoys Wharf", "body": "Convoys Wharf and Cannon Wharf riverside developments — secured access, goods-lift booking required."},
-      {"pc": "SE6", "title": "Catford friendlier rates", "body": "Outside the central congestion zone — no £18 access charge for SE6 jobs. Often the most cost-effective Lewisham postcode."}
+      {
+        "pc": "SE14",
+        "title": "Goldsmiths University",
+        "body": "Goldsmiths drives huge end-of-tenancy spikes in SE14 (New Cross), SE15 (Peckham boundary), and SE4 (Brockley) every June. Book 14 days ahead."
+      },
+      {
+        "pc": "SE4",
+        "title": "Brockley conservation area",
+        "body": "Brockley conservation — Victorian terraces with original sashes, reversible fixings, no façade changes without LBC."
+      },
+      {
+        "pc": "SE13",
+        "title": "Lewisham Shopping Centre redevelopment",
+        "body": "Major regeneration around Lewisham station. Construction traffic Mon–Fri 07:00–17:00 affects SE13 access — we plan around it."
+      },
+      {
+        "pc": "SE23",
+        "title": "Forest Hill walk-ups",
+        "body": "Honor Oak Park Victorian conversions — many 3rd/4th floor walk-ups. Allow +30–60 min per floor."
+      },
+      {
+        "pc": "SE8",
+        "title": "Deptford Convoys Wharf",
+        "body": "Convoys Wharf and Cannon Wharf riverside developments — secured access, goods-lift booking required."
+      },
+      {
+        "pc": "SE6",
+        "title": "Catford friendlier rates",
+        "body": "Outside the central congestion zone — no £18 access charge for SE6 jobs. Often the most cost-effective Lewisham postcode."
+      }
     ],
     "faq": [
-      {"q": "Do you do Goldsmiths student end-of-tenancy cleans?", "a": "Yes — Goldsmiths in New Cross drives our highest-volume end-of-tenancy weeks in SE14, SE15 boundary and SE4. We follow the inventory checklists used by the major Lewisham/Goldsmiths student-let agents (Foxtons, Acorn, Atkinson McLeod) and offer a free 72-hour re-clean if your check-out clerk flags an issue."},
-      {"q": "Are Lewisham postcodes outside the congestion charge?", "a": "Most of Lewisham (SE4, SE6, SE8, SE13, SE14, SE23, SE26) is outside the central congestion zone — so no £18 access surcharge. Some SE14 addresses very close to the Old Kent Road / Bermondsey boundary may be inside. We confirm at quote stage based on the exact postcode."},
-      {"q": "How does Brockley conservation affect handyman work?", "a": "Brockley conservation area covers most of SE4. We use reversible fixings on original lath-and-plaster, lift up rather than drag heavy furniture across original parquet, and route any external alteration through Listed Building Consent specialists rather than doing it ourselves."}
+      {
+        "q": "Do you do Goldsmiths student end-of-tenancy cleans?",
+        "a": "Yes — Goldsmiths in New Cross drives our highest-volume end-of-tenancy weeks in SE14, SE15 boundary and SE4. We follow the inventory checklists used by the major Lewisham/Goldsmiths student-let agents (Foxtons, Acorn, Atkinson McLeod) and offer a free 72-hour re-clean if your check-out clerk flags an issue."
+      },
+      {
+        "q": "Are Lewisham postcodes outside the congestion charge?",
+        "a": "Most of Lewisham (SE4, SE6, SE8, SE13, SE14, SE23, SE26) is outside the central congestion zone — so no £18 access surcharge. Some SE14 addresses very close to the Old Kent Road / Bermondsey boundary may be inside. We confirm at quote stage based on the exact postcode."
+      },
+      {
+        "q": "How does Brockley conservation affect handyman work?",
+        "a": "Brockley conservation area covers most of SE4. We use reversible fixings on original lath-and-plaster, lift up rather than drag heavy furniture across original parquet, and route any external alteration through Listed Building Consent specialists rather than doing it ourselves."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Goldsmiths drives the Lewisham cleaning calendar — end-of-tenancy spikes June and August in SE14, SE4 and the SE15 boundary. Regular weekly cleans grow steadily in Brockley and Forest Hill family postcodes.",
-      "removals": "Lewisham removals = Goldsmiths student moves June/September, Brockley conservation-area Victorian terraces, and the new Convoys Wharf / Cannon Wharf riverside developments. Catford and Sydenham are the most cost-effective postcodes (no congestion charge).",
+      "man-and-van": "Lewisham man and van calendar peaks around Goldsmiths in June and September — SE14 New Cross, SE4 Brockley, SE15 boundary all spike with student moves (book 14 days ahead for an early slot). Brockley conservation-area Victorian terraces need reversible fixings on original sash; Convoys Wharf and Cannon Wharf riverside developments need concierge sign-in. Catford and Sydenham (SE6, SE26) are outside the central congestion zone — no £18 access surcharge, the most cost-effective Lewisham postcodes.",
       "handyman": "Brockley sash window restoration (specialty), Forest Hill garden-shed assembly, and Lewisham high-rise fitouts are the three biggest handyman categories. We carry conservation-area-friendly fixings as standard."
     }
   },
@@ -199,27 +608,89 @@
     "name": "Brent",
     "slug": "brent",
     "geoCode": "GB-BEN",
-    "postcodes": ["NW2", "NW6", "NW9", "NW10", "HA0", "HA9"],
+    "postcodes": [
+      "NW2",
+      "NW6",
+      "NW9",
+      "NW10",
+      "HA0",
+      "HA9"
+    ],
     "headlinePostcodes": "NW2 · NW6 · NW10",
-    "neighborhoods": ["Wembley", "Kilburn", "Willesden", "Cricklewood", "Queens Park", "Kensal Green", "Harlesden", "Neasden", "Kingsbury", "Brondesbury"],
-    "boundary": ["Camden", "Westminster", "Kensington & Chelsea", "Ealing", "Harrow", "Barnet"],
-    "linkedBoroughs": ["camden", "ealing", "barnet"],
+    "neighborhoods": [
+      "Wembley",
+      "Kilburn",
+      "Willesden",
+      "Cricklewood",
+      "Queens Park",
+      "Kensal Green",
+      "Harlesden",
+      "Neasden",
+      "Kingsbury",
+      "Brondesbury"
+    ],
+    "boundary": [
+      "Camden",
+      "Westminster",
+      "Kensington & Chelsea",
+      "Ealing",
+      "Harrow",
+      "Barnet"
+    ],
+    "linkedBoroughs": [
+      "camden",
+      "ealing",
+      "barnet"
+    ],
     "snippets": [
-      {"pc": "HA9", "title": "Wembley event days", "body": "Wembley Stadium event days (England matches, concerts, NFL) — total parking restrictions across HA9. We don't book Wembley moves on event Saturdays/Sundays."},
-      {"pc": "NW10", "title": "Park Royal industrial routes", "body": "Park Royal HGV restrictions Mon–Fri 07:00–10:00 and 15:00–18:30. We use Luton vans which fit the rules; full HGV moves slot off-peak."},
-      {"pc": "NW6", "title": "Queens Park conservation", "body": "Queens Park conservation area — Victorian terraces with original features, reversible internal fixings, no façade changes."},
-      {"pc": "HA9", "title": "Wembley Park towers", "body": "Quintain Wembley Park development — 30+ residential towers, dedicated move-in scheduling, concierge sign-in. We've done 200+ moves here."},
-      {"pc": "NW2 · NW10", "title": "Brent Cross redevelopment", "body": "Brent Cross station rebuild affects NW2/NW10 access from M1. We plan around weekend road closures."},
-      {"pc": "NW6", "title": "Kilburn High Road parking", "body": "Brent CPZ on Kilburn High Road — tradesperson permits ~£10/half-day. Sundays mostly free."}
+      {
+        "pc": "HA9",
+        "title": "Wembley event days",
+        "body": "Wembley Stadium event days (England matches, concerts, NFL) — total parking restrictions across HA9. We don't book Wembley moves on event Saturdays/Sundays."
+      },
+      {
+        "pc": "NW10",
+        "title": "Park Royal industrial routes",
+        "body": "Park Royal HGV restrictions Mon–Fri 07:00–10:00 and 15:00–18:30. We use Luton vans which fit the rules; full HGV moves slot off-peak."
+      },
+      {
+        "pc": "NW6",
+        "title": "Queens Park conservation",
+        "body": "Queens Park conservation area — Victorian terraces with original features, reversible internal fixings, no façade changes."
+      },
+      {
+        "pc": "HA9",
+        "title": "Wembley Park towers",
+        "body": "Quintain Wembley Park development — 30+ residential towers, dedicated move-in scheduling, concierge sign-in. We've done 200+ moves here."
+      },
+      {
+        "pc": "NW2 · NW10",
+        "title": "Brent Cross redevelopment",
+        "body": "Brent Cross station rebuild affects NW2/NW10 access from M1. We plan around weekend road closures."
+      },
+      {
+        "pc": "NW6",
+        "title": "Kilburn High Road parking",
+        "body": "Brent CPZ on Kilburn High Road — tradesperson permits ~£10/half-day. Sundays mostly free."
+      }
     ],
     "faq": [
-      {"q": "Can you handle moves into Wembley Park (the Quintain blocks)?", "a": "Yes — we've done over 200 moves across Wembley Park (Tipi, Repton, Beton, Quintain Living, Canada Gardens). All blocks require goods-lift booking 24–48h ahead via the resident services team. We bring our own padding and floor protection. Our team carries CSCS cards for sign-in."},
-      {"q": "Do you avoid Wembley event days?", "a": "Yes — for HA9 jobs we check the Wembley Stadium fixture/event list before quoting. England matches, FA Cup finals, NFL games, and major concerts close most parking around the stadium 4 hours either side of kickoff. We slot HA9 moves around the schedule."},
-      {"q": "Do you do moves between Brent and outer Heathrow areas?", "a": "Yes — we do a lot of Brent to Hayes / Heathrow / Slough corridor moves (corporate relocations near LHR). Standard hourly rates apply, and we account for the M1/M4 connection routes (Western Avenue, North Circular) in time estimates."}
+      {
+        "q": "Can you handle moves into Wembley Park (the Quintain blocks)?",
+        "a": "Yes — we've done over 200 moves across Wembley Park (Tipi, Repton, Beton, Quintain Living, Canada Gardens). All blocks require goods-lift booking 24–48h ahead via the resident services team. We bring our own padding and floor protection. Our team carries CSCS cards for sign-in."
+      },
+      {
+        "q": "Do you avoid Wembley event days?",
+        "a": "Yes — for HA9 jobs we check the Wembley Stadium fixture/event list before quoting. England matches, FA Cup finals, NFL games, and major concerts close most parking around the stadium 4 hours either side of kickoff. We slot HA9 moves around the schedule."
+      },
+      {
+        "q": "Do you do moves between Brent and outer Heathrow areas?",
+        "a": "Yes — we do a lot of Brent to Hayes / Heathrow / Slough corridor moves (corporate relocations near LHR). Standard hourly rates apply, and we account for the M1/M4 connection routes (Western Avenue, North Circular) in time estimates."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Wembley Park regular cleans (fortnightly is the norm in Quintain blocks) and Queens Park / Kilburn family-home weekly cleans dominate Brent's cleaning category. End-of-tenancy spikes are smaller here — fewer student lets than Camden or Tower Hamlets.",
-      "removals": "Wembley Park goods-lift coordination, Wembley event-day awareness, and Park Royal HGV restrictions are the three Brent removals must-knows. We've done 200+ Wembley Park moves — we know the resident services teams.",
+      "man-and-van": "Brent man and van must-knows: Wembley Park lift coordination across the 30+ Quintain residential towers (Tipi, Repton, Beton, Canada Gardens — we've done 200+ moves there and know the resident-services teams by name), Wembley Stadium event-day awareness on HA9 (no bookings during England matches, FA Cup finals, NFL games, or major concerts), and Park Royal HGV restrictions on NW10 (Luton vans fit; full HGVs slot off-peak). Same-day slots common in NW2, NW6 and HA0.",
       "handyman": "Wembley Park new-build snagging is a Brent specialty (200+ jobs done). Queens Park sash window restoration, Kilburn family-home repairs, and Park Royal warehouse-conversion fixings round it out."
     }
   },
@@ -227,27 +698,89 @@
     "name": "Haringey",
     "slug": "haringey",
     "geoCode": "GB-HRY",
-    "postcodes": ["N4", "N8", "N10", "N15", "N17", "N22"],
+    "postcodes": [
+      "N4",
+      "N8",
+      "N10",
+      "N15",
+      "N17",
+      "N22"
+    ],
     "headlinePostcodes": "N4 · N8 · N17",
-    "neighborhoods": ["Wood Green", "Tottenham", "Crouch End", "Hornsey", "Muswell Hill", "Highgate (north)", "Stroud Green", "Harringay", "Bowes Park", "Bruce Grove"],
-    "boundary": ["Camden", "Islington", "Hackney", "Waltham Forest", "Enfield", "Barnet"],
-    "linkedBoroughs": ["camden", "islington", "waltham-forest"],
+    "neighborhoods": [
+      "Wood Green",
+      "Tottenham",
+      "Crouch End",
+      "Hornsey",
+      "Muswell Hill",
+      "Highgate (north)",
+      "Stroud Green",
+      "Harringay",
+      "Bowes Park",
+      "Bruce Grove"
+    ],
+    "boundary": [
+      "Camden",
+      "Islington",
+      "Hackney",
+      "Waltham Forest",
+      "Enfield",
+      "Barnet"
+    ],
+    "linkedBoroughs": [
+      "camden",
+      "islington",
+      "waltham-forest"
+    ],
     "snippets": [
-      {"pc": "N17", "title": "Tottenham Hotspur matchdays", "body": "Tottenham Stadium matchday afternoons — parking suspension across N17. We check the fixture list before quoting Saturday/Sunday moves."},
-      {"pc": "N8", "title": "Crouch End hill access", "body": "Crouch End hill (Park Road, Crouch Hill) — narrow Victorian streets, hill gradient. Larger Luton vans need careful 3-point access; 2-mover Transit is often better."},
-      {"pc": "N10", "title": "Muswell Hill conservation", "body": "Muswell Hill conservation area — Edwardian terraces, original features, reversible internal fixings."},
-      {"pc": "N4", "title": "Stroud Green walk-ups", "body": "Many SN4 conversions are 3rd/4th floor walk-ups. Allow +30–60 min per floor."},
-      {"pc": "N22", "title": "Wood Green Mall traffic", "body": "Saturdays around The Mall Wood Green — High Road gridlocked 11:00–17:00. We slot N22 moves before 10:00 or after 18:00."},
-      {"pc": "N6", "title": "Highgate Village conservation", "body": "Highgate conservation area (boundary with Camden) — Georgian/Victorian, listed buildings, conservation-area-friendly handyman fixings only."}
+      {
+        "pc": "N17",
+        "title": "Tottenham Hotspur matchdays",
+        "body": "Tottenham Stadium matchday afternoons — parking suspension across N17. We check the fixture list before quoting Saturday/Sunday moves."
+      },
+      {
+        "pc": "N8",
+        "title": "Crouch End hill access",
+        "body": "Crouch End hill (Park Road, Crouch Hill) — narrow Victorian streets, hill gradient. Larger Luton vans need careful 3-point access; 2-mover Transit is often better."
+      },
+      {
+        "pc": "N10",
+        "title": "Muswell Hill conservation",
+        "body": "Muswell Hill conservation area — Edwardian terraces, original features, reversible internal fixings."
+      },
+      {
+        "pc": "N4",
+        "title": "Stroud Green walk-ups",
+        "body": "Many SN4 conversions are 3rd/4th floor walk-ups. Allow +30–60 min per floor."
+      },
+      {
+        "pc": "N22",
+        "title": "Wood Green Mall traffic",
+        "body": "Saturdays around The Mall Wood Green — High Road gridlocked 11:00–17:00. We slot N22 moves before 10:00 or after 18:00."
+      },
+      {
+        "pc": "N6",
+        "title": "Highgate Village conservation",
+        "body": "Highgate conservation area (boundary with Camden) — Georgian/Victorian, listed buildings, conservation-area-friendly handyman fixings only."
+      }
     ],
     "faq": [
-      {"q": "Do you check Tottenham Stadium matchdays for N17 moves?", "a": "Yes — Tottenham Hotspur Stadium matchdays close most parking around High Road and Park Lane 4 hours either side of kickoff. For N17 moves we check the fixture list before quoting weekend or evening jobs and slot accordingly. Midweek matchdays affect mostly evenings."},
-      {"q": "Can you handle Crouch End hill access?", "a": "Yes — we know the gradient and access challenges across Park Road, Crouch Hill, and Crouch End Broadway. For larger moves we use 2 Transit vans rather than one Luton, which gives us better turning circles on the steep narrow streets. No surcharge."},
-      {"q": "Do you do moves in Highgate Village?", "a": "Highgate Village is technically split between Haringey (N6) and Camden (N6) — we cover both halves. Conservation area applies, so we use reversible fixings and lift rather than drag period furniture. Listed-building work routes through specialist surveyors."}
+      {
+        "q": "Do you check Tottenham Stadium matchdays for N17 moves?",
+        "a": "Yes — Tottenham Hotspur Stadium matchdays close most parking around High Road and Park Lane 4 hours either side of kickoff. For N17 moves we check the fixture list before quoting weekend or evening jobs and slot accordingly. Midweek matchdays affect mostly evenings."
+      },
+      {
+        "q": "Can you handle Crouch End hill access?",
+        "a": "Yes — we know the gradient and access challenges across Park Road, Crouch Hill, and Crouch End Broadway. For larger moves we use 2 Transit vans rather than one Luton, which gives us better turning circles on the steep narrow streets. No surcharge."
+      },
+      {
+        "q": "Do you do moves in Highgate Village?",
+        "a": "Highgate Village is technically split between Haringey (N6) and Camden (N6) — we cover both halves. Conservation area applies, so we use reversible fixings and lift rather than drag period furniture. Listed-building work routes through specialist surveyors."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Crouch End and Muswell Hill weekly family cleans are Haringey's biggest category. End-of-tenancy spikes around Stroud Green N4 (City University commuter belt) are seasonal but smaller than borough averages.",
-      "removals": "Haringey removals = Tottenham matchday awareness, Crouch End hill-and-narrow-street planning, and Wood Green Mall Saturday timing. We use 2-Transit splits for the steeper Crouch End streets where Luton vans don't fit.",
+      "man-and-van": "Haringey man and van work means Tottenham Hotspur matchday awareness on N17 (we check the fixture list before quoting weekend or evening jobs), Crouch End hill-and-narrow-street planning on N8 (Park Road, Crouch Hill — we use 2 Transit vans instead of one Luton for better turning circles, no surcharge), and Wood Green Mall Saturday gridlock on N22. Muswell Hill (N10) and Highgate Village (N6) conservation areas need reversible fixings.",
       "handyman": "Muswell Hill Edwardian sash window restoration (specialty), Crouch End conversion work, and Tottenham new-build snagging (Hale Village, Tottenham Hale developments) are the three biggest Haringey handyman categories."
     }
   },
@@ -255,27 +788,87 @@
     "name": "Newham",
     "slug": "newham",
     "geoCode": "GB-NWM",
-    "postcodes": ["E6", "E13", "E15", "E16", "E20"],
+    "postcodes": [
+      "E6",
+      "E13",
+      "E15",
+      "E16",
+      "E20"
+    ],
     "headlinePostcodes": "E15 · E16 · E20",
-    "neighborhoods": ["Stratford", "East Ham", "Plaistow", "Beckton", "Custom House", "Royal Docks", "Canning Town", "West Ham", "Forest Gate", "Manor Park", "Olympic Park"],
-    "boundary": ["Tower Hamlets", "Waltham Forest", "Redbridge", "Barking & Dagenham", "Greenwich (river)"],
-    "linkedBoroughs": ["tower-hamlets", "waltham-forest"],
+    "neighborhoods": [
+      "Stratford",
+      "East Ham",
+      "Plaistow",
+      "Beckton",
+      "Custom House",
+      "Royal Docks",
+      "Canning Town",
+      "West Ham",
+      "Forest Gate",
+      "Manor Park",
+      "Olympic Park"
+    ],
+    "boundary": [
+      "Tower Hamlets",
+      "Waltham Forest",
+      "Redbridge",
+      "Barking & Dagenham",
+      "Greenwich (river)"
+    ],
+    "linkedBoroughs": [
+      "tower-hamlets",
+      "waltham-forest"
+    ],
     "snippets": [
-      {"pc": "E20", "title": "Olympic Park / East Village", "body": "East Village (Olympicopolis area) — Get Living developments. Goods-lift booking via concierge 24–48h ahead. We've done 150+ moves here."},
-      {"pc": "E16", "title": "ExCeL exhibition days", "body": "ExCeL Royal Docks event days (CES London, Comic Con, Sleep Expo) — total Royal Docks gridlock. We check the events calendar."},
-      {"pc": "E15", "title": "Westfield Stratford traffic", "body": "Saturdays around Westfield Stratford City — A12/Romford Road gridlocked 11:00–18:00. We slot E15 moves before 10:00 or after 19:30."},
-      {"pc": "E16", "title": "Royal Docks tower blocks", "body": "Royal Wharf, City Island (technically E14 boundary), Britannia Village — secured access, dedicated move-in slots, concierge."},
-      {"pc": "E15", "title": "Stratford Crossrail boost", "body": "Elizabeth line cut Stratford to Bond Street to 11 minutes. Inbound moves into E15 grew sharply 2022–2024."},
-      {"pc": "E6", "title": "East Ham CPZ", "body": "Newham CPZ Mon–Sat 09:00–17:00. Sundays free; many weekend moves skip the permit."}
+      {
+        "pc": "E20",
+        "title": "Olympic Park / East Village",
+        "body": "East Village (Olympicopolis area) — Get Living developments. Goods-lift booking via concierge 24–48h ahead. We've done 150+ moves here."
+      },
+      {
+        "pc": "E16",
+        "title": "ExCeL exhibition days",
+        "body": "ExCeL Royal Docks event days (CES London, Comic Con, Sleep Expo) — total Royal Docks gridlock. We check the events calendar."
+      },
+      {
+        "pc": "E15",
+        "title": "Westfield Stratford traffic",
+        "body": "Saturdays around Westfield Stratford City — A12/Romford Road gridlocked 11:00–18:00. We slot E15 moves before 10:00 or after 19:30."
+      },
+      {
+        "pc": "E16",
+        "title": "Royal Docks tower blocks",
+        "body": "Royal Wharf, City Island (technically E14 boundary), Britannia Village — secured access, dedicated move-in slots, concierge."
+      },
+      {
+        "pc": "E15",
+        "title": "Stratford Crossrail boost",
+        "body": "Elizabeth line cut Stratford to Bond Street to 11 minutes. Inbound moves into E15 grew sharply 2022–2024."
+      },
+      {
+        "pc": "E6",
+        "title": "East Ham CPZ",
+        "body": "Newham CPZ Mon–Sat 09:00–17:00. Sundays free; many weekend moves skip the permit."
+      }
     ],
     "faq": [
-      {"q": "Do you handle East Village (Olympic Park) moves?", "a": "Yes — Get Living East Village (Glasshouse Gardens, Victory Plaza, Liberty Bridge Road) and the surrounding Olympicopolis blocks. We've done over 150 East Village moves. All require goods-lift booking 24–48h ahead via Get Living concierge. Our team carries CSCS cards. Move slots typically 09:00–17:00 weekdays."},
-      {"q": "Do you check ExCeL event days for Royal Docks moves?", "a": "Yes — ExCeL major events (CES London, IFSEC, Sleep Expo, Comic Con) close most parking around Royal Victoria Dock. For E16 jobs near the Royal Docks we check the events calendar and slot moves around the event window."},
-      {"q": "How does Stratford Westfield affect E15 moves?", "a": "Westfield Stratford City is gridlocked Saturdays 11:00–18:00. For E15 moves near the Westfield (Romford Road, the Stratford gyratory) we slot before 10:00 or after 19:30. Stratford station-side addresses are usually fine because we use the south-side approach via Carpenters Road."}
+      {
+        "q": "Do you handle East Village (Olympic Park) moves?",
+        "a": "Yes — Get Living East Village (Glasshouse Gardens, Victory Plaza, Liberty Bridge Road) and the surrounding Olympicopolis blocks. We've done over 150 East Village moves. All require goods-lift booking 24–48h ahead via Get Living concierge. Our team carries CSCS cards. Move slots typically 09:00–17:00 weekdays."
+      },
+      {
+        "q": "Do you check ExCeL event days for Royal Docks moves?",
+        "a": "Yes — ExCeL major events (CES London, IFSEC, Sleep Expo, Comic Con) close most parking around Royal Victoria Dock. For E16 jobs near the Royal Docks we check the events calendar and slot moves around the event window."
+      },
+      {
+        "q": "How does Stratford Westfield affect E15 moves?",
+        "a": "Westfield Stratford City is gridlocked Saturdays 11:00–18:00. For E15 moves near the Westfield (Romford Road, the Stratford gyratory) we slot before 10:00 or after 19:30. Stratford station-side addresses are usually fine because we use the south-side approach via Carpenters Road."
+      }
     ],
     "serviceFraming": {
       "cleaning": "East Village (Get Living) regular cleans dominate — fortnightly is the standard cycle for the Olympicopolis blocks. End-of-tenancy spikes around Forest Gate and Stratford in June/September. Royal Wharf and City Island grow steadily.",
-      "removals": "Newham = East Village goods-lift coordination, ExCeL event awareness, Westfield Saturday timing, and Royal Wharf concierge access. The Crossrail-driven inbound move volume into Stratford has grown ~50% over 2 years.",
+      "man-and-van": "Newham man and van work clusters around four big jobs: East Village (Get Living) goods-lift coordination on E20 (we've done 150+ moves across Glasshouse Gardens, Victory Plaza, Liberty Bridge Road), ExCeL Royal Docks event-day awareness on E16 (CES London, IFSEC, Sleep Expo, Comic Con close the docks), Westfield Stratford Saturday gridlock on E15 (slot before 10am or after 19:30), and Royal Wharf concierge access. Crossrail-driven inbound move volume into Stratford has grown ~50% over two years.",
       "handyman": "East Village new-build snagging (150+ jobs), Royal Wharf fitouts, Stratford studio-flat space-saving installations, and Forest Gate/Manor Park family-home work are the four main Newham handyman categories."
     }
   },
@@ -283,27 +876,83 @@
     "name": "Waltham Forest",
     "slug": "waltham-forest",
     "geoCode": "GB-WFT",
-    "postcodes": ["E4", "E10", "E11", "E17"],
+    "postcodes": [
+      "E4",
+      "E10",
+      "E11",
+      "E17"
+    ],
     "headlinePostcodes": "E10 · E11 · E17",
-    "neighborhoods": ["Walthamstow", "Leyton", "Leytonstone", "Chingford", "Highams Park", "Wood Street", "Walthamstow Village", "Whipps Cross"],
-    "boundary": ["Haringey", "Hackney", "Newham", "Redbridge", "Enfield"],
-    "linkedBoroughs": ["haringey", "newham"],
+    "neighborhoods": [
+      "Walthamstow",
+      "Leyton",
+      "Leytonstone",
+      "Chingford",
+      "Highams Park",
+      "Wood Street",
+      "Walthamstow Village",
+      "Whipps Cross"
+    ],
+    "boundary": [
+      "Haringey",
+      "Hackney",
+      "Newham",
+      "Redbridge",
+      "Enfield"
+    ],
+    "linkedBoroughs": [
+      "haringey",
+      "newham"
+    ],
     "snippets": [
-      {"pc": "E17", "title": "Walthamstow Village conservation", "body": "Walthamstow Village conservation area — original Victorian shop fronts, Vestry House Museum lanes. Reversible internal fixings, no façade changes."},
-      {"pc": "E10", "title": "Leyton Mini Holland", "body": "Mini Holland scheme — many E10 streets are LTN-restricted (Low Traffic Neighbourhood) with bollards/cameras. We use the approved access routes."},
-      {"pc": "E17", "title": "Borough of Culture legacy", "body": "Walthamstow's 2019 Borough of Culture status drove gentrification — many new-build flats need premium fitout work."},
-      {"pc": "E11", "title": "Leytonstone family streets", "body": "School-run streets (Davies Lane, Bushwood) — we avoid 08:00–09:00 and 15:00–16:00 windows."},
-      {"pc": "E10 · E17", "title": "ULTL & ULEZ extension", "body": "Waltham Forest is now inside extended ULEZ. Our vans are ULEZ-compliant — no surcharge passed on."},
-      {"pc": "E4", "title": "Chingford Mount commuter routes", "body": "Larger detached homes in Chingford E4 — typical move volume bigger than central E17. Allow extra time for full-house jobs."}
+      {
+        "pc": "E17",
+        "title": "Walthamstow Village conservation",
+        "body": "Walthamstow Village conservation area — original Victorian shop fronts, Vestry House Museum lanes. Reversible internal fixings, no façade changes."
+      },
+      {
+        "pc": "E10",
+        "title": "Leyton Mini Holland",
+        "body": "Mini Holland scheme — many E10 streets are LTN-restricted (Low Traffic Neighbourhood) with bollards/cameras. We use the approved access routes."
+      },
+      {
+        "pc": "E17",
+        "title": "Borough of Culture legacy",
+        "body": "Walthamstow's 2019 Borough of Culture status drove gentrification — many new-build flats need premium fitout work."
+      },
+      {
+        "pc": "E11",
+        "title": "Leytonstone family streets",
+        "body": "School-run streets (Davies Lane, Bushwood) — we avoid 08:00–09:00 and 15:00–16:00 windows."
+      },
+      {
+        "pc": "E10 · E17",
+        "title": "ULTL & ULEZ extension",
+        "body": "Waltham Forest is now inside extended ULEZ. Our vans are ULEZ-compliant — no surcharge passed on."
+      },
+      {
+        "pc": "E4",
+        "title": "Chingford Mount commuter routes",
+        "body": "Larger detached homes in Chingford E4 — typical move volume bigger than central E17. Allow extra time for full-house jobs."
+      }
     ],
     "faq": [
-      {"q": "Do you handle Mini Holland LTN restrictions in Leyton?", "a": "Yes — we use the council-approved access routes through the Leyton Mini Holland LTN zone (Francis Road, Murchison Road, etc.). Some streets have bollards or rising barriers we can't cross; we drop closer than 100m from the address and use a sack truck for the final leg. No surcharge."},
-      {"q": "Are Waltham Forest postcodes ULEZ?", "a": "Yes — extended ULEZ now covers all of E4, E10, E11, E17. Our vans are fully ULEZ-compliant, so there's no daily charge passed on to you."},
-      {"q": "Do you cover Chingford E4?", "a": "Yes — Chingford and Highams Park are within our standard service area. The houses are typically larger than central Waltham Forest (semi-detached, detached) so move-day allowances are bigger. Standard hourly rates apply."}
+      {
+        "q": "Do you handle Mini Holland LTN restrictions in Leyton?",
+        "a": "Yes — we use the council-approved access routes through the Leyton Mini Holland LTN zone (Francis Road, Murchison Road, etc.). Some streets have bollards or rising barriers we can't cross; we drop closer than 100m from the address and use a sack truck for the final leg. No surcharge."
+      },
+      {
+        "q": "Are Waltham Forest postcodes ULEZ?",
+        "a": "Yes — extended ULEZ now covers all of E4, E10, E11, E17. Our vans are fully ULEZ-compliant, so there's no daily charge passed on to you."
+      },
+      {
+        "q": "Do you cover Chingford E4?",
+        "a": "Yes — Chingford and Highams Park are within our standard service area. The houses are typically larger than central Waltham Forest (semi-detached, detached) so move-day allowances are bigger. Standard hourly rates apply."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Walthamstow E17 (especially the Village) and Leyton E10 family-home weekly cleans dominate. End-of-tenancy spikes are smaller than university boroughs but seasonal in E11 (Queen Mary commuter belt).",
-      "removals": "Waltham Forest = Mini Holland LTN navigation, Walthamstow Village conservation, ULEZ-compliant vans, and Chingford larger-home full-day moves. We know the LTN access points by heart.",
+      "man-and-van": "Waltham Forest man and van means Mini Holland LTN navigation in Leyton (Francis Road, Murchison Road — we know the council-approved access routes by heart, sack truck for the final 100m where bollards block vans, no surcharge), Walthamstow Village conservation on E17, ULEZ-compliant vans on all jobs across E4/E10/E11/E17 (no surcharge), and Chingford full-day larger-home moves on E4. The 2019 Borough of Culture legacy keeps new-build fit-out demand high.",
       "handyman": "Walthamstow new-build snagging from the Borough of Culture-driven development boom is the biggest handyman category. Leyton family-home repairs and Chingford garden-shed/fence work round it out."
     }
   },
@@ -311,27 +960,85 @@
     "name": "Ealing",
     "slug": "ealing",
     "geoCode": "GB-EAL",
-    "postcodes": ["W3", "W5", "W7", "W13", "NW10", "UB1"],
+    "postcodes": [
+      "W3",
+      "W5",
+      "W7",
+      "W13",
+      "NW10",
+      "UB1"
+    ],
     "headlinePostcodes": "W3 · W5 · W13",
-    "neighborhoods": ["Ealing", "Acton", "Hanwell", "Northolt", "Greenford", "Southall", "West Ealing", "Park Royal", "South Ealing"],
-    "boundary": ["Hammersmith & Fulham", "Hounslow", "Hillingdon", "Brent"],
-    "linkedBoroughs": ["hammersmith-fulham", "brent"],
+    "neighborhoods": [
+      "Ealing",
+      "Acton",
+      "Hanwell",
+      "Northolt",
+      "Greenford",
+      "Southall",
+      "West Ealing",
+      "Park Royal",
+      "South Ealing"
+    ],
+    "boundary": [
+      "Hammersmith & Fulham",
+      "Hounslow",
+      "Hillingdon",
+      "Brent"
+    ],
+    "linkedBoroughs": [
+      "hammersmith-fulham",
+      "brent"
+    ],
     "snippets": [
-      {"pc": "W5", "title": "Ealing Broadway Crossrail", "body": "Elizabeth line at Ealing Broadway cut central London commute to 12 minutes. Inbound move volume into W5 grew sharply 2022+."},
-      {"pc": "UB1", "title": "Southall family homes", "body": "Larger semis and detached homes in Southall — typical move volume bigger than central Ealing. Multi-generational households common."},
-      {"pc": "W3", "title": "Acton conservation pockets", "body": "Bedford Park (W4 boundary) and Acton Green conservation areas — reversible fixings, listed-building friendly."},
-      {"pc": "NW10", "title": "Park Royal industrial corridor", "body": "Park Royal HGV restrictions Mon–Fri 07:00–10:00 and 15:00–18:30. Luton vans fit the rules."},
-      {"pc": "W5", "title": "Ealing Studios area parking", "body": "Streets around Ealing Studios filming days — temporary parking suspensions. We check the council bulletin before quoting."},
-      {"pc": "W13", "title": "West Ealing redevelopment", "body": "New residential blocks around West Ealing station — concierge + goods-lift booking. We work with the dev managers."}
+      {
+        "pc": "W5",
+        "title": "Ealing Broadway Crossrail",
+        "body": "Elizabeth line at Ealing Broadway cut central London commute to 12 minutes. Inbound move volume into W5 grew sharply 2022+."
+      },
+      {
+        "pc": "UB1",
+        "title": "Southall family homes",
+        "body": "Larger semis and detached homes in Southall — typical move volume bigger than central Ealing. Multi-generational households common."
+      },
+      {
+        "pc": "W3",
+        "title": "Acton conservation pockets",
+        "body": "Bedford Park (W4 boundary) and Acton Green conservation areas — reversible fixings, listed-building friendly."
+      },
+      {
+        "pc": "NW10",
+        "title": "Park Royal industrial corridor",
+        "body": "Park Royal HGV restrictions Mon–Fri 07:00–10:00 and 15:00–18:30. Luton vans fit the rules."
+      },
+      {
+        "pc": "W5",
+        "title": "Ealing Studios area parking",
+        "body": "Streets around Ealing Studios filming days — temporary parking suspensions. We check the council bulletin before quoting."
+      },
+      {
+        "pc": "W13",
+        "title": "West Ealing redevelopment",
+        "body": "New residential blocks around West Ealing station — concierge + goods-lift booking. We work with the dev managers."
+      }
     ],
     "faq": [
-      {"q": "Do you do moves to/from Heathrow corridor (UB1, UB2)?", "a": "Yes — Ealing is our westernmost regular service area. UB1 (Southall), UB2 (Norwood Green), and the Hayes/Hounslow corridor are all standard rates. We do a lot of corporate relocation work near Heathrow."},
-      {"q": "How does the Elizabeth line affect Ealing moves?", "a": "Inbound move volume into W5 (Ealing Broadway) and W7 (Hanwell) jumped sharply when Elizabeth line opened — central London commuters trading flat-share central for a bigger Ealing flat. Most jobs are SW/W boundary to W5/W7. Standard rates."},
-      {"q": "Do you handle Southall family-size moves?", "a": "Yes — Southall (UB1, UB2) typically means larger semi-detached or detached homes, often multi-generational. We allow 6–8 hours for a 3-bed Southall house move with 3 movers and a Luton, vs 4 hours for a similar central London 3-bed flat. Standard hourly rates."}
+      {
+        "q": "Do you do moves to/from Heathrow corridor (UB1, UB2)?",
+        "a": "Yes — Ealing is our westernmost regular service area. UB1 (Southall), UB2 (Norwood Green), and the Hayes/Hounslow corridor are all standard rates. We do a lot of corporate relocation work near Heathrow."
+      },
+      {
+        "q": "How does the Elizabeth line affect Ealing moves?",
+        "a": "Inbound move volume into W5 (Ealing Broadway) and W7 (Hanwell) jumped sharply when Elizabeth line opened — central London commuters trading flat-share central for a bigger Ealing flat. Most jobs are SW/W boundary to W5/W7. Standard rates."
+      },
+      {
+        "q": "Do you handle Southall family-size moves?",
+        "a": "Yes — Southall (UB1, UB2) typically means larger semi-detached or detached homes, often multi-generational. We allow 6–8 hours for a 3-bed Southall house move with 3 movers and a Luton, vs 4 hours for a similar central London 3-bed flat. Standard hourly rates."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Ealing family-home weekly cleans are the biggest category. Crossrail-driven move-ins into W5 and W7 drove a 30% jump in end-of-tenancy + first-clean bookings in 2023–2024.",
-      "removals": "Ealing means Crossrail-corridor inbound moves, Park Royal HGV restrictions, Ealing Studios filming-day parking awareness, and Southall family-home full-day jobs.",
+      "man-and-van": "Ealing man and van work centres on Crossrail-corridor inbound moves into W5 Ealing Broadway and W7 Hanwell (Elizabeth line cut central-London commute to 12 minutes — move volume jumped 30%+ since 2022), Park Royal HGV restrictions on NW10 (Luton vans fit the rules), Ealing Studios filming-day parking suspensions (we check the council bulletin), and Southall (UB1) larger-home full-day jobs with multi-generational households. We cover the western Heathrow corridor at standard rates.",
       "handyman": "Ealing handyman work splits between W5/W7 modern-flat fitouts (Crossrail-driven new-builds), Acton/Bedford Park conservation work, and Southall family-home repairs (fence, garden, cosmetic)."
     }
   },
@@ -339,27 +1046,83 @@
     "name": "Richmond upon Thames",
     "slug": "richmond",
     "geoCode": "GB-RIC",
-    "postcodes": ["TW1", "TW9", "TW10", "TW11", "KT2"],
+    "postcodes": [
+      "TW1",
+      "TW9",
+      "TW10",
+      "TW11",
+      "KT2"
+    ],
     "headlinePostcodes": "TW9 · TW10 · KT2",
-    "neighborhoods": ["Richmond", "Twickenham", "Kew", "Mortlake", "Ham", "Petersham", "St Margarets", "Teddington", "East Sheen", "Barnes (boundary)"],
-    "boundary": ["Hounslow", "Wandsworth", "Kingston upon Thames"],
-    "linkedBoroughs": ["wandsworth"],
+    "neighborhoods": [
+      "Richmond",
+      "Twickenham",
+      "Kew",
+      "Mortlake",
+      "Ham",
+      "Petersham",
+      "St Margarets",
+      "Teddington",
+      "East Sheen",
+      "Barnes (boundary)"
+    ],
+    "boundary": [
+      "Hounslow",
+      "Wandsworth",
+      "Kingston upon Thames"
+    ],
+    "linkedBoroughs": [
+      "wandsworth"
+    ],
     "snippets": [
-      {"pc": "TW1", "title": "Twickenham Stadium event days", "body": "Twickenham Stadium rugby and concert days (England matches, Six Nations) — total parking suspension across TW1. We don't book Twickenham moves on event Saturdays."},
-      {"pc": "TW9", "title": "Kew Gardens area", "body": "Kew Bridge and Kew Gardens — heavy weekend tourist traffic. Saturdays 11:00–17:00 we slot moves before 09:00 or after 18:00."},
-      {"pc": "TW10", "title": "Richmond Hill conservation", "body": "Richmond Hill protected view (Petersham, Star and Garter Hill) — listed building rules, reversible fixings only."},
-      {"pc": "TW11", "title": "Teddington Lock area", "body": "Narrow river-side roads (Manor Road, Broom Road) — Luton vans need careful planning. We do recce day before."},
-      {"pc": "KT2", "title": "Kingston boundary", "body": "Kingston (KT2) addresses are technically Kingston borough but adjacent to Richmond — we cover both at standard rates."},
-      {"pc": "TW10", "title": "Petersham/Ham private land", "body": "Some Petersham/Ham roads are private (Sudbrook estate). Resident permits needed; we coordinate with house manager."}
+      {
+        "pc": "TW1",
+        "title": "Twickenham Stadium event days",
+        "body": "Twickenham Stadium rugby and concert days (England matches, Six Nations) — total parking suspension across TW1. We don't book Twickenham moves on event Saturdays."
+      },
+      {
+        "pc": "TW9",
+        "title": "Kew Gardens area",
+        "body": "Kew Bridge and Kew Gardens — heavy weekend tourist traffic. Saturdays 11:00–17:00 we slot moves before 09:00 or after 18:00."
+      },
+      {
+        "pc": "TW10",
+        "title": "Richmond Hill conservation",
+        "body": "Richmond Hill protected view (Petersham, Star and Garter Hill) — listed building rules, reversible fixings only."
+      },
+      {
+        "pc": "TW11",
+        "title": "Teddington Lock area",
+        "body": "Narrow river-side roads (Manor Road, Broom Road) — Luton vans need careful planning. We do recce day before."
+      },
+      {
+        "pc": "KT2",
+        "title": "Kingston boundary",
+        "body": "Kingston (KT2) addresses are technically Kingston borough but adjacent to Richmond — we cover both at standard rates."
+      },
+      {
+        "pc": "TW10",
+        "title": "Petersham/Ham private land",
+        "body": "Some Petersham/Ham roads are private (Sudbrook estate). Resident permits needed; we coordinate with house manager."
+      }
     ],
     "faq": [
-      {"q": "Do you avoid Twickenham rugby days?", "a": "Yes — Twickenham Stadium event days (Six Nations, autumn internationals, Premiership Rugby Cup) close most parking around the stadium 4 hours either side of kickoff. For TW1 jobs near the stadium we check the fixture list before quoting weekend moves and slot accordingly."},
-      {"q": "Do you cover Kingston (KT2) too?", "a": "Yes — we cover Kingston-side of the Richmond border (KT2) at standard rates. The geographic boundary is the river; KT2 addresses are adjacent and fit our regular Richmond round."},
-      {"q": "Are Richmond Hill listed-building moves a problem?", "a": "Not at all — most of Richmond Hill (Petersham, Star and Garter, Terrace Walk) is listed or in a protected view. We use reversible internal fixings, lift rather than drag heavy furniture out of period staircases, and route any external alteration work through Listed Building Consent specialists rather than doing it ourselves."}
+      {
+        "q": "Do you avoid Twickenham rugby days?",
+        "a": "Yes — Twickenham Stadium event days (Six Nations, autumn internationals, Premiership Rugby Cup) close most parking around the stadium 4 hours either side of kickoff. For TW1 jobs near the stadium we check the fixture list before quoting weekend moves and slot accordingly."
+      },
+      {
+        "q": "Do you cover Kingston (KT2) too?",
+        "a": "Yes — we cover Kingston-side of the Richmond border (KT2) at standard rates. The geographic boundary is the river; KT2 addresses are adjacent and fit our regular Richmond round."
+      },
+      {
+        "q": "Are Richmond Hill listed-building moves a problem?",
+        "a": "Not at all — most of Richmond Hill (Petersham, Star and Garter, Terrace Walk) is listed or in a protected view. We use reversible internal fixings, lift rather than drag heavy furniture out of period staircases, and route any external alteration work through Listed Building Consent specialists rather than doing it ourselves."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Richmond cleaning is dominated by premium weekly family-home cleans (Richmond Hill, Petersham, St Margarets). End-of-tenancy spikes around Richmond/Mortlake commuter rentals in March (corporate move season).",
-      "removals": "Richmond = Twickenham rugby-day awareness, Kew Gardens weekend tourist traffic, Richmond Hill listed-building care, and Petersham private-estate access permits.",
+      "man-and-van": "Richmond man and van must-knows: Twickenham Stadium rugby-day awareness on TW1 (no bookings during Six Nations, autumn internationals or Premiership Rugby Cup), Kew Gardens weekend tourist traffic on TW9 (slot before 9am or after 6pm), Richmond Hill listed-building care on TW10 (Petersham, Star and Garter, Terrace Walk — reversible fixings only), and Petersham/Ham private-estate resident permits (we coordinate with the house manager). We cover the Kingston side (KT2) at standard rates.",
       "handyman": "Richmond Hill Georgian sash window restoration is a Richmond specialty. St Margarets conservation work, Twickenham family-home repairs, and Kew/Mortlake garden-shed work round it out."
     }
   },
@@ -367,27 +1130,83 @@
     "name": "Merton",
     "slug": "merton",
     "geoCode": "GB-MRT",
-    "postcodes": ["SW19", "SW20", "CR4", "SW17"],
+    "postcodes": [
+      "SW19",
+      "SW20",
+      "CR4",
+      "SW17"
+    ],
     "headlinePostcodes": "SW19 · SW20 · CR4",
-    "neighborhoods": ["Wimbledon", "Mitcham", "Morden", "Raynes Park", "Colliers Wood", "South Wimbledon", "Wimbledon Village", "Wimbledon Park"],
-    "boundary": ["Wandsworth", "Lambeth", "Croydon", "Sutton", "Kingston upon Thames"],
-    "linkedBoroughs": ["wandsworth", "lambeth"],
+    "neighborhoods": [
+      "Wimbledon",
+      "Mitcham",
+      "Morden",
+      "Raynes Park",
+      "Colliers Wood",
+      "South Wimbledon",
+      "Wimbledon Village",
+      "Wimbledon Park"
+    ],
+    "boundary": [
+      "Wandsworth",
+      "Lambeth",
+      "Croydon",
+      "Sutton",
+      "Kingston upon Thames"
+    ],
+    "linkedBoroughs": [
+      "wandsworth",
+      "lambeth"
+    ],
     "snippets": [
-      {"pc": "SW19", "title": "Wimbledon fortnight", "body": "Wimbledon Championships (last week of June + first week of July) — total Wimbledon Village/Park gridlock. We don't book SW19 moves during the fortnight."},
-      {"pc": "SW19", "title": "Wimbledon Common conservation", "body": "Common-side roads (Parkside, Calonne Road) protected views. Listed houses common; reversible fixings only."},
-      {"pc": "SW20", "title": "Raynes Park family streets", "body": "School-run streets (West Barnes Lane, Coombe Lane) — we avoid 08:00–09:00 and 15:00–16:00 windows."},
-      {"pc": "CR4", "title": "Mitcham CPZ light", "body": "CR4 has limited CPZ — most streets free parking. Move-day savings vs central."},
-      {"pc": "SW19", "title": "Wimbledon Village access", "body": "High Street Wimbledon Village — narrow Victorian street, no Luton vans Mon–Fri lunchtime. We use Transit + multiple trips."},
-      {"pc": "SW17", "title": "Tooting boundary", "body": "Tooting (SW17) is half Wandsworth, half Merton. Standard rates either side; we cover both."}
+      {
+        "pc": "SW19",
+        "title": "Wimbledon fortnight",
+        "body": "Wimbledon Championships (last week of June + first week of July) — total Wimbledon Village/Park gridlock. We don't book SW19 moves during the fortnight."
+      },
+      {
+        "pc": "SW19",
+        "title": "Wimbledon Common conservation",
+        "body": "Common-side roads (Parkside, Calonne Road) protected views. Listed houses common; reversible fixings only."
+      },
+      {
+        "pc": "SW20",
+        "title": "Raynes Park family streets",
+        "body": "School-run streets (West Barnes Lane, Coombe Lane) — we avoid 08:00–09:00 and 15:00–16:00 windows."
+      },
+      {
+        "pc": "CR4",
+        "title": "Mitcham CPZ light",
+        "body": "CR4 has limited CPZ — most streets free parking. Move-day savings vs central."
+      },
+      {
+        "pc": "SW19",
+        "title": "Wimbledon Village access",
+        "body": "High Street Wimbledon Village — narrow Victorian street, no Luton vans Mon–Fri lunchtime. We use Transit + multiple trips."
+      },
+      {
+        "pc": "SW17",
+        "title": "Tooting boundary",
+        "body": "Tooting (SW17) is half Wandsworth, half Merton. Standard rates either side; we cover both."
+      }
     ],
     "faq": [
-      {"q": "Do you avoid Wimbledon Championships fortnight?", "a": "Yes — for SW19 (Wimbledon Park, Wimbledon Village) we don't book moves during Championships fortnight (last week of June + first week of July). The road closures and parking suspensions make moves impossible. SW20 Raynes Park is far enough from the All England Club to be unaffected."},
-      {"q": "Do you cover Mitcham (CR4)?", "a": "Yes — Mitcham, Pollards Hill and Tooting boundary are all within our standard Merton service area. CR4 has lighter CPZ enforcement than central London — usually free street parking, which keeps move-day total cost a bit lower."},
-      {"q": "Can you handle Wimbledon Village's narrow High Street?", "a": "Yes — Wimbledon Village High Street and the surrounding lanes (Lingfield Road, Marryat Road) are too narrow for full-size Luton vans during weekday business hours. We use 2 Transit-size vans + multiple trips, or we book a bigger Luton for early morning (07:00–09:00) before the village wakes up. No surcharge either way."}
+      {
+        "q": "Do you avoid Wimbledon Championships fortnight?",
+        "a": "Yes — for SW19 (Wimbledon Park, Wimbledon Village) we don't book moves during Championships fortnight (last week of June + first week of July). The road closures and parking suspensions make moves impossible. SW20 Raynes Park is far enough from the All England Club to be unaffected."
+      },
+      {
+        "q": "Do you cover Mitcham (CR4)?",
+        "a": "Yes — Mitcham, Pollards Hill and Tooting boundary are all within our standard Merton service area. CR4 has lighter CPZ enforcement than central London — usually free street parking, which keeps move-day total cost a bit lower."
+      },
+      {
+        "q": "Can you handle Wimbledon Village's narrow High Street?",
+        "a": "Yes — Wimbledon Village High Street and the surrounding lanes (Lingfield Road, Marryat Road) are too narrow for full-size Luton vans during weekday business hours. We use 2 Transit-size vans + multiple trips, or we book a bigger Luton for early morning (07:00–09:00) before the village wakes up. No surcharge either way."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Wimbledon Village and Wimbledon Park premium family weekly cleans dominate Merton's cleaning calendar. End-of-tenancy spikes are smaller than central London — fewer student lets, more long-term family rentals.",
-      "removals": "Merton = Wimbledon fortnight blackout, Wimbledon Common protected-view listed buildings, Wimbledon Village narrow-street planning (Transit vs Luton), and lighter CPZ in Mitcham CR4.",
+      "man-and-van": "Merton man and van calendar has one hard blackout: Wimbledon Championships fortnight on SW19 (last week of June + first week of July) — total Wimbledon Park and Village gridlock, no moves possible. Outside the fortnight: Wimbledon Common protected-view listed buildings on Parkside and Calonne Road (reversible fixings), Wimbledon Village High Street narrow-street planning (Transit vans + multiple trips instead of one Luton, no surcharge), and lighter CPZ in Mitcham CR4 keeps total move-day cost down vs central London.",
       "handyman": "Wimbledon Village Victorian/Edwardian sash window restoration (specialty), Wimbledon Park family-home garden work, and Raynes Park kid-proofing/garden-shed assembly are the three main Merton handyman categories."
     }
   },
@@ -395,28 +1214,1363 @@
     "name": "Barnet",
     "slug": "barnet",
     "geoCode": "GB-BNE",
-    "postcodes": ["NW4", "NW7", "NW9", "EN5", "N3", "N12", "N20"],
+    "postcodes": [
+      "NW4",
+      "NW7",
+      "NW9",
+      "EN5",
+      "N3",
+      "N12",
+      "N20"
+    ],
     "headlinePostcodes": "NW4 · NW7 · N3",
-    "neighborhoods": ["Edgware", "Hendon", "Finchley", "Mill Hill", "Whetstone", "High Barnet", "Cricklewood (boundary)", "Burnt Oak", "East Finchley", "Friern Barnet"],
-    "boundary": ["Brent", "Camden", "Haringey", "Enfield", "Harrow"],
-    "linkedBoroughs": ["brent", "camden", "haringey"],
+    "neighborhoods": [
+      "Edgware",
+      "Hendon",
+      "Finchley",
+      "Mill Hill",
+      "Whetstone",
+      "High Barnet",
+      "Cricklewood (boundary)",
+      "Burnt Oak",
+      "East Finchley",
+      "Friern Barnet"
+    ],
+    "boundary": [
+      "Brent",
+      "Camden",
+      "Haringey",
+      "Enfield",
+      "Harrow"
+    ],
+    "linkedBoroughs": [
+      "brent",
+      "camden",
+      "haringey"
+    ],
     "snippets": [
-      {"pc": "N20", "title": "Whetstone family homes", "body": "Larger detached and semi-detached homes (Friary Park, Totteridge boundary). Typical move-day budget bigger than central Barnet."},
-      {"pc": "NW4", "title": "Hendon Brent Cross redevelopment", "body": "Brent Cross station rebuild + Brent Cross Town development — major works affect NW4 and NW2 access. We plan around weekend road closures."},
-      {"pc": "NW7", "title": "Mill Hill conservation", "body": "Mill Hill Village conservation area (Page Street, The Ridgeway) — listed Georgian/Victorian, reversible internal fixings."},
-      {"pc": "EN5", "title": "Barnet Hill traffic", "body": "Great North Road (A1000) through High Barnet — congestion peak 07:30–09:30 and 16:30–19:00. We slot moves outside peak."},
-      {"pc": "N3", "title": "Finchley Central CPZ", "body": "Barnet CPZ Mon–Fri 09:00–17:00. Free Saturdays/Sundays — most weekend moves skip the permit."},
-      {"pc": "NW4", "title": "Hendon Jewish community moves", "body": "Friday afternoon and Saturday moves rare in NW4/NW11 (Sabbath observance). Sundays our busiest day in the area."}
+      {
+        "pc": "N20",
+        "title": "Whetstone family homes",
+        "body": "Larger detached and semi-detached homes (Friary Park, Totteridge boundary). Typical move-day budget bigger than central Barnet."
+      },
+      {
+        "pc": "NW4",
+        "title": "Hendon Brent Cross redevelopment",
+        "body": "Brent Cross station rebuild + Brent Cross Town development — major works affect NW4 and NW2 access. We plan around weekend road closures."
+      },
+      {
+        "pc": "NW7",
+        "title": "Mill Hill conservation",
+        "body": "Mill Hill Village conservation area (Page Street, The Ridgeway) — listed Georgian/Victorian, reversible internal fixings."
+      },
+      {
+        "pc": "EN5",
+        "title": "Barnet Hill traffic",
+        "body": "Great North Road (A1000) through High Barnet — congestion peak 07:30–09:30 and 16:30–19:00. We slot moves outside peak."
+      },
+      {
+        "pc": "N3",
+        "title": "Finchley Central CPZ",
+        "body": "Barnet CPZ Mon–Fri 09:00–17:00. Free Saturdays/Sundays — most weekend moves skip the permit."
+      },
+      {
+        "pc": "NW4",
+        "title": "Hendon Jewish community moves",
+        "body": "Friday afternoon and Saturday moves rare in NW4/NW11 (Sabbath observance). Sundays our busiest day in the area."
+      }
     ],
     "faq": [
-      {"q": "Do you cover the larger Barnet houses (Whetstone, Totteridge, Mill Hill)?", "a": "Yes — Barnet is geographically the largest London borough by area, and many of our jobs there are full 4-bed/5-bed family-home moves rather than central-London flats. We typically allow 7–9 hours with 3 movers and a Luton for a 4-bed Whetstone or Totteridge house. Standard hourly rates apply."},
-      {"q": "Are Friday afternoon / Saturday moves available in NW4 / NW11?", "a": "We respect Sabbath observance in the NW4 (Hendon) and NW11 (Golders Green / Hampstead Garden Suburb — technically Barnet) Jewish communities. We don't book Friday afternoon or Saturday moves there by default. Sunday is our busiest day in those postcodes. Other areas of Barnet (N3, EN5, NW7) we book Saturday normally."},
-      {"q": "How does the Brent Cross development affect NW4 moves?", "a": "Major construction at Brent Cross (station rebuild + Brent Cross Town residential development) affects NW4 and NW2 access on weekends. We check the council's road-closure bulletin before quoting any NW4 weekend move and route via the North Circular if the A41 is closed."}
+      {
+        "q": "Do you cover the larger Barnet houses (Whetstone, Totteridge, Mill Hill)?",
+        "a": "Yes — Barnet is geographically the largest London borough by area, and many of our jobs there are full 4-bed/5-bed family-home moves rather than central-London flats. We typically allow 7–9 hours with 3 movers and a Luton for a 4-bed Whetstone or Totteridge house. Standard hourly rates apply."
+      },
+      {
+        "q": "Are Friday afternoon / Saturday moves available in NW4 / NW11?",
+        "a": "We respect Sabbath observance in the NW4 (Hendon) and NW11 (Golders Green / Hampstead Garden Suburb — technically Barnet) Jewish communities. We don't book Friday afternoon or Saturday moves there by default. Sunday is our busiest day in those postcodes. Other areas of Barnet (N3, EN5, NW7) we book Saturday normally."
+      },
+      {
+        "q": "How does the Brent Cross development affect NW4 moves?",
+        "a": "Major construction at Brent Cross (station rebuild + Brent Cross Town residential development) affects NW4 and NW2 access on weekends. We check the council's road-closure bulletin before quoting any NW4 weekend move and route via the North Circular if the A41 is closed."
+      }
     ],
     "serviceFraming": {
       "cleaning": "Family-home weekly cleans dominate Barnet — bigger houses, longer cleaning visits, often with regular fortnightly schedules. End-of-tenancy is a smaller category here than central London.",
-      "removals": "Barnet = larger family homes (4-5 bed common), Brent Cross construction-zone awareness, Sabbath-observant Friday/Saturday scheduling in NW4/NW11, and Mill Hill conservation. We allow longer days and bigger crews vs. central jobs.",
+      "man-and-van": "Barnet is geographically London's biggest borough — most man and van jobs here are full 4-bed or 5-bed family-home moves (7–9 hour days with 3 movers and a Luton), not central-London flats. Brent Cross construction-zone awareness on NW4/NW2 (we route via the North Circular when the A41 is closed), Mill Hill Village conservation on NW7, and Sabbath-observant Friday-afternoon/Saturday scheduling in NW4/NW11 (Sunday is our busiest day there) are the three planning must-knows. Standard hourly rates — just longer days and bigger crews.",
       "handyman": "Family-home handyman work dominates — fence repair, garden-shed assembly, kid-proofing, garage/loft conversions. Mill Hill conservation work and Hendon kosher-kitchen fitouts (specialty) round it out."
     }
+  },
+  "westminster": {
+    "name": "Westminster",
+    "slug": "westminster",
+    "geoCode": "GB-WSM",
+    "postcodes": [
+      "W1",
+      "W2",
+      "SW1",
+      "NW1",
+      "WC1",
+      "WC2"
+    ],
+    "headlinePostcodes": "W1 · SW1 · W2",
+    "neighborhoods": [
+      "Mayfair",
+      "Marylebone",
+      "Soho",
+      "Belgravia",
+      "Pimlico",
+      "Bayswater",
+      "Paddington",
+      "Knightsbridge (north)",
+      "Victoria",
+      "St James's",
+      "Westminster",
+      "Marble Arch",
+      "Fitzrovia (south)"
+    ],
+    "boundary": [
+      "Camden",
+      "Kensington & Chelsea",
+      "Wandsworth (river)",
+      "Southwark (river)"
+    ],
+    "linkedBoroughs": [
+      "camden",
+      "kensington-chelsea"
+    ],
+    "snippets": [
+      {
+        "pc": "W1",
+        "title": "Westminster postcode coverage",
+        "body": "We cover all of Westminster — W1, W2, SW1, NW1, WC1, WC2 — at standard hourly rates. Mayfair, Marylebone, Soho, Belgravia and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Westminster is inside Central. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "CPZ Mon–Fri 08:30–18:30 (many sub-zones); £18 Central London Congestion Charge 07:00–18:00 Mon–Fri, 12:00–18:00 Sat–Sun. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Westminster?",
+        "a": "Yes — we cover all Westminster postcodes (W1, W2, SW1, NW1, WC1, WC2) at standard hourly rates. Mayfair, Marylebone, Soho, Belgravia, Pimlico and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Westminster W1 · SW1 · W2 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Westminster — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Westminster — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Westminster — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Westminster — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Westminster — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Westminster — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "camden": {
+    "name": "Camden",
+    "slug": "camden",
+    "geoCode": "GB-CMD",
+    "postcodes": [
+      "NW1",
+      "NW3",
+      "NW5",
+      "NW6",
+      "N1C",
+      "WC1",
+      "W1T",
+      "WC2"
+    ],
+    "headlinePostcodes": "NW1 · NW3 · WC1",
+    "neighborhoods": [
+      "Camden Town",
+      "Belsize Park",
+      "Hampstead",
+      "Kentish Town",
+      "Bloomsbury",
+      "King's Cross",
+      "Holborn (north)",
+      "Fitzrovia",
+      "Primrose Hill",
+      "West Hampstead",
+      "Tufnell Park",
+      "Gospel Oak"
+    ],
+    "boundary": [
+      "Westminster",
+      "Islington",
+      "Haringey",
+      "Barnet",
+      "Brent"
+    ],
+    "linkedBoroughs": [
+      "westminster",
+      "islington",
+      "haringey"
+    ],
+    "snippets": [
+      {
+        "pc": "NW1",
+        "title": "Camden postcode coverage",
+        "body": "We cover all of Camden — NW1, NW3, NW5, NW6, N1C, WC1, W1T, WC2 — at standard hourly rates. Camden Town, Belsize Park, Hampstead, Kentish Town and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Camden is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Camden CPZ Mon–Fri 08:30–18:30 (most sub-zones); part of central postcodes (WC1/W1) inside Congestion Charge. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Camden?",
+        "a": "Yes — we cover all Camden postcodes (NW1, NW3, NW5, NW6, N1C, WC1, W1T, WC2) at standard hourly rates. Camden Town, Belsize Park, Hampstead, Kentish Town, Bloomsbury and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Camden NW1 · NW3 · WC1 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Camden — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Camden — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Camden — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Camden — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Camden — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Camden — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "hackney": {
+    "name": "Hackney",
+    "slug": "hackney",
+    "geoCode": "GB-HCK",
+    "postcodes": [
+      "N1",
+      "N16",
+      "E2",
+      "E5",
+      "E8",
+      "E9"
+    ],
+    "headlinePostcodes": "E8 · N16 · E5",
+    "neighborhoods": [
+      "Shoreditch",
+      "Hoxton",
+      "Dalston",
+      "Stoke Newington",
+      "London Fields",
+      "Hackney Central",
+      "Clapton",
+      "Homerton",
+      "Stamford Hill",
+      "De Beauvoir Town"
+    ],
+    "boundary": [
+      "Islington",
+      "Haringey",
+      "Waltham Forest",
+      "Newham",
+      "Tower Hamlets"
+    ],
+    "linkedBoroughs": [
+      "islington",
+      "tower-hamlets",
+      "haringey"
+    ],
+    "snippets": [
+      {
+        "pc": "N1",
+        "title": "Hackney postcode coverage",
+        "body": "We cover all of Hackney — N1, N16, E2, E5, E8, E9 — at standard hourly rates. Shoreditch, Hoxton, Dalston, Stoke Newington and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Hackney is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Hackney CPZ Mon–Fri 08:30–18:30 (varies); Shoreditch postcodes inside Congestion Charge. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Hackney?",
+        "a": "Yes — we cover all Hackney postcodes (N1, N16, E2, E5, E8, E9) at standard hourly rates. Shoreditch, Hoxton, Dalston, Stoke Newington, London Fields and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Hackney E8 · N16 · E5 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Hackney — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Hackney — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Hackney — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Hackney — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Hackney — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Hackney — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "islington": {
+    "name": "Islington",
+    "slug": "islington",
+    "geoCode": "GB-ISL",
+    "postcodes": [
+      "N1",
+      "N5",
+      "N7",
+      "N19",
+      "EC1"
+    ],
+    "headlinePostcodes": "N1 · N7 · EC1",
+    "neighborhoods": [
+      "Angel",
+      "Highbury",
+      "Holloway",
+      "Archway",
+      "Tufnell Park (east)",
+      "Caledonian Road",
+      "Finsbury",
+      "Clerkenwell",
+      "Barnsbury",
+      "Canonbury"
+    ],
+    "boundary": [
+      "Hackney",
+      "Haringey",
+      "Camden",
+      "City of London"
+    ],
+    "linkedBoroughs": [
+      "camden",
+      "hackney"
+    ],
+    "snippets": [
+      {
+        "pc": "N1",
+        "title": "Islington postcode coverage",
+        "body": "We cover all of Islington — N1, N5, N7, N19, EC1 — at standard hourly rates. Angel, Highbury, Holloway, Archway and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Islington is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Islington CPZ Mon–Fri 08:30–18:30; EC1 postcodes inside Congestion Charge. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Islington?",
+        "a": "Yes — we cover all Islington postcodes (N1, N5, N7, N19, EC1) at standard hourly rates. Angel, Highbury, Holloway, Archway, Tufnell Park (east) and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Islington N1 · N7 · EC1 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Islington — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Islington — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Islington — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Islington — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Islington — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Islington — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "wandsworth": {
+    "name": "Wandsworth",
+    "slug": "wandsworth",
+    "geoCode": "GB-WND",
+    "postcodes": [
+      "SW8",
+      "SW11",
+      "SW12",
+      "SW15",
+      "SW17",
+      "SW18",
+      "SW19"
+    ],
+    "headlinePostcodes": "SW11 · SW18 · SW15",
+    "neighborhoods": [
+      "Battersea",
+      "Clapham (south)",
+      "Wandsworth",
+      "Putney",
+      "Tooting",
+      "Balham",
+      "Earlsfield",
+      "Roehampton",
+      "Southfields",
+      "Nine Elms"
+    ],
+    "boundary": [
+      "Hammersmith & Fulham (river)",
+      "Kensington & Chelsea (river)",
+      "Lambeth",
+      "Merton",
+      "Richmond"
+    ],
+    "linkedBoroughs": [
+      "lambeth",
+      "merton",
+      "richmond",
+      "hammersmith-fulham"
+    ],
+    "snippets": [
+      {
+        "pc": "SW8",
+        "title": "Wandsworth postcode coverage",
+        "body": "We cover all of Wandsworth — SW8, SW11, SW12, SW15, SW17, SW18, SW19 — at standard hourly rates. Battersea, Clapham (south), Wandsworth, Putney and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Wandsworth is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Wandsworth CPZ Mon–Fri 08:00–18:30; SW8 boundary with Vauxhall inside Congestion Charge boundary. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Wandsworth?",
+        "a": "Yes — we cover all Wandsworth postcodes (SW8, SW11, SW12, SW15, SW17, SW18, SW19) at standard hourly rates. Battersea, Clapham (south), Wandsworth, Putney, Tooting and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Wandsworth SW11 · SW18 · SW15 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Wandsworth — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Wandsworth — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Wandsworth — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Wandsworth — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Wandsworth — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Wandsworth — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "bromley": {
+    "name": "Bromley",
+    "slug": "bromley",
+    "geoCode": "GB-BRY",
+    "postcodes": [
+      "BR1",
+      "BR2",
+      "BR3",
+      "BR5",
+      "BR6",
+      "BR7",
+      "SE6",
+      "SE9",
+      "SE12",
+      "SE19",
+      "SE20",
+      "SE25",
+      "SE26"
+    ],
+    "headlinePostcodes": "BR1 · BR2 · BR3",
+    "neighborhoods": [
+      "Bromley",
+      "Beckenham",
+      "Orpington",
+      "Penge",
+      "West Wickham",
+      "Chislehurst",
+      "Bickley",
+      "Hayes",
+      "Crystal Palace (south)",
+      "Mottingham"
+    ],
+    "boundary": [
+      "Lewisham",
+      "Croydon",
+      "Bexley",
+      "Greenwich"
+    ],
+    "linkedBoroughs": [
+      "lewisham",
+      "greenwich"
+    ],
+    "snippets": [
+      {
+        "pc": "BR1",
+        "title": "Bromley postcode coverage",
+        "body": "We cover all of Bromley — BR1, BR2, BR3, BR5, BR6, BR7, SE6, SE9, SE12, SE19, SE20, SE25, SE26 — at standard hourly rates. Bromley, Beckenham, Orpington, Penge and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Bromley is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Bromley CPZ around BR1 town centre only (Mon–Sat 08:30–18:30); most outer postcodes free street parking. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Bromley?",
+        "a": "Yes — we cover all Bromley postcodes (BR1, BR2, BR3, BR5, BR6, BR7, SE6, SE9, SE12, SE19, SE20, SE25, SE26) at standard hourly rates. Bromley, Beckenham, Orpington, Penge, West Wickham and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Bromley BR1 · BR2 · BR3 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Bromley — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Bromley — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Bromley — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Bromley — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Bromley — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Bromley — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "croydon": {
+    "name": "Croydon",
+    "slug": "croydon",
+    "geoCode": "GB-CRY",
+    "postcodes": [
+      "CR0",
+      "CR2",
+      "CR5",
+      "CR7",
+      "CR8",
+      "SE19",
+      "SE25"
+    ],
+    "headlinePostcodes": "CR0 · CR2 · CR7",
+    "neighborhoods": [
+      "Croydon",
+      "Purley",
+      "South Norwood",
+      "Selsdon",
+      "Thornton Heath",
+      "Addiscombe",
+      "Coulsdon",
+      "Norbury",
+      "Crystal Palace (south)",
+      "New Addington"
+    ],
+    "boundary": [
+      "Lambeth",
+      "Lewisham",
+      "Sutton",
+      "Bromley"
+    ],
+    "linkedBoroughs": [
+      "lambeth",
+      "lewisham"
+    ],
+    "snippets": [
+      {
+        "pc": "CR0",
+        "title": "Croydon postcode coverage",
+        "body": "We cover all of Croydon — CR0, CR2, CR5, CR7, CR8, SE19, SE25 — at standard hourly rates. Croydon, Purley, South Norwood, Selsdon and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Croydon is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Croydon CPZ around CR0 town centre and CR7 Thornton Heath (Mon–Sat 08:30–18:30); most outer postcodes free. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Croydon?",
+        "a": "Yes — we cover all Croydon postcodes (CR0, CR2, CR5, CR7, CR8, SE19, SE25) at standard hourly rates. Croydon, Purley, South Norwood, Selsdon, Thornton Heath and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Croydon CR0 · CR2 · CR7 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Croydon — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Croydon — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Croydon — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Croydon — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Croydon — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Croydon — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "bexley": {
+    "name": "Bexley",
+    "slug": "bexley",
+    "geoCode": "GB-BEX",
+    "postcodes": [
+      "DA1",
+      "DA5",
+      "DA6",
+      "DA7",
+      "DA8",
+      "DA14",
+      "DA15",
+      "DA16",
+      "SE2",
+      "SE9",
+      "SE18",
+      "SE28"
+    ],
+    "headlinePostcodes": "DA6 · DA7 · DA8",
+    "neighborhoods": [
+      "Bexley",
+      "Bexleyheath",
+      "Sidcup",
+      "Welling",
+      "Crayford",
+      "Erith",
+      "Belvedere",
+      "Slade Green",
+      "Thamesmead (south)"
+    ],
+    "boundary": [
+      "Greenwich",
+      "Bromley",
+      "Dartford",
+      "Havering (river)"
+    ],
+    "linkedBoroughs": [
+      "greenwich",
+      "bromley"
+    ],
+    "snippets": [
+      {
+        "pc": "DA1",
+        "title": "Bexley postcode coverage",
+        "body": "We cover all of Bexley — DA1, DA5, DA6, DA7, DA8, DA14, DA15, DA16, SE2, SE9, SE18, SE28 — at standard hourly rates. Bexley, Bexleyheath, Sidcup, Welling and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Bexley is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Bexleyheath town centre CPZ only (Mon–Sat); most postcodes free street parking — among the cheapest move-day costs in London. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Bexley?",
+        "a": "Yes — we cover all Bexley postcodes (DA1, DA5, DA6, DA7, DA8, DA14, DA15, DA16, SE2, SE9, SE18, SE28) at standard hourly rates. Bexley, Bexleyheath, Sidcup, Welling, Crayford and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Bexley DA6 · DA7 · DA8 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Bexley — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Bexley — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Bexley — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Bexley — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Bexley — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Bexley — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "enfield": {
+    "name": "Enfield",
+    "slug": "enfield",
+    "geoCode": "GB-ENF",
+    "postcodes": [
+      "EN1",
+      "EN2",
+      "EN3",
+      "N9",
+      "N11",
+      "N13",
+      "N14",
+      "N18",
+      "N21"
+    ],
+    "headlinePostcodes": "EN1 · N14 · N21",
+    "neighborhoods": [
+      "Enfield Town",
+      "Edmonton",
+      "Palmers Green",
+      "Southgate",
+      "Winchmore Hill",
+      "Cockfosters",
+      "Bush Hill Park",
+      "Bowes Park",
+      "Oakwood"
+    ],
+    "boundary": [
+      "Haringey",
+      "Barnet",
+      "Waltham Forest",
+      "Hertfordshire (border)"
+    ],
+    "linkedBoroughs": [
+      "haringey",
+      "barnet",
+      "waltham-forest"
+    ],
+    "snippets": [
+      {
+        "pc": "EN1",
+        "title": "Enfield postcode coverage",
+        "body": "We cover all of Enfield — EN1, EN2, EN3, N9, N11, N13, N14, N18, N21 — at standard hourly rates. Enfield Town, Edmonton, Palmers Green, Southgate and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Enfield is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Enfield CPZ around EN1 and EN2 town centres only; most postcodes free parking. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Enfield?",
+        "a": "Yes — we cover all Enfield postcodes (EN1, EN2, EN3, N9, N11, N13, N14, N18, N21) at standard hourly rates. Enfield Town, Edmonton, Palmers Green, Southgate, Winchmore Hill and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Enfield EN1 · N14 · N21 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Enfield — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Enfield — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Enfield — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Enfield — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Enfield — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Enfield — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "harrow": {
+    "name": "Harrow",
+    "slug": "harrow",
+    "geoCode": "GB-HRW",
+    "postcodes": [
+      "HA1",
+      "HA2",
+      "HA3",
+      "HA5",
+      "HA7",
+      "HA8"
+    ],
+    "headlinePostcodes": "HA1 · HA5 · HA8",
+    "neighborhoods": [
+      "Harrow",
+      "Harrow on the Hill",
+      "Pinner",
+      "Stanmore",
+      "Wealdstone",
+      "Hatch End",
+      "Kenton",
+      "Edgware (south)",
+      "North Harrow"
+    ],
+    "boundary": [
+      "Brent",
+      "Barnet",
+      "Hillingdon",
+      "Hertfordshire (border)"
+    ],
+    "linkedBoroughs": [
+      "brent",
+      "barnet",
+      "hillingdon"
+    ],
+    "snippets": [
+      {
+        "pc": "HA1",
+        "title": "Harrow postcode coverage",
+        "body": "We cover all of Harrow — HA1, HA2, HA3, HA5, HA7, HA8 — at standard hourly rates. Harrow, Harrow on the Hill, Pinner, Stanmore and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Harrow is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Harrow CPZ around HA1 town centre and station areas; outer postcodes free parking. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Harrow?",
+        "a": "Yes — we cover all Harrow postcodes (HA1, HA2, HA3, HA5, HA7, HA8) at standard hourly rates. Harrow, Harrow on the Hill, Pinner, Stanmore, Wealdstone and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Harrow HA1 · HA5 · HA8 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Harrow — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Harrow — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Harrow — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Harrow — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Harrow — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Harrow — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "hillingdon": {
+    "name": "Hillingdon",
+    "slug": "hillingdon",
+    "geoCode": "GB-HIL",
+    "postcodes": [
+      "UB7",
+      "UB8",
+      "UB9",
+      "UB10",
+      "HA4",
+      "HA6"
+    ],
+    "headlinePostcodes": "UB8 · UB7 · HA4",
+    "neighborhoods": [
+      "Uxbridge",
+      "Hayes",
+      "West Drayton",
+      "Ruislip",
+      "Northwood",
+      "Eastcote",
+      "Yiewsley",
+      "Hillingdon",
+      "Ickenham",
+      "Heathrow Airport (north)"
+    ],
+    "boundary": [
+      "Harrow",
+      "Ealing",
+      "Hounslow",
+      "Buckinghamshire (border)"
+    ],
+    "linkedBoroughs": [
+      "ealing",
+      "harrow",
+      "hounslow"
+    ],
+    "snippets": [
+      {
+        "pc": "UB7",
+        "title": "Hillingdon postcode coverage",
+        "body": "We cover all of Hillingdon — UB7, UB8, UB9, UB10, HA4, HA6 — at standard hourly rates. Uxbridge, Hayes, West Drayton, Ruislip and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Hillingdon is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Uxbridge town centre CPZ only; most postcodes free parking. Heathrow corridor — frequent corporate relocations. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Hillingdon?",
+        "a": "Yes — we cover all Hillingdon postcodes (UB7, UB8, UB9, UB10, HA4, HA6) at standard hourly rates. Uxbridge, Hayes, West Drayton, Ruislip, Northwood and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Hillingdon UB8 · UB7 · HA4 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Hillingdon — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Hillingdon — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Hillingdon — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Hillingdon — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Hillingdon — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Hillingdon — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "hounslow": {
+    "name": "Hounslow",
+    "slug": "hounslow",
+    "geoCode": "GB-HNS",
+    "postcodes": [
+      "TW3",
+      "TW4",
+      "TW5",
+      "TW7",
+      "TW8",
+      "TW13",
+      "TW14",
+      "W4"
+    ],
+    "headlinePostcodes": "W4 · TW8 · TW3",
+    "neighborhoods": [
+      "Hounslow",
+      "Chiswick",
+      "Brentford",
+      "Isleworth",
+      "Feltham",
+      "Heston",
+      "Cranford",
+      "Hanworth"
+    ],
+    "boundary": [
+      "Ealing",
+      "Hillingdon",
+      "Richmond",
+      "Hammersmith & Fulham"
+    ],
+    "linkedBoroughs": [
+      "ealing",
+      "richmond",
+      "hammersmith-fulham"
+    ],
+    "snippets": [
+      {
+        "pc": "TW3",
+        "title": "Hounslow postcode coverage",
+        "body": "We cover all of Hounslow — TW3, TW4, TW5, TW7, TW8, TW13, TW14, W4 — at standard hourly rates. Hounslow, Chiswick, Brentford, Isleworth and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Hounslow is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Chiswick (W4) CPZ Mon–Fri 09:00–17:00; Hounslow town centre CPZ; Feltham postcodes mostly free. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Hounslow?",
+        "a": "Yes — we cover all Hounslow postcodes (TW3, TW4, TW5, TW7, TW8, TW13, TW14, W4) at standard hourly rates. Hounslow, Chiswick, Brentford, Isleworth, Feltham and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Hounslow W4 · TW8 · TW3 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Hounslow — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Hounslow — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Hounslow — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Hounslow — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Hounslow — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Hounslow — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "kingston": {
+    "name": "Kingston upon Thames",
+    "slug": "kingston",
+    "geoCode": "GB-KTT",
+    "postcodes": [
+      "KT1",
+      "KT2",
+      "KT3",
+      "KT4",
+      "KT5",
+      "KT6",
+      "KT9"
+    ],
+    "headlinePostcodes": "KT1 · KT2 · KT5",
+    "neighborhoods": [
+      "Kingston",
+      "Surbiton",
+      "New Malden",
+      "Chessington",
+      "Tolworth",
+      "Norbiton",
+      "Coombe",
+      "Berrylands"
+    ],
+    "boundary": [
+      "Richmond",
+      "Merton",
+      "Sutton",
+      "Surrey (border)"
+    ],
+    "linkedBoroughs": [
+      "richmond",
+      "merton"
+    ],
+    "snippets": [
+      {
+        "pc": "KT1",
+        "title": "Kingston upon Thames postcode coverage",
+        "body": "We cover all of Kingston upon Thames — KT1, KT2, KT3, KT4, KT5, KT6, KT9 — at standard hourly rates. Kingston, Surbiton, New Malden, Chessington and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Kingston upon Thames is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Kingston town centre and Surbiton CPZ Mon–Sat 08:30–18:30; outer postcodes free parking. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Kingston upon Thames?",
+        "a": "Yes — we cover all Kingston upon Thames postcodes (KT1, KT2, KT3, KT4, KT5, KT6, KT9) at standard hourly rates. Kingston, Surbiton, New Malden, Chessington, Tolworth and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Kingston upon Thames KT1 · KT2 · KT5 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Kingston upon Thames — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Kingston upon Thames — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Kingston upon Thames — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Kingston upon Thames — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Kingston upon Thames — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Kingston upon Thames — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "sutton": {
+    "name": "Sutton",
+    "slug": "sutton",
+    "geoCode": "GB-STN",
+    "postcodes": [
+      "SM1",
+      "SM2",
+      "SM3",
+      "SM4",
+      "SM5",
+      "SM6",
+      "KT4"
+    ],
+    "headlinePostcodes": "SM1 · SM2 · SM5",
+    "neighborhoods": [
+      "Sutton",
+      "Cheam",
+      "Wallington",
+      "Carshalton",
+      "Belmont",
+      "Worcester Park",
+      "Rose Hill",
+      "Hackbridge"
+    ],
+    "boundary": [
+      "Kingston",
+      "Merton",
+      "Croydon",
+      "Surrey (border)"
+    ],
+    "linkedBoroughs": [
+      "merton",
+      "croydon",
+      "kingston"
+    ],
+    "snippets": [
+      {
+        "pc": "SM1",
+        "title": "Sutton postcode coverage",
+        "body": "We cover all of Sutton — SM1, SM2, SM3, SM4, SM5, SM6, KT4 — at standard hourly rates. Sutton, Cheam, Wallington, Carshalton and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Sutton is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Sutton town centre CPZ Mon–Sat; most postcodes free parking. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Sutton?",
+        "a": "Yes — we cover all Sutton postcodes (SM1, SM2, SM3, SM4, SM5, SM6, KT4) at standard hourly rates. Sutton, Cheam, Wallington, Carshalton, Belmont and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Sutton SM1 · SM2 · SM5 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Sutton — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Sutton — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Sutton — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Sutton — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Sutton — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Sutton — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "redbridge": {
+    "name": "Redbridge",
+    "slug": "redbridge",
+    "geoCode": "GB-RDB",
+    "postcodes": [
+      "IG1",
+      "IG2",
+      "IG3",
+      "IG4",
+      "IG5",
+      "IG6",
+      "E11",
+      "E12",
+      "E18"
+    ],
+    "headlinePostcodes": "IG1 · IG4 · E11",
+    "neighborhoods": [
+      "Ilford",
+      "Wanstead",
+      "Woodford",
+      "Hainault",
+      "Barkingside",
+      "Gants Hill",
+      "South Woodford",
+      "Chigwell (west)"
+    ],
+    "boundary": [
+      "Waltham Forest",
+      "Newham",
+      "Barking & Dagenham",
+      "Havering",
+      "Essex (border)"
+    ],
+    "linkedBoroughs": [
+      "waltham-forest",
+      "newham"
+    ],
+    "snippets": [
+      {
+        "pc": "IG1",
+        "title": "Redbridge postcode coverage",
+        "body": "We cover all of Redbridge — IG1, IG2, IG3, IG4, IG5, IG6, E11, E12, E18 — at standard hourly rates. Ilford, Wanstead, Woodford, Hainault and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Redbridge is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Ilford town centre (IG1) CPZ; most postcodes free parking. Crossrail-driven gentrification in Ilford and Goodmayes. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Redbridge?",
+        "a": "Yes — we cover all Redbridge postcodes (IG1, IG2, IG3, IG4, IG5, IG6, E11, E12, E18) at standard hourly rates. Ilford, Wanstead, Woodford, Hainault, Barkingside and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Redbridge IG1 · IG4 · E11 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Redbridge — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Redbridge — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Redbridge — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Redbridge — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Redbridge — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Redbridge — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "havering": {
+    "name": "Havering",
+    "slug": "havering",
+    "geoCode": "GB-HAV",
+    "postcodes": [
+      "RM1",
+      "RM2",
+      "RM3",
+      "RM4",
+      "RM5",
+      "RM7",
+      "RM11",
+      "RM12",
+      "RM13",
+      "RM14"
+    ],
+    "headlinePostcodes": "RM1 · RM11 · RM14",
+    "neighborhoods": [
+      "Romford",
+      "Hornchurch",
+      "Upminster",
+      "Rainham",
+      "Harold Hill",
+      "Collier Row",
+      "Elm Park",
+      "Cranham",
+      "Gidea Park"
+    ],
+    "boundary": [
+      "Redbridge",
+      "Barking & Dagenham",
+      "Essex (border)"
+    ],
+    "linkedBoroughs": [
+      "redbridge",
+      "barking-dagenham"
+    ],
+    "snippets": [
+      {
+        "pc": "RM1",
+        "title": "Havering postcode coverage",
+        "body": "We cover all of Havering — RM1, RM2, RM3, RM4, RM5, RM7, RM11, RM12, RM13, RM14 — at standard hourly rates. Romford, Hornchurch, Upminster, Rainham and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Havering is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Romford town centre CPZ; most outer postcodes free parking. Larger family homes than central London — full-day move-day budgets. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Havering?",
+        "a": "Yes — we cover all Havering postcodes (RM1, RM2, RM3, RM4, RM5, RM7, RM11, RM12, RM13, RM14) at standard hourly rates. Romford, Hornchurch, Upminster, Rainham, Harold Hill and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Havering RM1 · RM11 · RM14 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Havering — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Havering — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Havering — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Havering — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Havering — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Havering — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
+  },
+  "barking-dagenham": {
+    "name": "Barking & Dagenham",
+    "slug": "barking-dagenham",
+    "geoCode": "GB-BDG",
+    "postcodes": [
+      "IG11",
+      "RM6",
+      "RM8",
+      "RM9",
+      "RM10"
+    ],
+    "headlinePostcodes": "IG11 · RM8 · RM10",
+    "neighborhoods": [
+      "Barking",
+      "Dagenham",
+      "Becontree",
+      "Chadwell Heath",
+      "Marks Gate",
+      "Rush Green",
+      "Upney"
+    ],
+    "boundary": [
+      "Newham",
+      "Redbridge",
+      "Havering",
+      "Bexley (river)"
+    ],
+    "linkedBoroughs": [
+      "newham",
+      "redbridge",
+      "havering"
+    ],
+    "snippets": [
+      {
+        "pc": "IG11",
+        "title": "Barking & Dagenham postcode coverage",
+        "body": "We cover all of Barking & Dagenham — IG11, RM6, RM8, RM9, RM10 — at standard hourly rates. Barking, Dagenham, Becontree, Chadwell Heath and the rest of the borough are all within our regular service round."
+      },
+      {
+        "pc": "All",
+        "title": "ULEZ-compliant fleet",
+        "body": "Barking & Dagenham is inside extended ULEZ. All Hausio vans are ULEZ-compliant — no daily charge passed on to you, on any postcode in the borough."
+      },
+      {
+        "pc": "All",
+        "title": "Parking & permits",
+        "body": "Limited CPZ — only around Barking town centre. Most postcodes free street parking — among the cheapest move-day costs in east London. Tradesperson permits when needed are roughly £10/half-day and included in the quote — no day-of surprises."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do you cover Barking & Dagenham?",
+        "a": "Yes — we cover all Barking & Dagenham postcodes (IG11, RM6, RM8, RM9, RM10) at standard hourly rates. Barking, Dagenham, Becontree, Chadwell Heath, Marks Gate and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+      },
+      {
+        "q": "Are prices the same as central London?",
+        "a": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+      }
+    ],
+    "serviceFraming": {
+      "man-and-van": "Man and van work across Barking & Dagenham IG11 · RM8 · RM10 at standard hourly rates — 1 man + van £55/hr, 2 men + van £85/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.",
+      "handyman": "Handyman work across Barking & Dagenham — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.",
+      "furniture-assembly": "Furniture assembly across Barking & Dagenham — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).",
+      "tv-mounting": "TV wall mounting across Barking & Dagenham — plasterboard, brick or concrete walls handled. Up to 43\" £55, 44–55\" £75, 56–65\" £95, 66–85\" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.",
+      "garden-clearance": "Garden clearance across Barking & Dagenham — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.",
+      "waste-removal": "Waste removal across Barking & Dagenham — single items, full house clearance, office and builders' waste. Single item from £55, small van £100, half Luton £180, full Luton £280. We're a registered waste carrier; transfer notes always provided.",
+      "painting-decorating": "Painting and decorating across Barking & Dagenham — single rooms, whole flats, sash window restoration, external doors and trim. Day rate £220/painter or fixed per room (£320 for walls + ceiling, prep included). Dulux trade and Farrow & Ball stocked."
+    },
+    "_scaffold": true
   }
 }

@@ -23,7 +23,7 @@ KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 DEFAULT_URLS = [
     f"https://{HOST}/",
     f"https://{HOST}/cleaning-london.html",
-    f"https://{HOST}/removals-london.html",
+    f"https://{HOST}/man-and-van-london.html",
     f"https://{HOST}/handyman-london.html",
     f"https://{HOST}/areas/camden.html",
     f"https://{HOST}/areas/hackney.html",

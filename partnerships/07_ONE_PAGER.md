@@ -4,7 +4,7 @@
 
 ---
 
-### Cleaning · Removals · Handyman — across all 32 London boroughs
+### Cleaning · Man and Van · Handyman — across all 32 London boroughs
 
 For letting agents, the end of every tenancy means coordinating a cleaning team, chasing the date, fielding deposit disputes if the inventory clerk flags an issue. We turn that operational tax into branch revenue.
 

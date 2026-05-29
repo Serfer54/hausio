@@ -13,7 +13,7 @@
 | # | Campaign | Budget/mo | Daily | Bidding | Ad groups |
 |---|---|---|---|---|---|
 | 1 | Cleaning — London | £500 | £16.67 | Manual CPC, max £4.00 | EOT · Deep · Regular |
-| 2 | Removals — London | £300 | £10.00 | Manual CPC, max £3.50 | Man & Van · House Removals |
+| 2 | Man and Van — London | £300 | £10.00 | Manual CPC, max £3.50 | Single Items · Flat & House Moves |
 | 3 | Handyman — London | £200 | £6.67 | Manual CPC, max £3.00 | General · Specific Tasks |
 
 Each campaign: ~15 keywords (mixed exact + phrase), shared 60-term negatives list, 3 RSAs per ad group, all extensions, geotargeting on Greater London with +30% bid on premium boroughs.
@@ -46,7 +46,7 @@ After saving, Google shows the **Conversion ID** (`AW-XXXXXXXXXX`) and **Label**
 - `business.google.com` → Manage your business → Add business
 - Type: **Service-area business** (no public storefront)
 - Service area: 5-mile radius from Westminster, Camden, Islington, Hammersmith, Wandsworth (or Greater London if simpler)
-- Categories: Cleaning service, Removalist, Handyman
+- Categories: Cleaning service, Moving company, Handyman
 - Phone: +44 7304 330 614, Website: hausio.co.uk
 - Verification: Postcard or video (takes 5-14 days). Doesn't block Search ads, but unlocks Local Services Ads + location asset.
 
@@ -142,16 +142,16 @@ After saving, Google shows the **Conversion ID** (`AW-XXXXXXXXXX`) and **Label**
 
 ---
 
-## 3. CAMPAIGN 2 — REMOVALS (£300/mo)
+## 3. CAMPAIGN 2 — MAN AND VAN (£300/mo)
 
 ### 3.1 Settings
 
 Same as Cleaning campaign settings except:
-- **Campaign name:** `Removals · London · Search`
+- **Campaign name:** `Man and Van · London · Search`
 - **Budget:** £10/day
 - **Default max CPC:** £3.50
 
-### 3.2 Ad Group 1 — Man & Van
+### 3.2 Ad Group 1 — Single Items & Deliveries
 
 **Daily allocation:** ~£6/day
 
@@ -170,7 +170,7 @@ Same as Cleaning campaign settings except:
 
 **Final URL:** `https://hausio.co.uk/book.html?service=removals`
 
-### 3.3 Ad Group 2 — House & Flat Removals
+### 3.3 Ad Group 2 — Flat & House Moves
 
 **Daily allocation:** ~£4/day
 
@@ -180,12 +180,16 @@ Same as Cleaning campaign settings except:
 | `[flat removals london]` | Exact | £3.20 |
 | `[moving company london]` | Exact | £3.50 |
 | `[removals service london]` | Exact | £3.20 |
+| `[house move london]` | Exact | £3.20 |
+| `[london moving service]` | Exact | £3.20 |
 | `"house removals"` | Phrase | £3.00 |
 | `"flat removals"` | Phrase | £2.80 |
 | `"moving service london"` | Phrase | £3.00 |
 | `"removal company"` | Phrase | £2.80 |
-| `"home removal"` | Phrase | £2.80 |
+| `"house move"` | Phrase | £2.80 |
 | `"office removal"` | Phrase | £3.00 |
+
+> **Hybrid strategy note:** ad group still labelled "Flat & House Moves" and ads serve Man and Van branded copy (see §6.5). But keywords target both `removals` and `moves` terms because UK searchers heavily use "removals" — ~60% of category search volume. Don't lose that traffic to brand purity. The user lands on the Man and Van page after click, sees consistent branding from that point.
 
 **Final URL:** `https://hausio.co.uk/book.html?service=removals`
 
@@ -424,9 +428,9 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 3. `Book online in 60 seconds. £0 today — your first slot is confirmed instantly, you pay after the job is done.`
 4. `Same trusted cleaner every visit. Get to know your team, never explain the apartment twice. Background-checked, insured, friendly.`
 
-### 6.4 Removals · Man & Van
+### 6.4 Man and Van · Single Items & Deliveries
 
-**Display path:** `/removals` and `/man-and-van`
+**Display path:** `/man-and-van` and `/single-item`
 
 **Headlines (15):**
 1. `Man & Van London — From £55/hr` 📌 Position 1
@@ -451,12 +455,12 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 3. `Need IKEA or furniture delivered? Need a flat moved this weekend? We do both. Choose 1, 2, or 3 movers + a Luton van.`
 4. `Add packing, dismantle/reassemble, or boxes & materials at booking. £2M public liability insurance covers your move.`
 
-### 6.5 Removals · House & Flat
+### 6.5 Man and Van · Flat & House Moves
 
-**Display path:** `/removals` and `/house-removals`
+**Display path:** `/man-and-van` and `/house-move`
 
 **Headlines (15):**
-1. `House & Flat Removals London` 📌 Position 1
+1. `House & Flat Moves London` 📌 Position 1
 2. `Vetted Team · £2M Insured` 📌 Position 2
 3. `Pickup + Dropoff Anywhere`
 4. `From £85/hr · Fixed Quote`
@@ -473,7 +477,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 15. `Stress-Free Moving Day`
 
 **Descriptions (4):**
-1. `Full house and flat removals across London. Vetted team, insured Luton van, packing add-on, dismantle service. Fixed pricing.`
+1. `Full house and flat moves across London. Vetted team, insured Luton van, packing add-on, dismantle service. Fixed pricing.`
 2. `Book online in 60 seconds. Tell us pickup, dropoff, floors, lifts — we quote up front. £0 today, pay after the move.`
 3. `Stress-free moving day with a vetted, DBS-checked team. £2M liability cover. No hidden fees, no time-watch on the day.`
 4. `Need to move this weekend? Same-day London slots available. We pack, dismantle, drive, reassemble — you just open the new door.`
@@ -541,7 +545,7 @@ Add these as **shared library negative list** (Tools → Shared library → Nega
 | Title | Description line 1 | Description line 2 | Final URL |
 |---|---|---|---|
 | Get an instant quote | 60-second online booking | £0 today, pay after the job | https://hausio.co.uk/book.html |
-| All London services | Cleaning · Removals · Handyman | One vetted London team | https://hausio.co.uk/#services |
+| All London services | Cleaning · Man and Van · Handyman | One vetted London team | https://hausio.co.uk/#services |
 | Pricing | Flat hourly rates | No hidden fees | https://hausio.co.uk/#pricing |
 | FAQ | Insured · DBS-checked | Pay after the job | https://hausio.co.uk/#faq |
 
@@ -561,7 +565,7 @@ Free Cancellation Until Noon Day Before
 ### 7.3 Structured Snippets
 
 **Header:** Services
-**Values:** End-of-Tenancy Cleaning, Deep Clean, Regular Cleaning, Man & Van, House Removals, Furniture Assembly, TV Mounting, Property Repairs
+**Values:** End-of-Tenancy Cleaning, Deep Clean, Regular Cleaning, Man and Van, Flat & House Moves, Furniture Assembly, TV Mounting, Property Repairs
 
 ### 7.4 Call extension
 
@@ -596,7 +600,7 @@ If you don't want to use Editor (skip Sec. 9), do this in `ads.google.com` UI:
 4. Create the 3 ad groups one by one with keywords from §2.2/2.3/2.4
 5. For each ad group, create 1 RSA from §6 (you can add 2 more later)
 
-### 8.3 Repeat for Removals (§3) and Handyman (§4)
+### 8.3 Repeat for Man and Van (§3) and Handyman (§4)
 
 ### 8.4 Create shared negative list (§5)
 **Tools → Shared library → Negative keyword lists → +Create list** → paste all negatives → Save → **Apply to** all 3 campaigns.
@@ -646,7 +650,7 @@ Set all 3 campaigns to **Paused** while you review. Once everything looks right,
 
 ## 11. EXPECTED RESULTS (realistic scenario)
 
-| Metric | Cleaning | Removals | Handyman | Total |
+| Metric | Cleaning | Man and Van | Handyman | Total |
 |---|---|---|---|---|
 | Spend | £500 | £300 | £200 | £1,000 |
 | Avg CPC | £1.20 | £1.40 | £1.10 | — |

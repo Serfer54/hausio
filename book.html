@@ -28,14 +28,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Book a service — Hausio London</title>
-<meta name="description" content="Book cleaning, removals or handyman in London. Get an instant quote in 60 seconds." />
+<meta name="description" content="Book cleaning, man and van or handyman in London. Get an instant quote in 60 seconds." />
 <link rel="canonical" href="https://hausio.co.uk/book.html" />
 <meta name="robots" content="index,follow" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Hausio" />
 <meta property="og:title" content="Book a service — Hausio London" />
-<meta property="og:description" content="Book cleaning, removals or handyman in London. Instant quote in 60 seconds." />
+<meta property="og:description" content="Book cleaning, man and van or handyman in London. Instant quote in 60 seconds." />
 <meta property="og:url" content="https://hausio.co.uk/book.html" />
 <meta property="og:image" content="https://hausio.co.uk/assets/hero-cleaning.jpg" />
 <meta property="og:locale" content="en_GB" />
@@ -45,6 +45,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css?v=13" />
+
+<!-- Cloudflare Turnstile — invisible bot challenge for the booking form -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <script type="application/ld+json">
 {
@@ -84,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="caret" aria-hidden="true">&#9662;</span></button>
         <div class="nav-dropdown" role="menu">
           <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
-          <a href="/removals-london.html" role="menuitem">Removals</a>
+          <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
         </div>
       </div>
@@ -135,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <label class="option">
               <input type="radio" name="service" value="removals" />
               <span class="option-body">
-                <b>Removals</b>
+                <b>Man and Van</b>
                 <small>from £55/hr</small>
               </span>
             </label>
@@ -408,6 +411,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p id="payment-error" class="payment-error" role="alert" hidden></p>
           </div>
 
+          <!-- TURNSTILE_SITEKEY_PROD_REQUIRED
+               !!! GO-LIVE BLOCKER !!! Current sitekey is Cloudflare's TEST key that
+               always passes — every bot gets through. Booking form is effectively unprotected.
+               Before launch:
+                 1. Cloudflare dash → Turnstile → Add Site → hausio.co.uk → copy SITE KEY + SECRET KEY
+                 2. Replace data-sitekey below with the SITE KEY
+                 3. Also replace TURNSTILE_SITE_KEY in js/popup.js
+                 4. Add TURNSTILE_SECRET_KEY env var in Netlify (Site → Configuration → Environment variables)
+               See SECURITY_DEPLOY_CHECKLIST.md -->
+          <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" data-size="flexible" style="margin: 16px 0;"></div>
+
           <div class="step-actions">
             <button type="button" class="btn btn-ghost" data-prev>← Back</button>
             <button type="submit" class="btn btn-dark" id="submit-button">Confirm booking →</button>
@@ -457,6 +471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <form name="booking" data-netlify="true" data-netlify-honeypot="bot-field" hidden aria-hidden="true">
   <input name="bot-field" />
   <input name="form-name" value="booking" />
+  <input name="cf-turnstile-response" />
   <input name="service" />
   <input name="name" />
   <input name="email" />

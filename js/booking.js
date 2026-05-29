@@ -197,7 +197,7 @@
         const dPostcode = (form['dropoff-postcode'] && form['dropoff-postcode'].value || '').trim();
         const dAddress = (form['dropoff-address'] && form['dropoff-address'].value || '').trim();
         if (!dPostcode || !dAddress) {
-          alert('Please fill in the dropoff postcode and address for the removal.');
+          alert('Please fill in the dropoff postcode and address for the move.');
           return false;
         }
       }

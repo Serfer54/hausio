@@ -85,7 +85,7 @@ Areas with dedicated borough pages and local intelligence:
 A single Hausio contract covers your tenant's full move-out workflow:
 
 - **End-of-tenancy cleaning** (primary partnership focus)
-- **Removals & man-with-a-van** (for tenant move-out)
+- **Man and Van** (for tenant move-out — single items, flats, full houses)
 - **Handyman** (touch-ups before re-let — IKEA, paint touch-ups, picture-hook fills)
 - **Garden tidy** (front and back — first impression for re-let viewings)
 

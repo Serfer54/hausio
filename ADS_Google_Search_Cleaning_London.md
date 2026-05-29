@@ -447,7 +447,7 @@ In **GA4 Admin → Product Links → Google Ads Links**: link the Ads account. T
 - YouTube TrueView — brand awareness, later stage
 - Shopping — N/A (service business)
 - Meta Ads — Phase 2 retargeting only, wait for pool
-- Removals & Handyman Search — only after Cleaning unit economics proven
+- Man and Van & Handyman Search — only after Cleaning unit economics proven
 
 ---
 

@@ -89,7 +89,7 @@ g.page/r/hausio-london   (Google)
 trustpilot.com/review/hausio.co.uk
 ```
 
-Cleaner / handyman / removal lead hands one card at end of job, with thanks. Cost: ~£0.05 per card (Vistaprint, 500 cards £25).
+Cleaner / handyman / van crew hands one card at end of job, with thanks. Cost: ~£0.05 per card (Vistaprint, 500 cards £25).
 
 ---
 

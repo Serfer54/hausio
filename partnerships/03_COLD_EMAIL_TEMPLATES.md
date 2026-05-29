@@ -66,7 +66,7 @@ Why I'm writing to {branch_name}:
 We work in mansion blocks, listed Georgian terraces, and Mayfair mews every week. Our cleaners use pH-neutral, marble-safe products as standard, never use steam on antique parquet, and operate with NDA-friendly discretion when tenants are international or high-profile. Every Hausio team member is DBS-checked, English-speaking, and trained in person.
 
 The partnership offer for {branch_name}:
-- **22% commission** (Preferred tier from day one — premium agents skip Standard) on every cleaning, removals, or handyman booking we deliver through your branch
+- **22% commission** (Preferred tier from day one — premium agents skip Standard) on every cleaning, man and van, or handyman booking we deliver through your branch
 - Same-day or next-day priority booking for your tenancies
 - Dedicated WhatsApp account manager — one direct line for your team
 - Insurance-grade documentation: £2M public liability, £25,000 goods-in-transit, declared cover extension for high-value contents on request
@@ -99,7 +99,7 @@ hausio.co.uk
 ```
 Hi {first_name},
 
-Serhii from Hausio. We're a London home services team — cleaning, removals, handyman — built specifically around the letting-agent and tenant workflow. I'm reaching out because boutique branches like {branch_name} consistently outperform the chains on tenant satisfaction, but you also coordinate cleans without a panel team to fall back on.
+Serhii from Hausio. We're a London home services team — cleaning, man and van, handyman — built specifically around the letting-agent and tenant workflow. I'm reaching out because boutique branches like {branch_name} consistently outperform the chains on tenant satisfaction, but you also coordinate cleans without a panel team to fall back on.
 
 Quick offer:
 - **20% commission** on every clean we book through your branch (avg. £36–£124 per clean depending on property size)

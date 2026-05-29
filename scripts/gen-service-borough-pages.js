@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 // Generate service × borough pages from data/boroughs.json
-// Output: /handyman-{slug}.html and /removals-{slug}.html for each borough
+// Output: /handyman-{slug}.html and /man-and-van-{slug}.html for each borough
+//
+// Note: the booking parameter `service=removals` is the internal ID — it is
+// kept for analytics/GA4/Stripe continuity and never exposed in UI copy.
 
 const fs = require('fs');
 const path = require('path');
@@ -10,8 +13,11 @@ const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'boroughs.json')
 
 const SERVICES = {
   handyman: {
+    key: 'handyman',
     name: 'Handyman',
-    nameLower: 'handyman',
+    label: 'handyman',
+    framingKey: 'handyman',
+    heroAsset: 'hero-handyman.jpg',
     headline: 'Local handyman in {borough} — repairs, assembly, mounting, small jobs.',
     leadeTpl: 'IKEA flatpacks, TV wall mounting, sash window restoration, minor plumbing and electrics, painting touch-ups. One booking, one visit, one bill — DBS-checked, fully insured, across {borough}.',
     pricingItems: [
@@ -23,6 +29,8 @@ const SERVICES = {
     pricingNote: 'No call-out fee. Pay after the job is done.',
     bookParam: 'service=handyman',
     schemaServiceType: 'Home repair and maintenance',
+    title: (b) => `Handyman in ${b.name}, London — Hausio | ${b.headlinePostcodes}`,
+    description: (b, framing) => `Handyman services in ${b.name} ${b.headlinePostcodes}. ${framing.slice(0, 130)}`,
     cards: [
       {
         title: 'Repairs & maintenance',
@@ -41,35 +49,225 @@ const SERVICES = {
       },
     ],
   },
-  removals: {
-    name: 'Removals',
-    nameLower: 'removals',
-    headline: 'Man and van removals in {borough} — DBS-checked team, fixed pricing.',
-    leadeTpl: 'From a single-item delivery to a full-flat or house move across {borough} — fully insured, DBS-checked team, floor protection on every job, online booking in 60 seconds.',
+  'man-and-van': {
+    key: 'man-and-van',
+    name: 'Man and Van',
+    label: 'man and van',
+    framingKey: 'man-and-van',
+    heroAsset: 'hero-removals.jpg', // asset filename kept for cache continuity
+    headline: 'Man and van in {borough} — DBS-checked crew, fixed pricing, same-day available.',
+    leadeTpl: 'From a single-item delivery to a full flat or house move across {borough} — fully insured, DBS-checked crew, floor protection on every job, online booking in 60 seconds.',
     pricingItems: [
-      '1 mover + van — £55/hr',
-      '2 movers + van — £85/hr',
-      '3 movers + Luton van — £115/hr',
-      'Packing service from £40',
+      '1 man + van — £55/hr',
+      '2 men + van — £85/hr',
+      '3 men + Luton van — £115/hr',
+      'Packing & wrapping from £40',
     ],
-    pricingNote: '2-hour minimum. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access.',
-    bookParam: 'service=removals',
+    pricingNote: '2-hour minimum. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access. Same-day slots available — book before 10am.',
+    bookParam: 'service=removals', // internal ID — NOT changed, keeps GA4/Stripe continuity
     schemaServiceType: 'Moving services',
+    title: (b) => `Man and Van ${b.name}, London — From £55/hr | Hausio | ${b.headlinePostcodes}`,
+    description: (b, framing) => `Cheap, reliable man and van in ${b.name} ${b.headlinePostcodes}. 1 man + van £55/hr · 2 men £85/hr · 3 men + Luton £115/hr. Same-day available. Fully insured. ${framing.slice(0, 90)}`,
     cards: [
       {
-        title: 'Man & van — single items',
-        body: 'IKEA delivery, single sofa or fridge moves, single-room packs, one-piece deliveries within London. Cheaper than a full removal but with the same insured, vetted crew.',
-        bullets: ['IKEA / Wayfair pickup', 'Sofa, fridge, washing machine', 'Storage drop-offs', '1-mover + Transit from £55/hr'],
+        title: 'Single items & deliveries',
+        body: 'IKEA pickup, single-sofa or fridge moves, one-piece deliveries, end-of-tenancy single-room clear-outs, storage drop-offs across London. Cheaper than a full move but with the same vetted, insured crew.',
+        bullets: ['IKEA / Wayfair / Made.com pickup', 'Sofa, fridge, washing machine', 'Storage drop-off & pickup', '1 man + Transit van from £55/hr'],
       },
       {
         title: 'Flat & house moves',
-        body: 'Studio, 1-bed, 2-bed, 3-bed full moves with a 2-3 person crew and a Luton van. Pickup floor + dropoff floor + lift coordination, all built into the quote.',
-        bullets: ['2 movers + van £85/hr', '3 movers + Luton £115/hr', 'Floor protection standard', 'Goods-lift booking included'],
+        body: 'Studio, 1-bed, 2-bed and 3-bed full moves with a 2-3 person crew and a Luton van. Pickup floor + dropoff floor + lift coordination + floor protection — all built into the quote, no day-of surprises.',
+        bullets: ['2 men + van £85/hr', '3 men + Luton £115/hr', 'Floor protection on every job', 'Goods-lift booking handled'],
       },
       {
         title: 'Office & specialist moves',
-        body: 'Small office relocations, piano moves, antiques, listed-building friendly access. We do recces day before for tricky jobs so the move-day is predictable.',
-        bullets: ['Office relocations', 'Piano / antique moves', 'Conservation-area aware', 'Day-before recce on tricky jobs'],
+        body: 'Small office relocations, piano moves, antiques, listed-building friendly access, conservation-area aware. We do day-before recces for tricky jobs so move-day is predictable.',
+        bullets: ['Office relocations', 'Piano & antique moves', 'Conservation-area aware', 'Day-before recce on tricky jobs'],
+      },
+    ],
+  },
+  'furniture-assembly': {
+    key: 'furniture-assembly',
+    name: 'Furniture Assembly',
+    label: 'furniture assembly',
+    framingKey: 'furniture-assembly',
+    heroAsset: 'service-handyman.jpg',
+    headline: 'Furniture assembly in {borough} — IKEA, Made.com, Wayfair, fixed-price by item.',
+    leadeTpl: 'Pax wardrobes built in tight {borough} flats, Malm and Hemnes finished while you work, Made.com sofas put together properly. £45/hr or fixed-price by item across {borough}.',
+    pricingItems: [
+      'From £45/hr (1 hour minimum)',
+      'IKEA Pax wardrobe £85 fixed',
+      'IKEA Malm bed £45 · Hemnes £35',
+      'IKEA Kallax £25 · Billy £20',
+    ],
+    pricingNote: 'No call-out fee. Materials and missing-parts protocol included.',
+    bookParam: 'service=handyman',
+    schemaServiceType: 'Furniture assembly',
+    title: (b) => `Furniture Assembly in ${b.name}, London — IKEA, Pax, Malm | Hausio | ${b.headlinePostcodes}`,
+    description: (b, framing) => `Furniture assembly in ${b.name} ${b.headlinePostcodes}. ${framing.slice(0, 130)}`,
+    cards: [
+      {
+        title: 'IKEA & flat-pack',
+        body: 'Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, Billy bookcases. We bring the right driver bits, allen keys, and a level. Fittings bag protocol means missing pieces get caught before they cost you a day.',
+        bullets: ['Pax wardrobe £85 fixed', 'Malm bed £45 · Hemnes £35', 'Kallax £25 · Billy £20', 'Tight-flat Pax-against-low-cornice'],
+      },
+      {
+        title: 'Wayfair, Made.com, Habitat',
+        body: 'Sofa-bed mechanisms, oak dining tables, beds with under-storage drawers. We build to the spec sheet, not the photo on the box — half of Wayfair instructions miss a step.',
+        bullets: ['Sofa beds & mechanisms', 'Dining tables & extensions', 'Storage beds & drawers', 'Replacement-fitting orders for you'],
+      },
+      {
+        title: 'Office & complex builds',
+        body: 'Standing-desk assembly, dual-monitor arm fitting, office chair builds, bookcase walls, conference-room flat-pack. Walk-in measurement on bigger jobs day before so the build day is just the build.',
+        bullets: ['Standing desks & monitor arms', 'Office chair builds', 'Bookcase walls', 'Day-before recce on bigger jobs'],
+      },
+    ],
+  },
+  'tv-mounting': {
+    key: 'tv-mounting',
+    name: 'TV Mounting',
+    label: 'TV mounting',
+    framingKey: 'tv-mounting',
+    heroAsset: 'service-handyman.jpg',
+    headline: 'TV wall mounting in {borough} — plasterboard, brick, concrete, cable-conceal.',
+    leadeTpl: 'TVs mounted properly across {borough} — right bracket for the wall type, right cable-conceal route for the room, no holes you regret. Up to 85" handled.',
+    pricingItems: [
+      'Up to 43" — £55',
+      '44–55" — £75',
+      '56–65" — £95',
+      '66–85" — £150',
+    ],
+    pricingNote: 'Cable conceal +£40. Soundbar mount +£25. Bracket supplied at cost if you need one.',
+    bookParam: 'service=handyman',
+    schemaServiceType: 'TV installation',
+    title: (b) => `TV Mounting in ${b.name}, London — From £55 | Hausio | ${b.headlinePostcodes}`,
+    description: (b, framing) => `TV wall mounting in ${b.name} ${b.headlinePostcodes}. Up to 43" £55, 44–55" £75, 56–65" £95, 66–85" £150. ${framing.slice(0, 90)}`,
+    cards: [
+      {
+        title: 'Standard wall mount',
+        body: 'Plasterboard with stud-finder + heavy-duty stud anchors, brick with rawl plugs and into-mortar fixings, concrete with hammer drill. We pick the right fixing for what is actually behind your plaster.',
+        bullets: ['Plasterboard, brick, concrete', 'Stud-finder + correct anchors', 'Level on every install', 'Cable management included'],
+      },
+      {
+        title: 'Cable concealment',
+        body: 'Trunking (cheap, fast, removable) or in-wall concealment (£££, premium finish) — your call. We walk through both before we drill. HDMI extenders if the source is elsewhere.',
+        bullets: ['Trunking +£20', 'In-wall concealment +£40', 'HDMI extenders supplied', 'Power-in-wall to BS 7671'],
+      },
+      {
+        title: 'Multi-device & home cinema',
+        body: 'Soundbar mounts, AV-receiver shelving, Sky/Virgin/aerial integration, multi-screen office walls. We co-ordinate with your Sonos/Sky engineer when needed.',
+        bullets: ['Soundbar mount +£25', 'AV receiver shelving', 'Sky/Virgin/aerial integration', 'Multi-screen office walls'],
+      },
+    ],
+  },
+  'garden-clearance': {
+    key: 'garden-clearance',
+    name: 'Garden Clearance',
+    label: 'garden clearance',
+    framingKey: 'garden-clearance',
+    heroAsset: 'service-removals.jpg',
+    headline: 'Garden clearance in {borough} — overgrowth, sheds, decking, post-tenant recovery.',
+    leadeTpl: 'Overgrown gardens cleared, sheds dismantled, decking lifted, end-of-tenancy gardens recovered across {borough}. Registered waste carrier — tip fees, transfer notes and licence all sorted by us.',
+    pricingItems: [
+      'Minimum — £120 (quarter-load)',
+      'Half Luton van — £180',
+      'Full Luton van — £280',
+      'Stump grinding — +£80/stump',
+    ],
+    pricingNote: 'Includes loading, tip fees and waste carrier licence. Fly-tipping liability stays with us, not you.',
+    bookParam: 'service=removals',
+    schemaServiceType: 'Garden waste removal',
+    title: (b) => `Garden Clearance in ${b.name}, London — Licensed Waste Carrier | Hausio | ${b.headlinePostcodes}`,
+    description: (b, framing) => `Garden clearance in ${b.name} ${b.headlinePostcodes}. From £120. Registered waste carrier — tip fees included. ${framing.slice(0, 90)}`,
+    cards: [
+      {
+        title: 'One-off clearance',
+        body: 'Years of accumulated overgrowth, old pots, broken planters, garden furniture beyond saving. We sort what can be donated locally from what goes to the tip, and we route green-waste separately (cheaper for you).',
+        bullets: ['Overgrowth & green waste', 'Broken furniture & planters', 'Green-waste tip routing', 'Donation sorting'],
+      },
+      {
+        title: 'Shed & decking dismantle',
+        body: 'Shed flatpack-in-reverse, decking lifted with the joists, fence panels taken down without damaging neighbouring boundaries. Concrete pad removal on quote.',
+        bullets: ['Shed dismantle +£60', 'Decking lift-out', 'Fence panel removal', 'Concrete pad on quote'],
+      },
+      {
+        title: 'Post-tenancy recovery',
+        body: "Landlord and letting-agent end-of-tenancy garden recovery. We send before/after photos for the deposit-dispute file, and we include the waste transfer note in the same email.",
+        bullets: ['End-of-tenancy recovery', 'Before/after photo report', 'Waste transfer notes', 'Letting-agent invoicing'],
+      },
+    ],
+  },
+  'waste-removal': {
+    key: 'waste-removal',
+    name: 'Waste Removal',
+    label: 'waste removal',
+    framingKey: 'waste-removal',
+    heroAsset: 'service-removals.jpg',
+    headline: 'Waste removal in {borough} — single items, house clearance, builders’ waste.',
+    leadeTpl: 'Single items, full house clearance, office and builders’ waste across {borough}. Registered waste carrier — transfer notes provided every job, so fly-tipping liability never lands back on you.',
+    pricingItems: [
+      'Single item — from £55',
+      'Small van load — £100',
+      'Half Luton van — £180',
+      'Full Luton van — £280',
+    ],
+    pricingNote: 'Includes loading and all transfer notes. We hold a waste carrier licence (CBDU on file).',
+    bookParam: 'service=removals',
+    schemaServiceType: 'Waste removal',
+    title: (b) => `Waste Removal in ${b.name}, London — Licensed Carrier | Hausio | ${b.headlinePostcodes}`,
+    description: (b, framing) => `Waste removal in ${b.name} ${b.headlinePostcodes}. From £55 single item, £100 small van. Licensed waste carrier — transfer notes included. ${framing.slice(0, 80)}`,
+    cards: [
+      {
+        title: 'Single items & furniture',
+        body: 'Sofa, mattress, fridge-freezer, washing machine, single-item house clearance. Mattresses are not kerb-collected by most councils — we take them properly to a licensed transfer station.',
+        bullets: ['Sofa, mattress, fridge from £55', 'Washing machine + dryer', 'Single-item house clear', 'Licensed mattress disposal'],
+      },
+      {
+        title: 'Full house clearance',
+        body: 'End-of-tenancy, post-bereavement, downsizing. We sort what is donate-able locally (Emmaus, British Heart Foundation, local hospice) from what goes to the tip — you save on tip fees, charities benefit.',
+        bullets: ['End-of-tenancy clearance', 'Post-bereavement house clear', 'Charity donation sorting', 'Itemised receipt for landlords'],
+      },
+      {
+        title: 'Office & builders’ waste',
+        body: 'Office furniture clear-out, post-renovation builders’ waste, plasterboard, broken tiles, concrete bagged-up. Builders’ waste goes to a different transfer station — we know which.',
+        bullets: ['Office furniture clear-out', 'Builders’ waste & plasterboard', 'Transfer notes for VAT books', 'Same-day for emergencies'],
+      },
+    ],
+  },
+  'painting-decorating': {
+    key: 'painting-decorating',
+    name: 'Painting & Decorating',
+    label: 'painting and decorating',
+    framingKey: 'painting-decorating',
+    heroAsset: 'service-handyman.jpg',
+    headline: 'Painters and decorators in {borough} — single rooms to whole flats, prep included.',
+    leadeTpl: 'Walls, ceilings, sash windows, external doors and trim painted properly across {borough}. Prep is 70% of the job — we don’t cut corners on sanding, filling and taping. Dulux Trade and Farrow & Ball stocked.',
+    pricingItems: [
+      'Day rate — £220/painter',
+      'Standard room (walls + ceiling, 2 coats) — £320',
+      'Sash window per side — £85',
+      'External door — £140',
+    ],
+    pricingNote: 'Prep, filling, taping and dust-sheeting included. Materials supplied at trade cost — no markup.',
+    bookParam: 'service=handyman',
+    schemaServiceType: 'Painting and decorating',
+    title: (b) => `Painters & Decorators in ${b.name}, London — From £220/day | Hausio | ${b.headlinePostcodes}`,
+    description: (b, framing) => `Painting and decorating in ${b.name} ${b.headlinePostcodes}. £220/day per painter, room £320 (prep + 2 coats included). ${framing.slice(0, 80)}`,
+    cards: [
+      {
+        title: 'Single rooms',
+        body: 'Walls and ceiling with proper prep — sanding, filling holes, taping skirting and architraves, dust-sheeting the floor. Two coats minimum, three if the base colour bleeds through (we tell you up front).',
+        bullets: ['£320 standard room', 'Prep + 2 coats included', 'Dulux Trade or F&B', 'Three coats if base bleeds'],
+      },
+      {
+        title: 'Whole flat',
+        body: 'Studio to 3-bed flats end-to-end, typically 3–6 painter-days. We sequence rooms so you keep one habitable while the rest dries, and we stage furniture rather than move it out.',
+        bullets: ['Studio: 2 painter-days', '2-bed: 4–5 painter-days', 'Sequenced rooms (1 habitable)', 'Furniture staged not moved'],
+      },
+      {
+        title: 'Period property & external',
+        body: 'Sash window restoration (rebrush after sand-back, glaze putty), external doors (primer + 2 topcoats), Farrow & Ball matte finishes done right (cutting in by brush, not roller). Lincrusta and picture rail work on quote.',
+        bullets: ['Sash window per side £85', 'External door £140', 'F&B matte specialist', 'Lincrusta & picture rail on quote'],
       },
     ],
   },
@@ -95,26 +293,23 @@ function renderFaqSchema(f) {
 }
 
 function renderServicePage(b, service) {
-  const url = `https://hausio.co.uk/${service.nameLower}-${b.slug}.html`;
+  const url = `https://hausio.co.uk/${service.key}-${b.slug}.html`;
   const headline = service.headline.replace('{borough}', b.name);
   const lede = service.leadeTpl.replace('{borough}', b.name);
-  const title = `${service.name} in ${b.name}, London — Hausio | ${b.headlinePostcodes}`;
-  const description = `${service.name} services in ${b.name} ${b.headlinePostcodes}. ${b.serviceFraming[service.nameLower].slice(0, 130)}`;
+  const serviceFraming = b.serviceFraming[service.framingKey];
+  const title = service.title(b);
+  const description = service.description(b, serviceFraming);
   const ogTitle = `${service.name} in ${b.name} — Hausio`;
 
-  // Service-specific framing as the lead paragraph in the "Why" section
-  const serviceFraming = b.serviceFraming[service.nameLower];
-
-  // Pick borough snippets that mention this service area context (we use all 6 — relevant to all services)
   const snippets = b.snippets;
 
-  // FAQ — we use the borough's general FAQ but prefix with one service-specific question
+  const faqLabel = service.label;
   const serviceFaq = [
     {
-      q: `How quickly can a Hausio ${service.nameLower} reach ${b.name}?`,
-      a: `Most ${service.nameLower} bookings in ${b.name} can be filled same-day or next-day. Postcodes ${b.headlinePostcodes} are within our regular daily round, so the team is usually 15–30 minutes away from your address. Book before 10am for a same-day slot.`,
+      q: `How quickly can a Hausio ${faqLabel} team reach ${b.name}?`,
+      a: `Most ${faqLabel} bookings in ${b.name} can be filled same-day or next-day. Postcodes ${b.headlinePostcodes} are within our regular daily round, so the team is usually 15–30 minutes away from your address. Book before 10am for a same-day slot.`,
     },
-    ...b.faq.slice(0, 2), // First 2 borough FAQ
+    ...b.faq.slice(0, 2),
   ];
 
   return `<!doctype html>
@@ -147,7 +342,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="${esc(ogTitle)}" />
 <meta property="og:description" content="${esc(description)}" />
 <meta property="og:url" content="${url}" />
-<meta property="og:image" content="https://hausio.co.uk/assets/hero-${service.nameLower === 'removals' ? 'removals' : 'handyman'}.jpg" />
+<meta property="og:image" content="https://hausio.co.uk/assets/${service.heroAsset}" />
 <meta property="og:locale" content="en_GB" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -172,13 +367,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "containedInPlace": { "@type": "City", "name": "London" }
       },
       "url": "${url}",
-      "image": "https://hausio.co.uk/assets/hero-${service.nameLower === 'removals' ? 'removals' : 'handyman'}.jpg"
+      "image": "https://hausio.co.uk/assets/${service.heroAsset}"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hausio.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "${escJson(service.name)}", "item": "https://hausio.co.uk/${service.nameLower}-london.html" },
+        { "@type": "ListItem", "position": 2, "name": "${escJson(service.name)}", "item": "https://hausio.co.uk/${service.key}-london.html" },
         { "@type": "ListItem", "position": 3, "name": "${escJson(b.name)}", "item": "${url}" }
       ]
     },
@@ -211,16 +406,20 @@ ${serviceFaq.map(renderFaqSchema).join(',\n')}
       <div class="nav-item has-dropdown">
         <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="caret" aria-hidden="true">&#9662;</span></button>
         <div class="nav-dropdown" role="menu">
-          <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
-          <a href="/removals-london.html" role="menuitem">Removals</a>
+          <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
+          <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
+          <a href="/tv-mounting-london.html" role="menuitem">TV Mounting</a>
+          <a href="/garden-clearance-london.html" role="menuitem">Garden Clearance</a>
+          <a href="/waste-removal-london.html" role="menuitem">Waste Removal</a>
+          <a href="/painting-decorating-london.html" role="menuitem">Painting &amp; Decorating</a>
         </div>
       </div>
       <a href="/#how">How it works</a>
       <a href="/blog/">Blog</a>
       <a href="/#faq">FAQ</a>
     </nav>
-    <a href="https://wa.me/447304330614" target="_blank" class="nav-wa" aria-label="WhatsApp">
+    <a href="#" data-wa data-wa-source="nav" class="nav-wa" aria-label="WhatsApp" rel="nofollow noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -232,7 +431,7 @@ ${serviceFaq.map(renderFaqSchema).join(',\n')}
 <main>
 
 <nav class="breadcrumbs container" aria-label="Breadcrumb">
-  <a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/${service.nameLower}-london.html">${esc(service.name)}</a> <span aria-hidden="true">/</span> <span>${esc(b.name)}</span>
+  <a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/${service.key}-london.html">${esc(service.name)}</a> <span aria-hidden="true">/</span> <span>${esc(b.name)}</span>
 </nav>
 
 <section class="page-hero">
@@ -241,8 +440,8 @@ ${serviceFaq.map(renderFaqSchema).join(',\n')}
     <h1>${esc(headline)}</h1>
     <p class="lede">${esc(lede)}</p>
     <div class="hero-ctas">
-      <a href="/book.html?${service.bookParam}" class="btn btn-dark">Book ${esc(service.nameLower)} in ${esc(b.name)} →</a>
-      <a href="tel:+447304330614" class="btn btn-outline">Call +44 7304 330 614</a>
+      <a href="/book.html?${service.bookParam}" class="btn btn-dark">Book ${esc(service.label)} in ${esc(b.name)} →</a>
+      <a href="#" data-tel data-tel-source="hero" class="btn btn-outline" rel="nofollow noopener">Call us — tap to dial</a>
     </div>
   </div>
 </section>
@@ -302,7 +501,7 @@ ${service.pricingItems.map(i => `      <li>${esc(i)}</li>`).join('\n')}
 ${b.linkedBoroughs.map(slug => {
   const lb = DATA[slug];
   if (!lb) return '';
-  return `      <a href="/${service.nameLower}-${lb.slug}.html">${esc(service.name)} in ${esc(lb.name)} →</a>`;
+  return `      <a href="/${service.key}-${lb.slug}.html">${esc(service.name)} in ${esc(lb.name)} →</a>`;
 }).join('\n')}
     </div>
   </div>
@@ -321,7 +520,7 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
 
 <section class="cta-final">
   <div class="container cta-box">
-    <h2>Book your ${esc(b.name)} ${esc(service.nameLower)} today.</h2>
+    <h2>Book your ${esc(b.name)} ${esc(service.label)} today.</h2>
     <p>Vetted, insured, fixed pricing. Online in 60 seconds.</p>
     <a href="/book.html?${service.bookParam}" class="btn btn-light">Get your instant quote →</a>
   </div>
@@ -338,15 +537,19 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
         </span>
         <span class="brand-name">HAUSIO</span>
       </div>
-      <p>Cleaning · Removals · Handyman</p>
+      <p>Man and Van · Handyman · Furniture Assembly · TV Mounting · Garden Clearance · Waste Removal · Painting</p>
       <p class="muted">Trusted home services across Greater London.</p>
     </div>
     <div>
       <h4>Services</h4>
       <ul>
-        <li><a href="/cleaning-london.html">Cleaning</a></li>
-        <li><a href="/removals-london.html">Removals</a></li>
+        <li><a href="/man-and-van-london.html">Man and Van</a></li>
         <li><a href="/handyman-london.html">Handyman</a></li>
+        <li><a href="/furniture-assembly-london.html">Furniture Assembly</a></li>
+        <li><a href="/tv-mounting-london.html">TV Mounting</a></li>
+        <li><a href="/garden-clearance-london.html">Garden Clearance</a></li>
+        <li><a href="/waste-removal-london.html">Waste Removal</a></li>
+        <li><a href="/painting-decorating-london.html">Painting &amp; Decorating</a></li>
       </ul>
     </div>
     <div>
@@ -358,7 +561,7 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
     </div>
     <div>
       <h4>Contact</h4>
-      <p><a href="tel:+447304330614">+44 7304 330 614</a></p>
+      <p><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></p>
       <p><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></p>
     </div>
   </div>
@@ -368,6 +571,8 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
 </footer>
 
 <script src="js/main.js" defer></script>
+<script src="js/popup.js" defer></script>
+<script src="/js/wa-obfuscate.js" defer></script>
 </body>
 </html>
 `;
@@ -375,13 +580,13 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
 
 let count = 0;
 Object.values(DATA).forEach(b => {
-  ['handyman', 'removals'].forEach(svcKey => {
+  ['handyman', 'man-and-van'].forEach(svcKey => {
     const svc = SERVICES[svcKey];
     const out = renderServicePage(b, svc);
-    const filePath = path.join(ROOT, `${svcKey}-${b.slug}.html`);
+    const filePath = path.join(ROOT, `${svc.key}-${b.slug}.html`);
     fs.writeFileSync(filePath, out, 'utf8');
     count++;
-    console.log(`✓ ${svcKey}-${b.slug}.html (${out.length} chars)`);
+    console.log(`✓ ${svc.key}-${b.slug}.html (${out.length} chars)`);
   });
 });
 console.log(`\nDone: ${count} service-borough pages generated.`);

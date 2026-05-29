@@ -4,7 +4,7 @@
 **Date:** 2026-04-29
 **Domain:** https://hausio.co.uk/
 **Business type:** Service Area Business (no street address)
-**Verticals:** Cleaning · Removals · Handyman · Gardening
+**Verticals:** Cleaning · Man and Van · Handyman · Gardening
 **Service area:** Greater London (32 boroughs + City of London)
 
 ---
@@ -81,7 +81,7 @@ Year started: 2026
 - Cleaning service · House cleaning service · Cleaners
 
 **Secondary (add if platform allows multiple):**
-- Moving company · Removals
+- Moving company
 - Handyman · Repair service
 - Gardener · Gardening service
 - Home services · Home cleaning
@@ -101,17 +101,17 @@ Sutton, Tower Hamlets, Waltham Forest, Wandsworth, Westminster, City of London.
 
 ### Description — Short (50–60 chars)
 ```
-London cleaning, removals & handyman services.
+London cleaning, man and van & handyman services.
 ```
 
 ### Description — Medium (150–160 chars, for Yelp/Yell tagline)
 ```
-Vetted cleaning, removals, and handyman services across Greater London. Fully insured. Eco-friendly. Book online in 60 seconds.
+Vetted cleaning, man and van, and handyman services across Greater London. Fully insured. Eco-friendly. Book online in 60 seconds.
 ```
 
 ### Description — Long (300–500 chars, for Trustpilot/Bark/Cylex)
 ```
-Hausio is a London home services company offering professional cleaning, removals, handyman, and gardening across all 32 Greater London boroughs. All staff are vetted, fully insured, and trained to use eco-friendly products. Book any service online in under 60 seconds with transparent hourly pricing — from £22/hr regular cleans to £55/hr man-and-van removals. Open Monday to Sunday, 08:00–20:00.
+Hausio is a London home services company offering professional cleaning, man and van, handyman, and gardening across all 32 Greater London boroughs. All staff are vetted, fully insured, and trained to use eco-friendly products. Book any service online in under 60 seconds with transparent hourly pricing — from £22/hr regular cleans to £55/hr man and van. Open Monday to Sunday, 08:00–20:00.
 ```
 
 ### Description — XL (700–1,200 chars, for FreeIndex/Hotfrog/long-form profiles)
@@ -120,7 +120,7 @@ Hausio is a Greater London home services company built around three principles: 
 
 Our services:
 • Cleaning — regular weekly/fortnightly, one-off deep cleans, end-of-tenancy. From £22/hr.
-• Removals — single item, flat moves, office relocations. Man + van from £55/hr, 2 men + van from £85/hr.
+• Man and Van — single item, flat moves, office relocations. 1 man + van from £55/hr, 2 men + van from £85/hr.
 • Handyman — repairs, IKEA assembly, TV mounting, minor plumbing and electrical. £65 first hour.
 • Gardening — lawn care, hedge trimming, garden tidy-ups. From £40/hr.
 
@@ -304,7 +304,7 @@ These are **prerequisites for Page 2** alongside citations. Without these, citat
 | # | Action | File | Effort |
 |---|--------|------|--------|
 | S1 | Create dedicated `cleaning-london.html` page (Whitespark: dedicated service pages = #1 local-organic factor) | new file | 2 hrs |
-| S2 | Same for `removals-london.html`, `handyman-london.html` | new files | 4 hrs |
+| S2 | Same for `man-and-van-london.html`, `handyman-london.html` | new files | 4 hrs |
 | S3 | Add 5 borough pages: `cleaning/camden.html`, etc. — but **>60% unique content per page**, no city-name swap doorway pattern | new files | 6 hrs |
 | S4 | Add visible NAP block to footer of every page (currently only home/book) | `index.html`, `book.html`, `privacy.html` | 15 min |
 | S5 | Add lazy-loaded Google Map iframe centred on London (geographic signal reinforcement) | `index.html` contact section | 15 min |
@@ -353,7 +353,7 @@ I can't auto-fill these forms — every Tier-1 + Tier-2 platform requires:
 - Update `Hausio/seo/SUBMISSION_TRACKER.csv` as you go
 
 **What I'll do next when asked:**
-- Create the `cleaning-london.html`, `removals-london.html`, `handyman-london.html` service pages (S1–S2) so they're ready to rank as soon as citations land.
+- Create the `cleaning-london.html`, `man-and-van-london.html`, `handyman-london.html` service pages (S1–S2) so they're ready to rank as soon as citations land.
 - Add the geo block + lazy-loaded Map + FAQ section to `index.html` (S2, S5, S6).
 - Update `sameAs: []` once you give me the live profile URLs.
 - Draft the borough pages (S3) with unique content.

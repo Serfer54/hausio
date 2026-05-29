@@ -14,10 +14,10 @@ Object.values(DATA).forEach(b => {
   newUrls.push({ loc: `https://hausio.co.uk/areas/${b.slug}.html`, priority: '0.7' });
 });
 
-// Service × borough pages (handyman + removals)
+// Service × borough pages (handyman + man-and-van)
 Object.values(DATA).forEach(b => {
   newUrls.push({ loc: `https://hausio.co.uk/handyman-${b.slug}.html`, priority: '0.75' });
-  newUrls.push({ loc: `https://hausio.co.uk/removals-${b.slug}.html`, priority: '0.75' });
+  newUrls.push({ loc: `https://hausio.co.uk/man-and-van-${b.slug}.html`, priority: '0.75' });
 });
 
 const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');

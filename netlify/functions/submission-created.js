@@ -63,6 +63,21 @@ exports.handler = async (event) => {
   const isEmpty = v => v === '' || v == null || (Array.isArray(v) && v.length === 0);
   const fields = Object.entries(data).filter(([k, v]) => !SKIP.has(k) && !isEmpty(v));
 
+  // Defense in depth: if all contact fields are empty, the user never reached
+  // step 2 of the form (iOS Safari Enter-key bug). Drop the notification — no
+  // way to follow up on this lead anyway. Submission still lands in Netlify
+  // Forms dashboard for audit. Frontend should have caught this in booking.js
+  // submit handler post-2026-06-01 fix.
+  if (formName === 'booking') {
+    const hasName  = !isEmpty(data.name);
+    const hasEmail = !isEmpty(data.email);
+    const hasPhone = !isEmpty(data.phone);
+    if (!hasName && !hasEmail && !hasPhone) {
+      console.warn('[submission-created] booking has no contact fields — dropping notifications. Likely incomplete-form submit (iOS Safari Enter-key). Submission still in Netlify Forms dashboard.');
+      return { statusCode: 200, body: 'Dropped: incomplete submission' };
+    }
+  }
+
   // === LEAD STORAGE #1 — Netlify Function Logs (always visible, no setup) ===
   // Open https://app.netlify.com/projects/celebrated-babka-f215f3/logs/functions
   // and search for [LEAD] to see every submission with all fields.

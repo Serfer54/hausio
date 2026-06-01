@@ -365,6 +365,20 @@
   /* ---------- Submit ---------- */
   form.addEventListener('submit', async e => {
     e.preventDefault();
+
+    // Re-run BOTH step validations on submit, not just the "Continue" button.
+    // iOS Safari fires `submit` when the user hits Done/Enter on the keyboard,
+    // even from step 1 — without this guard, the form lands in Netlify with
+    // service+pricing data but no name/email/phone (lost lead, May 2026 incident).
+    if (current < 2) {
+      showStep(2);
+      alert('Please fill in your schedule and contact details to confirm.');
+      return;
+    }
+    if (!validateStep(1) || !validateStep(2)) {
+      return;
+    }
+
     if (!form.terms.checked) {
       alert('Please accept the terms to continue.');
       return;

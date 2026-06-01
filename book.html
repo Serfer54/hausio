@@ -46,8 +46,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css?v=13" />
 
-<!-- Cloudflare Turnstile — invisible bot challenge for the booking form -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Cloudflare Turnstile — DISABLED until production sitekey is set.
+     The test key (1x00000000000000000000AA) renders a red "Только для тестирования"
+     warning to real users which kills conversion. When you create a production
+     Turnstile site at dash.cloudflare.com → Turnstile, uncomment the script
+     below AND the .cf-turnstile div in the form below (grep TURNSTILE_SITEKEY_PROD_REQUIRED). -->
+<!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
 
 <script type="application/ld+json">
 {
@@ -411,16 +415,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p id="payment-error" class="payment-error" role="alert" hidden></p>
           </div>
 
-          <!-- TURNSTILE_SITEKEY_PROD_REQUIRED
-               !!! GO-LIVE BLOCKER !!! Current sitekey is Cloudflare's TEST key that
-               always passes — every bot gets through. Booking form is effectively unprotected.
-               Before launch:
-                 1. Cloudflare dash → Turnstile → Add Site → hausio.co.uk → copy SITE KEY + SECRET KEY
-                 2. Replace data-sitekey below with the SITE KEY
-                 3. Also replace TURNSTILE_SITE_KEY in js/popup.js
-                 4. Add TURNSTILE_SECRET_KEY env var in Netlify (Site → Configuration → Environment variables)
-               See SECURITY_DEPLOY_CHECKLIST.md -->
-          <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" data-size="flexible" style="margin: 16px 0;"></div>
+          <!-- TURNSTILE_SITEKEY_PROD_REQUIRED — widget DISABLED until production key set.
+               The test sitekey 1x00000000000000000000AA renders a red Russian
+               warning to real visitors (kill on conversion). When you create a
+               production Turnstile site (dash.cloudflare.com → Turnstile → Add Site):
+                 1. Replace data-sitekey below with the SITE KEY
+                 2. Uncomment the wrapper div
+                 3. Also uncomment the script tag in the <head>
+                 4. Also replace TURNSTILE_SITE_KEY + uncomment Turnstile block in js/popup.js
+                 5. Add TURNSTILE_SECRET_KEY env var in Netlify
+               See SECURITY_DEPLOY_CHECKLIST.md
+          <div class="cf-turnstile" data-sitekey="REPLACE_WITH_PROD_SITEKEY" data-theme="light" data-size="flexible" style="margin: 16px 0;"></div>
+          -->
 
           <div class="step-actions">
             <button type="button" class="btn btn-ghost" data-prev>← Back</button>

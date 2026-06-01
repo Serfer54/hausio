@@ -5,10 +5,12 @@
   const LS_KEY = 'hausio_popup_v1';
   const SUPPRESS_DAYS = 30;
   const PROMO_CODE = 'HAUSIO10';
-  // TURNSTILE_SITEKEY_PROD_REQUIRED
-  // !!! GO-LIVE BLOCKER !!! Test key always passes — see SECURITY_DEPLOY_CHECKLIST.md.
-  // Replace below AND data-sitekey in book.html AND set TURNSTILE_SECRET_KEY in Netlify env.
-  const TURNSTILE_SITE_KEY = '1x00000000000000000000AA';
+  // TURNSTILE_SITEKEY_PROD_REQUIRED — null disables Turnstile widget entirely.
+  // Test sitekey 1x00000000000000000000AA renders a red Russian warning to
+  // real visitors (kills conversion). When you create a production Turnstile
+  // site at dash.cloudflare.com → Turnstile → Add Site, paste the SITE KEY
+  // below — the widget code further down auto-activates. See SECURITY_DEPLOY_CHECKLIST.md.
+  const TURNSTILE_SITE_KEY = null;
 
   // Don't show on booking flow or legal pages
   const path = location.pathname;
@@ -73,7 +75,7 @@
             <p class="hs-popup-bot"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
             <input type="email" name="email" class="hs-popup-input" placeholder="you@example.com" required autocomplete="email" aria-label="Your email" />
             <input type="hidden" name="source" value="" />
-            <div class="hs-popup-turnstile" data-sitekey="${TURNSTILE_SITE_KEY}"></div>
+            ${TURNSTILE_SITE_KEY ? `<div class="hs-popup-turnstile" data-sitekey="${TURNSTILE_SITE_KEY}"></div>` : ''}
             <button type="submit" class="hs-popup-btn">Send me my 10% off →</button>
           </form>
           <p class="hs-popup-fineprint">By subscribing you agree to our <a href="/privacy.html">privacy policy</a>. One or two emails per month. Unsubscribe anytime.</p>
@@ -138,16 +140,19 @@
     const submitBtn = form.querySelector('button[type="submit"]');
     const turnstileBox = overlay.querySelector('.hs-popup-turnstile');
 
-    // Render Turnstile widget once the script is loaded.
+    // Render Turnstile widget once the script is loaded — only if a
+    // production sitekey is configured (TURNSTILE_SITE_KEY is non-null).
     let turnstileWidgetId = null;
-    loadTurnstile().then(function (ts) {
-      if (!ts || !turnstileBox || !document.body.contains(turnstileBox)) return;
-      turnstileWidgetId = ts.render(turnstileBox, {
-        sitekey: TURNSTILE_SITE_KEY,
-        theme: 'light',
-        size: 'flexible',
+    if (TURNSTILE_SITE_KEY && turnstileBox) {
+      loadTurnstile().then(function (ts) {
+        if (!ts || !document.body.contains(turnstileBox)) return;
+        turnstileWidgetId = ts.render(turnstileBox, {
+          sitekey: TURNSTILE_SITE_KEY,
+          theme: 'light',
+          size: 'flexible',
+        });
       });
-    });
+    }
 
     function close() {
       if (!document.body.contains(overlay)) return;
@@ -180,13 +185,16 @@
         emailInput.setAttribute('aria-invalid', 'true');
         return;
       }
-      // Require Turnstile token. Widget injects a hidden input
-      // named "cf-turnstile-response" inside the form once a challenge passes.
-      const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
-      if (!tokenInput || !tokenInput.value) {
-        submitBtn.textContent = 'Please complete the challenge';
-        setTimeout(() => { submitBtn.textContent = 'Send me my 10% off →'; }, 2200);
-        return;
+      // Require Turnstile token only when widget is active (production sitekey).
+      // When TURNSTILE_SITE_KEY is null, fall through — Netlify honeypot still
+      // catches most bots, and server can re-add Turnstile verification later.
+      if (TURNSTILE_SITE_KEY) {
+        const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+        if (!tokenInput || !tokenInput.value) {
+          submitBtn.textContent = 'Please complete the challenge';
+          setTimeout(() => { submitBtn.textContent = 'Send me my 10% off →'; }, 2200);
+          return;
+        }
       }
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';

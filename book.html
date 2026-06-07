@@ -131,6 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <input type="hidden" name="estimated-total" id="hidden-estimated-total" value="" />
         <input type="hidden" name="deposit-paid" id="hidden-deposit-paid" value="" />
         <input type="hidden" name="submitted-from" id="hidden-submitted-from" value="" />
+        <input type="hidden" name="move-distance" id="hidden-move-distance" value="" />
 
         <!-- STEP 1: Service + details -->
         <fieldset class="step is-active" data-step="1">
@@ -464,6 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <b id="summary-total">£0</b>
         </div>
         <p class="summary-note">Final quote is confirmed after our team reviews your request. £0 today — you pay by card after the job is complete and you're satisfied.</p>
+        <p class="summary-note" id="mileage-note" hidden>Moving out of London? Local moves include the first 12 miles between addresses; longer trips add £1.30/mile, calculated automatically once both postcodes are entered.</p>
         <ul class="summary-trust">
           <li>✓ Fully insured</li>
           <li>✓ DBS-checked team</li>
@@ -499,6 +501,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <input name="removal-type" />
   <input name="from-address" />
   <input name="to-address" />
+  <input name="move-distance" />
   <input name="hours" />
   <input name="bedrooms" />
   <input name="movers" />
@@ -528,7 +531,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script src="js/main.js" defer></script>
-<script src="js/booking.js?v=7" defer></script>
+<script src="js/booking.js?v=10" defer></script>
 <script src="js/consent.js" defer></script>
 </body>
 </html>

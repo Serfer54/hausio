@@ -24,6 +24,10 @@
   const CHECKOUT_STATE_KEY = 'hausio_pending_booking';
   let checkoutInFlight = false;
 
+  // Long-distance mileage state for removals (filled async from postcodes.io).
+  // status: 'idle' | 'loading' | 'ok' | 'error'
+  let mileageState = { miles: null, charge: 0, status: 'idle' };
+
   /* ---------- Pricing model ---------- */
   const PRICES = {
     cleaning: {
@@ -37,6 +41,11 @@
       crew: { 1: 55, 2: 85, 3: 115 },
       extras: { luton: 15 /*per hour*/, packing: 40, materials: 35, dismantle: 30 },
     },
+    // Long-distance mileage for removals. The first `freeMiles` (local London
+    // radius) are included in the base rate; every mile beyond is charged at
+    // `perMile`. `roadFactor` converts straight-line postcode distance into an
+    // approximate driving distance. Edit these three numbers to retune pricing.
+    mileage: { freeMiles: 12, perMile: 1.30, roadFactor: 1.3 },
     handyman: {
       firstHour: 65,
       laterHour: 50,
@@ -106,9 +115,15 @@
     const hiddenTotal = document.getElementById('hidden-estimated-total');
     const hiddenDeposit = document.getElementById('hidden-deposit-paid');
     const hiddenFrom = document.getElementById('hidden-submitted-from');
+    const hiddenDistance = document.getElementById('hidden-move-distance');
     if (hiddenTotal) hiddenTotal.value = '£' + totalNum0;
     if (hiddenDeposit) hiddenDeposit.value = DEPOSIT_ENABLED ? '£50' : '£0 (pay-after-job)';
     if (hiddenFrom) hiddenFrom.value = location.href;
+    if (hiddenDistance) {
+      hiddenDistance.value = (mileageState.status === 'ok' && mileageState.miles != null)
+        ? mileageState.miles + ' mi · ' + (mileageState.charge > 0 ? '+£' + mileageState.charge + ' long-distance' : 'local, no surcharge')
+        : '';
+    }
 
     const formData = new FormData(form);
     const chosenService = form.querySelector('input[name="service"]:checked');
@@ -145,7 +160,7 @@
     ]);
     const SERVICE_FIELDS = {
       cleaning: ['clean-type', 'clean-bed', 'clean-bath', 'clean-hours', 'clean-supplies', 'clean-extra'],
-      removals: ['move-type', 'move-crew', 'move-hours', 'move-extra',
+      removals: ['move-type', 'move-crew', 'move-hours', 'move-extra', 'move-distance',
                  'pickup-postcode', 'pickup-address', 'pickup-floor', 'pickup-lift',
                  'dropoff-postcode', 'dropoff-address', 'dropoff-floor', 'dropoff-lift'],
       handyman: ['handy-type', 'handy-hours', 'handy-extra'],
@@ -228,6 +243,9 @@
     const val = chosen ? chosen.value : null;
     panels.forEach(p => p.classList.toggle('is-active', p.dataset.for === val));
     applyRemovalsLayout(val === 'removals');
+    // The mileage disclaimer only makes sense for moves (Man and Van).
+    const mileageNote = document.getElementById('mileage-note');
+    if (mileageNote) mileageNote.hidden = (val !== 'removals');
     calculate();
   }
 
@@ -273,6 +291,11 @@
     let total = 0;
     const lines = [];
 
+    // Drop any stale long-distance charge when the chosen service isn't a move.
+    if (service !== 'removals' && mileageState.status !== 'idle') {
+      mileageState = { miles: null, charge: 0, status: 'idle' };
+    }
+
     if (service === 'cleaning') {
       const type = form['clean-type'].value;
       const hours = Number(form['clean-hours'].value);
@@ -312,6 +335,15 @@
         lines.push([labelExtra(c.value), '£' + amt]);
         total += amt;
       });
+
+      // Long-distance mileage (pickup → dropoff beyond the free local radius)
+      if (mileageState.status === 'loading') {
+        lines.push(['Distance — calculating…', '…']);
+      } else if (mileageState.status === 'ok' && mileageState.charge > 0) {
+        const billableMiles = Math.max(0, mileageState.miles - PRICES.mileage.freeMiles);
+        lines.push([`Long-distance · ${billableMiles} mi × £${PRICES.mileage.perMile.toFixed(2)}`, '£' + mileageState.charge]);
+        total += mileageState.charge;
+      }
     }
 
     if (service === 'handyman') {
@@ -361,6 +393,76 @@
   /* ---------- Live recalculate ---------- */
   form.addEventListener('change', calculate);
   form.addEventListener('input', calculate);
+
+  /* ---------- Long-distance mileage (postcodes.io, free, no key) ---------- */
+  function debounce(fn, ms) {
+    let t;
+    return function () { clearTimeout(t); t = setTimeout(fn, ms); };
+  }
+
+  // Only fire the lookup once a full UK postcode (incl. inward code) is entered.
+  function isFullPostcode(pc) {
+    return /^[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}$/.test((pc || '').trim());
+  }
+
+  function haversineMiles(lat1, lon1, lat2, lon2) {
+    const R = 3958.8; // Earth radius in miles
+    const toRad = d => d * Math.PI / 180;
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a = Math.sin(dLat / 2) ** 2 +
+              Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(a));
+  }
+
+  async function lookupPostcode(pc) {
+    const clean = (pc || '').replace(/\s+/g, '');
+    const resp = await fetch('https://api.postcodes.io/postcodes/' + encodeURIComponent(clean));
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    if (!data || data.status !== 200 || !data.result) return null;
+    return { lat: data.result.latitude, lon: data.result.longitude };
+  }
+
+  async function fetchMileageCharge() {
+    const chosen = form.querySelector('input[name="service"]:checked');
+    if (!chosen || chosen.value !== 'removals') {
+      mileageState = { miles: null, charge: 0, status: 'idle' };
+      return;
+    }
+    const pickVal = (form.querySelector('[name="postcode"]') || {}).value || '';
+    const dropVal = (form.querySelector('[name="dropoff-postcode"]') || {}).value || '';
+    if (!isFullPostcode(pickVal) || !isFullPostcode(dropVal)) {
+      mileageState = { miles: null, charge: 0, status: 'idle' };
+      calculate();
+      return;
+    }
+    mileageState = { miles: null, charge: 0, status: 'loading' };
+    calculate();
+    try {
+      const [a, b] = await Promise.all([lookupPostcode(pickVal), lookupPostcode(dropVal)]);
+      if (!a || !b) {
+        mileageState = { miles: null, charge: 0, status: 'error' };
+        calculate();
+        return;
+      }
+      const miles = Math.round(haversineMiles(a.lat, a.lon, b.lat, b.lon) * PRICES.mileage.roadFactor);
+      const billable = Math.max(0, miles - PRICES.mileage.freeMiles);
+      const charge = Math.round(billable * PRICES.mileage.perMile);
+      mileageState = { miles, charge, status: 'ok' };
+      track('mileage_calculated', { miles, charge, currency: 'GBP' });
+    } catch (err) {
+      mileageState = { miles: null, charge: 0, status: 'error' };
+      track('mileage_lookup_error', { error: String(err && err.message || err) });
+    }
+    calculate();
+  }
+
+  const debouncedMileage = debounce(fetchMileageCharge, 600);
+  ['postcode', 'dropoff-postcode'].forEach(name => {
+    const el = form.querySelector(`[name="${name}"]`);
+    if (el) el.addEventListener('input', debouncedMileage);
+  });
 
   /* ---------- Submit ---------- */
   form.addEventListener('submit', async e => {
@@ -525,9 +627,28 @@
   const params = new URLSearchParams(window.location.search);
   const preService = params.get('service');
   const prePostcode = params.get('postcode');
+  const preType = params.get('type');
   if (preService) {
     const r = form.querySelector(`input[name="service"][value="${preService}"]`);
     if (r) { r.checked = true; updatePanels(); }
+  }
+  // Deep-link a specific job type inside the chosen service, e.g.
+  // /book?service=removals&type=man-van → preselect "Man & van" in the move-type
+  // select. Matching is punctuation-insensitive, so man-van === manvan.
+  if (preType && preService) {
+    const typeSelectByService = {
+      cleaning: 'clean-type',
+      removals: 'move-type',
+      handyman: 'handy-type',
+    };
+    const selName = typeSelectByService[preService];
+    const sel = selName ? form.querySelector(`select[name="${selName}"]`) : null;
+    if (sel) {
+      const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const want = norm(preType);
+      const match = Array.from(sel.options).find((o) => norm(o.value) === want);
+      if (match) sel.value = match.value;
+    }
   }
   if (prePostcode) form.postcode.value = prePostcode;
 

@@ -9,3 +9,6 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# Internal marketing assets (keyword plans, ad CSVs) — must never be published
+ads/

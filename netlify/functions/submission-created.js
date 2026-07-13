@@ -56,6 +56,13 @@ exports.handler = async (event) => {
     console.warn('[submission-created] TURNSTILE_SECRET_KEY missing — skipping bot verification');
   }
 
+  // === REVIEW submissions get their own pipeline (store pending -> owner moderates
+  // -> publish). Handled here and returned early so they never reach the booking
+  // lead-email / scheduled review-request logic below. ===
+  if (formName === 'review') {
+    return await handleReview(data);
+  }
+
   // Drop framework noise + empty values so the email/log only shows fields
   // the customer actually filled in (handyman bookings shouldn't show empty
   // cleaning/man-and-van fields, and vice versa).
@@ -278,4 +285,148 @@ async function scheduleReviewRequest(data) {
   const body = await res.text();
   if (!res.ok) throw new Error(`Resend (review) ${res.status}: ${body.slice(0, 300)}`);
   return `scheduled for ${sendAt}`;
+}
+
+// ============================================================================
+//  ON-SITE REVIEWS (form name "review")
+//  Store the review as `pending` in Netlify Blobs, then email the owner with
+//  one-click Approve/Reject links. Nothing is published without owner approval.
+//  Approved reviews are served by netlify/functions/reviews.js at /api/reviews.
+// ============================================================================
+const crypto = require('crypto');
+
+async function handleReview(data) {
+  const rating = Math.max(0, Math.min(5, parseInt(data.rating, 10) || 0));
+  const body = String(data.body || '').trim();
+  const title = String(data.title || '').trim();
+  const name = String(data.name || '').trim();
+  const email = String(data.email || '').trim();
+  const service = String(data.service || '').trim();
+  const borough = String(data.borough || '').trim();
+  const consent = data.consent === 'on' || data.consent === 'true' || data.consent === true || data.consent === 'yes' || data.consent === '1';
+
+  // Minimum viable, consented review — otherwise drop (still in Netlify Forms inbox).
+  if (!rating || body.length < 10 || !name || !consent) {
+    console.warn(`[review] dropped incomplete/no-consent review (rating=${rating} bodyLen=${body.length} name=${!!name} consent=${consent})`);
+    return { statusCode: 200, body: 'Dropped: incomplete review' };
+  }
+  // Basic spam gate: links / markup or absurd length. Real reviews rarely carry URLs.
+  if (looksLikeReviewSpam(body) || looksLikeReviewSpam(title) || body.length > 2000) {
+    console.warn('[review] dropped spam-like review');
+    return { statusCode: 200, body: 'Dropped: spam' };
+  }
+
+  const photoUrl = typeof data.photo === 'string'
+    ? data.photo
+    : (data.photo && (data.photo.url || data.photo.href)) || '';
+
+  const id = crypto.randomUUID();
+  const review = {
+    id,
+    createdAt: new Date().toISOString(),
+    status: 'pending',
+    rating,
+    title: title.slice(0, 120),
+    body: body.slice(0, 2000),
+    authorName: firstNameInitial(name),
+    authorEmail: email,   // stored for contact/erasure only — never exposed via /api/reviews
+    avatarUrl: '',        // reserved for v2 (optional Google sign-in)
+    verified: false,      // reserved for v2 (optional Google sign-in)
+    service,
+    borough: borough.slice(0, 60),
+    photoUrl,
+    source: 'on-site',
+  };
+
+  let stored = false;
+  try {
+    const { getStore } = require('@netlify/blobs');
+    await getStore('reviews').setJSON(id, review);
+    stored = true;
+  } catch (err) {
+    console.error('[review] blob store failed:', err && err.message);
+  }
+
+  if (process.env.RESEND_API_KEY) {
+    try { await emailOwnerReview(review); }
+    catch (err) { console.error('[review] owner email failed:', err && err.message); }
+  } else {
+    console.warn('[review] RESEND_API_KEY missing — owner not notified (review still in Blobs + Netlify Forms inbox)');
+  }
+
+  console.log(`[review] stored=${stored} id=${id} rating=${rating} service=${service || '-'} photo=${!!photoUrl}`);
+  return { statusCode: 200, body: 'Review received' };
+}
+
+function firstNameInitial(fullName) {
+  const parts = String(fullName).replace(/\s+/g, ' ').trim().split(' ').filter(Boolean);
+  const first = parts[0] || '';
+  const initial = parts.length > 1 ? ` ${parts[parts.length - 1][0].toUpperCase()}.` : '';
+  return (first + initial).slice(0, 40);
+}
+
+function looksLikeReviewSpam(s) {
+  if (!s) return false;
+  return /(https?:\/\/|www\.|\[url|<a\s|\b[a-z0-9-]+\.(com|net|ru|xyz|top|info|shop|online|click|link)\b)/i.test(s);
+}
+
+function reviewModerationToken(id, action) {
+  const secret = process.env.REVIEW_MODERATION_SECRET || '';
+  return crypto.createHmac('sha256', secret).update(`${id}:${action}`).digest('hex');
+}
+
+async function emailOwnerReview(review) {
+  const base = 'https://hausio.co.uk/api/moderate-review';
+  const publishUrl = `${base}?id=${encodeURIComponent(review.id)}&action=publish&token=${reviewModerationToken(review.id, 'publish')}`;
+  const rejectUrl = `${base}?id=${encodeURIComponent(review.id)}&action=reject&token=${reviewModerationToken(review.id, 'reject')}`;
+
+  const esc = (s) => String(s == null ? '' : s).replace(/[<>&]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]));
+  const filled = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+  const metaLine = [review.service, review.borough].filter(Boolean).map(esc).join(' · ');
+  const photoBlock = review.photoUrl
+    ? `<p style="margin:14px 0;"><a href="${esc(review.photoUrl)}"><img src="${esc(review.photoUrl)}" alt="Customer photo" style="max-width:100%;border-radius:6px;border:1px solid #eee;" /></a></p>`
+    : '<p style="color:#999;margin:14px 0;">No photo attached.</p>';
+
+  const html = `<div style="font-family:system-ui,-apple-system,sans-serif;max-width:560px;line-height:1.55;">
+    <h2 style="margin:0 0 4px;">New review — pending your approval</h2>
+    <p style="color:#a48a5a;font-size:20px;margin:0 0 2px;">${filled} <span style="color:#777;font-size:14px;">(${review.rating}/5)</span></p>
+    <p style="color:#777;margin:0 0 14px;">${esc(review.authorName)}${metaLine ? ' · ' + metaLine : ''} · ${esc(review.authorEmail)}</p>
+    ${review.title ? `<p style="font-weight:600;margin:0 0 6px;">${esc(review.title)}</p>` : ''}
+    <blockquote style="margin:0 0 8px;padding:12px 16px;background:#f7f4ef;border-left:3px solid #a48a5a;border-radius:4px;">${esc(review.body)}</blockquote>
+    ${photoBlock}
+    <div style="text-align:center;margin:24px 0;">
+      <a href="${publishUrl}" style="display:inline-block;background:#1a1a1a;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:600;margin:6px;">✓ Approve &amp; publish</a>
+      <a href="${rejectUrl}" style="display:inline-block;background:#fff;color:#b3261e;border:1px solid #e0c9c6;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:600;margin:6px;">Reject</a>
+    </div>
+    <p style="color:#999;font-size:13px;">Nothing is shown on the site until you approve it. Approve/reject on authenticity — not on the star rating.</p>
+  </div>`;
+
+  const textLines = [
+    `New review pending approval — ${review.rating}/5`,
+    `${review.authorName}${metaLine ? ' · ' + metaLine : ''} · ${review.authorEmail}`,
+    review.title ? `Title: ${review.title}` : '',
+    '',
+    review.body,
+    '',
+    review.photoUrl ? `Photo: ${review.photoUrl}` : 'No photo attached.',
+    '',
+    `Approve: ${publishUrl}`,
+    `Reject:  ${rejectUrl}`,
+  ].filter(Boolean);
+
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: SENDER,
+      to: [RECIPIENT],
+      ...(review.authorEmail ? { reply_to: review.authorEmail } : {}),
+      subject: `New ${review.rating}★ review from ${review.authorName} — approve?`,
+      text: textLines.join('\n'),
+      html,
+    }),
+  });
+  const respBody = await res.text();
+  if (!res.ok) throw new Error(`Resend (review notify) ${res.status}: ${respBody.slice(0, 300)}`);
+  return `status ${res.status}`;
 }

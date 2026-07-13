@@ -26,6 +26,17 @@
   to = "/.netlify/functions/check-apple-pay"
   status = 200
 
+# On-site reviews: public read + one-click owner moderation
+[[redirects]]
+  from = "/api/reviews"
+  to = "/.netlify/functions/reviews"
+  status = 200
+
+[[redirects]]
+  from = "/api/moderate-review"
+  to = "/.netlify/functions/moderate-review"
+  status = 200
+
 # ---------- 301 redirects: /removals-* → /man-and-van-* (renamed 2026-05-11) ----------
 [[redirects]]
   from = "/removals-london.html"

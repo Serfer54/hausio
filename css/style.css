@@ -2071,3 +2071,106 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   .main-nav.is-open .nav-dropdown a:hover { background: transparent; }
 }
 
+/* ==========================================================================
+   Reviews — homepage testimonials + on-site review form
+   ========================================================================== */
+
+/* ---------- Testimonials section ---------- */
+.testimonials { padding: 72px 0; background: var(--linen); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.review-stars { color: var(--line); letter-spacing: 2px; font-size: 1.1rem; line-height: 1; }
+.review-stars .filled { color: var(--gold); }
+.review-title { font-size: 1.15rem; margin: 0; }
+.review-body { color: var(--ink-2); margin: 0; }
+.review-photo img {
+  width: 100%; height: auto; max-height: 320px;
+  object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line);
+}
+.review-author { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 8px; }
+.review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; }
+.review-avatar-initial {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--sand); color: var(--ink);
+  font-family: var(--sans); font-weight: 600; font-size: 1rem;
+}
+.review-meta { display: flex; flex-direction: column; line-height: 1.3; }
+.review-meta small { color: var(--muted); font-size: .82rem; }
+.review-badge { font-size: .72rem; color: var(--gold); font-weight: 600; letter-spacing: .02em; margin-top: 2px; }
+
+/* ---------- Review form page ---------- */
+.review-wrap { padding: 48px 0 80px; }
+.review-form-card {
+  max-width: 660px; margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 36px;
+}
+.review-intro { text-align: center; margin-bottom: 26px; }
+.review-intro h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.review-form .field { margin-bottom: 18px; }
+.review-form .field-row { display: flex; gap: 16px; }
+.review-form .field-row .field { flex: 1; }
+.review-form .field-hint { display: block; color: var(--muted); font-size: .78rem; margin-top: 5px; }
+#review-submit { width: 100%; margin-top: 6px; }
+
+/* Star rating (pure-CSS, radios ordered 5→1 in DOM + row-reverse) */
+.star-rating { display: inline-flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; }
+.star-rating input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.star-rating label {
+  font-size: 2.1rem; line-height: 1; color: var(--line);
+  cursor: pointer; transition: color .15s ease; margin: 0;
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label { color: var(--gold); }
+.star-rating input:focus-visible + label { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Photo upload */
+.photo-field input[type="file"] { display: none; }
+.photo-drop {
+  display: block;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  padding: 18px; text-align: center;
+  color: var(--muted); cursor: pointer;
+  transition: border-color .2s ease, color .2s ease;
+}
+.photo-drop:hover { border-color: var(--gold); color: var(--ink); }
+.photo-preview { margin-top: 12px; }
+.photo-preview img { max-height: 220px; border-radius: var(--radius); border: 1px solid var(--line); }
+
+.review-error {
+  color: #b3261e; font-size: .9rem; margin: 8px 0 14px;
+  background: #fbeceb; border: 1px solid #e7c9c6; border-radius: var(--radius); padding: 10px 14px;
+}
+
+.review-success { text-align: center; padding: 20px 0; }
+.review-success .success-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--ink); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 2rem; margin-bottom: 16px;
+}
+
+@media (max-width: 560px) {
+  .review-form-card { padding: 24px; }
+  .review-form .field-row { flex-direction: column; gap: 0; }
+}
+

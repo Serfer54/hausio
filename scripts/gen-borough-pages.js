@@ -233,6 +233,7 @@ ${(b.faq || []).map(renderFaqSchema).join(',\n')}
         </div>
       </div>
       <a href="/#how">How it works</a>
+      <a href="/#work">Our work</a>
       <a href="/blog/">Blog</a>
       <a href="/#faq">FAQ</a>
     </nav>

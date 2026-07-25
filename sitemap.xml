@@ -24,6 +24,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://hausio.co.uk/portfolio.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/work/work-01.jpg</image:loc>
+      <image:title>Hausio recent work — London move, repairs and clean</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://hausio.co.uk/cleaning-london.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>

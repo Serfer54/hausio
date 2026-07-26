@@ -68,6 +68,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .how-cta{display:flex;flex-direction:column;align-items:center;gap:14px}
   .how-cta .how-more{color:var(--ink-2);font-size:.92rem;border-bottom:1px solid var(--line);padding-bottom:2px}
   .how-cta .how-more:hover{color:var(--gold)}
+
+  /* Section rhythm — framed highlight bands + an editorial rule above each heading */
+  .how{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why{background:var(--cream)}
+  .services .section-head,.how .section-head,.why .section-head,.faq .section-head{position:relative}
+  .services .section-head::before,
+  .how .section-head::before,
+  .why .section-head::before,
+  .faq .section-head::before{
+    content:"";display:block;width:46px;height:1px;margin:0 auto 20px;
+    background:var(--gold);opacity:.5
+  }
 </style>
 
 <script type="application/ld+json">

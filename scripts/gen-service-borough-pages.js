@@ -29,7 +29,7 @@ const SERVICES = {
     pricingNote: 'No call-out fee. Pay after the job is done.',
     bookParam: 'service=handyman',
     schemaServiceType: 'Home repair and maintenance',
-    title: (b) => `Handyman in ${b.name}, London — Hausio | ${b.headlinePostcodes}`,
+    title: (b) => `Handyman in ${b.name}, London | Hausio`,
     description: (b, framing) => `Handyman services in ${b.name} ${b.headlinePostcodes}. ${framing.slice(0, 130)}`,
     cards: [
       {
@@ -66,7 +66,7 @@ const SERVICES = {
     pricingNote: '2-hour minimum. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access. Same-day slots available — book before 10am.',
     bookParam: 'service=removals', // internal ID — NOT changed, keeps GA4/Stripe continuity
     schemaServiceType: 'Moving services',
-    title: (b) => `Man and Van ${b.name}, London — From £55/hr | Hausio | ${b.headlinePostcodes}`,
+    title: (b) => `Man and Van in ${b.name}, London — From £55/hr | Hausio`,
     description: (b, framing) => `Cheap, reliable man and van in ${b.name} ${b.headlinePostcodes}. 1 man + van £55/hr · 2 men £85/hr · 3 men + Luton £115/hr. Same-day available. Fully insured. ${framing.slice(0, 90)}`,
     cards: [
       {

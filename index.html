@@ -102,6 +102,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   @keyframes hero-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   @keyframes hero-fade{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:none}}
+
+  /* Wide screens: pull the photo toward the text to kill the empty band between them.
+     Only ≥1200px — below that the fluid two-column layout stays graceful. */
+  @media (min-width:1200px){
+    .hero-grid{grid-template-columns:minmax(0,1fr) 580px;gap:16px 40px}
+    .hero-visual{justify-content:flex-end}
+    .hero-photo{max-width:580px}
+  }
 </style>
 
 <script type="application/ld+json">

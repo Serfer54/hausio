@@ -278,6 +278,40 @@ const SERVICES = {
   },
 };
 
+// Service-specific FAQs (with extractable prices) — replace the generic borough
+// faq pull that was bleeding one service's pricing onto another service's page.
+// {borough} tokens are replaced per page.
+const SERVICE_FAQS = {
+  handyman: [
+    { q: 'How much does a handyman cost in {borough}?', a: 'A Hausio handyman in {borough} is £65 for the first hour, then £50/hour, with no call-out fee and nothing to pay until the job is done. A half-day (4h) is £215 and a full day (8h) £395. Most small jobs — a few shelves, a TV mount, a leaking tap — are finished within the first hour or two.' },
+    { q: 'What can a handyman do without a registered electrician or plumber?', a: 'Non-notifiable work: swapping taps, washers and toilet seats, changing light fittings, sockets and switches, unblocking waste pipes, hanging TVs, shelves and blinds, and easing doors or changing locks. Anything notifiable — new circuits, gas or boiler work — we will tell you needs a registered specialist.' },
+  ],
+  'man-and-van': [
+    { q: 'How much does a man and van cost in {borough}?', a: 'In {borough} it is £55/hour for 1 man + van, £85/hour for 2 men + van and £115/hour for 3 men + a Luton van, with a 2-hour minimum. A single-item move is usually 1–2 hours, a 1-bed flat 3–4 hours and a 2-bed 4–6 hours. Central-zone congestion access adds £18.' },
+    { q: 'How much does it cost to move a 1-bed flat in {borough}?', a: 'A 1-bed flat move in {borough} typically runs £165–£340 — usually 1–2 movers and a van for 3–4 hours at £55–£85/hour. A 2-bed is around £340–£510 (2 men, 4–6h) and a studio or single-item move from £110. We quote a fixed price up front, so there are no move-day surprises.' },
+  ],
+  'furniture-assembly': [
+    { q: 'How much does furniture assembly cost in {borough}?', a: 'Furniture assembly in {borough} is from £45/hour (1-hour minimum), or fixed-price by item: an IKEA Pax wardrobe is £85, a Malm bed £45, Hemnes drawers £35, Kallax £25 and a Billy bookcase £20. There is no call-out fee and we clear the packaging away when we leave.' },
+    { q: 'Do you assemble Made.com, Wayfair and Habitat furniture too?', a: 'Yes — as well as IKEA we build Made.com, Wayfair and Habitat sofa-beds, dining tables and storage beds, working to the spec sheet rather than the box photo. If a fitting is missing we run a missing-parts protocol so it is caught before it costs you a day.' },
+  ],
+  'tv-mounting': [
+    { q: 'How much does TV wall mounting cost in {borough}?', a: 'TV mounting in {borough} is £55 up to 43", £75 for 44–55", £95 for 56–65" and £150 for 66–85". Cable concealment is +£40, a soundbar mount +£25, and we can supply the bracket at cost. We match the fixing to what is behind your plaster — brick, stud or concrete.' },
+    { q: 'Can you hide the TV cables in the wall?', a: 'Yes — either surface trunking (cheaper and removable, +£20) or full in-wall concealment for a clean finish (+£40), with power taken to BS 7671. We walk you through both before drilling and add HDMI extenders if your Sky or console box lives elsewhere.' },
+  ],
+  'garden-clearance': [
+    { q: 'How much does garden clearance cost in {borough}?', a: 'Garden clearance in {borough} starts at £120 for a quarter-load, £180 for a half Luton van and £280 for a full load, with stump grinding +£80 per stump. Loading, tip fees and our waste-carrier licence are all included, so fly-tipping liability stays with us, not you.' },
+    { q: 'Do you remove sheds and decking in {borough}?', a: 'Yes — we dismantle sheds (+£60), lift decking with the joists and take down fence panels without damaging boundaries; concrete-pad removal is quoted on site. Everything is loaded and taken to a licensed transfer station with the waste transfer note included.' },
+  ],
+  'waste-removal': [
+    { q: 'How much does waste removal cost in {borough}?', a: 'Waste removal in {borough} is from £55 for a single item, £100 for a small van load, £180 for a half Luton and £280 for a full load. Loading and all waste transfer notes are included, and we hold a registered waste-carrier licence (CBDU on file).' },
+    { q: 'Can you take away a mattress or fridge in {borough}?', a: 'Yes — mattresses, sofas, fridge-freezers and washing machines are our most common single items, from £55. Mattresses are not kerb-collected by most councils, so we take them properly to a licensed transfer station and send you the transfer note.' },
+  ],
+  'painting-decorating': [
+    { q: 'How much do painters and decorators cost in {borough}?', a: 'Painting in {borough} is £220 per painter per day, or about £320 for a standard room (walls + ceiling, prep and two coats included). Sash windows are £85 per side and external doors £140. Materials are supplied at trade cost with no markup.' },
+    { q: 'How long does it take to paint a flat in {borough}?', a: 'A studio is usually 2 painter-days and a 2-bed flat 4–5, done properly with sanding, filling and taping first — prep is most of the job. We sequence rooms so you keep one habitable while the rest dries, and stage furniture rather than move it out.' },
+  ],
+};
+
 const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const escJson = s => String(s || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, ' ').replace(/\r/g, '');
 
@@ -299,8 +333,8 @@ function renderFaqSchema(f) {
 
 function renderServicePage(b, service) {
   const url = `https://hausio.co.uk/${service.key}-${b.slug}.html`;
-  const headline = service.headline.replace('{borough}', b.name);
-  const lede = service.leadeTpl.replace('{borough}', b.name);
+  const headline = service.headline.replace(/\{borough\}/g, b.name);
+  const lede = service.leadeTpl.replace(/\{borough\}/g, b.name);
   const serviceFraming = b.serviceFraming[service.framingKey] || (service.framingDefault ? service.framingDefault(b) : '');
   const title = service.title(b);
   const description = service.description(b, serviceFraming);
@@ -309,12 +343,16 @@ function renderServicePage(b, service) {
   const snippets = b.snippets;
 
   const faqLabel = service.label;
+  const svcFaqs = (SERVICE_FAQS[service.key] || []).map(f => ({
+    q: f.q.replace(/\{borough\}/g, b.name),
+    a: f.a.replace(/\{borough\}/g, b.name),
+  }));
   const serviceFaq = [
     {
       q: `How quickly can a Hausio ${faqLabel} team reach ${b.name}?`,
       a: `Most ${faqLabel} bookings in ${b.name} can be filled same-day or next-day. Postcodes ${b.headlinePostcodes} are within our regular daily round, so the team is usually 15–30 minutes away from your address. Book before 10am for a same-day slot.`,
     },
-    ...b.faq.slice(0, 2),
+    ...svcFaqs,
   ];
 
   return `<!doctype html>

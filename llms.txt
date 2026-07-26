@@ -1,0 +1,44 @@
+# Hausio
+
+> Hausio is a London home-services company offering cleaning, man and van / removals, handyman, furniture assembly, TV mounting, garden clearance, waste removal and painting & decorating across all 32 London boroughs. Vetted, DBS-checked, £2M insured, eco-friendly, with £0 to pay until the job is done.
+
+## Key facts
+
+- Service area: all 32 London boroughs (Greater London).
+- Prices: cleaning from £22/hr, man and van from £55/hr, handyman £65 first hour then £50/hr, furniture assembly from £45/hr, TV mounting from £55, garden clearance from £120, waste removal from £55, painting £220/painter/day.
+- Booking: instant online quote at https://hausio.co.uk/book.html — pay £0 at booking, settle by card/Apple Pay/Google Pay after the job.
+- Hours: Monday–Sunday, 08:00–20:00.
+- Trust: DBS-checked and reference-vetted staff, £2M public liability + £25k goods-in-transit cover.
+
+## Services
+
+- [Cleaning in London](https://hausio.co.uk/cleaning-london.html): regular, one-off, deep, end-of-tenancy and after-builders cleaning from £22/hr.
+- [Man and van in London](https://hausio.co.uk/man-and-van-london.html): single items to full flat/house moves from £55/hr, same-day available.
+- [Handyman in London](https://hausio.co.uk/handyman-london.html): repairs, assembly, mounting, minor plumbing and electrics — £65 first hour.
+- [Furniture assembly in London](https://hausio.co.uk/furniture-assembly-london.html): IKEA, Made.com, Wayfair — from £45/hr or fixed price by item.
+- [TV wall mounting in London](https://hausio.co.uk/tv-mounting-london.html): plasterboard, brick, concrete, cable-conceal — from £55.
+- [Garden clearance in London](https://hausio.co.uk/garden-clearance-london.html): overgrowth, sheds, decking — from £120, registered waste carrier.
+- [Waste removal in London](https://hausio.co.uk/waste-removal-london.html): single items to full house clearance — from £55, transfer notes included.
+- [Painting & decorating in London](https://hausio.co.uk/painting-decorating-london.html): single rooms to whole flats — £220/painter/day, prep included.
+
+## Areas
+
+- [All London areas we cover](https://hausio.co.uk/areas/): the 32 London boroughs, each with dedicated service pages (e.g. Camden, Hackney, Islington, Westminster, Tower Hamlets, Southwark, Lambeth, Wandsworth).
+
+## Company
+
+- [About Hausio](https://hausio.co.uk/about.html): who we are, vetting, insurance and how we work.
+- [How it works](https://hausio.co.uk/how-it-works.html): the booking-to-completion process in four steps.
+- [FAQ](https://hausio.co.uk/faq.html): pricing, booking, insurance, payment and access questions.
+- [Book / instant quote](https://hausio.co.uk/book.html): get a fixed price online in 60 seconds.
+- [Leave a review](https://hausio.co.uk/leave-a-review.html): customer reviews with photos.
+
+## Blog
+
+- [End of tenancy cleaning in London: costs 2026](https://hausio.co.uk/blog/end-of-tenancy-cleaning-london-cost-2026.html): full price bands by property size.
+- [Hiring a handyman in London (2026)](https://hausio.co.uk/blog/hiring-a-handyman-in-london-2026.html): rates and how to choose one.
+- [IKEA & flat-pack furniture assembly in London](https://hausio.co.uk/blog/ikea-flat-pack-furniture-assembly-london-2026.html): per-item assembly costs.
+- [TV wall mounting in London: costs 2026](https://hausio.co.uk/blog/tv-wall-mounting-london-cost-2026.html): pricing by TV size and cable options.
+- [London ULEZ & Congestion Charge for home services](https://hausio.co.uk/blog/london-ulez-congestion-charge-2026.html): how charges affect moves and clearances.
+- [Renters' Rights Act & end-of-tenancy cleaning](https://hausio.co.uk/blog/renters-rights-act-end-of-tenancy-cleaning-2026.html): what tenants and landlords need to know.
+- [Spring deep-clean checklist for London homes](https://hausio.co.uk/blog/spring-deep-clean-checklist-london-2026.html): room-by-room deep clean guide.

@@ -52,4 +52,34 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
 Sitemap: https://hausio.co.uk/sitemap.xml

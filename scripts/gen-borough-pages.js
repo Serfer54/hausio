@@ -232,7 +232,7 @@ ${(b.faq || []).map(renderFaqSchema).join(',\n')}
           <a href="/painting-decorating-london.html" role="menuitem">Painting &amp; Decorating</a>
         </div>
       </div>
-      <a href="/#how">How it works</a>
+      <a href="/how-it-works.html">How it works</a>
       <a href="/portfolio.html">Our work</a>
       <a href="/blog/">Blog</a>
       <a href="/#faq">FAQ</a>

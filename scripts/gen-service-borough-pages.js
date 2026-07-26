@@ -103,7 +103,8 @@ const SERVICES = {
     pricingNote: 'No call-out fee. Materials and missing-parts protocol included.',
     bookParam: 'service=handyman',
     schemaServiceType: 'Furniture assembly',
-    title: (b) => `Furniture Assembly in ${b.name}, London — IKEA, Pax, Malm | Hausio | ${b.headlinePostcodes}`,
+    framingDefault: (b) => `Furniture assembly in ${b.name} is mostly IKEA PAX wardrobes and MALM beds in period conversions and new-build flats alike — we bring the right anchors for lath-and-plaster, stud or solid walls, check the fittings bag before we start, and clear the packaging when we leave.`,
+    title: (b) => `Furniture Assembly in ${b.name} | Hausio`,
     description: (b, framing) => `Furniture assembly in ${b.name} ${b.headlinePostcodes}. ${framing.slice(0, 130)}`,
     cards: [
       {
@@ -140,7 +141,8 @@ const SERVICES = {
     pricingNote: 'Cable conceal +£40. Soundbar mount +£25. Bracket supplied at cost if you need one.',
     bookParam: 'service=handyman',
     schemaServiceType: 'TV installation',
-    title: (b) => `TV Mounting in ${b.name}, London — From £55 | Hausio | ${b.headlinePostcodes}`,
+    framingDefault: (b) => `TV mounting in ${b.name} lives or dies on the wall behind the plaster — solid brick in the older terraces, stud partitions and concrete in the newer blocks. We find what's there before we drill, match the bracket to it, and conceal the cables cleanly.`,
+    title: (b) => `TV Mounting in ${b.name} — From £55 | Hausio`,
     description: (b, framing) => `TV wall mounting in ${b.name} ${b.headlinePostcodes}. Up to 43" £55, 44–55" £75, 56–65" £95, 66–85" £150. ${framing.slice(0, 90)}`,
     cards: [
       {
@@ -177,7 +179,8 @@ const SERVICES = {
     pricingNote: 'Includes loading, tip fees and waste carrier licence. Fly-tipping liability stays with us, not you.',
     bookParam: 'service=removals',
     schemaServiceType: 'Garden waste removal',
-    title: (b) => `Garden Clearance in ${b.name}, London — Licensed Waste Carrier | Hausio | ${b.headlinePostcodes}`,
+    framingDefault: (b) => `Garden clearance in ${b.name} runs from overgrown end-of-tenancy plots to shed and decking strip-outs. As a registered waste carrier we handle the tip fees, transfer notes and the licence, so fly-tipping liability never lands back on you.`,
+    title: (b) => `Garden Clearance in ${b.name} | Hausio`,
     description: (b, framing) => `Garden clearance in ${b.name} ${b.headlinePostcodes}. From £120. Registered waste carrier — tip fees included. ${framing.slice(0, 90)}`,
     cards: [
       {
@@ -214,7 +217,8 @@ const SERVICES = {
     pricingNote: 'Includes loading and all transfer notes. We hold a waste carrier licence (CBDU on file).',
     bookParam: 'service=removals',
     schemaServiceType: 'Waste removal',
-    title: (b) => `Waste Removal in ${b.name}, London — Licensed Carrier | Hausio | ${b.headlinePostcodes}`,
+    framingDefault: (b) => `Waste removal in ${b.name} covers single bulky items, full house clearances and post-renovation builders' waste. Every load comes with a waste transfer note, and mattresses, green waste and rubble each go to the right licensed transfer station.`,
+    title: (b) => `Waste Removal in ${b.name} | Hausio`,
     description: (b, framing) => `Waste removal in ${b.name} ${b.headlinePostcodes}. From £55 single item, £100 small van. Licensed waste carrier — transfer notes included. ${framing.slice(0, 80)}`,
     cards: [
       {
@@ -251,7 +255,8 @@ const SERVICES = {
     pricingNote: 'Prep, filling, taping and dust-sheeting included. Materials supplied at trade cost — no markup.',
     bookParam: 'service=handyman',
     schemaServiceType: 'Painting and decorating',
-    title: (b) => `Painters & Decorators in ${b.name}, London — From £220/day | Hausio | ${b.headlinePostcodes}`,
+    framingDefault: (b) => `Painting and decorating in ${b.name} is mostly single rooms and whole-flat repaints in period conversions and lettings. Prep is most of the job — sanding, filling and taping done properly — with Dulux Trade and Farrow & Ball finishes cut in by brush.`,
+    title: (b) => `Painters & Decorators in ${b.name} | Hausio`,
     description: (b, framing) => `Painting and decorating in ${b.name} ${b.headlinePostcodes}. £220/day per painter, room £320 (prep + 2 coats included). ${framing.slice(0, 80)}`,
     cards: [
       {
@@ -296,7 +301,7 @@ function renderServicePage(b, service) {
   const url = `https://hausio.co.uk/${service.key}-${b.slug}.html`;
   const headline = service.headline.replace('{borough}', b.name);
   const lede = service.leadeTpl.replace('{borough}', b.name);
-  const serviceFraming = b.serviceFraming[service.framingKey];
+  const serviceFraming = b.serviceFraming[service.framingKey] || (service.framingDefault ? service.framingDefault(b) : '');
   const title = service.title(b);
   const description = service.description(b, serviceFraming);
   const ogTitle = `${service.name} in ${b.name} — Hausio`;
@@ -581,7 +586,7 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
 
 let count = 0;
 Object.values(DATA).forEach(b => {
-  ['handyman', 'man-and-van'].forEach(svcKey => {
+  ['handyman', 'man-and-van', 'furniture-assembly', 'tv-mounting', 'garden-clearance', 'waste-removal', 'painting-decorating'].forEach(svcKey => {
     const svc = SERVICES[svcKey];
     const out = renderServicePage(b, svc);
     const filePath = path.join(ROOT, `${svc.key}-${b.slug}.html`);

@@ -14,10 +14,11 @@ Object.values(DATA).forEach(b => {
   newUrls.push({ loc: `https://hausio.co.uk/areas/${b.slug}.html`, priority: '0.7' });
 });
 
-// Service × borough pages (handyman + man-and-van)
-Object.values(DATA).forEach(b => {
-  newUrls.push({ loc: `https://hausio.co.uk/handyman-${b.slug}.html`, priority: '0.75' });
-  newUrls.push({ loc: `https://hausio.co.uk/man-and-van-${b.slug}.html`, priority: '0.75' });
+// Service × borough pages (all 7 services)
+['handyman', 'man-and-van', 'furniture-assembly', 'tv-mounting', 'garden-clearance', 'waste-removal', 'painting-decorating'].forEach(svc => {
+  Object.values(DATA).forEach(b => {
+    newUrls.push({ loc: `https://hausio.co.uk/${svc}-${b.slug}.html`, priority: '0.7' });
+  });
 });
 
 const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');

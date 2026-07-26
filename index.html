@@ -80,6 +80,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     content:"";display:block;width:46px;height:1px;margin:0 auto 20px;
     background:var(--gold);opacity:.5
   }
+
+  /* Calmer, softer hero — no perpetual motion, warmer framing, gentle load-in */
+  .hero-photo img{animation:none}                 /* stop the constant breathing zoom */
+  .hero-photo{
+    border:none;
+    border-radius:12px;
+    box-shadow:0 30px 60px -26px rgba(60,45,25,.30), 0 8px 22px -12px rgba(60,45,25,.14);
+    position:relative;z-index:1;
+  }
+  .hero-visual{position:relative}
+  .hero-visual::before{                            /* soft warm halo grounds the photo on the cream */
+    content:"";position:absolute;inset:-9% -7% -12% -7%;
+    background:radial-gradient(58% 58% at 56% 46%, rgba(164,138,90,.18), transparent 70%);
+    filter:blur(14px);z-index:0;pointer-events:none
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .hero-top{animation:hero-rise .7s cubic-bezier(.2,.7,.2,1) both}
+    .hero-bottom{animation:hero-rise .7s cubic-bezier(.2,.7,.2,1) .09s both}
+    .hero-visual{animation:hero-fade 1s ease .04s both}
+  }
+  @keyframes hero-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes hero-fade{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:none}}
 </style>
 
 <script type="application/ld+json">

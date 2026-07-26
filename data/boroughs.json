@@ -907,6 +907,11 @@
     "snippets": [
       {
         "pc": "E17",
+        "title": "Blackhorse Road & Walthamstow",
+        "body": "Blackhorse Road (E17) and the new-build blocks by the Tube are our busiest Waltham Forest patch — flat-pack, TV mounting and handyman jobs in the flats, plus Village and Wood Street conversions. Parking is CPZ; we sort the tradesperson permit on the quote."
+      },
+      {
+        "pc": "E17",
         "title": "Walthamstow Village conservation",
         "body": "Walthamstow Village conservation area — original Victorian shop fronts, Vestry House Museum lanes. Reversible internal fixings, no façade changes."
       },
@@ -1339,6 +1344,11 @@
       "kensington-chelsea"
     ],
     "snippets": [
+      {
+        "pc": "W1",
+        "title": "Oxford Street & the West End",
+        "body": "Around Oxford Street, Marylebone and Fitzrovia (W1) we work mansion-block flats and offices — TV wall mounting, flat-pack and small repairs — with loading timed around the West End's red routes and delivery-window restrictions, and the flat £18 Congestion Charge shown upfront."
+      },
       {
         "pc": "W1",
         "title": "Westminster postcode coverage",

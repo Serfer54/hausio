@@ -504,6 +504,7 @@ ${service.pricingItems.map(i => `      <li>${esc(i)}</li>`).join('\n')}
     </p>
     <div class="area-links" style="margin-top: 28px;">
       <a href="/areas/${b.slug}.html">All ${esc(b.name)} services →</a>
+${Object.keys(SERVICES).filter(k => k !== service.key).map(k => `      <a href="/${k}-${b.slug}.html">${esc(SERVICES[k].name)} in ${esc(b.name)} →</a>`).join('\n')}
 ${b.linkedBoroughs.map(slug => {
   const lb = DATA[slug];
   if (!lb) return '';
@@ -561,6 +562,7 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
     <div>
       <h4>Company</h4>
       <ul>
+        <li><a href="/about.html">About</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
       </ul>

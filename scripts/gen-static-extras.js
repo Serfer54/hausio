@@ -101,6 +101,7 @@ const FOOTER = `<footer class="site-footer">
   </div>
   <div class="container footer-bottom">
     <p>© Hausio Ltd · London</p>
+    <p>Registered in England &amp; Wales · Company No. 17167561</p>
   </div>
 </footer>`;
 

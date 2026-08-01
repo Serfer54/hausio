@@ -339,16 +339,18 @@ async function handleReview(data) {
   };
 
   let stored = false;
+  let storeError = '';
   try {
     const { getStore } = require('@netlify/blobs');
     await getStore('reviews').setJSON(id, review);
     stored = true;
   } catch (err) {
-    console.error('[review] blob store failed:', err && err.message);
+    storeError = `${(err && err.name) || 'Error'}: ${(err && err.message) || String(err)}`;
+    console.error('[review] blob store failed:', storeError);
   }
 
   if (process.env.RESEND_API_KEY) {
-    try { await emailOwnerReview(review); }
+    try { await emailOwnerReview(review, storeError); }
     catch (err) { console.error('[review] owner email failed:', err && err.message); }
   } else {
     console.warn('[review] RESEND_API_KEY missing — owner not notified (review still in Blobs + Netlify Forms inbox)');
@@ -375,7 +377,7 @@ function reviewModerationToken(id, action) {
   return crypto.createHmac('sha256', secret).update(`${id}:${action}`).digest('hex');
 }
 
-async function emailOwnerReview(review) {
+async function emailOwnerReview(review, storeError) {
   const base = 'https://hausio.co.uk/api/moderate-review';
   const publishUrl = `${base}?id=${encodeURIComponent(review.id)}&action=publish&token=${reviewModerationToken(review.id, 'publish')}`;
   const rejectUrl = `${base}?id=${encodeURIComponent(review.id)}&action=reject&token=${reviewModerationToken(review.id, 'reject')}`;
@@ -387,7 +389,15 @@ async function emailOwnerReview(review) {
     ? `<p style="margin:14px 0;"><a href="${esc(review.photoUrl)}"><img src="${esc(review.photoUrl)}" alt="Customer photo" style="max-width:100%;border-radius:6px;border:1px solid #eee;" /></a></p>`
     : '<p style="color:#999;margin:14px 0;">No photo attached.</p>';
 
+  // If the Blobs write failed the review exists only in this email and in the
+  // Netlify Forms inbox — the Approve button below cannot work. Say so loudly
+  // rather than letting the owner discover it by clicking.
+  const storeWarning = storeError
+    ? `<div style="background:#fdecea;border:1px solid #f5c6c2;border-radius:6px;padding:12px 16px;margin:0 0 16px;color:#8b1c13;font-size:14px;"><b>Storage write failed — Approve/Reject will not work for this review.</b><br/>The full text is in this email; keep it. Error: ${esc(storeError)}</div>`
+    : '';
+
   const html = `<div style="font-family:system-ui,-apple-system,sans-serif;max-width:560px;line-height:1.55;">
+    ${storeWarning}
     <h2 style="margin:0 0 4px;">New review — pending your approval</h2>
     <p style="color:#a48a5a;font-size:20px;margin:0 0 2px;">${filled} <span style="color:#777;font-size:14px;">(${review.rating}/5)</span></p>
     <p style="color:#777;margin:0 0 14px;">${esc(review.authorName)}${metaLine ? ' · ' + metaLine : ''} · ${esc(review.authorEmail)}</p>
@@ -402,6 +412,7 @@ async function emailOwnerReview(review) {
   </div>`;
 
   const textLines = [
+    storeError ? `!! STORAGE WRITE FAILED — Approve/Reject links will not work. Keep this email. (${storeError})` : '',
     `New review pending approval — ${review.rating}/5`,
     `${review.authorName}${metaLine ? ' · ' + metaLine : ''} · ${review.authorEmail}`,
     review.title ? `Title: ${review.title}` : '',

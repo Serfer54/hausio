@@ -341,8 +341,8 @@ async function handleReview(data) {
   let stored = false;
   let storeError = '';
   try {
-    const { getStore } = require('@netlify/blobs');
-    await getStore('reviews').setJSON(id, review);
+    const { getReviewsStore } = require('../lib/reviews-store');
+    await getReviewsStore().setJSON(id, review);
     stored = true;
   } catch (err) {
     storeError = `${(err && err.name) || 'Error'}: ${(err && err.message) || String(err)}`;

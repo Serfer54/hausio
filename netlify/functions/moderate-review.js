@@ -5,7 +5,7 @@
 // (the same value used to sign the links in submission-created.js). Without a valid
 // token the request is rejected, so the links can't be forged or guessed.
 const crypto = require('crypto');
-const { getStore } = require('@netlify/blobs');
+const { getReviewsStore, hasManualBlobsConfig } = require('../lib/reviews-store');
 
 function escapeHtml(s) {
   return String(s == null ? '' : s).replace(/[<>&]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]));
@@ -40,18 +40,21 @@ function describeError(err) {
 // Blobs failures used to surface as one opaque "something went wrong". Report
 // which step broke instead, plus whether the store is reachable at all, so the
 // owner can act on it without digging through function logs.
-async function blobsDiagnostics(getStore) {
+async function blobsDiagnostics() {
   const lines = [];
-  lines.push(`NETLIFY_BLOBS_CONTEXT: ${process.env.NETLIFY_BLOBS_CONTEXT ? 'present' : 'MISSING'}`);
-  lines.push(`SITE_ID: ${process.env.SITE_ID ? 'present' : 'missing'} · NETLIFY_DEV: ${process.env.NETLIFY_DEV || 'no'}`);
+  lines.push(`auto context (NETLIFY_BLOBS_CONTEXT): ${process.env.NETLIFY_BLOBS_CONTEXT ? 'present' : 'MISSING'}`);
+  lines.push(`manual config: SITE_ID ${process.env.SITE_ID ? 'present' : 'missing'} · NETLIFY_BLOBS_TOKEN ${(process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN) ? 'present' : 'MISSING'} → manual mode ${hasManualBlobsConfig() ? 'ON' : 'off'}`);
   try {
-    const store = getStore('reviews');
+    const store = getReviewsStore();
     const listing = await store.list();
     const keys = ((listing && listing.blobs) || []).map((b) => b.key);
     lines.push(`store.list(): OK — ${keys.length} key(s)`);
     if (keys.length) lines.push(`keys: ${keys.slice(0, 10).join(', ')}`);
   } catch (err) {
     lines.push(`store.list(): FAILED — ${describeError(err)}`);
+    if (!hasManualBlobsConfig()) {
+      lines.push('Fix: add a Netlify personal access token as env var NETLIFY_BLOBS_TOKEN, then redeploy.');
+    }
   }
   return lines.join('\n');
 }
@@ -86,12 +89,12 @@ exports.handler = async (event) => {
   // into a generic 500 — store init, read and write fail for different reasons.
   let store;
   try {
-    store = getStore('reviews');
+    store = getReviewsStore();
   } catch (err) {
     console.error('[moderate-review] getStore failed:', describeError(err));
     return htmlResponse(500, 'Storage unavailable',
       'Netlify Blobs could not be opened, so this review cannot be updated.',
-      `step: getStore('reviews')\n${describeError(err)}\n\n${await blobsDiagnostics(getStore)}`);
+      `step: getReviewsStore()\n${describeError(err)}\n\n${await blobsDiagnostics()}`);
   }
 
   let review;
@@ -103,13 +106,13 @@ exports.handler = async (event) => {
     console.error('[moderate-review] read failed:', describeError(err));
     return htmlResponse(500, 'Read failed',
       'The review could not be read from storage.',
-      `step: store.get('${id}')\n${describeError(err)}\n\n${await blobsDiagnostics(getStore)}`);
+      `step: store.get('${id}')\n${describeError(err)}\n\n${await blobsDiagnostics()}`);
   }
 
   if (!review) {
     return htmlResponse(404, 'Not found',
       'This review is not in storage — it was most likely never saved (the write at submission time failed silently), or it has already been removed.',
-      `step: store.get('${id}') returned null\n\n${await blobsDiagnostics(getStore)}`);
+      `step: store.get('${id}') returned null\n\n${await blobsDiagnostics()}`);
   }
 
   review.status = action === 'publish' ? 'published' : 'rejected';
@@ -121,7 +124,7 @@ exports.handler = async (event) => {
     console.error('[moderate-review] write failed:', describeError(err));
     return htmlResponse(500, 'Write failed',
       'The review was read but the new status could not be saved.',
-      `step: store.setJSON('${id}')\n${describeError(err)}\n\n${await blobsDiagnostics(getStore)}`);
+      `step: store.setJSON('${id}')\n${describeError(err)}\n\n${await blobsDiagnostics()}`);
   }
 
   const who = escapeHtml(review.authorName || 'this review');

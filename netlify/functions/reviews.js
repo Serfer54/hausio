@@ -5,13 +5,13 @@
 // (status: pending) and flipped to "published" by moderate-review.js. This endpoint
 // exposes ONLY published reviews and ONLY public fields — never the reviewer's email
 // or any internal moderation data.
-const { getStore } = require('@netlify/blobs');
+const { getReviewsStore } = require('../lib/reviews-store');
 
 const PUBLIC_FIELDS = ['id', 'rating', 'title', 'body', 'authorName', 'avatarUrl', 'verified', 'service', 'borough', 'photoUrl', 'createdAt'];
 
 exports.handler = async () => {
   try {
-    const store = getStore('reviews');
+    const store = getReviewsStore();
     const listing = await store.list();
     const blobs = (listing && listing.blobs) || [];
 

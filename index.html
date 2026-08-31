@@ -117,7 +117,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
       "@id": "https://hausio.co.uk/#organization",
       "name": "Hausio",
       "legalName": "Hausio Ltd",
@@ -134,7 +138,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "priceRange": "££",
       "currenciesAccepted": "GBP",
       "paymentAccepted": "Credit Card, Debit Card, Apple Pay, Google Pay",
-      "foundingDate": "2025",
+      "foundingDate": "2026-04-19",
       "knowsAbout": [
         "House cleaning",
         "End of tenancy cleaning",
@@ -161,53 +165,169 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "longitude": -0.12776
       },
       "areaServed": [
-        { "@type": "City", "name": "London" },
-        { "@type": "AdministrativeArea", "name": "Greater London" },
-        { "@type": "AdministrativeArea", "name": "Camden" },
-        { "@type": "AdministrativeArea", "name": "Islington" },
-        { "@type": "AdministrativeArea", "name": "Hackney" },
-        { "@type": "AdministrativeArea", "name": "Tower Hamlets" },
-        { "@type": "AdministrativeArea", "name": "Southwark" },
-        { "@type": "AdministrativeArea", "name": "Lambeth" },
-        { "@type": "AdministrativeArea", "name": "Wandsworth" },
-        { "@type": "AdministrativeArea", "name": "Westminster" },
-        { "@type": "AdministrativeArea", "name": "Kensington & Chelsea" },
-        { "@type": "AdministrativeArea", "name": "Hammersmith & Fulham" },
-        { "@type": "AdministrativeArea", "name": "Greenwich" },
-        { "@type": "AdministrativeArea", "name": "Lewisham" },
-        { "@type": "AdministrativeArea", "name": "Brent" },
-        { "@type": "AdministrativeArea", "name": "Haringey" },
-        { "@type": "AdministrativeArea", "name": "Newham" },
-        { "@type": "AdministrativeArea", "name": "Waltham Forest" },
-        { "@type": "AdministrativeArea", "name": "Ealing" },
-        { "@type": "AdministrativeArea", "name": "Richmond upon Thames" },
-        { "@type": "AdministrativeArea", "name": "Merton" },
-        { "@type": "AdministrativeArea", "name": "Barnet" },
-        { "@type": "AdministrativeArea", "name": "Bromley" },
-        { "@type": "AdministrativeArea", "name": "Croydon" },
-        { "@type": "AdministrativeArea", "name": "Bexley" },
-        { "@type": "AdministrativeArea", "name": "Enfield" },
-        { "@type": "AdministrativeArea", "name": "Harrow" },
-        { "@type": "AdministrativeArea", "name": "Hillingdon" },
-        { "@type": "AdministrativeArea", "name": "Hounslow" },
-        { "@type": "AdministrativeArea", "name": "Kingston upon Thames" },
-        { "@type": "AdministrativeArea", "name": "Sutton" },
-        { "@type": "AdministrativeArea", "name": "Redbridge" },
-        { "@type": "AdministrativeArea", "name": "Havering" },
-        { "@type": "AdministrativeArea", "name": "Barking & Dagenham" }
+        {
+          "@type": "City",
+          "name": "London"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greater London"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Camden"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Islington"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hackney"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Tower Hamlets"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southwark"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lambeth"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wandsworth"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Westminster"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kensington & Chelsea"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hammersmith & Fulham"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greenwich"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lewisham"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Brent"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Haringey"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Newham"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Waltham Forest"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ealing"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Richmond upon Thames"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Merton"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Barnet"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bromley"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Croydon"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bexley"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Enfield"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Harrow"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hillingdon"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hounslow"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kingston upon Thames"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sutton"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Redbridge"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Havering"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Barking & Dagenham"
+        }
       ],
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "08:00",
-        "closes": "20:00"
-      }],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
       "sameAs": [
         "https://www.google.com/maps?cid=14006212585508995202",
         "https://find-and-update.company-information.service.gov.uk/company/17167561"
       ],
       "hasMap": "https://www.google.com/maps?cid=14006212585508995202",
-      "identifier": { "@type": "PropertyValue", "propertyID": "Companies House", "value": "17167561" },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Companies House",
+        "value": "17167561"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Hausio home services",
@@ -227,7 +347,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "price": "22",
               "priceCurrency": "GBP",
               "unitCode": "HUR",
-              "referenceQuantity": { "@type": "QuantitativeValue", "value": "2", "unitCode": "HUR" }
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "2",
+                "unitCode": "HUR"
+              }
             }
           },
           {
@@ -245,7 +369,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "price": "55",
               "priceCurrency": "GBP",
               "unitCode": "HUR",
-              "referenceQuantity": { "@type": "QuantitativeValue", "value": "2", "unitCode": "HUR" }
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "2",
+                "unitCode": "HUR"
+              }
             }
           },
           {
@@ -263,18 +391,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "price": "65",
               "priceCurrency": "GBP",
               "unitCode": "HUR",
-              "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitCode": "HUR" }
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "1",
+                "unitCode": "HUR"
+              }
             }
           }
         ]
-      }
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+44-7304-330614",
+          "email": "hausio.co.uk@proton.me",
+          "areaServed": "GB",
+          "availableLanguage": [
+            "en-GB"
+          ],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        }
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://hausio.co.uk/#website",
       "url": "https://hausio.co.uk/",
       "name": "Hausio",
-      "publisher": { "@id": "https://hausio.co.uk/#organization" },
+      "publisher": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
       "inLanguage": "en-GB"
     },
     {
@@ -365,7 +525,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-top">
-      <h1>Your home, perfectly cared for.</h1>
+      <p class="eyebrow">Your home, perfectly cared for.</p>
+      <h1>Cleaning, man and van and handyman across London.</h1>
       <p class="lede">Cleaning, man and van, handyman and home services across all 32 London boroughs — vetted, insured, and £0 to pay until the job's done.</p>
     </div>
     <div class="hero-visual">
@@ -504,14 +665,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<section class="testimonials" id="reviews" hidden>
+<section class="testimonials" id="reviews">
   <div class="container">
     <header class="section-head">
       <p class="eyebrow">Reviews</p>
       <h2>What London says about Hausio</h2>
       <p class="section-lede">Real jobs, real homes, real customers.</p>
     </header>
-    <div class="reviews-grid" id="reviews-grid"></div>
+    <div class="reviews-grid" id="reviews-grid">
+      <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars"><span class="filled">★★★★★</span></div><h3 class="review-title">Fantastic moving and cleaning service</h3><p class="review-body">I genuinely couldn't be happier with the service! I recently moved from West London to Central London, and the whole process was incredibly smooth from start to finish. Everything was arranged quickly and efficiently, and the move itself was completely stress-free. I also booked their end of tenancy cleaning service, and the team did an outstanding job. The property was left absolutely spotless, and everything was completed much faster than I expected.
+
+Also wanted to add that the team was super attentive and extremely careful with my belongings. I honestly couldn’t have asked for a better experience. I would definitely recommend them to anyone looking for a reliable moving company!</p><div class="review-author"><span class="review-avatar review-avatar-initial" aria-hidden="true">M</span><span class="review-meta"><b>Mary H.</b><small>Man and Van · Chiswick</small></span></div></article>
+    </div>
     <div class="how-cta">
       <a href="leave-a-review.html" class="btn btn-outline">Been a customer? Leave a review →</a>
     </div>
@@ -643,7 +808,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></li>
+        <li><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></li>
         <li><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></li>
         <li><a href="leave-a-review.html">Leave a review</a></li>
         <li>London, United Kingdom</li>

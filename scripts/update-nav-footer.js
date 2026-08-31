@@ -53,10 +53,10 @@ const FOOTER_PROSE_NEW = '<p>Man and Van · Handyman · Furniture Assembly · TV
 // Tel obfuscation — strip the visible number, JS fills it back at load time.
 // `tel:+447304330614` href is removed entirely; bots scanning for tel: prefix won't find it.
 const TEL_OLD = '<a href="tel:+447304330614">+44 7304 330 614</a>';
-const TEL_NEW = '<a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a>';
+const TEL_NEW = '<a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a>';
 
 const TEL_HERO_OLD = '<a href="tel:+447304330614" class="btn btn-outline">Call +44 7304 330 614</a>';
-const TEL_HERO_NEW = '<a href="#" data-tel data-tel-source="hero" class="btn btn-outline" rel="nofollow noopener">Call us — tap to dial</a>';
+const TEL_HERO_NEW = '<a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>';
 
 function walk(dir, out = []) {
   for (const name of fs.readdirSync(dir)) {

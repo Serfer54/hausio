@@ -50,36 +50,167 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Hausio Home Services in Kensington & Chelsea",
       "serviceType": "Home services",
       "description": "Cleaning, man and van, and handyman services across the London Borough of Kensington & Chelsea — including South Kensington, Chelsea, Notting Hill, Earl's Court, Knightsbridge (north), Holland Park, World's End, Brompton, Ladbroke Grove (south) (SW3, SW5, SW7, SW10, W8, W11, W14).",
-      "provider": { "@id": "https://hausio.co.uk/#organization" },
+      "provider": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "London Borough of Kensington & Chelsea",
-        "containedInPlace": { "@type": "City", "name": "London" }
+        "containedInPlace": {
+          "@type": "City",
+          "name": "London"
+        }
       },
       "url": "https://hausio.co.uk/areas/kensington-chelsea.html",
       "image": "https://hausio.co.uk/assets/hero-cleaning.jpg"
     },
     {
-      "@type": "Place",
-      "name": "Kensington & Chelsea, London",
-      "address": { "@type": "PostalAddress", "addressLocality": "Kensington & Chelsea", "addressRegion": "Greater London", "addressCountry": "GB" },
-      "containedInPlace": { "@type": "City", "name": "London" }
-    },
-    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hausio.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Areas", "item": "https://hausio.co.uk/areas/" },
-        { "@type": "ListItem", "position": 3, "name": "Kensington & Chelsea", "item": "https://hausio.co.uk/areas/kensington-chelsea.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hausio.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas",
+          "item": "https://hausio.co.uk/areas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kensington & Chelsea",
+          "item": "https://hausio.co.uk/areas/kensington-chelsea.html"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Do you work in mews houses and listed Chelsea properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — most of Chelsea (SW3) and South Kensington (SW7) is in a conservation area or has Listed status. We use reversible internal fixings, floor protection on period parquet, and lift rather than drag furniture out of period staircases. For Listed Building Consent issues (façade work, external alterations) we route those through our Part-P / surveyor partners, not ourselves." } },
-        { "@type": "Question", "name": "How do you handle the big mansion blocks (Kensington Court, Albert Hall Mansions)?", "acceptedAnswer": { "@type": "Answer", "text": "Mansion-block moves in W8 and SW7 require porter coordination — most blocks let us book the lift 48 hours ahead, restrict moves to 09:00–16:00 weekdays only (no weekends), and require ground-floor parking permits we arrange via the porter. Our team carries CSCS cards and ID for sign-in." } },
-        { "@type": "Question", "name": "Are your prices the same as outer London?", "acceptedAnswer": { "@type": "Answer", "text": "Same hourly rates — £22/hr cleaning, £55/hr man-and-van, £65 first hour handyman (2-hour minimum). The total often runs higher in Kensington & Chelsea because of (a) congestion-charge access (£18 added for SW3, SW7, SW10, W8, W14 inside the central zone), (b) parking permits the borough charges at premium rates, and (c) mansion-block coordination time. We quote everything up front, no surprises." } }
+        {
+          "@type": "Question",
+          "name": "Do you work in mews houses and listed Chelsea properties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — most of Chelsea (SW3) and South Kensington (SW7) is in a conservation area or has Listed status. We use reversible internal fixings, floor protection on period parquet, and lift rather than drag furniture out of period staircases. For Listed Building Consent issues (façade work, external alterations) we route those through our Part-P / surveyor partners, not ourselves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle the big mansion blocks (Kensington Court, Albert Hall Mansions)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mansion-block moves in W8 and SW7 require porter coordination — most blocks let us book the lift 48 hours ahead, restrict moves to 09:00–16:00 weekdays only (no weekends), and require ground-floor parking permits we arrange via the porter. Our team carries CSCS cards and ID for sign-in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your prices the same as outer London?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same hourly rates — £22/hr cleaning, £55/hr man-and-van, £65 first hour handyman (2-hour minimum). The total often runs higher in Kensington & Chelsea because of (a) congestion-charge access (£18 added for SW3, SW7, SW10, W8, W14 inside the central zone), (b) parking permits the borough charges at premium rates, and (c) mansion-block coordination time. We quote everything up front, no surprises."
+          }
+        }
       ]
+    },
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://hausio.co.uk/#organization",
+      "name": "Hausio",
+      "legalName": "Hausio Ltd",
+      "url": "https://hausio.co.uk/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hausio.co.uk/assets/logo.png"
+      },
+      "telephone": "+44-7304-330614",
+      "email": "hausio.co.uk@proton.me",
+      "priceRange": "££",
+      "foundingDate": "2026-04-19",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.50735,
+        "longitude": -0.12776
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Greater London"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Companies House",
+        "value": "17167561"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+44-7304-330614",
+          "email": "hausio.co.uk@proton.me",
+          "areaServed": "GB",
+          "availableLanguage": [
+            "en-GB"
+          ],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps?cid=14006212585508995202",
+        "https://find-and-update.company-information.service.gov.uk/company/17167561"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hausio.co.uk/#website",
+      "url": "https://hausio.co.uk/",
+      "name": "Hausio",
+      "description": "London home services — cleaning, man and van, handyman, across all 32 boroughs.",
+      "publisher": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
     }
   ]
 }
@@ -140,7 +271,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="lede">From South Kensington, Chelsea, Notting Hill, Earl's Court and beyond, Hausio sends DBS-checked, fully insured professionals across Kensington &amp; Chelsea.</p>
     <div class="hero-ctas">
       <a href="/book.html" class="btn btn-dark">Book in Kensington &amp; Chelsea →</a>
-      <a href="#" data-tel data-tel-source="hero" class="btn btn-outline" rel="nofollow noopener">Call us — tap to dial</a>
+      <a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>
     </div>
   </div>
 </section>
@@ -161,7 +292,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li>Eco products as standard</li>
           <li>72-hour re-clean if flagged</li>
         </ul>
-        <a href="/cleaning-london.html" class="btn btn-outline">Cleaning details</a>
+        <a href="/cleaning-kensington-chelsea.html" class="btn btn-outline">Cleaning details</a>
       </article>
 
       <article class="service-card">
@@ -307,7 +438,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div>
       <h4>Contact</h4>
-      <p><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></p>
+      <p><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></p>
       <p><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></p>
     </div>
   </div>

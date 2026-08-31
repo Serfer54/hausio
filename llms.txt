@@ -9,6 +9,10 @@
 - Booking: instant online quote at https://hausio.co.uk/book.html — pay £0 at booking, settle by card/Apple Pay/Google Pay after the job.
 - Hours: Monday–Sunday, 08:00–20:00.
 - Trust: DBS-checked and reference-vetted staff, £2M public liability + £25k goods-in-transit cover.
+- Surcharges: the only two are a flat £18 access charge inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) and a £15 same-day surcharge. No weekend or evening premium — the 08:00–20:00 rate is the same seven days a week.
+- Minimums: 2-hour minimum on cleaning, man and van, and handyman bookings.
+- Legal entity: Hausio Ltd, registered in England & Wales, company number 17167561 (https://find-and-update.company-information.service.gov.uk/company/17167561).
+- Phone: +44 7304 330614. Email: hausio.co.uk@proton.me.
 
 ## Services
 
@@ -23,7 +27,20 @@
 
 ## Areas
 
-- [All London areas we cover](https://hausio.co.uk/areas/): the 32 London boroughs, each with dedicated service pages (e.g. Camden, Hackney, Islington, Westminster, Tower Hamlets, Southwark, Lambeth, Wandsworth).
+Every one of the 8 services has a dedicated page for each of the 32 London boroughs — 256 local pages in total, at `https://hausio.co.uk/{service}-{borough}.html`, where `{service}` is one of `cleaning`, `handyman`, `man-and-van`, `furniture-assembly`, `tv-mounting`, `garden-clearance`, `waste-removal`, `painting-decorating`, and `{borough}` is the borough slug (e.g. `camden`, `hackney`, `tower-hamlets`, `waltham-forest`, `hammersmith-fulham`, `kensington-chelsea`, `barking-dagenham`, `richmond`, `kingston`).
+
+Each local page carries that borough's postcodes, ULEZ and controlled-parking-zone position, local pricing and borough-specific FAQs. Examples:
+
+- [Cleaners in Camden](https://hausio.co.uk/cleaning-camden.html): NW1, NW3, WC1 — regular £22/hr to end of tenancy £32/hr.
+- [Handyman in Camden](https://hausio.co.uk/handyman-camden.html): £65 first hour, then £50/hr, 15–30 min response across the borough.
+- [Man and van in Hackney](https://hausio.co.uk/man-and-van-hackney.html): E5, E8, E9, N1, N16 — £55/hr for 1 man + van.
+- [Cleaners in Tower Hamlets](https://hausio.co.uk/cleaning-tower-hamlets.html): E1, E2, E3, E14 including Canary Wharf.
+- [Handyman in Waltham Forest](https://hausio.co.uk/handyman-waltham-forest.html): E4, E10, E11, E17 including Blackhorse Road.
+- [Garden clearance in Bexley](https://hausio.co.uk/garden-clearance-bexley.html): DA1, DA5–DA8, DA14–DA16, SE2, SE9 — inside extended ULEZ, no charge passed on.
+- [TV mounting in Westminster](https://hausio.co.uk/tv-mounting-westminster.html): W1, SW1, WC2 including Oxford Street.
+- [Painting & decorating in Wandsworth](https://hausio.co.uk/painting-decorating-wandsworth.html): SW11, SW12, SW17, SW18.
+
+- [All London borough hubs](https://hausio.co.uk/areas/): index of all 32 hubs, each listing every service for that borough at `https://hausio.co.uk/areas/{borough}.html`.
 
 ## Company
 
@@ -42,3 +59,9 @@
 - [London ULEZ & Congestion Charge for home services](https://hausio.co.uk/blog/london-ulez-congestion-charge-2026.html): how charges affect moves and clearances.
 - [Renters' Rights Act & end-of-tenancy cleaning](https://hausio.co.uk/blog/renters-rights-act-end-of-tenancy-cleaning-2026.html): what tenants and landlords need to know.
 - [Spring deep-clean checklist for London homes](https://hausio.co.uk/blog/spring-deep-clean-checklist-london-2026.html): room-by-room deep clean guide.
+
+## Optional
+
+- [Our work](https://hausio.co.uk/portfolio.html): completed jobs.
+- [Privacy policy](https://hausio.co.uk/privacy.html): how customer data is handled.
+- [Full text of every service and blog page](https://hausio.co.uk/llms-full.txt): single-file version for retrieval.

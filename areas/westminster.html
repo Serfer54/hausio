@@ -50,32 +50,175 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Hausio Home Services in Westminster",
       "serviceType": "Home services",
       "description": "Cleaning, man and van, and handyman services across the City of Westminster — including Mayfair, Marylebone, Soho, Belgravia, Pimlico, Knightsbridge, Bayswater, Paddington, Maida Vale, St James's, Hyde Park and Covent Garden (W1, W2, SW1, NW8, WC2).",
-      "provider": { "@id": "https://hausio.co.uk/#organization" },
+      "provider": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "City of Westminster",
-        "containedInPlace": { "@type": "City", "name": "London" }
+        "containedInPlace": {
+          "@type": "City",
+          "name": "London"
+        }
       },
       "url": "https://hausio.co.uk/areas/westminster.html",
       "image": "https://hausio.co.uk/assets/hero-cleaning.jpg"
     },
-    { "@type": "Place", "name": "Westminster, London", "address": { "@type": "PostalAddress", "addressLocality": "Westminster", "addressRegion": "Greater London", "addressCountry": "GB" }, "containedInPlace": { "@type": "City", "name": "London" } },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hausio.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Areas", "item": "https://hausio.co.uk/areas/" },
-        { "@type": "ListItem", "position": 3, "name": "Westminster", "item": "https://hausio.co.uk/areas/westminster.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hausio.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas",
+          "item": "https://hausio.co.uk/areas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Westminster",
+          "item": "https://hausio.co.uk/areas/westminster.html"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Do you handle Mayfair and Belgravia mansion-block protocols?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — every Mayfair and Belgravia mansion block we work in has its own access protocol. Most need 24–48 hour lift booking through the head porter, photo ID for every team member, and floor and lift wall protection on the day. Some Belgravia squares (Eaton, Belgrave, Chester) have additional embassy-related security screenings. We've worked across all of them; provide the porter's direct line at booking and we coordinate the rest." } },
-        { "@type": "Question", "name": "How does the Congestion Charge and ULEZ affect my Westminster booking?", "acceptedAnswer": { "@type": "Answer", "text": "Almost all of Westminster sits inside the £15 daily Congestion Charge zone (07:00–18:00 weekdays, 12:00–18:00 weekends and bank holidays) plus the 24/7 ULEZ. Our flat £18 access charge for any Westminster booking covers both, regardless of how many trips we make on the day. We use ULEZ-compliant Euro 6 vans on every Westminster job — there's no surprise non-compliance fine on your invoice." } },
-        { "@type": "Question", "name": "Are your cleaners experienced with marble, parquet and antique flooring?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Westminster cleans regularly involve marble (Belgravia, Knightsbridge), antique parquet (Mayfair, St James's), original Edwardian tiles (Bayswater, Maida Vale) and stone flooring (Pimlico stuccos). Our cleaners use pH-neutral, marble-safe products as standard, and we never use steam on parquet or antique tile. If your building specifies particular product brands or restrictions, send those to us at booking and we'll match them." } },
-        { "@type": "Question", "name": "Can you handle moves with porter buildings, mews access and listed-building rules?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — that combination is normal for us in W1 and SW1. Mayfair mews (e.g. Bourdon Place, Three Kings Yard, Adam's Row) have very narrow access requiring small Transit-size vans rather than Lutons. Listed buildings prohibit alterations to façades, doorways, ironwork — we plan furniture-disassembly routes around the protections rather than removing original features. For very high-value moves (fine art, antiques) we extend goods-in-transit cover above £25,000 — declare the value at booking." } }
+        {
+          "@type": "Question",
+          "name": "Do you handle Mayfair and Belgravia mansion-block protocols?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — every Mayfair and Belgravia mansion block we work in has its own access protocol. Most need 24–48 hour lift booking through the head porter, photo ID for every team member, and floor and lift wall protection on the day. Some Belgravia squares (Eaton, Belgrave, Chester) have additional embassy-related security screenings. We've worked across all of them; provide the porter's direct line at booking and we coordinate the rest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Congestion Charge and ULEZ affect my Westminster booking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost all of Westminster sits inside the £15 daily Congestion Charge zone (07:00–18:00 weekdays, 12:00–18:00 weekends and bank holidays) plus the 24/7 ULEZ. Our flat £18 access charge for any Westminster booking covers both, regardless of how many trips we make on the day. We use ULEZ-compliant Euro 6 vans on every Westminster job — there's no surprise non-compliance fine on your invoice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your cleaners experienced with marble, parquet and antique flooring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Westminster cleans regularly involve marble (Belgravia, Knightsbridge), antique parquet (Mayfair, St James's), original Edwardian tiles (Bayswater, Maida Vale) and stone flooring (Pimlico stuccos). Our cleaners use pH-neutral, marble-safe products as standard, and we never use steam on parquet or antique tile. If your building specifies particular product brands or restrictions, send those to us at booking and we'll match them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you handle moves with porter buildings, mews access and listed-building rules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — that combination is normal for us in W1 and SW1. Mayfair mews (e.g. Bourdon Place, Three Kings Yard, Adam's Row) have very narrow access requiring small Transit-size vans rather than Lutons. Listed buildings prohibit alterations to façades, doorways, ironwork — we plan furniture-disassembly routes around the protections rather than removing original features. For very high-value moves (fine art, antiques) we extend goods-in-transit cover above £25,000 — declare the value at booking."
+          }
+        }
       ]
+    },
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://hausio.co.uk/#organization",
+      "name": "Hausio",
+      "legalName": "Hausio Ltd",
+      "url": "https://hausio.co.uk/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hausio.co.uk/assets/logo.png"
+      },
+      "telephone": "+44-7304-330614",
+      "email": "hausio.co.uk@proton.me",
+      "priceRange": "££",
+      "foundingDate": "2026-04-19",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.50735,
+        "longitude": -0.12776
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Greater London"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Companies House",
+        "value": "17167561"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+44-7304-330614",
+          "email": "hausio.co.uk@proton.me",
+          "areaServed": "GB",
+          "availableLanguage": [
+            "en-GB"
+          ],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps?cid=14006212585508995202",
+        "https://find-and-update.company-information.service.gov.uk/company/17167561"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hausio.co.uk/#website",
+      "url": "https://hausio.co.uk/",
+      "name": "Hausio",
+      "description": "London home services — cleaning, man and van, handyman, across all 32 boroughs.",
+      "publisher": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
     }
   ]
 }
@@ -132,7 +275,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="lede">Mayfair townhouses, Belgravia mansion blocks, Knightsbridge porter buildings, Pimlico stuccos and Maida Vale Edwardian flats — Westminster work means knowing porter protocols, ULEZ-compliant vans, and pH-neutral products on marble. Hausio is built for it.</p>
     <div class="hero-ctas">
       <a href="/book.html" class="btn btn-dark">Book in Westminster →</a>
-      <a href="#" data-tel data-tel-source="hero" class="btn btn-outline" rel="nofollow noopener">Call us — tap to dial</a>
+      <a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>
     </div>
   </div>
 </section>
@@ -153,7 +296,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li>Discreet, NDA-friendly service</li>
           <li>Porter-coordinated key handover</li>
         </ul>
-        <a href="/cleaning-london.html" class="btn btn-outline">Cleaning details</a>
+        <a href="/cleaning-westminster.html" class="btn btn-outline">Cleaning details</a>
       </article>
 
       <article class="service-card">
@@ -233,6 +376,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       Mayfair · Marylebone · Soho · Belgravia · Pimlico · Westminster · Victoria · St James's · Knightsbridge · Bayswater · Paddington · Maida Vale · Hyde Park · Covent Garden (boundary WC2) · St John's Wood (boundary NW8) · Lisson Grove · Marble Arch · Edgware Road
     </p>
     <div class="area-links" style="margin-top: 28px;">
+      <a href="/cleaning-westminster.html">Cleaning in Westminster →</a>
       <a href="/handyman-westminster.html">Handyman in Westminster →</a>
       <a href="/man-and-van-westminster.html">Man and Van in Westminster →</a>
       <a href="/furniture-assembly-westminster.html">Furniture Assembly in Westminster →</a>
@@ -304,7 +448,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div>
       <h4>Contact</h4>
       <ul>
-        <li><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></li>
+        <li><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></li>
         <li><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></li>
         <li>London, United Kingdom</li>
         <li>Mon–Sun · 8am–8pm</li>

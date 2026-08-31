@@ -14,8 +14,8 @@ Object.values(DATA).forEach(b => {
   newUrls.push({ loc: `https://hausio.co.uk/areas/${b.slug}.html`, priority: '0.7' });
 });
 
-// Service × borough pages (all 7 services)
-['handyman', 'man-and-van', 'furniture-assembly', 'tv-mounting', 'garden-clearance', 'waste-removal', 'painting-decorating'].forEach(svc => {
+// Service × borough pages (all 8 services)
+['cleaning', 'handyman', 'man-and-van', 'furniture-assembly', 'tv-mounting', 'garden-clearance', 'waste-removal', 'painting-decorating'].forEach(svc => {
   Object.values(DATA).forEach(b => {
     newUrls.push({ loc: `https://hausio.co.uk/${svc}-${b.slug}.html`, priority: '0.7' });
   });

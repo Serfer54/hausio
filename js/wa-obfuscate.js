@@ -39,6 +39,17 @@
       })(waEls[i]);
     }
 
+    // Real tel: links — the number is visible in the page and in the markup,
+    // so there is nothing to obfuscate. Track the click and let the browser dial.
+    var realTelEls = document.querySelectorAll('a[href^="tel:"]');
+    for (var k = 0; k < realTelEls.length; k++) {
+      (function (el) {
+        el.addEventListener('click', function () {
+          track('tel_click', el.dataset.telSource);
+        });
+      })(realTelEls[k]);
+    }
+
     var telEls = document.querySelectorAll('[data-tel]');
     for (var j = 0; j < telEls.length; j++) {
       (function (el) {

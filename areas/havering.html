@@ -50,35 +50,159 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Hausio Home Services in Havering",
       "serviceType": "Home services",
       "description": "Man and van, handyman, furniture assembly, garden clearance, waste removal and painting across the London Borough of Havering — including Romford, Hornchurch, Upminster, Rainham, Harold Hill, Collier Row, Elm Park, Cranham, Gidea Park (RM1, RM2, RM3, RM4, RM5, RM7, RM11, RM12, RM13, RM14).",
-      "provider": { "@id": "https://hausio.co.uk/#organization" },
+      "provider": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "London Borough of Havering",
-        "containedInPlace": { "@type": "City", "name": "London" }
+        "containedInPlace": {
+          "@type": "City",
+          "name": "London"
+        }
       },
       "url": "https://hausio.co.uk/areas/havering.html",
       "image": "https://hausio.co.uk/assets/hero-cleaning.jpg"
     },
     {
-      "@type": "Place",
-      "name": "Havering, London",
-      "address": { "@type": "PostalAddress", "addressLocality": "Havering", "addressRegion": "Greater London", "addressCountry": "GB" },
-      "containedInPlace": { "@type": "City", "name": "London" }
-    },
-    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hausio.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Areas", "item": "https://hausio.co.uk/areas/" },
-        { "@type": "ListItem", "position": 3, "name": "Havering", "item": "https://hausio.co.uk/areas/havering.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hausio.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas",
+          "item": "https://hausio.co.uk/areas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Havering",
+          "item": "https://hausio.co.uk/areas/havering.html"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Do you cover Havering?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we cover all Havering postcodes (RM1, RM2, RM3, RM4, RM5, RM7, RM11, RM12, RM13, RM14) at standard hourly rates. Romford, Hornchurch, Upminster, Rainham, Harold Hill and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays." } },
-        { "@type": "Question", "name": "Are prices the same as central London?", "acceptedAnswer": { "@type": "Answer", "text": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after, 2-hour minimum. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)." } }
+        {
+          "@type": "Question",
+          "name": "Do you cover Havering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we cover all Havering postcodes (RM1, RM2, RM3, RM4, RM5, RM7, RM11, RM12, RM13, RM14) at standard hourly rates. Romford, Hornchurch, Upminster, Rainham, Harold Hill and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are prices the same as central London?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same hourly rates across all London boroughs — £55/hr for 1 man and van, £85/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after, 2-hour minimum. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden)."
+          }
+        }
       ]
+    },
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://hausio.co.uk/#organization",
+      "name": "Hausio",
+      "legalName": "Hausio Ltd",
+      "url": "https://hausio.co.uk/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hausio.co.uk/assets/logo.png"
+      },
+      "telephone": "+44-7304-330614",
+      "email": "hausio.co.uk@proton.me",
+      "priceRange": "££",
+      "foundingDate": "2026-04-19",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.50735,
+        "longitude": -0.12776
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Greater London"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Companies House",
+        "value": "17167561"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+44-7304-330614",
+          "email": "hausio.co.uk@proton.me",
+          "areaServed": "GB",
+          "availableLanguage": [
+            "en-GB"
+          ],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps?cid=14006212585508995202",
+        "https://find-and-update.company-information.service.gov.uk/company/17167561"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hausio.co.uk/#website",
+      "url": "https://hausio.co.uk/",
+      "name": "Hausio",
+      "description": "London home services — cleaning, man and van, handyman, across all 32 boroughs.",
+      "publisher": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
     }
   ]
 }
@@ -139,7 +263,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="lede">From Romford, Hornchurch, Upminster, Rainham and beyond, Hausio sends DBS-checked, fully insured professionals across Havering.</p>
     <div class="hero-ctas">
       <a href="/book.html" class="btn btn-dark">Book in Havering →</a>
-      <a href="#" data-tel data-tel-source="hero" class="btn btn-outline" rel="nofollow noopener">Call us — tap to dial</a>
+      <a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>
     </div>
   </div>
 </section>
@@ -237,6 +361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       Romford · Hornchurch · Upminster · Rainham · Harold Hill · Collier Row · Elm Park · Cranham · Gidea Park
     </p>
     <div class="area-links" style="margin-top: 28px;">
+      <a href="/cleaning-havering.html">Cleaning in Havering →</a>
       <a href="/handyman-havering.html">Handyman in Havering →</a>
       <a href="/man-and-van-havering.html">Man and Van in Havering →</a>
       <a href="/furniture-assembly-havering.html">Furniture Assembly in Havering →</a>
@@ -306,7 +431,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div>
       <h4>Contact</h4>
-      <p><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></p>
+      <p><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></p>
       <p><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></p>
     </div>
   </div>

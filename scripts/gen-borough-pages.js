@@ -14,6 +14,10 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'boroughs.json'), 'utf8'));
+
+const entity = require('./lib/entity');
+const ORG_JSON = entity.nodeJson(entity.orgNode(), 4);
+const SITE_JSON = entity.nodeJson(entity.websiteNode(), 4);
 const OUT_DIR = path.join(ROOT, 'areas');
 
 const args = process.argv.slice(2);
@@ -166,11 +170,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "${url}#webpage",
+      "url": "${url}",
+      "name": "${escJson(title)}",
+      "inLanguage": "en-GB",
+      "isPartOf": { "@id": "https://hausio.co.uk/#website" },
+      "about": { "@id": "https://hausio.co.uk/#organization" },
+      "breadcrumb": { "@id": "${url}#breadcrumb" },
+      "mainEntity": [
+        { "@id": "${url}#service" },
+        { "@id": "${url}#faq" }
+      ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".hero h1", ".hero .lede"]
+      }
+    },
+    {
       "@type": "Service",
       "@id": "${url}#service",
       "name": "Hausio Home Services in ${escJson(b.name)}",
       "serviceType": "Home services",
-      "description": "Man and van, handyman, furniture assembly, garden clearance, waste removal and painting across the London Borough of ${escJson(b.name)} — including ${escJson(b.neighborhoods.join(', '))} (${escJson(b.postcodes.join(', '))}).",
+      "description": "Cleaning, man and van, handyman, furniture assembly, TV mounting, garden clearance, waste removal and painting across the London Borough of ${escJson(b.name)} — including ${escJson(b.neighborhoods.join(', '))} (${escJson(b.postcodes.join(', '))}).",
       "provider": { "@id": "https://hausio.co.uk/#organization" },
       "areaServed": {
         "@type": "AdministrativeArea",
@@ -178,16 +200,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "containedInPlace": { "@type": "City", "name": "London" }
       },
       "url": "${url}",
-      "image": "https://hausio.co.uk/assets/hero-cleaning.jpg"
-    },
-    {
-      "@type": "Place",
-      "name": "${escJson(b.name)}, London",
-      "address": { "@type": "PostalAddress", "addressLocality": "${escJson(b.name)}", "addressRegion": "Greater London", "addressCountry": "GB" },
-      "containedInPlace": { "@type": "City", "name": "London" }
+      "image": "https://hausio.co.uk/assets/hero-cleaning.jpg",
+      "priceRange": "££",
+      "termsOfService": "https://hausio.co.uk/book.html"
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "${url}#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hausio.co.uk/" },
         { "@type": "ListItem", "position": 2, "name": "Areas", "item": "https://hausio.co.uk/areas/" },
@@ -196,10 +215,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     },
     {
       "@type": "FAQPage",
+      "@id": "${url}#faq",
+      "isPartOf": { "@id": "${url}#webpage" },
       "mainEntity": [
 ${(b.faq || []).map(renderFaqSchema).join(',\n')}
       ]
-    }
+    },
+${ORG_JSON},
+${SITE_JSON}
   ]
 }
 </script>
@@ -259,7 +282,7 @@ ${(b.faq || []).map(renderFaqSchema).join(',\n')}
     <p class="lede">From ${esc(b.neighborhoods.slice(0, 4).join(', '))} and beyond, Hausio sends DBS-checked, fully insured professionals across ${esc(b.name)}.</p>
     <div class="hero-ctas">
       <a href="/book.html" class="btn btn-dark">Book in ${esc(b.name)} →</a>
-      <a href="#" data-tel data-tel-source="hero" class="btn btn-outline" rel="nofollow noopener">Call us — tap to dial</a>
+      <a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>
     </div>
   </div>
 </section>
@@ -356,7 +379,7 @@ ${(b.faq || []).map(renderFaqHtml).join('\n')}
     </div>
     <div>
       <h4>Contact</h4>
-      <p><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></p>
+      <p><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></p>
       <p><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></p>
     </div>
   </div>

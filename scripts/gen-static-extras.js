@@ -95,7 +95,7 @@ const FOOTER = `<footer class="site-footer">
     </div>
     <div>
       <h4>Contact</h4>
-      <p><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></p>
+      <p><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></p>
       <p><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></p>
     </div>
   </div>

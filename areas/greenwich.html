@@ -50,36 +50,167 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Hausio Home Services in Greenwich",
       "serviceType": "Home services",
       "description": "Cleaning, man and van, and handyman services across the London Borough of Greenwich — including Greenwich, Blackheath, Charlton, Woolwich, Eltham, Kidbrooke, New Eltham, Royal Arsenal, Greenwich Peninsula (SE3, SE10, SE18, SE7, SE9).",
-      "provider": { "@id": "https://hausio.co.uk/#organization" },
+      "provider": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "London Borough of Greenwich",
-        "containedInPlace": { "@type": "City", "name": "London" }
+        "containedInPlace": {
+          "@type": "City",
+          "name": "London"
+        }
       },
       "url": "https://hausio.co.uk/areas/greenwich.html",
       "image": "https://hausio.co.uk/assets/hero-cleaning.jpg"
     },
     {
-      "@type": "Place",
-      "name": "Greenwich, London",
-      "address": { "@type": "PostalAddress", "addressLocality": "Greenwich", "addressRegion": "Greater London", "addressCountry": "GB" },
-      "containedInPlace": { "@type": "City", "name": "London" }
-    },
-    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hausio.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Areas", "item": "https://hausio.co.uk/areas/" },
-        { "@type": "ListItem", "position": 3, "name": "Greenwich", "item": "https://hausio.co.uk/areas/greenwich.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hausio.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas",
+          "item": "https://hausio.co.uk/areas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Greenwich",
+          "item": "https://hausio.co.uk/areas/greenwich.html"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Do you work in the Greenwich Peninsula towers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Upper Riverside, Lower Riverside, Greenwich Reach, Aspen, Plimsoll Building. All require goods-lift booking 24–48h ahead and concierge sign-in. Our team carries CSCS cards. The peninsula is well-organised — most blocks have dedicated weekday move-in slots." } },
-        { "@type": "Question", "name": "Are you ULEZ-compliant for Greenwich jobs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — all our vans are ULEZ-compliant, so there's no extra charge for you. The extended ULEZ now covers all Greenwich addresses, but we don't pass any compliance cost on." } },
-        { "@type": "Question", "name": "How do you handle Cutty Sark tourist traffic on Saturdays?", "acceptedAnswer": { "@type": "Answer", "text": "Saturdays around Cutty Sark, the Old Royal Naval College and Greenwich Market are gridlocked 11:00–17:00. We slot SE10 town-centre moves either before 09:00 or after 18:00. For Greenwich Peninsula and Blackheath Village (no tourist gridlock) any time works." } }
+        {
+          "@type": "Question",
+          "name": "Do you work in the Greenwich Peninsula towers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Upper Riverside, Lower Riverside, Greenwich Reach, Aspen, Plimsoll Building. All require goods-lift booking 24–48h ahead and concierge sign-in. Our team carries CSCS cards. The peninsula is well-organised — most blocks have dedicated weekday move-in slots."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you ULEZ-compliant for Greenwich jobs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — all our vans are ULEZ-compliant, so there's no extra charge for you. The extended ULEZ now covers all Greenwich addresses, but we don't pass any compliance cost on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle Cutty Sark tourist traffic on Saturdays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Saturdays around Cutty Sark, the Old Royal Naval College and Greenwich Market are gridlocked 11:00–17:00. We slot SE10 town-centre moves either before 09:00 or after 18:00. For Greenwich Peninsula and Blackheath Village (no tourist gridlock) any time works."
+          }
+        }
       ]
+    },
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://hausio.co.uk/#organization",
+      "name": "Hausio",
+      "legalName": "Hausio Ltd",
+      "url": "https://hausio.co.uk/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hausio.co.uk/assets/logo.png"
+      },
+      "telephone": "+44-7304-330614",
+      "email": "hausio.co.uk@proton.me",
+      "priceRange": "££",
+      "foundingDate": "2026-04-19",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.50735,
+        "longitude": -0.12776
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Greater London"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Companies House",
+        "value": "17167561"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+44-7304-330614",
+          "email": "hausio.co.uk@proton.me",
+          "areaServed": "GB",
+          "availableLanguage": [
+            "en-GB"
+          ],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps?cid=14006212585508995202",
+        "https://find-and-update.company-information.service.gov.uk/company/17167561"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hausio.co.uk/#website",
+      "url": "https://hausio.co.uk/",
+      "name": "Hausio",
+      "description": "London home services — cleaning, man and van, handyman, across all 32 boroughs.",
+      "publisher": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
     }
   ]
 }
@@ -140,7 +271,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="lede">From Greenwich, Blackheath, Charlton, Woolwich and beyond, Hausio sends DBS-checked, fully insured professionals across Greenwich.</p>
     <div class="hero-ctas">
       <a href="/book.html" class="btn btn-dark">Book in Greenwich →</a>
-      <a href="#" data-tel data-tel-source="hero" class="btn btn-outline" rel="nofollow noopener">Call us — tap to dial</a>
+      <a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>
     </div>
   </div>
 </section>
@@ -161,7 +292,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li>Eco products as standard</li>
           <li>72-hour re-clean if flagged</li>
         </ul>
-        <a href="/cleaning-london.html" class="btn btn-outline">Cleaning details</a>
+        <a href="/cleaning-greenwich.html" class="btn btn-outline">Cleaning details</a>
       </article>
 
       <article class="service-card">
@@ -241,6 +372,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       Greenwich · Blackheath · Charlton · Woolwich · Eltham · Kidbrooke · New Eltham · Royal Arsenal · Greenwich Peninsula
     </p>
     <div class="area-links" style="margin-top: 28px;">
+      <a href="/cleaning-greenwich.html">Cleaning in Greenwich →</a>
       <a href="/handyman-greenwich.html">Handyman in Greenwich →</a>
       <a href="/man-and-van-greenwich.html">Man and Van in Greenwich →</a>
       <a href="/furniture-assembly-greenwich.html">Furniture Assembly in Greenwich →</a>
@@ -307,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div>
       <h4>Contact</h4>
-      <p><a href="#" data-tel data-tel-source="footer" rel="nofollow noopener">Call us</a></p>
+      <p><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></p>
       <p><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></p>
     </div>
   </div>

@@ -117,7 +117,7 @@ ${renderTable(h)}
 `;
 }
 
-const CSS_ANCHOR = '<link rel="stylesheet" href="css/style.css?v=16" />';
+const CSS_ANCHOR = '<link rel="stylesheet" href="css/style.css?v=17" />';
 let done = 0;
 for (const [file, h] of Object.entries(HUBS)) {
   const fp = path.join(ROOT, file);

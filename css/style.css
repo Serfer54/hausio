@@ -2276,3 +2276,21 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   .review-form .field-row { flex-direction: column; gap: 0; }
 }
 
+
+/* Google review prompt on the review page — a Google review is worth more than
+   an on-site one: it feeds the local pack and the AI answers, an on-site one does not. */
+.review-google {
+  background: var(--linen);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 0 0 28px;
+  text-align: center;
+}
+.review-google p { margin: 0 0 14px; }
+.review-google p:last-child { margin-bottom: 0; }
+.review-google .btn { margin: 0 auto; }
+.review-google-or {
+  font-size: 0.9rem;
+  color: var(--muted);
+}

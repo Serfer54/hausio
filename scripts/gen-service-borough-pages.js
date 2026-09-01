@@ -31,6 +31,18 @@ const SERVICES = {
       'End of tenancy £32/hr',
     ],
     pricingNote: '2-hour minimum. All products and equipment included. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access.',
+    totals: {
+      title: 'What a full end-of-tenancy clean costs in {borough}',
+      head: ['Property', 'Typical total'],
+      rows: [
+        ['Studio', '£180–£240'],
+        ['1-bed flat', '£220–£300'],
+        ['2-bed flat', '£280–£380'],
+        ['3-bed house', '£400–£520'],
+        ['4-bed house', '£550–£620'],
+      ],
+      note: 'Add-ons where needed: oven and fridge +£40–£80, limescale-heavy bathroom +£25–£50, carpets +£30–£60 per room. Quoted up front, never added afterwards.',
+    },
     bookParam: 'service=cleaning',
     schemaServiceType: 'House cleaning',
     priceLow: '22',
@@ -457,6 +469,31 @@ function renderFaqHtml(f) {
   return `      <details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`;
 }
 
+// Whole-job totals, not just the hourly rate.
+// The GSC "AI features" report shows the pages that actually earn AI impressions
+// are the ones answering "what will this cost me in total" with a concrete
+// number per item or property size — furniture assembly and TV mounting lead
+// on exactly that. Hourly rates alone do not answer the question.
+function renderTotals(service, b) {
+  if (!service.totals) return '';
+  return `
+    <div class="pricing-totals" style="max-width:680px;margin:28px auto 0;">
+      <h3 style="text-align:center;font-size:1.05rem;margin-bottom:14px;">${esc(service.totals.title.replace(/\{borough\}/g, b.name))}</h3>
+      <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);">${esc(service.totals.head[0])}</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:1px solid var(--line);">${esc(service.totals.head[1])}</th>
+          </tr>
+        </thead>
+        <tbody>
+${service.totals.rows.map(r => `          <tr><td style="padding:10px 12px;border-bottom:1px solid var(--line);">${esc(r[0])}</td><td style="padding:10px 12px;border-bottom:1px solid var(--line);text-align:right;">${esc(r[1])}</td></tr>`).join('\n')}
+        </tbody>
+      </table>
+      <p style="text-align:center;color:var(--muted);margin-top:14px;font-size:0.9rem;">${esc(service.totals.note)}</p>
+    </div>`;
+}
+
 function renderOffer(o) {
   const unit = o.unit
     ? `, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "${o.price}", "priceCurrency": "GBP", "unitCode": "${o.unit}" }`
@@ -709,6 +746,7 @@ ${snippets.map(renderSnippet).join('\n')}
 ${service.pricingItems.map(i => `      <li>${esc(i)}</li>`).join('\n')}
     </ul>
     <p style="text-align:center;color:var(--muted);margin-top:16px;">${esc(service.pricingNote)}</p>
+${renderTotals(service, b)}
   </div>
 </section>
 

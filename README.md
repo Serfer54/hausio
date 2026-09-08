@@ -42,8 +42,9 @@ python -m http.server -d Hausio 8000
 
 | Service    | Rate |
 |------------|------|
-| Cleaning (regular)     | £22/hr |
-| Cleaning (deep)        | £28/hr |
+| Cleaning (one-off)     | £30/hr |
+| Cleaning (regular)     | £27/hr |
+| Cleaning (deep)        | £45/hr |
 | Cleaning (end of tenancy) | £32/hr |
 | Man and Van (1 man + van) | £55/hr |
 | Man and Van (2 men + van) | £85/hr |
@@ -51,6 +52,8 @@ python -m http.server -d Hausio 8000
 | Handyman (1st hour)    | £65 |
 | Handyman (subsequent)  | £50/hr |
 | Gardening              | £40/hr |
+
+All cleaning bookings have a 5-hour minimum per cleaner. Optional products cost £15 per visit; larger-home supplements and extras are calculated separately.
 
 Competitive with Housekeep, ARO Multi Services, and major London man-and-van operators.
 

@@ -22,15 +22,15 @@ const SERVICES = {
     label: 'cleaning',
     framingKey: 'cleaning',
     heroAsset: 'service-cleaning.jpg',
-    headline: 'House cleaning in {borough} — vetted, insured, eco products included.',
-    leadeTpl: 'Regular, one-off, deep, end-of-tenancy and after-builders cleaning across {borough}. Same cleaner each visit where you want one, all products and equipment brought with us, nothing to pay until the clean is done.',
+    headline: 'House cleaning in {borough} — vetted, insured, care for your home.',
+    leadeTpl: 'Regular, one-off, deep, end-of-tenancy and after-builders cleaning across {borough}. Same cleaner each visit where you want one, optional eco-friendly products for £15 per visit, nothing to pay until the clean is done.',
     pricingItems: [
-      'Regular clean £22/hr',
-      'One-off clean £26/hr',
-      'Deep & after-builders £28/hr',
+      'Regular clean £27/hr',
+      'One-off clean £30/hr',
+      'Deep £45/hr · after-builders £30/hr',
       'End of tenancy £32/hr',
     ],
-    pricingNote: '2-hour minimum. All products and equipment included. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access.',
+    pricingNote: '5-hour minimum. Optional products +£15 per visit. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access.',
     totals: {
       title: 'What a full end-of-tenancy clean costs in {borough}',
       head: ['Property', 'Typical total'],
@@ -45,28 +45,28 @@ const SERVICES = {
     },
     bookParam: 'service=cleaning',
     schemaServiceType: 'House cleaning',
-    priceLow: '22',
-    priceHigh: '32',
+    priceLow: '27',
+    priceHigh: '45',
     offers: [
-      { name: 'Regular clean', price: '22', unit: 'HUR' },
-      { name: 'One-off clean', price: '26', unit: 'HUR' },
-      { name: 'Deep clean', price: '28', unit: 'HUR' },
-      { name: 'After-builders clean', price: '28', unit: 'HUR' },
+      { name: 'Regular clean', price: '27', unit: 'HUR' },
+      { name: 'One-off clean', price: '30', unit: 'HUR' },
+      { name: 'Deep clean', price: '45', unit: 'HUR' },
+      { name: 'After-builders clean', price: '30', unit: 'HUR' },
       { name: 'End of tenancy clean', price: '32', unit: 'HUR' },
     ],
-    framingDefault: (b) => `Cleaning in ${b.name} is split between regular weekly and fortnightly visits in occupied flats and one-off end-of-tenancy cleans against a letting agent's inventory. We bring our own products and equipment, work to the inventory where a deposit is at stake, and send the same cleaner back where you want continuity.`,
-    title: (b) => `Cleaners in ${b.name}, London — From £22/hr | Hausio`,
-    description: (b, framing) => `House cleaning in ${b.name} ${b.headlinePostcodes}. Regular £22/hr, one-off £26/hr, deep £28/hr, end of tenancy £32/hr. ${trimWords(framing, 90)}`,
+    framingDefault: (b) => `Cleaning in ${b.name} is split between regular weekly and fortnightly visits in occupied flats and one-off end-of-tenancy cleans against a letting agent's inventory. We offer eco-friendly products for £15 per visit, work to the inventory where a deposit is at stake, and send the same cleaner back where you want continuity.`,
+    title: (b) => `Cleaners in ${b.name}, London — From £27/hr | Hausio`,
+    description: (b, framing) => `House cleaning in ${b.name} ${b.headlinePostcodes}. Regular £27/hr, one-off £30/hr, deep £45/hr, end of tenancy £32/hr. ${trimWords(framing, 90)}`,
     cards: [
       {
         title: 'Regular & one-off cleaning',
         body: 'Weekly, fortnightly or one-off visits — kitchens, bathrooms, floors, dusting, beds changed and bins out. Same cleaner each visit where you want continuity, and a key-safe arrangement if you are out at work.',
-        bullets: ['Regular £22/hr · one-off £26/hr', 'Same cleaner on request', 'All products and equipment included', 'Key-safe or keyholder arrangements'],
+        bullets: ['Regular £27/hr · one-off £30/hr', 'Same cleaner on request', 'Optional products +£15 per visit', 'Key-safe or keyholder arrangements'],
       },
       {
         title: 'Deep & after-builders cleaning',
         body: 'Limescale, oven interiors, extractor filters, skirting, behind and under appliances, window sills and frames. After a renovation we take the dust down in stages so it does not settle back onto what we just cleaned.',
-        bullets: ['Deep and after-builders £28/hr', 'Oven interiors and extractor filters', 'Limescale and grout treatment', 'Post-renovation dust in stages'],
+        bullets: ['Deep £45/hr · after-builders £30/hr', 'Oven interiors and extractor filters', 'Limescale and grout treatment', 'Post-renovation dust in stages'],
       },
       {
         title: 'End of tenancy cleaning',
@@ -407,7 +407,7 @@ const SERVICES = {
 // {borough} tokens are replaced per page.
 const SERVICE_FAQS = {
   cleaning: [
-    { q: 'How much does a cleaner cost in {borough}?', a: 'A cleaner in {borough} is £22/hour for a regular clean, £26/hour one-off, £28/hour for a deep or after-builders clean and £32/hour for end of tenancy, with a 2-hour minimum. All products and equipment are included and there is nothing to pay until the clean is done. A typical 2-bed flat regular clean runs 3 hours.' },
+    { q: 'How much does a cleaner cost in {borough}?', a: 'A cleaner in {borough} is £27/hour for a regular clean, £30/hour one-off, £45/hour for a deep clean, £30/hour for an after-builders clean and £32/hour for end of tenancy, with a 5-hour minimum. Cleaning products can be added for £15 per visit and there is nothing to pay until the clean is done. A typical 2-bed flat regular clean has a 5-hour minimum.' },
     { q: 'How much is end of tenancy cleaning in {borough}?', a: 'End of tenancy cleaning in {borough} is £32/hour, which usually works out at £180–£240 for a studio, £220–£300 for a 1-bed, £280–£380 for a 2-bed and £400–£520 for a 3-bed. We work against the inventory your agent will check against and give you a receipt for them.' },
   ],
   handyman: [

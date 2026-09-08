@@ -31,7 +31,7 @@
   /* ---------- Pricing model ---------- */
   const PRICES = {
     cleaning: {
-      regular: 22, 'one-off': 26, deep: 28, eot: 32, builders: 30,
+      regular: 27, 'one-off': 30, deep: 45, eot: 32, builders: 30,
       extras: { oven: 25, fridge: 15, windows: 20, ironing: 20, laundry: 15 },
       supplies: { own: 0, hausio: 15 },
       bedroomSurcharge: 4,   // per bedroom beyond 2
@@ -298,10 +298,11 @@
 
     if (service === 'cleaning') {
       const type = form['clean-type'].value;
-      const hours = Number(form['clean-hours'].value);
+      const hours = Math.max(5, Number(form['clean-hours'].value) || 5);
+      form['clean-hours'].value = String(hours);
       const beds = Number(form['clean-bed'].value);
       const baths = Number(form['clean-bath'].value);
-      const rate = PRICES.cleaning[type] || 22;
+      const rate = PRICES.cleaning[type] || PRICES.cleaning['one-off'];
       const subtotal = rate * hours;
       lines.push([labelCleanType(type) + ' · ' + hours + 'h', '£' + subtotal]);
       total += subtotal;

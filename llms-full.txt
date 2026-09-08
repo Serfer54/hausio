@@ -4,7 +4,7 @@ London home services: cleaning, man and van, handyman, furniture assembly, TV mo
 
 This file carries the full text of the service pages, company pages and blog. The 256 local service × borough pages follow the URL pattern https://hausio.co.uk/{service}-{borough}.html and are listed in https://hausio.co.uk/llms.txt
 
-Generated: 2026-08-31
+Generated: 2026-09-08
 
 ---
 
@@ -17,34 +17,95 @@ Cleaning · London
 
 # House cleaning in London — vetted, insured, eco-friendly.
 
-Regular weekly cleans, deep cleans, end-of-tenancy and after-builders cleans across every London borough. Transparent hourly pricing from £22, all supplies included, and a team that's been DBS-checked and trained in person.
+Regular weekly cleans, deep cleans, end-of-tenancy and after-builders cleans across every London borough. Transparent hourly pricing from £27, optional cleaning products (+£15 per visit), and a team that's been DBS-checked and trained in person.
 
 Book a clean →
 Call +44 7304 330614
 
 ## How much does a house cleaner cost in London?
 
-A house cleaner in London costs £22–£32 per hour with Hausio: regular £22/hr, one-off £26/hr, deep cleans £28/hr and end-of-tenancy £32/hr — with a 2-hour minimum and all products and equipment included. A full end-of-tenancy clean typically totals £180–£620 depending on the size of the property.
+A house cleaner in London costs £27–£45 per hour with Hausio: regular £27/hr, one-off £30/hr, deep cleans £45/hr and end-of-tenancy £32/hr — with a 5-hour minimum and cleaning products optional (+£15 per visit). A full end-of-tenancy clean typically totals £180–£620 depending on the size of the property.
 
 Hausio London cleaning prices (2026)
 
 Clean type | Price |
 
-Regular (weekly / fortnightly) | £22/hr |
+Regular (weekly / fortnightly) | £27/hr |
 
-One-off clean | £26/hr |
+One-off clean | £30/hr |
 
-Deep clean | £28/hr |
+Deep clean | £45/hr |
 
-After-builders clean | £28/hr |
+After-builders clean | £30/hr |
 
 End of tenancy | £32/hr |
 
-2-hour minimum · all products & equipment included · Congestion Zone (EC, WC, W1, SW1, SE1) +£18.
+5-hour minimum · optional products +£15 per visit · Congestion Zone (EC, WC, W1, SW1, SE1) +£18.
+
+### What a full end-of-tenancy clean costs in London
+
+Property |
+Typical total |
+
+Studio | £180–£240 |
+
+1-bed flat | £220–£300 |
+
+2-bed flat | £280–£380 |
+
+3-bed house | £400–£520 |
+
+4-bed house | £550–£620 |
+
+Add-ons where needed: oven and fridge +£40–£80, limescale-heavy bathroom +£25–£50, carpets +£30–£60 per room. Quoted up front, never added afterwards.
+
+A clean home, on your terms
+
+## The right clean for your routine.
+
+Three simple hourly rates. A minimum of 5 hours per cleaner, with your estimate shown before you book.
+
+A fresh start
+
+### One-off cleaning
+
+£30 / hour
+
+From £150 · 5 hours
+
+A helping hand when you need it. Kitchens, bathrooms, floors and everyday dust, taken care of.
+
+Book a one-off clean →
+
+Your weekly rhythm
+
+### Regular cleaning
+
+£27 / hour
+
+From £135 · 5 hours
+
+Keep your home feeling its best with weekly or fortnightly visits. The same cleaner on request.
+
+Book regular cleaning →
+
+Time for a thorough reset
+
+### Deep cleaning
+
+£45 / hour
+
+From £225 · 5 hours
+
+Extra attention for built-up grime, skirting boards and hard-to-reach areas. A more detailed clean.
+
+Book a deep clean →
+
+Base labour prices for up to 2 bedrooms and 1 bathroom. Larger homes, extra tasks and optional products (+£15 per visit) cost extra. Central London access adds £18 where applicable. Your calculator shows the breakdown.
 
 Cleaning services we offer
 
-All cleans include eco products, equipment and full insurance.
+All cleans have a 5-hour minimum. Use your own products or add our eco-friendly products for £15 per visit.
 
 ### Regular cleaning
 
@@ -54,15 +115,15 @@ Same dedicated cleaner
 
 - Flexible re-scheduling
 
-- 2-hour minimum visit
+- 5-hour minimum visit
 
 - Pause anytime, no contract
 
-From £22/hr
+From £27/hr
 
 Book regular clean
 
-### One-off & deep cleaning
+### Deep cleaning
 
 Top-to-bottom reset: kitchen interiors, behind appliances, limescale removal, skirtings, vents and light fittings.
 
@@ -72,9 +133,9 @@ Top-to-bottom reset: kitchen interiors, behind appliances, limescale removal, sk
 
 - Window interiors & frames
 
-- 4–8 hour typical visit
+- 5–8 hour typical visit
 
-From £28/hr
+From £45/hr
 
 Book deep clean
 
@@ -106,7 +167,7 @@ Post-renovation dust gets everywhere — inside cabinets, ventilation, behind ra
 
 - Site PPE & dust sheets carried
 
-From £28/hr
+From £30/hr
 
 Book after-builders
 
@@ -122,7 +183,7 @@ EU Ecolabel and Leaping Bunny certified products as standard — safer for child
 
 #### No call-out fees, no surprises
 
-The hourly rate you see is the rate you pay. Supplies, equipment and travel inside our coverage zone are always included.
+See your estimate before you book. Optional products, extra tasks, larger-home supplements and central-London access are itemised in the calculator.
 
 London cleaning we do every week
 
@@ -154,7 +215,7 @@ SW4 · SW8 · SW11
 
 #### Regular weekly resets
 
-Clapham and Battersea shared houses and young-professional flats — fast 2-hour visits.
+Clapham and Battersea shared houses and young-professional flats — thorough visits with a 5-hour minimum.
 
 E15 · E14 · SE10
 
@@ -176,11 +237,11 @@ Cleaning FAQ
 
 Q: How much does a house cleaner cost in London?
 
-Regular weekly or fortnightly cleans start at £22 per hour with Hausio, with a 2-hour minimum. One-off cleans are £26/hr, deep cleans £28/hr, end-of-tenancy £32/hr. All cleaning products and equipment are included in the rate. Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge.
+Regular weekly or fortnightly cleans start at £27 per hour with Hausio, with a 5-hour minimum. One-off cleans are £30/hr, deep cleans £45/hr, end-of-tenancy £32/hr. Cleaning products can be added for £15 per visit; you can also supply your own. Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge.
 
 Q: How long should a deep clean take in a London flat?
 
-A 1-bed flat usually needs 4–5 hours, a 2-bed 5–7 hours, and a 3-bed house 7–9 hours. End-of-tenancy cleans add 1–2 hours for oven, fridge and limescale work that letting agents expect for the deposit return.
+A 1-bed flat usually needs 5 hours or more, a 2-bed 5–7 hours, and a 3-bed house 7–9 hours. End-of-tenancy cleans add 1–2 hours for oven, fridge and limescale work that letting agents expect for the deposit return.
 
 Q: Do you offer end-of-tenancy cleans with deposit-back guarantee?
 
@@ -1511,6 +1572,28 @@ You see the price before you book — handyman from £65 the first hour, man and
 
 We work across all 32 London boroughs, seven days a week from 8am to 8pm. Our teams know the parking zones, the estate lifts and the conservation rules street by street — so access is sorted before we arrive, not argued about on the day.
 
+Company details
+
+## Who you are actually dealing with.
+
+Every claim on this page can be checked against a public register.
+
+### Registered company
+
+Hausio Ltd, registered in England & Wales, company number 17167561, incorporated on 19 April 2026. Registered office: 35 Addison Gardens, London W14 0DP.
+
+Check us on Companies House →
+
+### Insurance
+
+£2M public liability cover and £25k goods-in-transit cover on every job, including single-item moves. Certificates available on request before a booking — just ask.
+
+### Contact
+
+Phone +44 7304 330614Email hausio.co.uk@proton.meOpen Monday to Sunday, 08:00–20:00.
+
+Service-area business covering all 32 London boroughs — we come to you, there is no shopfront to visit.
+
 ## Your home. Sorted in one booking.
 
 Cleaning, man and van, handyman and specialist trades — one trusted London team. £0 today, pay after the job.
@@ -1652,7 +1735,7 @@ Pricing & fees
 
 Q: How much do home services cost in London?
 
-Cleaning from £22/hr (regular), £28/hr (deep), £32/hr (end-of-tenancy). Man and van from £55/hr (1 man + van), £85/hr (2 men + van). Handyman £65 first hour, then £50/hr (2-hour minimum), half-day £215, full-day £395. Furniture assembly from £45/hr. TV mounting from £55. Garden clearance from £120. Waste removal from £55. Painting from £220/day. All prices include insurance — and there are no call-out fees.
+Cleaning from £30/hr (one-off), £27/hr (regular), £45/hr (deep; 5-hour minimum for all cleaning), £32/hr (end-of-tenancy). Man and van from £55/hr (1 man + van), £85/hr (2 men + van). Handyman £65 first hour, then £50/hr (2-hour minimum), half-day £215, full-day £395. Furniture assembly from £45/hr. TV mounting from £55. Garden clearance from £120. Waste removal from £55. Painting from £220/day. All prices include insurance — and there are no call-out fees.
 
 Q: Are there any hidden fees or call-out charges?
 
@@ -1923,7 +2006,7 @@ For borough-specific notes on access, parking and listed-building rules, see our
 
 ## Book a London end-of-tenancy clean today
 
-£32/hour. £0 today, pay after the job. Free 72-hour re-clean. Photo evidence as standard.
+£32/hour, with a 5-hour minimum per cleaner. £0 today, pay after the job. Free 72-hour re-clean. Photo evidence as standard.
 
 Get an instant quote →
 
@@ -2189,7 +2272,7 @@ For a deeper breakdown of London cleaning costs in 2026 — including how Conges
 
 ## Get a transparent London quote in 60 seconds
 
-Cleaning from £22/hr, man and van from £55/hr, handyman from £65 first hour (2-hour minimum). Congestion Zone surcharge always itemised — never hidden.
+Cleaning from £27/hr, man and van from £55/hr, handyman from £65 first hour (2-hour minimum). Congestion Zone surcharge always itemised — never hidden.
 
 Get an instant quote →
 
@@ -2325,11 +2408,11 @@ If you're short on time, the high-ROI tasks to outsource in London are: oven and
 
 - 3-bed house: 10–12 hours self / 7–8 hours professional
 
-Hausio's London deep clean covers everything in this checklist for £28/hour, with eco-friendly products and a 2-hour minimum. For full pricing and what an agent-spec clean covers, see our 2026 cleaning cost guide.
+Hausio's London deep clean covers everything in this checklist for £45/hour, with a 5-hour minimum and optional eco-friendly products (+£15 per visit). For full pricing and what an agent-spec clean covers, see our 2026 cleaning cost guide.
 
 ## Skip the 8 hours — book a London deep clean
 
-£28/hour. Vetted, DBS-checked, eco-friendly products. £0 today, pay after the job.
+£45/hour. Vetted, DBS-checked, eco-friendly products. £0 today, pay after the job.
 
 Book a deep clean →
 

@@ -189,6 +189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<link rel="stylesheet" href="/css/home-refresh.css" />
 </head>
 <body class="page-book">
 <!-- Google Tag Manager (noscript) -->
@@ -256,7 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <input type="radio" name="service" value="cleaning" required />
               <span class="option-body">
                 <b>Cleaning</b>
-                <small>from £22/hr</small>
+                <small>£30/hr · regular £27/hr</small>
               </span>
             </label>
             <label class="option">
@@ -277,12 +278,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <!-- Cleaning details -->
           <div class="service-panel" data-for="cleaning">
+            <p class="booking-rate-note">5-hour minimum per cleaner. One-off £30/hr · Regular £27/hr · Deep £45/hr. Products and selected extras are shown separately in your quote.</p>
             <label class="field">
               <span>Type of clean</span>
               <select name="clean-type">
-                <option value="regular">Regular clean — £22/hr</option>
-                <option value="one-off">One-off clean — £26/hr</option>
-                <option value="deep">Deep clean — £28/hr</option>
+                <option value="regular">Regular clean — £27/hr</option>
+                <option value="one-off" selected>One-off clean — £30/hr</option>
+                <option value="deep">Deep clean — £45/hr</option>
                 <option value="eot">End of tenancy — £32/hr</option>
                 <option value="builders">After-builders — £30/hr</option>
               </select>
@@ -311,11 +313,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <label class="field">
               <span>Duration</span>
               <select name="clean-hours">
-                <option value="2">2 hours (minimum)</option>
-                <option value="3" selected>3 hours</option>
-                <option value="4">4 hours</option>
-                <option value="5">5 hours</option>
+                <option value="5" selected>5 hours (minimum)</option>
                 <option value="6">6 hours</option>
+                <option value="7">7 hours</option>
                 <option value="8">8 hours (full day)</option>
               </select>
             </label>

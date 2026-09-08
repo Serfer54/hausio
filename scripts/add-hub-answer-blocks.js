@@ -23,11 +23,11 @@ const CSS = `<style>
 const HUBS = {
   'cleaning-london.html': {
     h2: 'How much does a house cleaner cost in London?',
-    answer: 'A house cleaner in London costs £22–£32 per hour with Hausio: regular £22/hr, one-off £26/hr, deep cleans £28/hr and end-of-tenancy £32/hr — with a 2-hour minimum and all products and equipment included. A full end-of-tenancy clean typically totals £180–£620 depending on the size of the property.',
+    answer: 'A house cleaner in London costs £27–£45 per hour with Hausio: regular £27/hr, one-off £30/hr, deep cleans £45/hr and end-of-tenancy £32/hr — with a 5-hour minimum and optional products +£15 per visit. A full end-of-tenancy clean typically totals £180–£620 depending on the size of the property.',
     caption: 'Hausio London cleaning prices (2026)',
     head: ['Clean type', 'Price'],
-    rows: [['Regular (weekly / fortnightly)', '£22/hr'], ['One-off clean', '£26/hr'], ['Deep clean', '£28/hr'], ['After-builders clean', '£28/hr'], ['End of tenancy', '£32/hr']],
-    note: '2-hour minimum · all products & equipment included · Congestion Zone (EC, WC, W1, SW1, SE1) +£18.',
+    rows: [['Regular (weekly / fortnightly)', '£27/hr'], ['One-off clean', '£30/hr'], ['Deep clean', '£45/hr'], ['After-builders clean', '£30/hr'], ['End of tenancy', '£32/hr']],
+    note: '5-hour minimum · optional products +£15 per visit · Congestion Zone (EC, WC, W1, SW1, SE1) +£18.',
   },
   'man-and-van-london.html': {
     h2: 'How much does a man and van cost in London?',

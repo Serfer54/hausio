@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  const DELAY_MS = 27000;
   const LS_KEY = 'hausio_popup_v1';
   const SUPPRESS_DAYS = 30;
   const PROMO_CODE = 'HAUSIO10';
@@ -14,7 +13,7 @@
 
   // Don't show on booking flow or legal pages
   const path = location.pathname;
-  if (/\/book\.html$/.test(path) || /\/privacy\.html$/.test(path)) return;
+  if (/\/(book|privacy)(?:\.html)?\/?$/.test(path)) return;
 
   // Suppress if dismissed or submitted within SUPPRESS_DAYS
   try {
@@ -28,9 +27,9 @@
   function injectStyles() {
     if (document.getElementById('hs-popup-styles')) return;
     const css = `
-.hs-popup-overlay{position:fixed;inset:0;background:rgba(20,18,15,0.62);display:flex;align-items:center;justify-content:center;z-index:9000;opacity:0;transition:opacity 220ms ease;padding:16px;font-family:inherit}
+.hs-popup-overlay{position:relative;display:flex;justify-content:center;padding:48px 24px;background:#ece6db;font-family:inherit}
 .hs-popup-overlay.is-open{opacity:1}
-.hs-popup{background:#f7f4ef;max-width:460px;width:100%;padding:38px 34px 32px;border-radius:4px;box-shadow:0 24px 64px rgba(0,0,0,0.22);position:relative;transform:translateY(18px);transition:transform 220ms ease;color:#1a1a1a}
+.hs-popup{background:#f7f4ef;max-width:680px;width:100%;padding:38px 34px 32px;border-radius:4px;box-shadow:none;position:relative;transform:none;transition:transform 220ms ease;color:#1a1a1a}
 .hs-popup-overlay.is-open .hs-popup{transform:translateY(0)}
 .hs-popup-close{position:absolute;top:10px;right:12px;background:none;border:0;width:34px;height:34px;font-size:24px;line-height:1;cursor:pointer;color:#777;border-radius:3px}
 .hs-popup-close:hover{color:#000;background:rgba(0,0,0,0.05)}
@@ -43,7 +42,7 @@
 .hs-popup-btn{background:#1a1a1a;color:#f7f4ef;border:0;padding:14px 24px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border-radius:3px;font-family:inherit;font-weight:500}
 .hs-popup-btn:hover{background:#000}
 .hs-popup-btn:disabled{opacity:0.6;cursor:wait}
-.hs-popup-fineprint{font-size:12px;color:#8a857a;margin:14px 0 0;line-height:1.45}
+.hs-popup-fineprint{font-size:12px;color:#625e56;margin:14px 0 0;line-height:1.45}
 .hs-popup-fineprint a{color:#454239;text-decoration:underline}
 .hs-popup-code{display:inline-block;background:#1a1a1a;color:#f7f4ef;padding:12px 26px;border-radius:3px;font-family:'Courier New',monospace;font-size:20px;letter-spacing:0.18em;margin:6px 0 14px;font-weight:600}
 .hs-popup-success{text-align:center}
@@ -60,8 +59,8 @@
   function buildPopup() {
     const overlay = document.createElement('div');
     overlay.className = 'hs-popup-overlay';
-    overlay.setAttribute('role', 'dialog');
-    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('role', 'region');
+
     overlay.setAttribute('aria-labelledby', 'hs-popup-title');
     overlay.innerHTML = `
       <div class="hs-popup">
@@ -124,7 +123,9 @@
     if (document.querySelector('.hs-popup-overlay')) return;
     injectStyles();
     const overlay = buildPopup();
-    document.body.appendChild(overlay);
+    const main = document.querySelector('main');
+    if (!main) return;
+    main.appendChild(overlay);
 
     // Stash current page as `source` so we know where signups came from
     const sourceInput = overlay.querySelector('input[name="source"]');
@@ -166,7 +167,7 @@
     }
 
     closeBtn.addEventListener('click', close);
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+
 
     function escHandler(e) {
       if (e.key === 'Escape' && document.body.contains(overlay)) {
@@ -221,7 +222,7 @@
   }
 
   function schedule() {
-    setTimeout(show, DELAY_MS);
+    show();
   }
 
   if (document.readyState === 'loading') {

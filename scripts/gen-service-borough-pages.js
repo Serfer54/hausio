@@ -41,7 +41,7 @@ const SERVICES = {
         ['3-bed house', '£400–£520'],
         ['4-bed house', '£550–£620'],
       ],
-      note: 'Add-ons where needed: oven and fridge +£40–£80, limescale-heavy bathroom +£25–£50, carpets +£30–£60 per room. Quoted up front, never added afterwards.',
+      note: 'Oven and fridge interiors are included in end-of-tenancy cleaning. Optional products cost £15 per visit; any specialist work is quoted before you agree.',
     },
     bookParam: 'service=cleaning',
     schemaServiceType: 'House cleaning',
@@ -66,7 +66,7 @@ const SERVICES = {
       {
         title: 'Deep & after-builders cleaning',
         body: 'Limescale, oven interiors, extractor filters, skirting, behind and under appliances, window sills and frames. After a renovation we take the dust down in stages so it does not settle back onto what we just cleaned.',
-        bullets: ['Deep £45/hr · after-builders £30/hr', 'Oven interiors and extractor filters', 'Limescale and grout treatment', 'Post-renovation dust in stages'],
+        bullets: ['Deep £45/hr · after-builders £30/hr', 'Extractor filters; oven interior optional', 'Limescale and grout treatment', 'Post-renovation dust in stages'],
       },
       {
         title: 'End of tenancy cleaning',
@@ -507,6 +507,10 @@ function renderFaqSchema(f) {
 
 function renderServicePage(b, service) {
   const url = `https://hausio.co.uk/${service.key}-${b.slug}.html`;
+  const specialist = !['cleaning', 'handyman', 'man-and-van'].includes(service.key);
+  const bookingAttrs = specialist
+    ? `href="#" data-wa data-wa-source="specialist-quote" data-wa-message="${esc(`Hi Hausio, I'd like a quote for ${service.label} in ${b.name}. Page: ${url}`)}"`
+    : `href="/book.html?${service.bookParam}"`;
   const headline = service.headline.replace(/\{borough\}/g, b.name);
   const lede = service.leadeTpl.replace(/\{borough\}/g, b.name);
   const serviceFraming = b.serviceFraming[service.framingKey] || (service.framingDefault ? service.framingDefault(b) : '');
@@ -565,7 +569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=17" />
+<link rel="stylesheet" href="css/style.css?v=20260908-ux3" />
 
 <script type="application/ld+json">
 {
@@ -667,6 +671,7 @@ ${SITE_JSON}
       <div class="nav-item has-dropdown">
         <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="caret" aria-hidden="true">&#9662;</span></button>
         <div class="nav-dropdown" role="menu">
+          <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
           <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
@@ -702,7 +707,7 @@ ${SITE_JSON}
     <h1>${esc(headline)}</h1>
     <p class="lede">${esc(lede)}</p>
     <div class="hero-ctas">
-      <a href="/book.html?${service.bookParam}" class="btn btn-dark">Book ${esc(service.label)} in ${esc(b.name)} →</a>
+      <a ${bookingAttrs} class="btn btn-dark">${specialist ? 'Request a quote for' : 'Book'} ${esc(service.label)} in ${esc(b.name)} →</a>
       <a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>
     </div>
   </div>
@@ -786,7 +791,7 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
   <div class="container cta-box">
     <h2>Book your ${esc(b.name)} ${esc(service.label)} today.</h2>
     <p>Vetted, insured, fixed pricing. Online in 60 seconds.</p>
-    <a href="/book.html?${service.bookParam}" class="btn btn-light">Get your instant quote →</a>
+    <a ${bookingAttrs} class="btn btn-light">${specialist ? 'Request a quote on WhatsApp' : 'Get your instant quote'} →</a>
   </div>
 </section>
 
@@ -836,9 +841,9 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
   </div>
 </footer>
 
-<script src="js/main.js" defer></script>
-<script src="js/popup.js" defer></script>
-<script src="/js/wa-obfuscate.js" defer></script>
+<script src="js/main.js?v=20260908-ux3" defer></script>
+<script src="js/popup.js?v=20260908-ux3" defer></script>
+<script src="/js/wa-obfuscate.js?v=20260908-ux3" defer></script>
 </body>
 </html>
 `;

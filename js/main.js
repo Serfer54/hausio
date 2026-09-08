@@ -2,6 +2,16 @@
 (function () {
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+  // Keep generated pages usable even before a static navigation refresh.
+  var main = document.querySelector('main');
+  if (main && !document.querySelector('.skip-link')) {
+    if (!main.id) main.id = 'main-content';
+    var skip = document.createElement('a'); skip.className = 'skip-link'; skip.href = '#' + main.id; skip.textContent = 'Skip to content'; document.body.prepend(skip);
+  }
+  var mainNav = document.querySelector('.main-nav');
+  if (mainNav && !document.getElementById('booking-form') && !document.querySelector('.nav-book')) {
+    var bookLink = document.createElement('a'); bookLink.className = 'nav-book'; bookLink.href = '/book.html'; bookLink.textContent = 'Book now'; mainNav.after(bookLink);
+  }
 
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
@@ -12,7 +22,7 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     nav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { nav.classList.remove('is-open'); });
+      a.addEventListener('click', function () { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); });
     });
   }
 
@@ -31,6 +41,7 @@
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
+      if (nav && nav.classList.contains('is-open')) { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); toggle.focus(); }
       document.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach(function (btn) {
         btn.setAttribute('aria-expanded', 'false');
         btn.focus();

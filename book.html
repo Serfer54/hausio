@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=17" />
+<link rel="stylesheet" href="css/style.css?v=20260908-ux3" />
 
 <!-- Cloudflare Turnstile — DISABLED until production sitekey is set.
      The test key (1x00000000000000000000AA) renders a red "Только для тестирования"
@@ -189,9 +189,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/home-refresh.css" />
+<link rel="stylesheet" href="/css/home-refresh.css?v=20260908-ux3" />
 </head>
 <body class="page-book">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RN3TRV4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -212,6 +213,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
+          <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
+          <a href="/tv-mounting-london.html" role="menuitem">TV Mounting</a>
+          <a href="/garden-clearance-london.html" role="menuitem">Garden Clearance</a>
+          <a href="/waste-removal-london.html" role="menuitem">Waste Removal</a>
+          <a href="/painting-decorating-london.html" role="menuitem">Painting &amp; Decorating</a>
         </div>
       </div>
       <a href="/how-it-works.html">How it works</a>
@@ -225,7 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<main class="booking-wrap">
+<main id="main-content" class="booking-wrap">
   <div class="container booking-grid">
     <section class="booking">
       <header class="booking-head">
@@ -289,6 +295,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <option value="builders">After-builders — £30/hr</option>
               </select>
             </label>
+            <label class="field" id="clean-frequency-field" hidden>
+              <span>How often?</span>
+              <select name="frequency" disabled><option value="weekly">Every week</option><option value="fortnightly">Every two weeks</option></select>
+              <small class="field-hint">Your estimate is per visit. We will confirm your recurring schedule with you.</small>
+            </label>
             <div class="field-row">
               <label class="field">
                 <span>Bedrooms</span>
@@ -319,17 +330,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <option value="8">8 hours (full day)</option>
               </select>
             </label>
-            <label class="field">
-              <span>Cleaning products</span>
-              <select name="clean-supplies">
-                <option value="own">I'll provide my own — £0</option>
-                <option value="hausio" selected>Hausio brings eco-friendly products — +£15</option>
-              </select>
-            </label>
+            <fieldset class="supplies-choice">
+              <legend>Cleaning products — choose one</legend>
+              <label class="supplies-option"><input type="radio" name="clean-supplies" value="own" required /><span>I'll provide my own <b>Included · £0</b></span></label>
+              <label class="supplies-option"><input type="radio" name="clean-supplies" value="hausio" required /><span>Bring Hausio products <b>+£15 per visit</b></span></label>
+            </fieldset>
             <div class="extras">
               <p class="field-label">Extras</p>
-              <label class="check"><input type="checkbox" name="clean-extra" value="oven" /> Oven cleaning (+£25)</label>
-              <label class="check"><input type="checkbox" name="clean-extra" value="fridge" /> Inside fridge (+£15)</label>
+              <p id="clean-included-note" class="field-hint" hidden>Inside oven and fridge are included in end-of-tenancy cleaning. No extra charge.</p>
+              <label class="check"><input type="checkbox" name="clean-extra" value="oven" /> Oven cleaning <span class="extra-cost">+£25</span></label>
+              <label class="check"><input type="checkbox" name="clean-extra" value="fridge" /> Inside fridge <span class="extra-cost">+£15</span></label>
               <label class="check"><input type="checkbox" name="clean-extra" value="windows" /> Inside windows (+£20)</label>
               <label class="check"><input type="checkbox" name="clean-extra" value="ironing" /> Ironing service (+£20)</label>
               <label class="check"><input type="checkbox" name="clean-extra" value="laundry" /> Laundry (+£15)</label>
@@ -500,16 +510,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="field-row">
               <label class="field">
                 <span>Full name</span>
-                <input type="text" name="name" required />
+                <input type="text" name="name" autocomplete="name" required />
               </label>
               <label class="field">
                 <span>Phone</span>
-                <input type="tel" name="phone" required />
+                <input type="tel" name="phone" autocomplete="tel" required />
               </label>
             </div>
             <label class="field">
               <span>Email</span>
-              <input type="email" name="email" required />
+              <input type="email" name="email" autocomplete="email" required />
             </label>
             <label class="field">
               <span>Anything we should know? <small style="color:#888;font-weight:normal;">(optional)</small></span>
@@ -524,7 +534,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="payment-block" id="payment-block">
             <div class="payment-summary">
               <h3>£0 today — pay after the job</h3>
-              <p>No upfront payment. We confirm your booking instantly and bill you securely by card after the work is complete and you're happy with it.</p>
+              <p>No upfront payment. Send your preferred date and time. Our team will contact you to confirm availability and the final quote. You pay by card after the work is complete.</p>
               <ul>
                 <li>Free cancellation until <strong>noon the day before</strong>.</li>
                 <li>Same-day cancellations — small £15 admin fee.</li>
@@ -549,7 +559,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <div class="step-actions">
             <button type="button" class="btn btn-ghost" data-prev>← Back</button>
-            <button type="submit" class="btn btn-dark" id="submit-button">Confirm booking →</button>
+            <button type="submit" class="btn btn-dark" id="submit-button">Send booking request →</button>
           </div>
         </fieldset>
 
@@ -557,8 +567,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="step success" data-step="success">
           <div class="success-inner">
             <div class="success-icon">✓</div>
-            <h2>Booking received!</h2>
-            <p>Thank you — we've sent a confirmation to your email. A member of the Hausio team will call you within 15 minutes to finalise the details.</p>
+            <h2>Request received!</h2>
+            <p>Thank you — your request has reached us. Our team will contact you to confirm the date, time and final price. Your appointment is confirmed once you hear from us.</p>
             <p class="success-followup">When the job's done, we'll send you a short note. If it went well, a 30-second Google or Trustpilot review helps another Londoner find us.</p>
             <a href="index.html" class="btn btn-dark">Back to home</a>
           </div>
@@ -568,7 +578,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- SIDEBAR SUMMARY -->
-    <aside class="summary" aria-label="Booking summary">
+    <aside class="summary" id="booking-summary" aria-label="Booking summary">
       <div class="summary-inner">
         <h3>Your booking</h3>
         <ul class="summary-list" id="summary-list">
@@ -588,6 +598,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </aside>
   </div>
+<div class="mobile-booking-bar" id="mobile-booking-bar" aria-label="Booking estimate">
+  <a href="#booking-summary" class="mobile-estimate-link"><span>Estimate per visit</span><strong id="mobile-estimate" aria-live="polite">£0</strong><small>View breakdown</small></a>
+  <button type="button" class="btn btn-dark" id="mobile-booking-action">Continue →</button>
+</div>
 </main>
 
 <!-- Netlify Forms detection: hidden static form so Netlify's build-time
@@ -645,8 +659,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<script src="js/main.js" defer></script>
-<script src="js/booking.js?v=10" defer></script>
+<script src="js/main.js?v=20260908-ux3" defer></script>
+<script src="js/booking.js?v=20260908-ux3" defer></script>
 <script src="js/consent.js" defer></script>
 </body>
 </html>

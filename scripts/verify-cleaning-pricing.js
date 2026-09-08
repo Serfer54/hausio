@@ -14,11 +14,11 @@ for (const [type, rate] of Object.entries({regular:27, 'one-off':30, deep:45, eo
 
 // Exercise the actual calculation function, including minimum enforcement.
 const calculateSource = booking.slice(booking.indexOf('  function calculate()'), booking.indexOf('  function renderSummary'));
-function quote(type, hours, supplies = 'own') {
+function quote(type, hours, supplies = 'own', extras = []) {
   const fields = {'clean-type':{value:type}, 'clean-hours':{value:String(hours)}, 'clean-bed':{value:'2'}, 'clean-bath':{value:'1'}, 'clean-supplies':{value:supplies}, postcode:{value:''}};
   fields.querySelector = () => ({value:'cleaning'});
-  fields.querySelectorAll = () => [];
-  const context = {PRICES:prices, form:fields, mileageState:{status:'idle'}, labelCleanType:x=>x, isCentralLondon:()=>false, renderSummary:(lines,total)=>{context.result=total;}};
+  fields.querySelectorAll = () => extras.map(value=>({value}));
+  const context = {PRICES:prices, form:fields, mileageState:{status:'idle'}, labelCleanType:x=>x, labelExtra:x=>x, isCentralLondon:()=>false, renderSummary:(lines,total)=>{context.result=total;}};
   vm.runInNewContext(calculateSource + '\ncalculate();', context);
   return context.result;
 }
@@ -27,6 +27,8 @@ assert.equal(quote('regular',5),135);
 assert.equal(quote('deep',5),225);
 assert.equal(quote('one-off',2),150,'Under-minimum input must still price five hours');
 assert.equal(quote('deep',6,'hausio'),285);
+assert.equal(quote('eot',5,'own',['oven','fridge']),160,'Included end-of-tenancy tasks must not be billed twice');
+assert.equal(quote('deep',5,'own',['oven','fridge']),265,'Deep-clean optional extras');
 
 const expected = {'Regular clean':27,'Regular cleaning':27,'One-off clean':30,'One-off cleaning':30,'Deep clean':45,'Deep cleaning':45,'After-builders clean':30,'End of tenancy clean':32,'End of tenancy cleaning':32};
 let checked = 0;

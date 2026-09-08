@@ -117,11 +117,12 @@ ${renderTable(h)}
 `;
 }
 
-const CSS_ANCHOR = '<link rel="stylesheet" href="css/style.css?v=17" />';
+const CSS_ANCHOR = '<link rel="stylesheet" href="css/style.css?v=20260908-ux3" />';
 let done = 0;
 for (const [file, h] of Object.entries(HUBS)) {
   const fp = path.join(ROOT, file);
   let html = fs.readFileSync(fp, 'utf8');
+  if (file === 'cleaning-london.html' && html.includes('id="cleaning-inclusions"')) { console.log('skip (integrated cleaning pricing):', file); continue; }
   if (html.includes('class="answer-block"')) { console.log('skip (already has block):', file); continue; }
 
   // 1) inject table CSS after the stylesheet link (in <head>)

@@ -15,9 +15,15 @@ const NAV_OLD = `        <div class="nav-dropdown" role="menu">
           <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
+          <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
+          <a href="/tv-mounting-london.html" role="menuitem">TV Mounting</a>
+          <a href="/garden-clearance-london.html" role="menuitem">Garden Clearance</a>
+          <a href="/waste-removal-london.html" role="menuitem">Waste Removal</a>
+          <a href="/painting-decorating-london.html" role="menuitem">Painting &amp; Decorating</a>
         </div>`;
 
 const NAV_NEW = `        <div class="nav-dropdown" role="menu">
+          <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
           <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>

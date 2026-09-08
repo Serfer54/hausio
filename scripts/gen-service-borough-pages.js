@@ -22,15 +22,15 @@ const SERVICES = {
     label: 'cleaning',
     framingKey: 'cleaning',
     heroAsset: 'service-cleaning.jpg',
-    headline: 'House cleaning in {borough} — vetted, insured, eco products included.',
-    leadeTpl: 'Regular, one-off, deep, end-of-tenancy and after-builders cleaning across {borough}. Same cleaner each visit where you want one, all products and equipment brought with us, nothing to pay until the clean is done.',
+    headline: 'House cleaning in {borough} — vetted, insured, care for your home.',
+    leadeTpl: 'Regular, one-off, deep, end-of-tenancy and after-builders cleaning across {borough}. Same cleaner each visit where you want one, optional eco-friendly products for £15 per visit, nothing to pay until the clean is done.',
     pricingItems: [
-      'Regular clean £22/hr',
-      'One-off clean £26/hr',
-      'Deep & after-builders £28/hr',
+      'Regular clean £27/hr',
+      'One-off clean £30/hr',
+      'Deep £45/hr · after-builders £30/hr',
       'End of tenancy £32/hr',
     ],
-    pricingNote: '2-hour minimum. All products and equipment included. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access.',
+    pricingNote: '5-hour minimum. Optional products +£15 per visit. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access.',
     totals: {
       title: 'What a full end-of-tenancy clean costs in {borough}',
       head: ['Property', 'Typical total'],
@@ -41,32 +41,32 @@ const SERVICES = {
         ['3-bed house', '£400–£520'],
         ['4-bed house', '£550–£620'],
       ],
-      note: 'Add-ons where needed: oven and fridge +£40–£80, limescale-heavy bathroom +£25–£50, carpets +£30–£60 per room. Quoted up front, never added afterwards.',
+      note: 'Oven and fridge interiors are included in end-of-tenancy cleaning. Optional products cost £15 per visit; any specialist work is quoted before you agree.',
     },
     bookParam: 'service=cleaning',
     schemaServiceType: 'House cleaning',
-    priceLow: '22',
-    priceHigh: '32',
+    priceLow: '27',
+    priceHigh: '45',
     offers: [
-      { name: 'Regular clean', price: '22', unit: 'HUR' },
-      { name: 'One-off clean', price: '26', unit: 'HUR' },
-      { name: 'Deep clean', price: '28', unit: 'HUR' },
-      { name: 'After-builders clean', price: '28', unit: 'HUR' },
+      { name: 'Regular clean', price: '27', unit: 'HUR' },
+      { name: 'One-off clean', price: '30', unit: 'HUR' },
+      { name: 'Deep clean', price: '45', unit: 'HUR' },
+      { name: 'After-builders clean', price: '30', unit: 'HUR' },
       { name: 'End of tenancy clean', price: '32', unit: 'HUR' },
     ],
-    framingDefault: (b) => `Cleaning in ${b.name} is split between regular weekly and fortnightly visits in occupied flats and one-off end-of-tenancy cleans against a letting agent's inventory. We bring our own products and equipment, work to the inventory where a deposit is at stake, and send the same cleaner back where you want continuity.`,
-    title: (b) => `Cleaners in ${b.name}, London — From £22/hr | Hausio`,
-    description: (b, framing) => `House cleaning in ${b.name} ${b.headlinePostcodes}. Regular £22/hr, one-off £26/hr, deep £28/hr, end of tenancy £32/hr. ${trimWords(framing, 90)}`,
+    framingDefault: (b) => `Cleaning in ${b.name} is split between regular weekly and fortnightly visits in occupied flats and one-off end-of-tenancy cleans against a letting agent's inventory. We offer eco-friendly products for £15 per visit, work to the inventory where a deposit is at stake, and send the same cleaner back where you want continuity.`,
+    title: (b) => `Cleaners in ${b.name}, London — From £27/hr | Hausio`,
+    description: (b, framing) => `House cleaning in ${b.name} ${b.headlinePostcodes}. Regular £27/hr, one-off £30/hr, deep £45/hr, end of tenancy £32/hr. ${trimWords(framing, 90)}`,
     cards: [
       {
         title: 'Regular & one-off cleaning',
         body: 'Weekly, fortnightly or one-off visits — kitchens, bathrooms, floors, dusting, beds changed and bins out. Same cleaner each visit where you want continuity, and a key-safe arrangement if you are out at work.',
-        bullets: ['Regular £22/hr · one-off £26/hr', 'Same cleaner on request', 'All products and equipment included', 'Key-safe or keyholder arrangements'],
+        bullets: ['Regular £27/hr · one-off £30/hr', 'Same cleaner on request', 'Optional products +£15 per visit', 'Key-safe or keyholder arrangements'],
       },
       {
         title: 'Deep & after-builders cleaning',
         body: 'Limescale, oven interiors, extractor filters, skirting, behind and under appliances, window sills and frames. After a renovation we take the dust down in stages so it does not settle back onto what we just cleaned.',
-        bullets: ['Deep and after-builders £28/hr', 'Oven interiors and extractor filters', 'Limescale and grout treatment', 'Post-renovation dust in stages'],
+        bullets: ['Deep £45/hr · after-builders £30/hr', 'Extractor filters; oven interior optional', 'Limescale and grout treatment', 'Post-renovation dust in stages'],
       },
       {
         title: 'End of tenancy cleaning',
@@ -407,7 +407,7 @@ const SERVICES = {
 // {borough} tokens are replaced per page.
 const SERVICE_FAQS = {
   cleaning: [
-    { q: 'How much does a cleaner cost in {borough}?', a: 'A cleaner in {borough} is £22/hour for a regular clean, £26/hour one-off, £28/hour for a deep or after-builders clean and £32/hour for end of tenancy, with a 2-hour minimum. All products and equipment are included and there is nothing to pay until the clean is done. A typical 2-bed flat regular clean runs 3 hours.' },
+    { q: 'How much does a cleaner cost in {borough}?', a: 'A cleaner in {borough} is £27/hour for a regular clean, £30/hour one-off, £45/hour for a deep clean, £30/hour for an after-builders clean and £32/hour for end of tenancy, with a 5-hour minimum. Cleaning products can be added for £15 per visit and there is nothing to pay until the clean is done. A typical 2-bed flat regular clean has a 5-hour minimum.' },
     { q: 'How much is end of tenancy cleaning in {borough}?', a: 'End of tenancy cleaning in {borough} is £32/hour, which usually works out at £180–£240 for a studio, £220–£300 for a 1-bed, £280–£380 for a 2-bed and £400–£520 for a 3-bed. We work against the inventory your agent will check against and give you a receipt for them.' },
   ],
   handyman: [
@@ -507,6 +507,10 @@ function renderFaqSchema(f) {
 
 function renderServicePage(b, service) {
   const url = `https://hausio.co.uk/${service.key}-${b.slug}.html`;
+  const specialist = !['cleaning', 'handyman', 'man-and-van'].includes(service.key);
+  const bookingAttrs = specialist
+    ? `href="#" data-wa data-wa-source="specialist-quote" data-wa-message="${esc(`Hi Hausio, I'd like a quote for ${service.label} in ${b.name}. Page: ${url}`)}"`
+    : `href="/book.html?${service.bookParam}"`;
   const headline = service.headline.replace(/\{borough\}/g, b.name);
   const lede = service.leadeTpl.replace(/\{borough\}/g, b.name);
   const serviceFraming = b.serviceFraming[service.framingKey] || (service.framingDefault ? service.framingDefault(b) : '');
@@ -565,7 +569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=17" />
+<link rel="stylesheet" href="css/style.css?v=20260908-ux3" />
 
 <script type="application/ld+json">
 {
@@ -667,6 +671,7 @@ ${SITE_JSON}
       <div class="nav-item has-dropdown">
         <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="caret" aria-hidden="true">&#9662;</span></button>
         <div class="nav-dropdown" role="menu">
+          <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
           <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
@@ -702,7 +707,7 @@ ${SITE_JSON}
     <h1>${esc(headline)}</h1>
     <p class="lede">${esc(lede)}</p>
     <div class="hero-ctas">
-      <a href="/book.html?${service.bookParam}" class="btn btn-dark">Book ${esc(service.label)} in ${esc(b.name)} →</a>
+      <a ${bookingAttrs} class="btn btn-dark">${specialist ? 'Request a quote for' : 'Book'} ${esc(service.label)} in ${esc(b.name)} →</a>
       <a href="tel:+447304330614" data-tel-source="hero" class="btn btn-outline">Call +44 7304 330614</a>
     </div>
   </div>
@@ -786,7 +791,7 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
   <div class="container cta-box">
     <h2>Book your ${esc(b.name)} ${esc(service.label)} today.</h2>
     <p>Vetted, insured, fixed pricing. Online in 60 seconds.</p>
-    <a href="/book.html?${service.bookParam}" class="btn btn-light">Get your instant quote →</a>
+    <a ${bookingAttrs} class="btn btn-light">${specialist ? 'Request a quote on WhatsApp' : 'Get your instant quote'} →</a>
   </div>
 </section>
 
@@ -836,9 +841,9 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
   </div>
 </footer>
 
-<script src="js/main.js" defer></script>
-<script src="js/popup.js" defer></script>
-<script src="/js/wa-obfuscate.js" defer></script>
+<script src="js/main.js?v=20260908-ux3" defer></script>
+<script src="js/popup.js?v=20260908-ux3" defer></script>
+<script src="/js/wa-obfuscate.js?v=20260908-ux3" defer></script>
 </body>
 </html>
 `;

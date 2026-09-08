@@ -11,8 +11,9 @@
     return s;
   }
 
-  function waUrl() {
-    return 'https://wa.me/' + decode(phoneCodes) + '?text=' + encodeURIComponent(decode(waMsgCodes));
+  function waUrl(el) {
+    var message = el && el.dataset.waMessage ? el.dataset.waMessage : "Hi Hausio, I'd like a quote.";
+    return 'https://wa.me/' + decode(phoneCodes) + '?text=' + encodeURIComponent(message);
   }
 
   function telUrl() {
@@ -31,7 +32,7 @@
       (function (el) {
         el.addEventListener('click', function (e) {
           if (e && e.preventDefault) e.preventDefault();
-          var w = window.open(waUrl(), '_blank');
+          var w = window.open(waUrl(el), '_blank');
           if (w) { try { w.opener = null; } catch (_) {} }
           track('wa_click', el.dataset.waSource);
         });

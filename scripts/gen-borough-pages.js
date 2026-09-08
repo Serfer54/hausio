@@ -163,7 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/style.css?v=17" />
+<link rel="stylesheet" href="../css/style.css?v=20260908-ux3" />
 
 <script type="application/ld+json">
 {
@@ -246,6 +246,7 @@ ${SITE_JSON}
       <div class="nav-item has-dropdown">
         <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="caret" aria-hidden="true">&#9662;</span></button>
         <div class="nav-dropdown" role="menu">
+          <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
           <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
@@ -388,9 +389,9 @@ ${(b.faq || []).map(renderFaqHtml).join('\n')}
   </div>
 </footer>
 
-<script src="../js/main.js" defer></script>
-<script src="../js/popup.js" defer></script>
-<script src="/js/wa-obfuscate.js" defer></script>
+<script src="../js/main.js?v=20260908-ux3" defer></script>
+<script src="../js/popup.js?v=20260908-ux3" defer></script>
+<script src="/js/wa-obfuscate.js?v=20260908-ux3" defer></script>
 </body>
 </html>
 `;

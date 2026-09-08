@@ -61,8 +61,8 @@ We publish all prices on hausio.co.uk — no hidden fees, no call-out charges, n
 
 | Service | Hausio rate | Industry avg London 2026 |
 |---------|-------------|--------------------------|
-| Regular clean | £22/hr | £26–32/hr |
-| Deep clean | £28/hr | £32–40/hr |
+| Regular clean | £27/hr | £26–32/hr |
+| Deep clean | £45/hr | £32–40/hr |
 | End of tenancy | £32/hr | £35–45/hr |
 | Man + van | £55/hr | £60–80/hr |
 

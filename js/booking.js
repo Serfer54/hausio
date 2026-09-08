@@ -8,6 +8,9 @@
   const panels = Array.from(form.querySelectorAll('.service-panel'));
   const summaryList = document.getElementById('summary-list');
   const summaryTotal = document.getElementById('summary-total');
+  const mobileTotal = document.getElementById('mobile-estimate');
+  const mobileAction = document.getElementById('mobile-booking-action');
+  const mobileBar = document.getElementById('mobile-booking-bar');
 
   let current = 1;
   const maxSteps = 2;
@@ -31,7 +34,7 @@
   /* ---------- Pricing model ---------- */
   const PRICES = {
     cleaning: {
-      regular: 22, 'one-off': 26, deep: 28, eot: 32, builders: 30,
+      regular: 27, 'one-off': 30, deep: 45, eot: 32, builders: 30,
       extras: { oven: 25, fridge: 15, windows: 20, ironing: 20, laundry: 15 },
       supplies: { own: 0, hausio: 15 },
       bedroomSurcharge: 4,   // per bedroom beyond 2
@@ -95,6 +98,35 @@
     });
     window.scrollTo({ top: document.querySelector('.booking').offsetTop - 80, behavior: 'smooth' });
     track('booking_step', { step_number: n });
+    if (mobileAction) mobileAction.textContent = n === 1 ? 'Continue →' : 'Send request →';
+  }
+
+  if (mobileAction) mobileAction.addEventListener('click', () => {
+    if (checkoutInFlight) return;
+    if (current === 1) {
+      if (validateStep(1)) showStep(2);
+    } else {
+      form.requestSubmit();
+    }
+  });
+
+  function updateCleaningControls() {
+    const chosen = form.querySelector('input[name="service"]:checked');
+    const cleaning = chosen && chosen.value === 'cleaning';
+    const type = form['clean-type'].value;
+    const recurring = cleaning && type === 'regular';
+    const frequency = form.querySelector('[name="frequency"]');
+    document.getElementById('clean-frequency-field').hidden = !recurring;
+    frequency.disabled = !recurring;
+    const included = cleaning && type === 'eot';
+    document.getElementById('clean-included-note').hidden = !included;
+    ['oven', 'fridge'].forEach(value => {
+      const input = form.querySelector(`input[name="clean-extra"][value="${value}"]`);
+      input.disabled = !cleaning || included;
+      if (included) input.checked = false;
+      input.closest('label').querySelector('.extra-cost').textContent = included ? 'Included' : (value === 'oven' ? '+£25' : '+£15');
+    });
+    form.querySelectorAll('input[name="clean-supplies"]').forEach(input => { input.required = cleaning; });
   }
 
   /* ---------- Stripe Checkout ---------- */
@@ -159,7 +191,7 @@
       'name', 'email', 'phone', 'notes', 'terms',
     ]);
     const SERVICE_FIELDS = {
-      cleaning: ['clean-type', 'clean-bed', 'clean-bath', 'clean-hours', 'clean-supplies', 'clean-extra'],
+      cleaning: ['clean-type', 'clean-bed', 'clean-bath', 'clean-hours', 'clean-supplies', 'clean-extra', 'frequency'],
       removals: ['move-type', 'move-crew', 'move-hours', 'move-extra', 'move-distance',
                  'pickup-postcode', 'pickup-address', 'pickup-floor', 'pickup-lift',
                  'dropoff-postcode', 'dropoff-address', 'dropoff-floor', 'dropoff-lift'],
@@ -167,7 +199,11 @@
     };
     const allowed = new Set([...COMMON, ...(SERVICE_FIELDS[svc] || [])]);
     const formSubmitPayload = {};
-    formData.forEach((v, k) => { if (allowed.has(k) && v !== '' && v !== null && v !== undefined) formSubmitPayload[k] = v; });
+    formData.forEach((v, k) => {
+      if (allowed.has(k) && v !== '' && v !== null && v !== undefined) {
+        formSubmitPayload[k] = Object.prototype.hasOwnProperty.call(formSubmitPayload, k) ? formSubmitPayload[k] + ', ' + v : v;
+      }
+    });
     formSubmitPayload['estimated-total'] = '£' + totalNum;
     formSubmitPayload['deposit-paid'] = DEPOSIT_ENABLED ? '£50' : '£0 (pay-after-job)';
     formSubmitPayload['submitted-from'] = location.href;
@@ -181,19 +217,35 @@
   }
 
   function showSuccess() {
+    if (mobileBar) mobileBar.hidden = true;
     steps.forEach(s => s.classList.remove('is-active'));
     const ok = form.querySelector('[data-step="success"]');
     if (ok) ok.classList.add('is-active');
     progressItems.forEach(li => { li.classList.add('is-done'); li.classList.remove('is-active'); });
+    if (ok) { ok.setAttribute('tabindex', '-1'); ok.focus(); ok.scrollIntoView({block:'start', behavior:'smooth'}); }
   }
 
   function validateStep(n) {
     if (n === 1) {
       const chosen = form.querySelector('input[name="service"]:checked');
       if (!chosen) { alert('Please choose a service to continue.'); return false; }
+      if (chosen.value === 'cleaning' && !form['clean-supplies'].value) {
+        showStep(1);
+        const supplies = form.querySelector('input[name="clean-supplies"]');
+        supplies.focus();
+        supplies.reportValidity();
+        return false;
+      }
       return true;
     }
     if (n === 2) {
+      for (const input of form.querySelectorAll('.step[data-step="2"] input, .step[data-step="2"] select, .step[data-step="2"] textarea')) {
+        if (!input.disabled && !input.checkValidity()) {
+          showStep(2);
+          input.reportValidity();
+          return false;
+        }
+      }
       const date = form.date.value;
       const postcode = form.postcode.value.trim();
       const address = form.address.value.trim();
@@ -241,7 +293,12 @@
   function updatePanels() {
     const chosen = form.querySelector('input[name="service"]:checked');
     const val = chosen ? chosen.value : null;
-    panels.forEach(p => p.classList.toggle('is-active', p.dataset.for === val));
+    panels.forEach(p => {
+      const active = p.dataset.for === val;
+      p.classList.toggle('is-active', active);
+      p.querySelectorAll('input, select, textarea').forEach(input => { input.disabled = !active; });
+    });
+    updateCleaningControls();
     applyRemovalsLayout(val === 'removals');
     // The mileage disclaimer only makes sense for moves (Man and Van).
     const mileageNote = document.getElementById('mileage-note');
@@ -298,10 +355,11 @@
 
     if (service === 'cleaning') {
       const type = form['clean-type'].value;
-      const hours = Number(form['clean-hours'].value);
+      const hours = Math.max(5, Number(form['clean-hours'].value) || 5);
+      form['clean-hours'].value = String(hours);
       const beds = Number(form['clean-bed'].value);
       const baths = Number(form['clean-bath'].value);
-      const rate = PRICES.cleaning[type] || 22;
+      const rate = PRICES.cleaning[type] || PRICES.cleaning['one-off'];
       const subtotal = rate * hours;
       lines.push([labelCleanType(type) + ' · ' + hours + 'h', '£' + subtotal]);
       total += subtotal;
@@ -316,6 +374,7 @@
         total += suppliesAmt;
       }
       form.querySelectorAll('input[name="clean-extra"]:checked').forEach(c => {
+        if (type === 'eot' && (c.value === 'oven' || c.value === 'fridge')) return;
         const amt = PRICES.cleaning.extras[c.value] || 0;
         lines.push([labelExtra(c.value), '£' + amt]);
         total += amt;
@@ -376,6 +435,8 @@
       ).join('');
     }
     summaryTotal.textContent = '£' + total;
+    if (mobileTotal) mobileTotal.textContent = '£' + total;
+    if (mobileAction) mobileAction.disabled = !lines.length || checkoutInFlight;
   }
 
   /* ---------- Labels ---------- */
@@ -391,7 +452,7 @@
   }
 
   /* ---------- Live recalculate ---------- */
-  form.addEventListener('change', calculate);
+  form.addEventListener('change', () => { updateCleaningControls(); calculate(); });
   form.addEventListener('input', calculate);
 
   /* ---------- Long-distance mileage (postcodes.io, free, no key) ---------- */
@@ -465,6 +526,22 @@
   });
 
   /* ---------- Submit ---------- */
+  async function postBookingRequest(body) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+        signal: controller.signal,
+      });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
   form.addEventListener('submit', async e => {
     e.preventDefault();
 
@@ -473,8 +550,8 @@
     // even from step 1 — without this guard, the form lands in Netlify with
     // service+pricing data but no name/email/phone (lost lead, May 2026 incident).
     if (current < 2) {
+      if (!validateStep(1)) return;
       showStep(2);
-      alert('Please fill in your schedule and contact details to confirm.');
       return;
     }
     if (!validateStep(1) || !validateStep(2)) {
@@ -491,6 +568,7 @@
     const originalLabel = submitBtn ? submitBtn.textContent : '';
     setPaymentError('');
     checkoutInFlight = true;
+    if (mobileAction) { mobileAction.disabled = true; mobileAction.textContent = 'Sending…'; }
 
     const { checkoutPayload, formSubmitPayload, totalNum, service: serviceVal } = buildBookingPayload();
 
@@ -503,18 +581,20 @@
       // No third-party endpoints from the browser — keeps client-side AV
       // (Avast, Kaspersky, ESET) from blocking the submit.
       const netlifyParams = new URLSearchParams({ 'form-name': 'booking', ...formSubmitPayload }).toString();
-      const nfCall = fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: netlifyParams,
-      }).catch(err => { track('booking_netlify_error', { error: String(err && err.message || err) }); });
-
-      // Cap the wait — never block the user UI on a slow network.
-      await Promise.race([nfCall, new Promise(r => setTimeout(r, 3500))]);
-      track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
-      track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
-      showSuccess();
-      checkoutInFlight = false;
+      try {
+        await postBookingRequest(netlifyParams);
+        track('generate_lead', { service: serviceVal, value: totalNum, currency: 'GBP' });
+        track('booking_submitted', { service: serviceVal, value: totalNum, currency: 'GBP' });
+        showSuccess();
+      } catch (err) {
+        track('booking_netlify_error', { error: String(err && err.message || err) });
+        setPaymentError('We could not confirm delivery of your request. Your details are still here. Please check your connection and try again, or call +44 7304 330614 if you are unsure whether it reached us.');
+        document.getElementById('payment-error').scrollIntoView({block:'center',behavior:'smooth'});
+      } finally {
+        checkoutInFlight = false;
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
+        if (mobileAction) { mobileAction.disabled = false; mobileAction.textContent = 'Send request →'; }
+      }
       return;
     }
 
@@ -653,9 +733,9 @@
   if (prePostcode) form.postcode.value = prePostcode;
 
   // Set min date to today
-  const today = new Date().toISOString().slice(0, 10);
+  const today = new Intl.DateTimeFormat('en-CA', {timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   form.date.min = today;
-  form.date.value = today;
+  // Leave the preferred date unselected so a request cannot accidentally use today.
 
   updatePanels();
   calculate();

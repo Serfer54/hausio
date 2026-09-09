@@ -4,7 +4,7 @@ London home services: cleaning, man and van, handyman, furniture assembly, TV mo
 
 This file carries the full text of the service pages, company pages and blog. The 256 local service × borough pages follow the URL pattern https://hausio.co.uk/{service}-{borough}.html and are listed in https://hausio.co.uk/llms.txt
 
-Generated: 2026-09-08
+Generated: 2026-09-09
 
 ---
 
@@ -204,6 +204,19 @@ Q: Do you offer end-of-tenancy cleans with deposit-back guarantee?
 
 Yes. Our end-of-tenancy clean follows the checklist used by most major London letting agents. If your landlord or agent flags a cleaning issue within 72 hours of completion, we return free of charge to fix it.
 
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### Choose your clean
+One-off £30/hr, regular £27/hr or deep cleaning £45/hr. All have a 5-hour minimum.
+
+### Tell us about your home
+Share the number of bedrooms and bathrooms, your priorities and any access instructions.
+
+### Plan your supplies
+Choose your own cleaning products or add Hausio products in the booking form.
+
 ## Book a London cleaner today.
 
 Online quote in 60 seconds. Vetted, insured, eco-friendly.
@@ -218,9 +231,9 @@ Accept
 ---
 
 URL: https://hausio.co.uk/man-and-van-london.html
-Title: Man and Van London — From £55/hr · House Moves · Same-Day | Hausio
+Title: Man and Van London — From £65/hr · House Moves · Same-Day | Hausio
 
-Man and Van London — From £55/hr · House Moves · Same-Day | Hausio
+Man and Van London — From £65/hr · House Moves · Same-Day | Hausio
 
 Skip to content
 
@@ -228,28 +241,28 @@ Man and Van · London
 
 # London man and van — fully insured, fairly priced.
 
-Flat and house moves, office relocations, single-item delivery, and pickup-and-drop runs across every London borough. Hourly pricing from £55 with no hidden fees, £2M public liability cover, and a team that knows London streets, lifts and one-way systems.
+Flat and house moves, office relocations, single-item delivery, and pickup-and-drop runs across every London borough. Hourly pricing from £65 with no hidden fees, £2M public liability cover, and a team that knows London streets, lifts and one-way systems.
 
 Get a moving quote →
 Call +44 7304 330614
 
 ## How much does a man and van cost in London?
 
-A man and van in London costs £55/hr for 1 man + van, £85/hr for 2 men + van and £115/hr for 3 men + a Luton van, with a 2-hour minimum. As a total move, a 1-bed flat usually runs £165–£340, a 2-bed £340–£510 and a studio or single item from £110.
+A man and van in London costs £65/hr for 1 man + van, £90/hr for 2 men + van and £115/hr for 3 men + a Luton van, with a 3-hour minimum. As a total move, a 1-bed flat usually runs £195–£360, a 2-bed £360–£540 and a studio or single item from £195.
 
 Hausio London move prices (2026)
 
 Move size | Crew & time | Typical total |
 
-Single item / studio | 1 man + van · 2–3h | £110–£165 |
+Single item / studio | 1 man + van · 3h | £195 |
 
-1-bed flat | 1–2 movers · 3–4h | £165–£340 |
+1-bed flat | 1–2 movers · 3–4h | £195–£360 |
 
-2-bed flat | 2 movers · 4–6h | £340–£510 |
+2-bed flat | 2 movers · 4–6h | £360–£540 |
 
 3-bed house | 3 movers · 6–8h | £690–£920 |
 
-Hourly: 1 man+van £55 · 2 men £85 · 3 men+Luton £115 · 2-hour minimum · Congestion Zone +£18.
+Hourly: 1 man+van £65 · 2 men £90 · 3 men+Luton £115 · 3-hour minimum · Congestion Zone +£18.
 
 Man and van services we offer
 
@@ -267,7 +280,7 @@ Studio / 1-bed moves
 
 - Storage runs
 
-From £55/hr
+From £65/hr
 
 Book man & van
 
@@ -283,7 +296,7 @@ Two or three movers plus a Transit or Luton van. Disassembly and reassembly of b
 
 - Furniture dis-/re-assembly
 
-From £85/hr
+From £90/hr
 
 Book home move
 
@@ -315,7 +328,7 @@ One bulky item door-to-door — sofa, fridge, piano, treadmill. Two movers and a
 
 - Wrapping & strapping
 
-From £85 flat
+From £270 · 2 movers, 3-hour minimum
 
 Book delivery
 
@@ -345,7 +358,7 @@ N1 · NW1 · E1 · E8
 
 #### Studio moves Camden ↔ Hackney
 
-Young professionals shuffling — 2–3h man-and-van, usually a Saturday morning slot.
+Studio moves with a 3-hour minimum, including Saturday appointments subject to availability.
 
 SW4 · SW11 · SW18
 
@@ -375,7 +388,7 @@ N1 · NW1 · SE1 · SW7
 
 #### Student moves UCL, King's, Imperial
 
-September and June term changes — 1 man + van, 2-hour move with packed boxes.
+September and June term changes — 1 man + van with packed boxes; a 3-hour minimum applies.
 
 Areas we move
 
@@ -388,7 +401,7 @@ Man and van FAQ
 
 Q: How much does a man with a van cost in London?
 
-1 man + van starts at £55/hr with Hausio (2-hour minimum). 2 men + van £85/hr, 3 men + van £115/hr. A larger Luton van adds £15/hr. Bookings inside the Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge.
+1 man + van starts at £65/hr with Hausio (3-hour minimum). 2 men + van £90/hr, 3 men + van £115/hr. A larger Luton van adds £15/hr. Bookings inside the Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge.
 
 Q: How long does a 1-bed flat move take in London?
 
@@ -397,6 +410,19 @@ Usually 3–4 hours door-to-door with 1 man + van; 2–3 hours with 2 men. Stair
 Q: Can you do a same-day move?
 
 Same-day single-item delivery and small studio/1-bed moves are usually possible in Zones 1–3 if booked before 11:00. Larger 2-bed and house moves need 24–48 hours' notice.
+
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### Choose your crew
+1 mover + van: £65/hr, £195 minimum. 2 movers + van: £90/hr, £270 minimum. Tell us about bulky items so we can confirm the right crew.
+
+### Plan the route and access
+Prepare both postcodes, an item list or photos, floors, lift access and parking details at each address.
+
+### Understand the estimate
+Minimum 3 hours. Every hour has the same rate: 4 hours costs £260 with 1 mover or £360 with 2. Selected extras and access charges are additional.
 
 ## Move with a London team you can trust.
 
@@ -590,6 +616,19 @@ Q: Can I book a handyman for a list of small jobs?
 
 That's our most popular booking. A half-day at £215 usually covers 8–12 small tasks across a 1-bed flat — shelves, blinds, hooks, tap aerators, door alignment, etc.
 
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### List your jobs
+Group the tasks in priority order and send photos, measurements and any product links.
+
+### Check materials
+Tell us which fittings and parts you already have and which need to be supplied.
+
+### Describe the access
+Share wall types where relevant, parking arrangements and your preferred appointment date.
+
 ## Knock the to-do list off in one visit.
 
 Send the list. We'll bring the tools.
@@ -774,6 +813,19 @@ Q: What if parts are missing?
 
 We check the manifest before opening the sealed fittings bag. If anything is genuinely missing, we stop at the latest safe stage, log the IKEA part number, and return for a short follow-up at £45 once you've reordered the spare — no second minimum.
 
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### Identify the furniture
+Send product links or model names and quantities so we can estimate assembly time.
+
+### Prepare the space
+Tell us if boxes are in the assembly room and whether existing furniture needs dismantling.
+
+### Flag extra work
+Mention wall anchoring, moving heavy items and packaging removal when requesting your quote.
+
 ## One box, one visit, one bill.
 
 Send the model name. We'll bring the tools and the patience.
@@ -951,6 +1003,19 @@ Yes, but we'll usually try to talk you out of it. Heat above an active fire void
 Q: Do you supply brackets?
 
 Either way works. Bring your own, or we bring one at trade cost — £25–£60 for fixed/tilt, £80–£140 for full-motion arms. No markup. If you've already got one, send us the model number so we can confirm the VESA and weight rating.
+
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### Share your TV details
+Send the screen size, model and a photo of the mounting area.
+
+### Check the bracket and wall
+Tell us whether you have a bracket and what the wall is made of, if known.
+
+### Plan the finish
+Describe your preferred height, nearby sockets and cable arrangement so the scope is clear.
 
 ## One TV, one wall, one tidy result.
 
@@ -1130,6 +1195,19 @@ Q: How much for a 1-bed flat back garden?
 
 A typical small London back garden — shrubs, a collapsed shed, some pots, a broken chair — usually fits a quarter to half-load: £120–£180 including labour, tip and transfer note. Stumps, slabs and hot tubs are quoted as add-ons from a photo.
 
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### Show the garden
+Send recent photos and an approximate size, with the areas you want cleared.
+
+### Describe the access
+Mention steps, side access and whether garden waste must pass through the house.
+
+### Agree the scope
+List vegetation, furniture or other items to remove and what should stay.
+
 ## One van. One trip. Tip fees included.
 
 Send a photo of the garden. We'll quote a fixed price.
@@ -1307,6 +1385,19 @@ A typical 2-bed clearance fits a full Luton: £280, two loaders, drive, tip fees
 Q: Do you take mattresses?
 
 Yes — £55 per mattress as a single item, or free if it's part of a half or full Luton load. Mattresses go to a hard-to-recycle waste stream that most London councils stopped collecting kerbside — that's our problem, not yours.
+
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### List the items
+Send photos, approximate dimensions and quantities for a more accurate quote.
+
+### Explain collection access
+Tell us the floor, lift availability, parking and how far items are from the collection point.
+
+### Flag unusual materials
+Identify paint, chemicals, batteries or building materials in advance so we can confirm what we can collect.
 
 ## One van, one trip, one transfer note.
 
@@ -1486,6 +1577,19 @@ Q: Can you paint over wallpaper?
 
 Sometimes. Well-stuck, smooth (non-textured) paper can be primed and painted — fine for a quick pre-let refresh. Bubbled, peeling, woodchip or embossed paper needs to come off (or be skimmed over) first. We tell you straight on viewing.
 
+## Before you book
+
+A few details help us plan your visit and give you a clearer estimate.
+
+### Describe the rooms
+Share room dimensions and whether walls, ceilings, doors or woodwork need painting.
+
+### Show the condition
+Send photos of cracks, peeling paint or stains so preparation can be included in the estimate.
+
+### Choose the finish
+Tell us your colours, whether you have paint, and when the rooms will be available.
+
 ## One room or the whole flat — done properly.
 
 Send room photos and the colour spec. We'll quote a fixed price.
@@ -1539,7 +1643,7 @@ Most homes don't need a specialist firm for every little thing. Hausio brings ma
 
 ### Transparent, fixed pricing
 
-You see the price before you book — handyman from £65 the first hour, man and van from £55/hour, TV mounting from £55. No call-out fees, no surprise add-ons, materials at cost.
+You see the price before you book — handyman from £65 the first hour, man and van from £65/hour, TV mounting from £65. No call-out fees, no surprise add-ons, materials at cost.
 
 ### Local, all over London
 
@@ -1712,7 +1816,7 @@ Pricing & fees
 
 Q: How much do home services cost in London?
 
-Cleaning from £30/hr (one-off), £27/hr (regular), £45/hr (deep; 5-hour minimum for all cleaning), £32/hr (end-of-tenancy). Man and van from £55/hr (1 man + van), £85/hr (2 men + van). Handyman £65 first hour, then £50/hr (2-hour minimum), half-day £215, full-day £395. Furniture assembly from £45/hr. TV mounting from £55. Garden clearance from £120. Waste removal from £55. Painting from £220/day. All prices include insurance — and there are no call-out fees.
+Cleaning from £30/hr (one-off), £27/hr (regular), £45/hr (deep; 5-hour minimum for all cleaning), £32/hr (end-of-tenancy). Man and van from £65/hr (1 man + van), £90/hr (2 men + van), with a 3-hour minimum and the same rate for every hour. Handyman £65 first hour, then £50/hr (2-hour minimum), half-day £215, full-day £395. Furniture assembly from £45/hr. TV mounting from £55. Garden clearance from £120. Waste removal from £55. Painting from £220/day. All prices include insurance — and there are no call-out fees.
 
 Q: Are there any hidden fees or call-out charges?
 
@@ -2257,7 +2361,7 @@ For a deeper breakdown of London cleaning costs in 2026 — including how Conges
 
 ## Get a transparent London quote in 60 seconds
 
-Cleaning from £27/hr, man and van from £55/hr, handyman from £65 first hour (2-hour minimum). Congestion Zone surcharge always itemised — never hidden.
+Cleaning from £27/hr, man and van from £65/hr, handyman from £65 first hour (2-hour minimum). Congestion Zone surcharge always itemised — never hidden.
 
 Get an instant quote →
 

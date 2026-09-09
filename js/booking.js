@@ -41,7 +41,7 @@
       bathroomSurcharge: 5,  // per bathroom beyond 1
     },
     removals: {
-      crew: { 1: 55, 2: 85, 3: 115 },
+      crew: { 1: 65, 2: 90, 3: 115 },
       extras: { luton: 15 /*per hour*/, packing: 40, materials: 35, dismantle: 30 },
     },
     // Long-distance mileage for removals. The first `freeMiles` (local London
@@ -383,8 +383,9 @@
 
     if (service === 'removals') {
       const crew = Number(form['move-crew'].value);
-      const hours = Number(form['move-hours'].value);
-      const rate = PRICES.removals.crew[crew] || 85;
+      const hours = Math.max(3, Number(form['move-hours'].value) || 3);
+      form['move-hours'].value = String(hours);
+      const rate = PRICES.removals.crew[crew] || 90;
       const subtotal = rate * hours;
       lines.push([`${crew} mover${crew > 1 ? 's' : ''} + van · ${hours}h`, '£' + subtotal]);
       total += subtotal;

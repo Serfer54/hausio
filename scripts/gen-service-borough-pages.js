@@ -126,37 +126,37 @@ const SERVICES = {
     label: 'man and van',
     framingKey: 'man-and-van',
     heroAsset: 'service-removals.jpg',
-    headline: 'Man and van in {borough} — DBS-checked crew, fixed pricing, same-day available.',
+    headline: 'Man and van in {borough} — DBS-checked crew, transparent hourly pricing, same-day available.',
     leadeTpl: 'From a single-item delivery to a full flat or house move across {borough} — fully insured, DBS-checked crew, floor protection on every job, online booking in 60 seconds.',
     pricingItems: [
-      '1 man + van — £55/hr',
-      '2 men + van — £85/hr',
+      '1 man + van — £65/hr',
+      '2 men + van — £90/hr',
       '3 men + Luton van — £115/hr',
       'Packing & wrapping from £40',
     ],
-    pricingNote: '2-hour minimum. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access. Same-day slots available — book before 10am.',
+    pricingNote: '3-hour minimum. £18 added for central-London (EC, WC, W1, SW1, SE1) congestion access. Same-day slots available — book before 10am.',
     bookParam: 'service=removals', // internal ID — NOT changed, keeps GA4/Stripe continuity
     schemaServiceType: 'Moving services',
     priceLow: '40',
     priceHigh: '115',
     offers: [
-      { name: '1 man + van', price: '55', unit: 'HUR' },
-      { name: '2 men + van', price: '85', unit: 'HUR' },
+      { name: '1 man + van', price: '65', unit: 'HUR' },
+      { name: '2 men + van', price: '90', unit: 'HUR' },
       { name: '3 men + Luton van', price: '115', unit: 'HUR' },
       { name: 'Packing and wrapping from', price: '40' },
     ],
-    title: (b) => `Man and Van in ${b.name}, London — From £55/hr | Hausio`,
-    description: (b, framing) => `Cheap, reliable man and van in ${b.name} ${b.headlinePostcodes}. 1 man + van £55/hr · 2 men £85/hr · 3 men + Luton £115/hr. Same-day available. Fully insured. ${trimWords(framing, 90)}`,
+    title: (b) => `Man and Van in ${b.name}, London — From £65/hr | Hausio`,
+    description: (b, framing) => `Cheap, reliable man and van in ${b.name} ${b.headlinePostcodes}. 1 man + van £65/hr · 2 men £90/hr · 3 men + Luton £115/hr. Same-day available. Fully insured. ${trimWords(framing, 90)}`,
     cards: [
       {
         title: 'Single items & deliveries',
         body: 'IKEA pickup, single-sofa or fridge moves, one-piece deliveries, end-of-tenancy single-room clear-outs, storage drop-offs across London. Cheaper than a full move but with the same vetted, insured crew.',
-        bullets: ['IKEA / Wayfair / Made.com pickup', 'Sofa, fridge, washing machine', 'Storage drop-off & pickup', '1 man + Transit van from £55/hr'],
+        bullets: ['IKEA / Wayfair / Made.com pickup', 'Sofa, fridge, washing machine', 'Storage drop-off & pickup', '1 man + Transit van from £65/hr'],
       },
       {
         title: 'Flat & house moves',
         body: 'Studio, 1-bed, 2-bed and 3-bed full moves with a 2-3 person crew and a Luton van. Pickup floor + dropoff floor + lift coordination + floor protection — all built into the quote, no day-of surprises.',
-        bullets: ['2 men + van £85/hr', '3 men + Luton £115/hr', 'Floor protection on every job', 'Goods-lift booking handled'],
+        bullets: ['2 men + van £90/hr', '3 men + Luton £115/hr', 'Floor protection on every job', 'Goods-lift booking handled'],
       },
       {
         title: 'Office & specialist moves',
@@ -415,8 +415,8 @@ const SERVICE_FAQS = {
     { q: 'What can a handyman do without a registered electrician or plumber?', a: 'Non-notifiable work: swapping taps, washers and toilet seats, changing light fittings, sockets and switches, unblocking waste pipes, hanging TVs, shelves and blinds, and easing doors or changing locks. Anything notifiable — new circuits, gas or boiler work — we will tell you needs a registered specialist.' },
   ],
   'man-and-van': [
-    { q: 'How much does a man and van cost in {borough}?', a: 'In {borough} it is £55/hour for 1 man + van, £85/hour for 2 men + van and £115/hour for 3 men + a Luton van, with a 2-hour minimum. A single-item move is usually 1–2 hours, a 1-bed flat 3–4 hours and a 2-bed 4–6 hours. Central-zone congestion access adds £18.' },
-    { q: 'How much does it cost to move a 1-bed flat in {borough}?', a: 'A 1-bed flat move in {borough} typically runs £165–£340 — usually 1–2 movers and a van for 3–4 hours at £55–£85/hour. A 2-bed is around £340–£510 (2 men, 4–6h) and a studio or single-item move from £110. We quote a fixed price up front, so there are no move-day surprises.' },
+    { q: 'How much does a man and van cost in {borough}?', a: 'In {borough} it is £65/hour for 1 man + van, £90/hour for 2 men + van and £115/hour for 3 men + a Luton van, with a 3-hour minimum. Even a short single-item move has a 3-hour minimum; allow a 1-bed flat 3–4 hours and a 2-bed 4–6 hours. Central-zone congestion access adds £18.' },
+    { q: 'How much does it cost to move a 1-bed flat in {borough}?', a: 'A 1-bed flat move in {borough} typically runs £195–£360 — usually 1–2 movers and a van for 3–4 hours at £65–£90/hour. A 2-bed is around £360–£540 (2 men, 4–6h) and a studio or single-item move from £195. We provide an estimate up front. Every hour uses the same crew rate, with a 3-hour minimum; selected extras are additional.' },
   ],
   'furniture-assembly': [
     { q: 'How much does furniture assembly cost in {borough}?', a: 'Furniture assembly in {borough} is from £45/hour (1-hour minimum), or fixed-price by item: an IKEA Pax wardrobe is £85, a Malm bed £45, Hemnes drawers £35, Kallax £25 and a Billy bookcase £20. There is no call-out fee and we clear the packaging away when we leave.' },
@@ -569,7 +569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=20260908-ux3" />
+<link rel="stylesheet" href="css/style.css?v=20260909-moving" />
 
 <script type="application/ld+json">
 {
@@ -790,7 +790,7 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
 <section class="cta-final">
   <div class="container cta-box">
     <h2>Book your ${esc(b.name)} ${esc(service.label)} today.</h2>
-    <p>Vetted, insured, fixed pricing. Online in 60 seconds.</p>
+    <p>Vetted, insured, ${service.key === 'man-and-van' ? 'transparent hourly pricing' : 'fixed pricing'}. Online in 60 seconds.</p>
     <a ${bookingAttrs} class="btn btn-light">${specialist ? 'Request a quote on WhatsApp' : 'Get your instant quote'} →</a>
   </div>
 </section>
@@ -841,9 +841,9 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
   </div>
 </footer>
 
-<script src="js/main.js?v=20260908-ux3" defer></script>
-<script src="js/popup.js?v=20260908-ux3" defer></script>
-<script src="/js/wa-obfuscate.js?v=20260908-ux3" defer></script>
+<script src="js/main.js?v=20260909-moving" defer></script>
+<script src="js/popup.js?v=20260909-moving" defer></script>
+<script src="/js/wa-obfuscate.js?v=20260909-moving" defer></script>
 </body>
 </html>
 `;

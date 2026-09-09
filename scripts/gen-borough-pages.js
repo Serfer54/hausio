@@ -57,8 +57,8 @@ const SERVICE_CARDS = [
     key: 'man-and-van',
     title: (b) => `Man and Van in ${b.name}`,
     bullets: [
-      '1 man + van from £55/hr',
-      '2 men + van from £85/hr',
+      '1 man + van from £65/hr',
+      '2 men + van from £90/hr',
       'Floor protection on every job',
       'Lift-booking coordination',
     ],
@@ -163,7 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/style.css?v=20260908-ux3" />
+<link rel="stylesheet" href="../css/style.css?v=20260909-moving" />
 
 <script type="application/ld+json">
 {
@@ -389,9 +389,9 @@ ${(b.faq || []).map(renderFaqHtml).join('\n')}
   </div>
 </footer>
 
-<script src="../js/main.js?v=20260908-ux3" defer></script>
-<script src="../js/popup.js?v=20260908-ux3" defer></script>
-<script src="/js/wa-obfuscate.js?v=20260908-ux3" defer></script>
+<script src="../js/main.js?v=20260909-moving" defer></script>
+<script src="../js/popup.js?v=20260909-moving" defer></script>
+<script src="/js/wa-obfuscate.js?v=20260909-moving" defer></script>
 </body>
 </html>
 `;

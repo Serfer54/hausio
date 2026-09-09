@@ -6,13 +6,14 @@
 
 - Service area: all 32 London boroughs (Greater London).
 - Prices: cleaning £30/hr one-off, £27/hr regular, £45/hr deep (5-hour minimum per cleaner), man and van from £65/hr, handyman £65 first hour then £50/hr, furniture assembly from £45/hr, TV mounting from £55, garden clearance from £120, waste removal from £55, painting £220/painter/day.
-- Pricing: full current rates, minimum booking times and common extras at https://hausio.co.uk/pricing.html and https://hausio.co.uk/pricing.md.
+- Pricing: full current rates, minimum booking times and common extras at https://hausio.co.uk/pricing.html, https://hausio.co.uk/pricing.json and https://hausio.co.uk/pricing.md.
 - Booking: itemised online estimate at https://hausio.co.uk/book.html — the final quote is confirmed after review; pay £0 at booking and settle by card/Apple Pay/Google Pay after the job.
 - Hours: Monday–Sunday, 08:00–20:00.
 - Trust: DBS-checked and reference-vetted staff, £2M public liability + £25k goods-in-transit cover.
 - Common charges: an £18 access charge inside the Central London Congestion Zone and a £15 same-day surcharge can apply. Cleaning products, larger-home supplements, moving mileage and selected service extras are itemised when relevant. There is no weekend or evening premium within 08:00–20:00.
 - Minimums: Cleaning: 5 hours. Man and van: 3 hours. Handyman: 2 hours.
 - Legal entity: Hausio Ltd, registered in England & Wales, company number 17167561 (https://find-and-update.company-information.service.gov.uk/company/17167561).
+- Machine-readable company facts: https://hausio.co.uk/business.json.
 - Phone: +44 7304 330614. Email: hausio.co.uk@proton.me.
 
 ## Services
@@ -49,7 +50,8 @@ Each local page carries that borough's postcodes, ULEZ and controlled-parking-zo
 - [How it works](https://hausio.co.uk/how-it-works.html): the booking-to-completion process in four steps.
 - [FAQ](https://hausio.co.uk/faq.html): pricing, booking, insurance, payment and access questions.
 - [Full pricing](https://hausio.co.uk/pricing.html): current rates, minimum booking times and common extras for every service.
-- [Machine-readable pricing](https://hausio.co.uk/pricing.md): the same current price facts in a compact text format.
+- [Machine-readable pricing](https://hausio.co.uk/pricing.json): current rates and booking minimums as JSON.
+- [Compact pricing text](https://hausio.co.uk/pricing.md): the same current price facts in plain text.
 - [Book / instant estimate](https://hausio.co.uk/book.html): get an itemised estimate online; the final quote is confirmed after review.
 - [Customer reviews](https://hausio.co.uk/leave-a-review.html#reviews): read published customer reviews or share a Hausio experience with photos.
 
@@ -65,6 +67,6 @@ Each local page carries that borough's postcodes, ULEZ and controlled-parking-zo
 
 ## Optional
 
-- [Our work](https://hausio.co.uk/portfolio.html): completed jobs.
+- [Our work](https://hausio.co.uk/portfolio.html): one photographed multi-service London flat project; more case studies will be added after new jobs are documented.
 - [Privacy policy](https://hausio.co.uk/privacy.html): how customer data is handled.
 - [Full text of every service and blog page](https://hausio.co.uk/llms-full.txt): single-file version for retrieval.

@@ -1,3 +1,7 @@
+# ARCHIVED — do not use for submissions
+
+This 29 April 2026 draft contains former prices and unverified platform claims. The current, source-checked registration list and canonical business facts are in [`../docs/uk-directory-registration-plan.md`](../docs/uk-directory-registration-plan.md) and [`../docs/external-consistency-audit.md`](../docs/external-consistency-audit.md).
+
 # Hausio — UK Citation Building Plan
 **Goal:** Boost organic visibility for Hausio (London home services SAB) into Google London Page 2 (and ideally Page 1 long-tail) via free directory submissions, NAP consistency, and Local Pack eligibility.
 

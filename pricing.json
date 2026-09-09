@@ -1,0 +1,53 @@
+{
+  "formatVersion": "1.0",
+  "name": "Hausio London pricing",
+  "url": "https://hausio.co.uk/pricing.html",
+  "currency": "GBP",
+  "lastUpdated": "2026-09-09",
+  "hours": "Monday-Sunday 08:00-20:00",
+  "services": {
+    "cleaning": {
+      "unit": "hour per cleaner",
+      "minimumHours": 5,
+      "rates": {
+        "regular": 27,
+        "oneOff": 30,
+        "deep": 45,
+        "endOfTenancy": 32,
+        "afterBuilders": 30
+      }
+    },
+    "manAndVan": {
+      "unit": "hour",
+      "minimumHours": 3,
+      "sameRateEveryHour": true,
+      "rates": {
+        "oneMoverAndVan": 65,
+        "twoMoversAndVan": 90,
+        "threeMoversAndVan": 115
+      }
+    },
+    "handyman": {
+      "minimumHours": 2,
+      "rates": {
+        "firstHour": 65,
+        "additionalHour": 50,
+        "halfDayFourHours": 215,
+        "fullDayEightHours": 395
+      }
+    },
+    "specialistServices": {
+      "furnitureAssemblyFromPerHour": 45,
+      "tvWallMountingFrom": 55,
+      "gardenClearanceFrom": 120,
+      "wasteRemovalFrom": 55,
+      "paintingPerPainterPerDay": 220
+    }
+  },
+  "commonCharges": {
+    "centralLondonCongestionZone": 18,
+    "sameDayWhenApplicable": 15
+  },
+  "bookingUrl": "https://hausio.co.uk/book.html",
+  "phone": "+44 7304 330614"
+}

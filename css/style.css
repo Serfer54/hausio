@@ -2116,15 +2116,24 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .blog-grid .service-card {
   text-align: left;
 }
+.blog-grid .service-card.reveal,
+.blog-grid .service-card.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
 .blog-grid .service-card > img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  height: 220px;
   object-fit: cover;
   border-bottom: 1px solid var(--line);
 }
+.service-grid.blog-grid:has(.service-card:nth-child(4)) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: none;
+}
 .blog-grid .service-card h3 {
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   line-height: 1.2;
   margin-top: 6px;
 }
@@ -2133,6 +2142,17 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 }
 .blog-faq {
   margin-top: 20px;
+}
+@media (min-width: 761px) and (max-width: 1020px) {
+  .service-grid.blog-grid:has(.service-card:nth-child(4)) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .service-grid.blog-grid:has(.service-card:nth-child(4)) {
+    grid-template-columns: 1fr;
+  }
+  .blog-grid .service-card > img { height: 210px; }
 }
 
 /* Services dropdown in main nav */

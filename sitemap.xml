@@ -230,9 +230,10 @@
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+
     <image:image>
-      <image:loc>https://hausio.co.uk/assets/service-cleaning.jpg</image:loc>
-      <image:title>End of tenancy cleaning London 2026 price guide</image:title>
+      <image:loc>https://hausio.co.uk/assets/blog/end-of-tenancy-cleaning-guide.jpg</image:loc>
+      <image:title>End-of-tenancy cleaning cost in London guide</image:title>
     </image:image>
   </url>
   <url>
@@ -240,18 +241,33 @@
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/blog/london-moving-access-guide.jpg</image:loc>
+      <image:title>London Congestion Charge and ULEZ access guide</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hausio.co.uk/blog/renters-rights-act-end-of-tenancy-cleaning-2026.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/blog/tenancy-deposit-cleaning-guide.jpg</image:loc>
+      <image:title>End-of-tenancy cleaning and deposit guide</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hausio.co.uk/blog/spring-deep-clean-checklist-london-2026.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/blog/spring-deep-clean-guide.jpg</image:loc>
+      <image:title>Spring deep-clean checklist for London homes</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hausio.co.uk/book.html</loc>
@@ -540,18 +556,33 @@
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/blog/furniture-assembly-guide.jpg</image:loc>
+      <image:title>Furniture assembly in London guide</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hausio.co.uk/blog/tv-wall-mounting-london-cost-2026.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/blog/tv-mounting-guide.jpg</image:loc>
+      <image:title>TV wall mounting in London guide</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hausio.co.uk/blog/hiring-a-handyman-in-london-2026.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/blog/handyman-guide.jpg</image:loc>
+      <image:title>Hiring a handyman in London guide</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hausio.co.uk/handyman-westminster.html</loc>
@@ -1950,9 +1981,10 @@
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
+
     <image:image>
-      <image:loc>https://hausio.co.uk/assets/service-building-works.jpg</image:loc>
-      <image:title>Building works in London: services, quotes and project planning</image:title>
+      <image:loc>https://hausio.co.uk/assets/blog/building-works-guide.jpg</image:loc>
+      <image:title>Building works in London guide</image:title>
     </image:image>
   </url>
   <url>
@@ -1960,9 +1992,10 @@
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
+
     <image:image>
-      <image:loc>https://hausio.co.uk/assets/service-plumbing.jpg</image:loc>
-      <image:title>Plumber in London: repairs, installations and how quotes work</image:title>
+      <image:loc>https://hausio.co.uk/assets/blog/plumbing-guide.jpg</image:loc>
+      <image:title>Plumbing repairs and installations in London guide</image:title>
     </image:image>
   </url>
   <url>
@@ -1970,9 +2003,10 @@
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
+
     <image:image>
-      <image:loc>https://hausio.co.uk/assets/service-garden-care.jpg</image:loc>
-      <image:title>Garden maintenance in London: seasonal care and regular visits</image:title>
+      <image:loc>https://hausio.co.uk/assets/blog/garden-maintenance-guide.jpg</image:loc>
+      <image:title>Garden maintenance in London seasonal guide</image:title>
     </image:image>
   </url>
 </urlset>

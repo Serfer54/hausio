@@ -80,14 +80,14 @@ check('телефон tel: в HTML каждой страницы', noTel.length 
   `без tel:: ${noTel.length} → ${noTel.slice(0, 3).map(f => path.relative(ROOT, f)).join(', ')}`);
 
 // --- reviews in static HTML ---
-const index = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+const reviewsPage = fs.readFileSync(path.join(ROOT, 'leave-a-review.html'), 'utf8');
 const cachePath = path.join(ROOT, 'data', 'reviews-cache.json');
 const cached = fs.existsSync(cachePath) ? JSON.parse(fs.readFileSync(cachePath, 'utf8')) : [];
-const cards = (index.match(/class="review-card"/g) || []).length;
+const cards = (reviewsPage.match(/class="review-card"/g) || []).length;
 check('отзывы отрендерены в статику', cached.length === 0 || cards === Math.min(cached.length, 12),
   `в кэше ${cached.length}, карточек в HTML ${cards}`);
 check('секция отзывов не скрыта, когда отзывы есть',
-  cached.length === 0 || !index.includes('id="reviews" hidden'), '');
+  cached.length === 0 || !reviewsPage.includes('id="reviews" hidden'), '');
 
 // --- cleaning coverage ---
 const missingCleaning = Object.values(DATA)

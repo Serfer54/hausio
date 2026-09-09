@@ -24,7 +24,7 @@ const SERVICE_HUBS = [
   'painting-decorating-london.html',
 ];
 
-const PAGES = ['pricing.html', 'about.html', 'how-it-works.html', 'faq.html'];
+const PAGES = ['pricing.html', 'about.html', 'how-it-works.html', 'faq.html', 'leave-a-review.html'];
 
 function blogPosts() {
   const dir = path.join(ROOT, 'blog');

@@ -40,8 +40,9 @@ check(booking.includes('value="regular">Regular clean — £27/hr'), 'calculator
 check(booking.includes('value="2" selected>2 movers + van — £90/hr'), 'calculator has stale two-mover price');
 check(llms.includes('https://hausio.co.uk/pricing.html'), 'llms.txt does not expose pricing page');
 check(sitemap.includes('<loc>https://hausio.co.uk/pricing.html</loc>'), 'pricing page missing from sitemap');
-check(read('index.html').includes(reviewUrl), 'homepage Google review URL missing');
 check(read('leave-a-review.html').includes(reviewUrl), 'review page Google review URL missing');
+check(read('index.html').includes('/leave-a-review.html#reviews'), 'homepage Reviews navigation link missing');
+check(!read('index.html').includes('class="testimonials" id="reviews"'), 'reviews section still appears on homepage');
 check(!fs.existsSync(path.join(root, 'design-preview.html')), 'rejected design preview still exists');
 
 const scripts = [...pricing.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];

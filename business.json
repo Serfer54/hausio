@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
+  "@id": "https://hausio.co.uk/#organization",
+  "name": "Hausio",
+  "legalName": "Hausio Ltd",
+  "url": "https://hausio.co.uk/",
+  "telephone": "+44 7304 330614",
+  "email": "hausio.co.uk@proton.me",
+  "foundingDate": "2026-04-19",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressRegion": "Greater London",
+    "addressCountry": "GB"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Greater London"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "08:00",
+    "closes": "20:00"
+  },
+  "knowsAbout": [
+    "Handyman",
+    "Man and van",
+    "House removals",
+    "Cleaning",
+    "Furniture assembly",
+    "TV wall mounting",
+    "Garden clearance",
+    "Waste removal",
+    "Painting and decorating"
+  ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Companies House",
+    "value": "17167561"
+  },
+  "sameAs": [
+    "https://find-and-update.company-information.service.gov.uk/company/17167561",
+    "https://www.google.com/maps?cid=14006212585508995202"
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": "https://hausio.co.uk/book.html"
+  },
+  "subjectOf": "https://hausio.co.uk/pricing.json"
+}

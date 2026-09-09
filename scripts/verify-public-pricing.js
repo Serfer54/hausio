@@ -13,6 +13,8 @@ const check = (condition, message) => {
 
 const pricing = read('pricing.html');
 const pricingText = read('pricing.md');
+const pricingData = JSON.parse(read('pricing.json'));
+const businessData = JSON.parse(read('business.json'));
 const booking = read('book.html');
 const llms = read('llms.txt');
 const sitemap = read('sitemap.xml');
@@ -36,6 +38,17 @@ check(pricing.includes('5-hour minimum per cleaner'), 'pricing.html missing clea
 check(pricing.includes('3-hour minimum'), 'pricing.html missing moving minimum');
 check(pricingText.includes('Regular cleaning: £27 per hour'), 'pricing.md has stale cleaning price');
 check(pricingText.includes('2 movers and van: £90 per hour'), 'pricing.md has stale moving price');
+check(pricingData.services.cleaning.rates.regular === 27, 'pricing.json has stale regular cleaning price');
+check(pricingData.services.cleaning.rates.oneOff === 30, 'pricing.json has stale one-off cleaning price');
+check(pricingData.services.cleaning.rates.deep === 45, 'pricing.json has stale deep cleaning price');
+check(pricingData.services.cleaning.minimumHours === 5, 'pricing.json has stale cleaning minimum');
+check(pricingData.services.manAndVan.rates.oneMoverAndVan === 65, 'pricing.json has stale one-mover price');
+check(pricingData.services.manAndVan.rates.twoMoversAndVan === 90, 'pricing.json has stale two-mover price');
+check(pricingData.services.manAndVan.minimumHours === 3, 'pricing.json has stale moving minimum');
+check(pricingData.services.manAndVan.sameRateEveryHour === true, 'pricing.json must state a uniform moving rate');
+check(businessData.telephone === '+44 7304 330614', 'business.json has a non-canonical phone number');
+check(businessData.identifier.value === '17167561', 'business.json has a non-canonical company number');
+check(businessData.openingHoursSpecification.opens === '08:00' && businessData.openingHoursSpecification.closes === '20:00', 'business.json has stale hours');
 check(booking.includes('value="regular">Regular clean — £27/hr'), 'calculator has stale regular cleaning price');
 check(booking.includes('value="2" selected>2 movers + van — £90/hr'), 'calculator has stale two-mover price');
 check(llms.includes('https://hausio.co.uk/pricing.html'), 'llms.txt does not expose pricing page');

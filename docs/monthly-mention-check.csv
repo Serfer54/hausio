@@ -1,0 +1,14 @@
+month,check_date,source,check_url,profile_url,name_match,phone_match,website_match,hours_match,service_category_match,pricing_match,duplicate_found,rating,review_count,status,action,owner,next_check,notes
+2026-09,2026-09-09,Hausio website,https://hausio.co.uk/,https://hausio.co.uk/,yes,yes,yes,yes,yes,yes,no,,,checked,Keep business.json and pricing.json current,Website owner,2026-10-01,Canonical source
+2026-09,2026-09-09,Google Business Profile,https://www.google.com/maps?cid=14006212585508995202,https://www.google.com/maps?cid=14006212585508995202,yes,yes,yes,no,partial,unknown,no,5.0,1,action needed,Set hours to 08:00-20:00 daily and review primary plus secondary categories,GBP owner,2026-10-01,Public profile showed House cleaning service and Open 24 hours at audit time
+2026-09,2026-09-09,Companies House,https://find-and-update.company-information.service.gov.uk/company/17167561,https://find-and-update.company-information.service.gov.uk/company/17167561,yes,n/a,yes,n/a,yes,n/a,no,,,checked,Recheck after filing,Company officer,2026-10-01,Legal record is active; company number 17167561
+2026-09,2026-09-09,Google brand search,https://www.google.com/search?q=%22Hausio%22+London,,yes,yes,yes,partial,partial,partial,no,,,action needed,Request recrawl for pages whose snippets retain old prices,SEO owner,2026-10-01,Search snippets can lag behind deployed content
+2026-09,,Bing Places,https://www.bingplaces.com/,,,,,,,,,,,not checked,Claim or import profile and record live URL,Profile owner,2026-10-01,
+2026-09,,Apple Business Connect,https://businessconnect.apple.com/,,,,,,,,,,,not checked,Claim profile and record live URL,Profile owner,2026-10-01,
+2026-09,,Yell,https://www.yell.com/,,,,,,,,,,,not found,Create free profile and record live URL,Profile owner,2026-10-01,
+2026-09,,Checkatrade,https://www.checkatrade.com/,,,,,,,,,,,not found,Apply after insurance and customer references are ready,Profile owner,2026-10-01,
+2026-09,,TrustATrader,https://www.trustatrader.com/,,,,,,,,,,,not found,Consider after at least five verifiable references are ready,Profile owner,2026-10-01,
+2026-09,,Rated People,https://www.ratedpeople.com/,,,,,,,,,,,not checked,Test only with tracked lead budget,Marketing owner,2026-10-01,
+2026-09,,Bark,https://www.bark.com/en/gb/,,,,,,,,,,,not checked,Test only with tracked lead budget,Marketing owner,2026-10-01,
+2026-09,,Houzz,https://www.houzz.co.uk/,,,,,,,,,,,not checked,Create profile when a stronger handyman and painting portfolio is ready,Profile owner,2026-10-01,
+

@@ -80,6 +80,8 @@
 }
 .home-page #services .service-card .btn::after { content: '→'; font-size: 1.1rem; }
 .home-page #services .service-card .btn:hover { background: #4a4335; border-color: #4a4335; }
+.home-page .coverage-ticker-only { padding: 0; }
+.home-page .coverage-ticker-only .ticker-wrap { border-bottom: 0; }
 @media (max-width: 900px) and (min-width: 621px) {
   .home-page #services .service-grid { gap: 16px; }
   .home-page #services .service-card h3,

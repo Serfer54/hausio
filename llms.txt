@@ -6,10 +6,11 @@
 
 - Service area: all 32 London boroughs (Greater London).
 - Prices: cleaning £30/hr one-off, £27/hr regular, £45/hr deep (5-hour minimum per cleaner), man and van from £65/hr, handyman £65 first hour then £50/hr, furniture assembly from £45/hr, TV mounting from £55, garden clearance from £120, waste removal from £55, painting £220/painter/day.
-- Booking: instant online quote at https://hausio.co.uk/book.html — pay £0 at booking, settle by card/Apple Pay/Google Pay after the job.
+- Pricing: full current rates, minimum booking times and common extras at https://hausio.co.uk/pricing.html and https://hausio.co.uk/pricing.md.
+- Booking: itemised online estimate at https://hausio.co.uk/book.html — the final quote is confirmed after review; pay £0 at booking and settle by card/Apple Pay/Google Pay after the job.
 - Hours: Monday–Sunday, 08:00–20:00.
 - Trust: DBS-checked and reference-vetted staff, £2M public liability + £25k goods-in-transit cover.
-- Surcharges: the only two are a flat £18 access charge inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) and a £15 same-day surcharge. No weekend or evening premium — the 08:00–20:00 rate is the same seven days a week.
+- Common charges: an £18 access charge inside the Central London Congestion Zone and a £15 same-day surcharge can apply. Cleaning products, larger-home supplements, moving mileage and selected service extras are itemised when relevant. There is no weekend or evening premium within 08:00–20:00.
 - Minimums: Cleaning: 5 hours. Man and van: 3 hours. Handyman: 2 hours.
 - Legal entity: Hausio Ltd, registered in England & Wales, company number 17167561 (https://find-and-update.company-information.service.gov.uk/company/17167561).
 - Phone: +44 7304 330614. Email: hausio.co.uk@proton.me.
@@ -47,7 +48,9 @@ Each local page carries that borough's postcodes, ULEZ and controlled-parking-zo
 - [About Hausio](https://hausio.co.uk/about.html): who we are, vetting, insurance and how we work.
 - [How it works](https://hausio.co.uk/how-it-works.html): the booking-to-completion process in four steps.
 - [FAQ](https://hausio.co.uk/faq.html): pricing, booking, insurance, payment and access questions.
-- [Book / instant quote](https://hausio.co.uk/book.html): get a fixed price online in 60 seconds.
+- [Full pricing](https://hausio.co.uk/pricing.html): current rates, minimum booking times and common extras for every service.
+- [Machine-readable pricing](https://hausio.co.uk/pricing.md): the same current price facts in a compact text format.
+- [Book / instant estimate](https://hausio.co.uk/book.html): get an itemised estimate online; the final quote is confirmed after review.
 - [Leave a review](https://hausio.co.uk/leave-a-review.html): customer reviews with photos.
 
 ## Blog

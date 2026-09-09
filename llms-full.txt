@@ -2586,180 +2586,85 @@ Cleaning · Pricing
 
 # How much does end-of-tenancy cleaning cost in London? 2026 price guide.
 
-Published 30 April 2026 · 8 min read · By Serhii Perepechaiev, Hausio
+Published 30 April 2026 · Updated 10 September 2026 · 6 min read · By Serhii Perepechaiev, Hausio
 
-End-of-tenancy cleaning in London now costs between £180 and £620 in 2026, depending on property size and depth of clean. With cleaning still the most-disputed deposit deduction in Greater London — and the Renters' Rights Act 2025 reshaping how those disputes get settled — choosing the right cleaner can be the difference between a 7-day deposit return and a 60-day TDS adjudication.
+Hausio end-of-tenancy cleaning in London is £32 per hour with a five-hour minimum per cleaner. The final total depends on condition, property size and agreed extras; the estimate is shown before booking.
 
-## London end-of-tenancy cleaning prices in 2026
+## Hausio end-of-tenancy cleaning prices in 2026
 
-Most professional cleaners in London charge by the hour for end-of-tenancy work, at rates between £28 and £40 per hour. The total bill depends on how many hours the property needs, with a 4-hour minimum on most agent-spec cleans.
+The current Hausio rate is £32 per hour per cleaner, with a five-hour minimum. That makes the minimum labour booking £160. Longer jobs remain at the same hourly rate:
 
-Here are realistic price ranges across Greater London in 2026:
+### Example labour totals
 
-### By property size
+5 billable hours£160
 
-Studio£180–£240
+- 6 billable hours£192
 
-- 1-bed flat£220–£300
+- 8 billable hours£256
 
-- 2-bed flat£280–£380
+- 10 billable hours£320
+Examples at £32/hour; the property estimate is confirmed before booking.
 
-- 3-bed house£400–£520
+### Common quoted items
 
-- 4-bed house£550–£620
+- Oven and fridge interiorsIncluded
 
-Hourly rate £28–£40, 4-hour minimum
+- Hausio cleaning products+£15/visit
 
-### Common add-ons
+- Central London access+£18 where applicable
 
-- Inside oven & fridge+£40–£80
+- Same-day booking+£15 where available
+Larger homes and extra tasks are itemised in the estimate.
 
-- Limescale-heavy bathroom+£25–£50
+Two cleaners can reduce the elapsed time, but billing is based on total cleaner-hours. For example, two cleaners working for four hours equal eight cleaner-hours.
 
-- After-builders dust+£60–£120
+## What changes the number of hours?
 
-- Carpet shampoo+£30–£60/room
+Condition has more impact than floor area alone. Built-up oven grease, bathroom limescale, crowded cupboards, pet hair and fine renovation dust all add time. Clear access, an empty fridge and freezer, and removal of personal belongings help the team work through the checklist without pauses.
 
-- Mattress steam clean+£35/mattress
+Photos taken before booking help Hausio estimate the work. The estimate should show the likely hours, optional products, extra tasks and any Central London access charge.
 
-Billed at cost, no markup
-
-### Surcharges
-
-- Central Congestion Zone+£15–£20
-
-- Same-day booking+£15
-
-- Weekend / bank holiday+10–15%
-
-- Out-of-hours (after 20:00)+25%
-
-Quoted up-front, never surprise charges
-
-Bookings inside the Central London Congestion Charge zone (postcodes EC, WC, W1, SW1, SE1) add a small access charge to cover the daily £18 Congestion Charge plus ULEZ. Some cleaners hide this in their hourly rate; the better practice in 2026 is to itemise it.
-
-## What drives the cost up or down
-
-The biggest cost variable in a London end-of-tenancy clean is not square footage — it's condition and access. A well-maintained 2-bed flat in Hackney can be ready in 5 hours; a 1-bed Camden flat with a heavily-used kitchen and a no-lift Victorian walk-up can stretch to 7.
-
-### Variables that push the price up
-
-#### Heavy oven and limescale work
-An untouched oven over 12 months adds 60–90 minutes. London's hard water makes bathroom limescale a separate line item in around 40% of jobs.
-
-#### After-builders dust
-Even minor renovation dust (paint flecks, plaster, sawdust) requires two-stage cleaning — coarse capture, then fine surfaces. This adds 1–2 hours and £60–£120.
-
-#### No-lift Victorian walk-ups
-Common in NW1 (Kentish Town), N16 (Stoke Newington) and SW18 (Earlsfield). Carrying equipment up four floors costs time, even though Hausio doesn't add a "stairs surcharge".
-
-#### Listed buildings or mansion blocks
-Properties in W1 (Mayfair, Marylebone), SW1 (Belgravia, Pimlico), NW3 (Hampstead) and N1 (Canonbury, Barnsbury) often need pH-neutral, marble-safe products and slower work to protect period features.
-
-### Variables that bring the price down
-
-#### Booking 5+ days ahead
-Last-minute slots cost 10–20% more across London because they push other jobs. Plan ahead and you keep the standard rate.
-
-#### Tenant-cleaned kitchen
-If you handle the oven, fridge and cupboards yourself before the cleaner arrives, the booking can drop by 1.5–2 hours.
-
-#### Off-peak weekday slots
-Tuesday and Wednesday afternoons are the quietest in London cleaning calendars. Some providers (Hausio included) reward those slots with a small discount.
-
-## Hourly billing vs flat-fee: what changed in 2026
-
-Five years ago, "fixed-fee end-of-tenancy clean from £200" was the standard pitch on London cleaning websites. In 2026 most professional cleaners and most letting agents have moved to hourly billing with a transparent estimate.
-
-The shift has two drivers:
-
-- TDS adjudication trends. The Tenancy Deposit Scheme has, since 2025, increasingly rejected flat-fee cleaning charges that arrive without itemised invoices. If a landlord deducts £350 for "professional clean" without showing what was cleaned and how long it took, the tenant typically wins the dispute.
-
-- Renters' Rights Act 2025. The Act tightened the standard for what landlords can charge tenants on exit. Cleaning costs must now be evidence-based — itemised by area, with photos and time records — to be defendable in adjudication.
-
-The practical consequence: if a London cleaner quotes you a single number with no breakdown, ask for an hourly estimate plus a list of what's included. Any cleaner working with letting agents in 2026 already produces this format.
-
-## What's included in an agent-spec clean
-
-An agent-spec end-of-tenancy clean follows the inventory checklist used by the major London letting agencies — Foxtons, Dexters, Hamptons, Savills, Knight Frank, John D Wood, Marsh & Parsons. There are minor differences between them, but the core list is identical:
+## What an end-of-tenancy clean covers
 
 #### Kitchen
-Inside oven (racks, trays, glass door), inside fridge and freezer (defrosted), dishwasher filter and seals, all cupboards and drawers (inside and out), extractor and filters, hob and grill, sink, taps, splashback, tiles, floor.
+Oven, hob, extractor, fridge and freezer interiors, accessible cupboards and drawers, worktops, sink, taps, splashbacks and floor.
 
 #### Bathrooms
-Bath and shower descale, tile grout, silicone, glass screens, taps, toilet (interior and exterior, including hinges), basin, mirror, extractor, floor.
+Bath or shower, screens, accessible grout and silicone, taps, toilet, basin, mirrors, fittings and floor.
 
-#### Living and bedrooms
-Windows interior, frames and sills, skirting boards, doors and frames, light fittings, switches, sockets, behind radiators where accessible, wardrobes inside and out, carpets vacuumed and edge-cleaned.
+#### Living rooms and bedrooms
+Accessible surfaces, skirting, doors, switches, sockets, wardrobes, interior window glass and floors or carpets.
 
-#### Communal areas
-Hallways, staircases, any private balcony or patio. Front-door interior and threshold.
+#### Hallways and stairs
+Dusting, vacuuming or mopping, skirting, doors, handrails and reachable fittings.
 
-Hausio's London end-of-tenancy clean covers all of the above as standard, with photographic evidence emailed to the tenant and the agent within 4 hours of completion.
+Balconies, exterior windows, carpet extraction, upholstery and specialist stain treatment should be agreed separately where needed.
 
-## How long does an end-of-tenancy clean take?
+## How long should you allow?
 
-Average completion times across London in 2026, based on agent-spec checklists:
+A well-kept one-bedroom flat may fit into five to seven cleaner-hours. A larger property or a home with heavy kitchen and bathroom build-up can require substantially longer. Send current photographs instead of relying only on bedroom count.
 
-- Studio: 4–5 hours
+## Professional cleaning and tenancy deposits
 
-- 1-bed flat: 5–7 hours
+In England, a landlord or agent cannot require a tenant to pay a separate prohibited fee for a third-party cleaning service. The tenant may still need to return the property to the cleanliness recorded at check-in, allowing for fair wear and tear. The government's Tenant Fees Act guidance explains the permitted-payment framework.
 
-- 2-bed flat: 6–9 hours
+For a deposit deduction, records matter: retain the check-in inventory, dated before-and-after photographs, the cleaner's invoice and the check-out report. The future Private Rented Sector Landlord Ombudsman is part of the Renters' Rights Act programme, but the government's current roadmap expects mandatory landlord membership in 2028. It should not be presented as a live shortcut for cleaning-deposit disputes in 2026.
 
-- 3-bed house: 8–11 hours
+## Before the cleaners arrive
 
-- 4-bed house: 10–14 hours
+- Remove belongings and rubbish unless removal is part of the booking.
 
-For larger properties most professional London cleaners send a 2-person team, halving the elapsed time without changing the total billable hours.
+- Defrost and empty the freezer if it must be cleaned inside.
 
-## Renters' Rights Act 2025: what changed for end-of-tenancy cleaning
+- Provide access to cupboards, appliances and utility areas.
 
-The Renters' Rights Act 2025 reshaped the relationship between landlords, tenants and the deposit-cleaning industry in three concrete ways:
+- Share the agent or inventory checklist before the visit.
 
-- Professional-cleaning requirement is conditional. A landlord can only require a "professional standard" end-of-tenancy clean if the property was demonstrably cleaned to that standard at move-in and the tenancy agreement reflects that. Otherwise, "return to check-in condition" is the standard, evidenced by the original inventory.
+- Identify fragile finishes, existing damage and areas requiring specialist products.
 
-- Evidence-based deductions. Cleaning charges deducted from a deposit must be itemised, time-stamped, and photographically evidenced. Flat-fee deductions without those three elements are now routinely overturned in TDS adjudication.
+## Book an end-of-tenancy clean in London
 
-- Tenant access to mediation. The Act expanded access to the new Private Rented Sector ombudsman service, giving tenants a faster route than full TDS adjudication for cleaning disputes under £400.
-
-The net effect for tenants in Camden, Hackney, Islington, Wandsworth and Westminster: if your cleaner produces an hourly itemised invoice and before-and-after photos, you almost always keep the disputed cleaning portion of your deposit.
-
-## How to choose a London end-of-tenancy cleaner — the 5 questions
-
-Whether you're a tenant booking the clean yourself or a letting agent coordinating on a tenant's behalf, these five questions surface the difference between a £200 cleaner you'll have to chase and a £200 cleaner who closes the tenancy cleanly.
-
-- Are your cleaners DBS-checked and insured? The right answer is yes, with £2M+ public liability cover. Anything less and the company isn't equipped for tenancy work.
-
-- Do you follow agent-spec inventory checklists? Specifically — Foxtons, Dexters, Hamptons, Knight Frank, Savills format. Generic "deep clean" doesn't pass an inventory clerk.
-
-- Will I receive before-and-after photos? Standard in 2026. If a cleaner doesn't produce them, your deposit is exposed.
-
-- Is there a free re-clean if the inventory clerk flags an issue? The 72-hour re-clean window is industry standard for professional London cleaners.
-
-- What's your hourly rate, your minimum, and your Congestion Charge policy? If the answer is a single fixed number with no breakdown, that's a 2025-era flat-fee approach the TDS has been increasingly rejecting.
-
-## What Hausio charges for London end-of-tenancy cleaning in 2026
-
-Our London end-of-tenancy clean starts at £32 per hour, with a 4-hour minimum. Every clean includes:
-
-- DBS-checked, English-speaking, fully insured cleaners (£2M public liability)
-
-- EU Ecolabel eco-friendly products and all equipment
-
-- Agent-spec checklist matching Foxtons, Dexters, Hamptons, Savills, Knight Frank format
-
-- Before-and-after photos emailed within 4 hours of completion
-
-- Free 72-hour re-clean if the inventory clerk flags any cleaning issue
-
-- Itemised invoice ready for TDS or deposit-protection submission
-
-- £0 today — you only pay after the job is complete and you're satisfied
-
-Bookings inside the Central London Congestion Zone carry a flat £18 access charge that bundles the £15 daily Congestion Charge plus ULEZ. We use ULEZ-compliant Euro 6 vans on every Westminster, Mayfair and Belgravia job.
-
-For borough-specific notes on access, parking and listed-building rules, see our pages for Camden, Hackney, Islington, Wandsworth and Westminster.
+Use the Hausio London cleaning page or booking calculator for an itemised estimate. The public Hausio pricing page is the current source for rates and minimum booking times.
 
 ## Book a London end-of-tenancy clean today
 
@@ -2769,23 +2674,20 @@ Get an instant quote →
 
 Quick answers
 
-Q: How much does end-of-tenancy cleaning cost in London in 2026?
-£180–£620 depending on property size: studio £180–£240, 1-bed £220–£300, 2-bed £280–£380, 3-bed £400–£520, 4-bed £550–£620. Hourly rate £28–£40, 4-hour minimum. Central Zone adds £15–£20 for Congestion Charge + ULEZ.
+Q: What is Hausio's end-of-tenancy cleaning rate?
+£32 per hour per cleaner, with a five-hour minimum. The minimum labour booking is £160.
 
 Q: How long does an end-of-tenancy clean take?
-1-bed flat 5–7 hours, 2-bed 6–9 hours, 3-bed 8–11 hours. Larger properties get a 2-person team, halving the elapsed time without changing billable hours.
+A well-kept one-bedroom flat may require five to seven cleaner-hours. Larger homes and heavy kitchen, bathroom or renovation residue take longer, so recent photos produce a better estimate than bedroom count alone.
 
-Q: Hourly billing vs flat-fee — which is better?
-Hourly with itemised invoice. TDS adjudicators since 2025 reject flat-fee cleaning charges without breakdowns. Hourly billing also tends to be cheaper for well-maintained smaller flats.
+Q: Are oven and fridge interiors included?
+Yes, oven and fridge interiors are included in Hausio end-of-tenancy cleaning. The freezer should be empty and defrosted before the visit.
 
-Q: Can my landlord require professional cleaning at move-out?
-Only if the property was professionally cleaned at move-in and that's documented in the tenancy agreement. Otherwise the standard is "return to check-in condition", evidenced from the inventory.
+Q: Can my landlord make me buy professional cleaning?
+A landlord or agent cannot require a prohibited third-party cleaning fee. The property can still be expected back at the cleanliness recorded at check-in, allowing for fair wear and tear.
 
-Q: What's in an agent-spec clean?
-Inside oven, fridge, freezer, dishwasher, all cupboards and drawers, extractor, hob, sink. Bathroom descale, grout, silicone. Windows interior, skirting, light fittings, behind radiators, carpets vacuumed and edge-cleaned. Hausio includes all of this as standard.
-
-Q: How do I avoid a deposit dispute?
-Three things: itemised invoice, before-and-after photos, free 72-hour re-clean if your inventory clerk flags an issue. Hausio includes all three.
+Q: What evidence should I keep?
+Keep the signed inventory, dated before-and-after photos, itemised cleaning invoice, key-return record and check-out report.
 
 ## Sorted in one booking.
 
@@ -2912,7 +2814,7 @@ Guide · Handyman
 
 # Hiring a handyman in London: the complete 2026 guide.
 
-Published 26 July 2026 · 5 min read · By Serhii Perepechaiev, Hausio
+Published 26 July 2026 · 5 min read · By Nikita Denysiuk, Hausio
 
 Hiring a handyman in London should be the easiest home job you ever book: one visit, a list of small fixes, a fair hourly rate. In practice it is where people get caught out most — the shelf that never sits level, the TV mount that pulls a chunk out of a plasterboard wall, the "quick job" that quietly becomes a lost afternoon. This is a practical guide to what a good London handyman actually does in 2026, what the work really costs, and how to tell a dependable tradesperson from the noise when you search "handyman near me".
 
@@ -3000,7 +2902,7 @@ Guide · Furniture Assembly
 
 # IKEA and flat-pack furniture assembly in London: the 2026 guide.
 
-Published 26 July 2026 · 5 min read · By Serhii Perepechaiev, Hausio
+Published 26 July 2026 · 5 min read · By Nikita Denysiuk, Hausio
 
 A flat-pack box looks simple on the shop floor and considerably less so at 9pm on the living-room carpet, surrounded by cam locks, dowels and a wordless manual. IKEA flat-pack assembly in London carries an extra layer of difficulty most buying guides skip: the flat itself. This is a practical guide to furniture assembly in London in 2026 — what a good service actually builds, how long each piece really takes, and why a Victorian conversion in N16 turns the same PAX wardrobe into twice the job it would be in a Home Counties new-build.
 
@@ -3096,43 +2998,47 @@ RejectAccept
 ---
 
 URL: https://hausio.co.uk/blog/london-ulez-congestion-charge-2026.html
-Title: London ULEZ + Congestion Charge 2026: Impact on Cleaning, Man and Van & Handyman Quotes — Hausio
+Title: London Congestion Charge & ULEZ 2026: Home-Service Access Guide — Hausio
 
-London ULEZ + Congestion Charge 2026: Impact on Cleaning, Man and Van & Handyman Quotes — Hausio
+London Congestion Charge & ULEZ 2026: Home-Service Access Guide — Hausio
 
 Skip to content
 
 News · Pricing
 
-# London ULEZ + Congestion Charge 2026: how the new rules change your cleaning and man and van quote.
+# London Congestion Charge and ULEZ 2026: a home-service access guide.
 
-Published 30 April 2026 · 3 min read · By Serhii Perepechaiev, Hausio
+Published 30 April 2026 · Updated 10 September 2026 · 4 min read · By Nikita Denysiuk, Hausio
 
-If you're booking a cleaner, man and van team or handyman inside central London in 2026, the £18 daily Congestion Charge plus the 24/7 ULEZ are now baked into nearly every quote. Here's what's actually changed and what a fair access charge looks like in 2026.
+London road charges can affect a home-service visit when a vehicle enters the relevant zone during charging hours. Hausio shows its applicable £18 Central London access charge separately so it is visible before booking.
 
-## What the rules are now
+## Congestion Charge in 2026
 
-Congestion Charge: £18/day, 07:00–18:00 weekdays, 12:00–18:00 weekends and bank holidays. Covers the EC, WC, W1, SW1 and SE1 postcode core.
+Transport for London lists the Congestion Charge as £18 when paid in advance or on the day. Charging hours are 07:00–18:00 Monday to Friday and 12:00–18:00 on Saturdays, Sundays and bank holidays. The charge does not operate during the published Christmas-to-New-Year suspension.
 
-- ULEZ (Ultra Low Emission Zone): 24/7, all London boroughs inside the M25. Non-compliant vans pay £12.50/day on top.
+The zone is a defined central-London area, so a postcode alone should not be used as a guarantee that an address is inside or outside it. TfL's official Congestion Charge checker and guidance is the correct source for a specific address.
 
-- Combined: a non-compliant Luton van entering central London on a weekday now costs the operator £30.50 in road charges before fuel and labour.
+## ULEZ is a separate scheme
 
-## What this means for your quote
+ULEZ operates across all London boroughs, 24 hours a day except Christmas Day. It applies only when a vehicle does not meet the required emissions standard. A compliant vehicle does not pay the daily ULEZ charge.
 
-Most professional London cleaners, man and van firms and handymen now itemise a flat £15–£20 access charge for jobs inside the Congestion Zone, instead of hiding it inside the hourly rate. Hausio uses a flat £18 charge that bundles both Congestion Charge and ULEZ for the day, regardless of how many trips we make.
+That distinction matters: the £18 Hausio access charge for applicable central-London work should not be described as a ULEZ charge for a compliant van. It reflects the Congestion Charge and the access planning associated with a central job.
 
-If you're outside the Congestion Zone but inside the ULEZ ring (most of zones 2–6), there's no access surcharge with reputable London providers — the whole industry has migrated to Euro 6 ULEZ-compliant fleets since 2024.
+## How the charge appears in a Hausio estimate
 
-## How to spot a fair quote
+The access charge is displayed as its own line where applicable.
 
-- The access charge is named explicitly — not buried in a higher hourly rate.
+- It is not presented as a discount on later moving hours.
 
-- It's a flat fee per day, not "per trip" or "per van" — multi-trip jobs shouldn't multiply.
+- Parking, permits or unusual loading restrictions are assessed separately when the address requires them.
 
-- The provider confirms their van is Euro 6 ULEZ-compliant in writing. (You won't get a surprise £12.50 ULEZ fine on your invoice.)
+- The service rate and booking minimum remain visible alongside any access charge.
 
-For a deeper breakdown of London cleaning costs in 2026 — including how Congestion Charge interacts with hourly rates — read our 2026 end-of-tenancy cleaning price guide. Borough-specific notes for Westminster (where every job touches the zone) and Camden (where NW1 sits on the boundary) are in our area pages.
+## What to send before a London visit
+
+Provide the complete postcode and building or estate name, the preferred arrival time, parking instructions and any loading-bay or concierge restrictions. For a move, say whether the van can stop near the entrance and whether lifts must be reserved.
+
+See the current Hausio pricing page for service rates and common charges. Borough information for Westminster and Camden can help with local planning, but TfL remains the source for the actual charging boundary.
 
 ## Get a transparent London quote in 60 seconds
 
@@ -3162,7 +3068,7 @@ Guide · Plumbing
 
 # Plumber in London: common repairs, installations and how to get a clear quote.
 
-Published 10 September 2026 · 6 min read · By Serhii Perepechaiev, Hausio
+Published 10 September 2026 · 6 min read · By Nikita Denysiuk, Hausio
 
 Hausio provides plumbing repairs and installations across Greater London for common water, waste and bathroom jobs. This includes leaking taps, sink wastes, toilets, appliance connections, radiator changes and bathroom fittings. The price is confirmed for the specific job after the fault, access and likely parts have been reviewed.
 
@@ -3243,9 +3149,9 @@ RejectAccept
 ---
 
 URL: https://hausio.co.uk/blog/renters-rights-act-end-of-tenancy-cleaning-2026.html
-Title: Renters' Rights Act 2025: What Changed for End-of-Tenancy Cleaning in London — Hausio
+Title: End-of-Tenancy Cleaning, Deposits & Renters' Rights in 2026 — Hausio
 
-Renters' Rights Act 2025: What Changed for End-of-Tenancy Cleaning in London — Hausio
+End-of-Tenancy Cleaning, Deposits & Renters' Rights in 2026 — Hausio
 
 Skip to content
 
@@ -3253,33 +3159,53 @@ News · Tenancies
 
 # Renters' Rights Act 2025: three things that changed for end-of-tenancy cleaning in London.
 
-Published 30 April 2026 · 3 min read · By Serhii Perepechaiev, Hausio
+Published 30 April 2026 · Updated 10 September 2026 · 5 min read · By Nikita Denysiuk, Hausio
 
-The Renters' Rights Act 2025 reshaped a lot more than the headlines suggested. For London tenants and letting agents, three concrete changes are already affecting how end-of-tenancy cleaning is charged and disputed in 2026.
+End-of-tenancy cleaning disputes are decided by evidence of condition, responsibility and reasonable cost. The Renters' Rights Act 2025 changed important parts of renting in England, but it did not create a special cleaning-dispute limit or replace the deposit-protection process in 2026.
 
-## 1. "Professional clean required" only if move-in was professional
+## Can a landlord require professional cleaning?
 
-Before 2025, many London tenancies had a clause requiring "professional standard" cleaning at move-out, regardless of how the property was handed over at move-in. Under the Act framework now in force, that clause is unenforceable unless the inventory and tenancy agreement document a professional clean at the start of the tenancy.
+A landlord or letting agent cannot require a tenant to pay a separate mandatory fee for a third-party cleaning service. The Tenant Fees Act guidance lists the payments that can be required in England; a compulsory cleaning-service fee is not on that list.
 
-What this means: if you moved into a flat that was not professionally cleaned, the standard at exit is "return to check-in condition", evidenced by the original inventory — not an arbitrary "professional" benchmark.
+The tenant can still be responsible for returning the property to the level of cleanliness recorded at check-in, allowing for fair wear and tear. The practical question is the condition of the property, not whether the tenant used a particular cleaning company.
 
-## 2. Flat-fee deductions are routinely overturned
+## What evidence matters in a deposit dispute?
 
-The Tenancy Deposit Scheme (TDS) and the deposit-protection alternatives have, since 2025, increasingly rejected flat-fee cleaning deductions submitted without itemised evidence. A landlord deducting £350 for "professional clean" with no breakdown of hours, areas covered, or rate now usually loses the dispute.
+A tenancy deposit remains the tenant's money unless the landlord establishes a justified deduction. For cleaning, the strongest records are the signed check-in inventory, dated check-out photographs, correspondence about specific areas and a reasonable invoice or estimate for putting the property back to its recorded starting condition.
 
-What this means: in 2026, cleaning deductions that hold up in adjudication look like an itemised invoice — hourly rate, hours worked, areas covered, before-and-after photos.
+Before cleaning: photograph every room, appliance interior and existing mark.
 
-## 3. Faster mediation for cleaning disputes under £400
+- After cleaning: repeat the same angles and retain the originals with dates.
 
-The Act expanded the Private Rented Sector ombudsman service. Most cleaning-only disputes (typically £150–£400 in London) now route through ombudsman mediation rather than full TDS adjudication — faster turnaround, often days instead of weeks.
+- At handover: keep the cleaning invoice, key-return record and any inventory-clerk report.
 
-## What it means for tenants and agents in 2026
+- If a deduction is proposed: ask which check-in and check-out evidence supports it and how the amount was calculated.
 
-If you're handing back a tenancy in NW1, E8, N1, SW11 or W1, choose a cleaner that produces three things automatically: itemised hourly invoice, before-and-after photos, 72-hour free re-clean window if the inventory clerk flags an issue. Those three turn a 60-day deposit dispute into a 7-day deposit return.
+## What did the Renters' Rights Act change?
 
-For a full breakdown of cleaning costs and what an agent-spec clean covers, see our 2026 London end-of-tenancy cleaning price guide.
+The Act introduced a wider programme of tenancy reform, including a future Private Rented Sector Database and Landlord Ombudsman. According to the government's implementation roadmap, the database rollout begins from late 2026 and mandatory landlord membership of the Ombudsman is expected in 2028 after the service has been established.
 
-Disclaimer: this article is general information, not legal advice. For specific tenancy disputes consult Citizens Advice or a property solicitor.
+That means the future Ombudsman should not be described as the current route for ordinary cleaning-deposit disputes in September 2026. Where a protected deposit is disputed, tenants and landlords should follow the process of the government-approved deposit scheme holding or insuring that deposit.
+
+## A practical check-out plan
+
+- Read the check-in inventory and make a room-by-room task list.
+
+- Ask the agent whether they have a check-out checklist, without accepting an obligation to buy a named cleaning service.
+
+- Book enough cleaning time for the actual condition of the property.
+
+- Keep dated photographs and an itemised invoice.
+
+- Respond to any proposed deduction with the relevant records rather than general statements.
+
+## How Hausio documents an end-of-tenancy clean
+
+Hausio's London end-of-tenancy cleaning is £32 per hour with a five-hour minimum per cleaner. The agreed checklist, optional extras and applicable access charges are shown before booking. Customers can also request before-and-after photographs and use the invoice as a record of the completed work.
+
+For costs, likely duration and the cleaning checklist, see the London end-of-tenancy cleaning price guide.
+
+This article provides general information for England and is not legal advice. For a specific dispute, check your deposit scheme's guidance or seek independent housing advice.
 
 ## Hausio London end-of-tenancy clean — agent-spec, photo-evidenced, re-clean guaranteed
 

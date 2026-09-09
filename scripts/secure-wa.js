@@ -6,7 +6,7 @@ const ROOT = path.resolve(__dirname, '..');
 const OLD_LINK = '<a href="https://wa.me/447304330614" target="_blank" class="nav-wa" aria-label="WhatsApp">';
 const NEW_LINK = '<a href="#" data-wa data-wa-source="nav" class="nav-wa" aria-label="WhatsApp" rel="nofollow noopener">';
 
-const SCRIPT_TAG = '<script src="/js/wa-obfuscate.js?v=20260908-ux3" defer></script>';
+const SCRIPT_TAG = '<script src="/js/wa-obfuscate.js?v=20260909-moving" defer></script>';
 
 function walk(dir, out = []) {
   for (const name of fs.readdirSync(dir)) {

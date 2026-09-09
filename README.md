@@ -46,8 +46,8 @@ python -m http.server -d Hausio 8000
 | Cleaning (regular)     | £27/hr |
 | Cleaning (deep)        | £45/hr |
 | Cleaning (end of tenancy) | £32/hr |
-| Man and Van (1 man + van) | £55/hr |
-| Man and Van (2 men + van) | £85/hr |
+| Man and Van (1 man + van) | £65/hr |
+| Man and Van (2 men + van) | £90/hr |
 | Man and Van (3 men + van) | £115/hr |
 | Handyman (1st hour)    | £65 |
 | Handyman (subsequent)  | £50/hr |

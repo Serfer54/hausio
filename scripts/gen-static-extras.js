@@ -105,9 +105,9 @@ const FOOTER = `<footer class="site-footer">
   </div>
 </footer>`;
 
-const SCRIPTS = `<script src="js/main.js?v=20260908-ux3" defer></script>
-<script src="js/popup.js?v=20260908-ux3" defer></script>
-<script src="/js/wa-obfuscate.js?v=20260908-ux3" defer></script>`;
+const SCRIPTS = `<script src="js/main.js?v=20260909-moving" defer></script>
+<script src="js/popup.js?v=20260909-moving" defer></script>
+<script src="/js/wa-obfuscate.js?v=20260909-moving" defer></script>`;
 
 // ---- /areas/index.html ----
 const boroughs = Object.values(DATA).slice().sort((a, b) => a.name.localeCompare(b.name));
@@ -135,7 +135,7 @@ ${HEAD_ANALYTICS}
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=20260908-ux3" />
+<link rel="stylesheet" href="/css/style.css?v=20260909-moving" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -228,7 +228,7 @@ ${HEAD_ANALYTICS}
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=20260908-ux3" />
+<link rel="stylesheet" href="/css/style.css?v=20260909-moving" />
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RN3TRV4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

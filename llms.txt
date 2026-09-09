@@ -5,19 +5,19 @@
 ## Key facts
 
 - Service area: all 32 London boroughs (Greater London).
-- Prices: cleaning £30/hr one-off, £27/hr regular, £45/hr deep (5-hour minimum per cleaner), man and van from £55/hr, handyman £65 first hour then £50/hr, furniture assembly from £45/hr, TV mounting from £55, garden clearance from £120, waste removal from £55, painting £220/painter/day.
+- Prices: cleaning £30/hr one-off, £27/hr regular, £45/hr deep (5-hour minimum per cleaner), man and van from £65/hr, handyman £65 first hour then £50/hr, furniture assembly from £45/hr, TV mounting from £55, garden clearance from £120, waste removal from £55, painting £220/painter/day.
 - Booking: instant online quote at https://hausio.co.uk/book.html — pay £0 at booking, settle by card/Apple Pay/Google Pay after the job.
 - Hours: Monday–Sunday, 08:00–20:00.
 - Trust: DBS-checked and reference-vetted staff, £2M public liability + £25k goods-in-transit cover.
 - Surcharges: the only two are a flat £18 access charge inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) and a £15 same-day surcharge. No weekend or evening premium — the 08:00–20:00 rate is the same seven days a week.
-- Minimums: 2-hour minimum on cleaning, man and van, and handyman bookings.
+- Minimums: Cleaning: 5 hours. Man and van: 3 hours. Handyman: 2 hours.
 - Legal entity: Hausio Ltd, registered in England & Wales, company number 17167561 (https://find-and-update.company-information.service.gov.uk/company/17167561).
 - Phone: +44 7304 330614. Email: hausio.co.uk@proton.me.
 
 ## Services
 
 - [Cleaning in London](https://hausio.co.uk/cleaning-london.html): one-off £30/hr, regular £27/hr, deep £45/hr, end-of-tenancy £32/hr and after-builders £30/hr; 5-hour minimum per cleaner. Optional products +£15 per visit.
-- [Man and van in London](https://hausio.co.uk/man-and-van-london.html): single items to full flat/house moves from £55/hr, same-day available.
+- [Man and van in London](https://hausio.co.uk/man-and-van-london.html): single items to full flat/house moves from £65/hr, same-day available.
 - [Handyman in London](https://hausio.co.uk/handyman-london.html): repairs, assembly, mounting, minor plumbing and electrics — £65 first hour.
 - [Furniture assembly in London](https://hausio.co.uk/furniture-assembly-london.html): IKEA, Made.com, Wayfair — from £45/hr or fixed price by item.
 - [TV wall mounting in London](https://hausio.co.uk/tv-mounting-london.html): plasterboard, brick, concrete, cable-conceal — from £55.
@@ -33,7 +33,7 @@ Each local page carries that borough's postcodes, ULEZ and controlled-parking-zo
 
 - [Cleaners in Camden](https://hausio.co.uk/cleaning-camden.html): NW1, NW3, WC1 — regular £27/hr to end of tenancy £32/hr.
 - [Handyman in Camden](https://hausio.co.uk/handyman-camden.html): £65 first hour, then £50/hr, 15–30 min response across the borough.
-- [Man and van in Hackney](https://hausio.co.uk/man-and-van-hackney.html): E5, E8, E9, N1, N16 — £55/hr for 1 man + van.
+- [Man and van in Hackney](https://hausio.co.uk/man-and-van-hackney.html): E5, E8, E9, N1, N16 — £65/hr for 1 man + van.
 - [Cleaners in Tower Hamlets](https://hausio.co.uk/cleaning-tower-hamlets.html): E1, E2, E3, E14 including Canary Wharf.
 - [Handyman in Waltham Forest](https://hausio.co.uk/handyman-waltham-forest.html): E4, E10, E11, E17 including Blackhorse Road.
 - [Garden clearance in Bexley](https://hausio.co.uk/garden-clearance-bexley.html): DA1, DA5–DA8, DA14–DA16, SE2, SE9 — inside extended ULEZ, no charge passed on.

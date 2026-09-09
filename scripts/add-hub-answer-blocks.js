@@ -31,11 +31,11 @@ const HUBS = {
   },
   'man-and-van-london.html': {
     h2: 'How much does a man and van cost in London?',
-    answer: 'A man and van in London costs £55/hr for 1 man + van, £85/hr for 2 men + van and £115/hr for 3 men + a Luton van, with a 2-hour minimum. As a total move, a 1-bed flat usually runs £165–£340, a 2-bed £340–£510 and a studio or single item from £110.',
+    answer: 'A man and van in London costs £65/hr for 1 man + van, £90/hr for 2 men + van and £115/hr for 3 men + a Luton van, with a 3-hour minimum. As a total move, a 1-bed flat usually runs £195–£360, a 2-bed £360–£540 and a studio or single item from £195.',
     caption: 'Hausio London move prices (2026)',
     head: ['Move size', 'Crew &amp; time', 'Typical total'],
-    rows: [['Single item / studio', '1 man + van · 2–3h', '£110–£165'], ['1-bed flat', '1–2 movers · 3–4h', '£165–£340'], ['2-bed flat', '2 movers · 4–6h', '£340–£510'], ['3-bed house', '3 movers · 6–8h', '£690–£920']],
-    note: 'Hourly: 1 man+van £55 · 2 men £85 · 3 men+Luton £115 · 2-hour minimum · Congestion Zone +£18.',
+    rows: [['Single item / studio', '1 man + van · 3h', '£195'], ['1-bed flat', '1–2 movers · 3–4h', '£195–£360'], ['2-bed flat', '2 movers · 4–6h', '£360–£540'], ['3-bed house', '3 movers · 6–8h', '£690–£920']],
+    note: 'Hourly: 1 man+van £65 · 2 men £90 · 3 men+Luton £115 · 3-hour minimum · Congestion Zone +£18.',
   },
   'handyman-london.html': {
     h2: 'How much does a handyman cost in London?',
@@ -117,7 +117,7 @@ ${renderTable(h)}
 `;
 }
 
-const CSS_ANCHOR = '<link rel="stylesheet" href="css/style.css?v=20260908-ux3" />';
+const CSS_ANCHOR = '<link rel="stylesheet" href="css/style.css?v=20260909-moving" />';
 let done = 0;
 for (const [file, h] of Object.entries(HUBS)) {
   const fp = path.join(ROOT, file);

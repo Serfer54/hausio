@@ -51,7 +51,7 @@ Each local page carries that borough's postcodes, ULEZ and controlled-parking-zo
 - [Full pricing](https://hausio.co.uk/pricing.html): current rates, minimum booking times and common extras for every service.
 - [Machine-readable pricing](https://hausio.co.uk/pricing.md): the same current price facts in a compact text format.
 - [Book / instant estimate](https://hausio.co.uk/book.html): get an itemised estimate online; the final quote is confirmed after review.
-- [Leave a review](https://hausio.co.uk/leave-a-review.html): customer reviews with photos.
+- [Customer reviews](https://hausio.co.uk/leave-a-review.html#reviews): read published customer reviews or share a Hausio experience with photos.
 
 ## Blog
 

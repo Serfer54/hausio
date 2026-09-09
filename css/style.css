@@ -2277,7 +2277,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   padding: 36px;
 }
 .review-intro { text-align: center; margin-bottom: 26px; }
-.review-intro h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.review-intro h1, .review-intro h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .review-form .field { margin-bottom: 18px; }
 .review-form .field-row { display: flex; gap: 16px; }
 .review-form .field-row .field { flex: 1; }

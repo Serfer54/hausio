@@ -1,6 +1,6 @@
-// Hausio — homepage testimonials: fetch approved reviews and render cards.
+// Hausio — customer reviews page: fetch approved reviews and render cards.
 // The #reviews section stays hidden until at least one published review loads,
-// so the homepage never shows an empty "reviews" shell before any exist.
+// so the page never shows an empty reviews shell before any exist.
 (function () {
   var section = document.getElementById('reviews');
   var grid = document.getElementById('reviews-grid');

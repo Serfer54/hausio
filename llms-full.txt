@@ -2004,6 +2004,103 @@ RejectAccept
 
 ---
 
+URL: https://hausio.co.uk/leave-a-review.html
+Title: Hausio Reviews London — Read or Leave a Review
+
+Hausio Reviews London — Read or Leave a Review
+
+Skip to content
+
+Reviews
+
+# What London says about Hausio
+
+Real jobs, real homes, real customers.
+
+★★★★★
+
+### Fantastic moving and cleaning service
+I genuinely couldn't be happier with the service! I recently moved from West London to Central London, and the whole process was incredibly smooth from start to finish. Everything was arranged quickly and efficiently, and the move itself was completely stress-free. I also booked their end of tenancy cleaning service, and the team did an outstanding job. The property was left absolutely spotless, and everything was completed much faster than I expected.
+
+Also wanted to add that the team was super attentive and extremely careful with my belongings. I honestly couldn’t have asked for a better experience. I would definitely recommend them to anyone looking for a reliable moving company!
+MMary H.Man and Van · Chiswick
+
+Share your experience →
+Review Hausio on Google →
+
+## How did we do?
+
+If Hausio has helped with your home, we'd love to hear about it — and a photo of the finished job goes a long way.
+
+A review on Google helps most. It takes about a minute and shows up next to Hausio whenever someone searches for us.
+
+Leave a Google review →
+
+Prefer to send it with photos instead? Use the form below — we publish it on the site.
+
+Don't fill this out if you're human:
+
+Your rating
+
+&#9733;
+&#9733;
+&#9733;
+&#9733;
+&#9733;
+
+Headline (optional)
+
+Your review
+
+Service
+
+Choose a service…
+Cleaning
+Man and Van
+Handyman
+Gardening
+Specialist job
+
+Area / borough (optional)
+
+Add a photo (optional — before/after or the finished job)
+
+Tap to add a photo — JPG, PNG or WebP
+
+We resize your photo and remove hidden location data before it's uploaded, so your address stays private.
+
+Your name
+
+We only ever publish your first name and last initial (e.g. "Sarah T.").
+
+Email
+
+Never published or shared.
+
+I'm happy for Hausio to publish my first name, review and photo on its website. I understand I can ask for it to be removed at any time by emailing hausio.co.uk@proton.me.
+
+4. Add TURNSTILE_SECRET_KEY env var in Netlify
+See SECURITY_DEPLOY_CHECKLIST.md
+
+-->
+
+Post my review →
+
+✓
+
+## Thank you!
+
+Your review has been received. We check every review before it goes live, so it'll appear on this page shortly.
+
+Back to home
+
+We use cookies to analyse site usage and improve your experience. Learn more
+
+Reject
+Accept
+
+---
+
 URL: https://hausio.co.uk/blog/end-of-tenancy-cleaning-london-cost-2026.html
 Title: How Much Does End-of-Tenancy Cleaning Cost in London? 2026 Price Guide — Hausio
 

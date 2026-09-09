@@ -31,15 +31,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<title>Leave a review — Hausio London</title>
-<meta name="description" content="Been a Hausio customer in London? Share your experience — add a photo of the finished job and help another Londoner choose with confidence." />
+<title>Hausio Reviews London — Read or Leave a Review</title>
+<meta name="description" content="Read verified Hausio customer reviews for London cleaning, moving and handyman jobs, or share your own experience and finished-job photos." />
 <link rel="canonical" href="https://hausio.co.uk/leave-a-review.html" />
 <meta name="robots" content="index,follow" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Hausio" />
-<meta property="og:title" content="Leave a review — Hausio London" />
-<meta property="og:description" content="Share your Hausio experience and add a photo of the finished job." />
+<meta property="og:title" content="Hausio Reviews London — Read or Leave a Review" />
+<meta property="og:description" content="Read customer reviews for Hausio home services in London or share your own experience." />
 <meta property="og:url" content="https://hausio.co.uk/leave-a-review.html" />
 <meta property="og:image" content="https://hausio.co.uk/assets/hero-cleaning.jpg" />
 <meta property="og:locale" content="en_GB" />
@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Leave a review — Hausio London",
+      "name": "Hausio Reviews London — Read or Leave a Review",
       "url": "https://hausio.co.uk/leave-a-review.html",
       "inLanguage": "en-GB",
       "isPartOf": {
@@ -84,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Leave a review",
+            "name": "Reviews",
             "item": "https://hausio.co.uk/leave-a-review.html"
           }
         ]
@@ -218,6 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/portfolio.html">Our work</a>
       <a href="/blog/">Blog</a>
       <a href="/faq.html">FAQ</a>
+      <a href="#reviews" aria-current="page">Reviews</a>
     </nav>
     <a href="/book.html" class="nav-book">Book now <span aria-hidden="true">→</span></a>
     <div class="nav-cta">
@@ -226,11 +227,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<main id="main-content" class="review-wrap">
+<main id="main-content">
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Reviews</p>
+      <h1>What London says about Hausio</h1>
+      <p class="section-lede">Real jobs, real homes, real customers.</p>
+    </header>
+    <div class="reviews-grid" id="reviews-grid">
+      <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars"><span class="filled">★★★★★</span></div><h3 class="review-title">Fantastic moving and cleaning service</h3><p class="review-body">I genuinely couldn't be happier with the service! I recently moved from West London to Central London, and the whole process was incredibly smooth from start to finish. Everything was arranged quickly and efficiently, and the move itself was completely stress-free. I also booked their end of tenancy cleaning service, and the team did an outstanding job. The property was left absolutely spotless, and everything was completed much faster than I expected.
+
+Also wanted to add that the team was super attentive and extremely careful with my belongings. I honestly couldn’t have asked for a better experience. I would definitely recommend them to anyone looking for a reliable moving company!</p><div class="review-author"><span class="review-avatar review-avatar-initial" aria-hidden="true">M</span><span class="review-meta"><b>Mary H.</b><small>Man and Van · Chiswick</small></span></div></article>
+    </div>
+    <div class="how-cta">
+      <a href="#leave-review" class="btn btn-dark">Share your experience →</a>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJq_sQzkx5x0wRgoDebyMQYMI" class="btn btn-outline" rel="noopener" target="_blank">Review Hausio on Google →</a>
+    </div>
+  </div>
+</section>
+
+<section class="review-wrap" id="leave-review">
   <div class="container">
     <div class="review-form-card">
       <header class="review-intro">
-        <h1>How did we do?</h1>
+        <h2>How did we do?</h2>
         <p>If Hausio has helped with your home, we'd love to hear about it — and a photo of the finished job goes a long way.</p>
       </header>
 
@@ -332,11 +353,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="review-success" id="review-success" hidden>
         <div class="success-icon">&#10003;</div>
         <h2>Thank you!</h2>
-        <p>Your review has been received. We check every review before it goes live, so it'll appear on our homepage shortly.</p>
+        <p>Your review has been received. We check every review before it goes live, so it'll appear on this page shortly.</p>
         <a href="index.html" class="btn btn-dark">Back to home</a>
       </div>
     </div>
   </div>
+</section>
 </main>
 
 <!-- Netlify Forms detection: hidden static form so Netlify's build-time scanner
@@ -377,6 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="js/main.js?v=20260909-moving" defer></script>
 <script src="js/review.js?v=1" defer></script>
+<script src="js/reviews.js?v=2" defer></script>
 <script src="js/consent.js" defer></script>
 </body>
 </html>

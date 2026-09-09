@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// Render approved reviews into the homepage HTML at build time.
+// Render approved reviews into the customer reviews page at build time.
 //
 // Before this, the reviews section shipped as `<section id="reviews" hidden>`
 // with an empty grid, filled by js/reviews.js from /api/reviews. Two things made
-// that invisible to every crawler: /api/ is disallowed in robots.txt for
+// dynamic-only reviews invisible to every crawler: /api/ is disallowed in robots.txt for
 // User-agent: *, and the AI crawlers (GPTBot, ClaudeBot, PerplexityBot) do not
 // execute JavaScript at all. So the page showed "What London says about Hausio"
 // with nothing underneath.
@@ -18,7 +18,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const INDEX = path.join(ROOT, 'index.html');
+const REVIEWS_PAGE = path.join(ROOT, 'leave-a-review.html');
 const CACHE = path.join(ROOT, 'data', 'reviews-cache.json');
 const SOURCE = 'https://hausio.co.uk/api/reviews';
 
@@ -79,7 +79,7 @@ async function load() {
   }
 
   const cards = list.slice(0, 12).map(cardHtml).join('\n      ');
-  let html = fs.readFileSync(INDEX, 'utf8');
+  let html = fs.readFileSync(REVIEWS_PAGE, 'utf8');
 
   // Open the section only when there is something to show.
   const sectionOpen = list.length
@@ -96,6 +96,6 @@ async function load() {
     grid + '$1$2<div class="how-cta">'
   );
 
-  fs.writeFileSync(INDEX, html, 'utf8');
-  console.log(`Отзывов вписано в index.html: ${list.length}${list.length ? '' : ' (секция остаётся скрытой)'}`);
+  fs.writeFileSync(REVIEWS_PAGE, html, 'utf8');
+  console.log(`Отзывов вписано в leave-a-review.html: ${list.length}${list.length ? '' : ' (секция остаётся скрытой)'}`);
 })();

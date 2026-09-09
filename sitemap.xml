@@ -1945,4 +1945,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://hausio.co.uk/blog/building-works-london-guide-2026.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/service-building-works.jpg</image:loc>
+      <image:title>Building works in London: services, quotes and project planning</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hausio.co.uk/blog/plumber-london-repairs-installations-guide-2026.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/service-plumbing.jpg</image:loc>
+      <image:title>Plumber in London: repairs, installations and how quotes work</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hausio.co.uk/blog/garden-maintenance-london-seasonal-guide-2026.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <image:image>
+      <image:loc>https://hausio.co.uk/assets/service-garden-care.jpg</image:loc>
+      <image:title>Garden maintenance in London: seasonal care and regular visits</image:title>
+    </image:image>
+  </url>
 </urlset>

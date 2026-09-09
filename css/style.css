@@ -2037,6 +2037,20 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
   font-style: italic;
 }
 
+.blog-featured-image {
+  margin: 0 0 36px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--linen);
+}
+.blog-featured-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
 .blog-content {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -2102,6 +2116,13 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .blog-grid .service-card {
   text-align: left;
 }
+.blog-grid .service-card > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
 .blog-grid .service-card h3 {
   font-size: 1.45rem;
   line-height: 1.2;
@@ -2109,6 +2130,9 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 }
 .blog-grid .service-card .blog-meta {
   margin-bottom: 10px;
+}
+.blog-faq {
+  margin-top: 20px;
 }
 
 /* Services dropdown in main nav */

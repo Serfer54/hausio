@@ -26,8 +26,11 @@ const NAV_NEW = `        <div class="nav-dropdown" role="menu">
           <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
+          <a href="/building-works-london.html" role="menuitem">Building Works</a>
+          <a href="/plumbing-london.html" role="menuitem">Plumbing</a>
           <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
           <a href="/tv-mounting-london.html" role="menuitem">TV Mounting</a>
+          <a href="/garden-maintenance-london.html" role="menuitem">Garden Maintenance</a>
           <a href="/garden-clearance-london.html" role="menuitem">Garden Clearance</a>
           <a href="/waste-removal-london.html" role="menuitem">Waste Removal</a>
           <a href="/painting-decorating-london.html" role="menuitem">Painting &amp; Decorating</a>
@@ -38,6 +41,9 @@ const FOOTER_SERVICES_OLD = `      <h4>Services</h4>
         <li><a href="/cleaning-london.html">Cleaning</a></li>
         <li><a href="/man-and-van-london.html">Man and Van</a></li>
         <li><a href="/handyman-london.html">Handyman</a></li>
+        <li><a href="/building-works-london.html">Building Works</a></li>
+        <li><a href="/plumbing-london.html">Plumbing</a></li>
+        <li><a href="/garden-maintenance-london.html">Garden Maintenance</a></li>
         <li><a href="/blog/">Blog</a></li>
       </ul>`;
 
@@ -54,7 +60,7 @@ const FOOTER_SERVICES_NEW = `      <h4>Services</h4>
       </ul>`;
 
 const FOOTER_PROSE_OLD = '<p>Cleaning · Man and Van · Handyman</p>';
-const FOOTER_PROSE_NEW = '<p>Man and Van · Handyman · Furniture Assembly · TV Mounting · Garden Clearance · Waste Removal · Painting</p>';
+const FOOTER_PROSE_NEW = '<p>Man and Van · Handyman · Building Works · Plumbing · Garden Maintenance · Home Services</p>';
 
 // Tel obfuscation — strip the visible number, JS fills it back at load time.
 // `tel:+447304330614` href is removed entirely; bots scanning for tel: prefix won't find it.

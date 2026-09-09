@@ -46,6 +46,9 @@ check(pricingData.services.manAndVan.rates.oneMoverAndVan === 65, 'pricing.json 
 check(pricingData.services.manAndVan.rates.twoMoversAndVan === 90, 'pricing.json has stale two-mover price');
 check(pricingData.services.manAndVan.minimumHours === 3, 'pricing.json has stale moving minimum');
 check(pricingData.services.manAndVan.sameRateEveryHour === true, 'pricing.json must state a uniform moving rate');
+check(pricingData.services.quotedServices.buildingWorks.includes('Project quote'), 'pricing.json missing building works quote model');
+check(pricingData.services.quotedServices.plumbing.includes('Job-specific quote'), 'pricing.json missing plumbing quote model');
+check(pricingData.services.quotedServices.gardenMaintenance.includes('Quote based'), 'pricing.json missing garden maintenance quote model');
 check(businessData.telephone === '+44 7304 330614', 'business.json has a non-canonical phone number');
 check(businessData.identifier.value === '17167561', 'business.json has a non-canonical company number');
 check(businessData.openingHoursSpecification.opens === '08:00' && businessData.openingHoursSpecification.closes === '20:00', 'business.json has stale hours');
@@ -53,6 +56,10 @@ check(booking.includes('value="regular">Regular clean — £27/hr'), 'calculator
 check(booking.includes('value="2" selected>2 movers + van — £90/hr'), 'calculator has stale two-mover price');
 check(llms.includes('https://hausio.co.uk/pricing.html'), 'llms.txt does not expose pricing page');
 check(sitemap.includes('<loc>https://hausio.co.uk/pricing.html</loc>'), 'pricing page missing from sitemap');
+for (const service of ['building-works', 'plumbing', 'garden-maintenance']) {
+  check(fs.existsSync(path.join(root, `${service}-london.html`)), `${service} page missing`);
+  check(sitemap.includes(`<loc>https://hausio.co.uk/${service}-london.html</loc>`), `${service} page missing from sitemap`);
+}
 check(read('leave-a-review.html').includes(reviewUrl), 'review page Google review URL missing');
 check(read('index.html').includes('/leave-a-review.html#reviews'), 'homepage Reviews navigation link missing');
 check(!read('index.html').includes('class="testimonials" id="reviews"'), 'reviews section still appears on homepage');

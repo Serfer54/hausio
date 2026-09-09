@@ -3,7 +3,7 @@
   "name": "Hausio London pricing",
   "url": "https://hausio.co.uk/pricing.html",
   "currency": "GBP",
-  "lastUpdated": "2026-09-09",
+  "lastUpdated": "2026-09-10",
   "hours": "Monday-Sunday 08:00-20:00",
   "services": {
     "cleaning": {
@@ -42,6 +42,11 @@
       "gardenClearanceFrom": 120,
       "wasteRemovalFrom": 55,
       "paintingPerPainterPerDay": 220
+    },
+    "quotedServices": {
+      "buildingWorks": "Project quote after scope review or site survey",
+      "plumbing": "Job-specific quote after fault and parts review",
+      "gardenMaintenance": "Quote based on garden size, access, tasks and waste"
     }
   },
   "commonCharges": {

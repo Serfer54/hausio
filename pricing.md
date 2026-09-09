@@ -1,6 +1,6 @@
 # Hausio London pricing
 
-Last updated: 9 September 2026
+Last updated: 10 September 2026
 
 Hausio provides home services across all 32 London boroughs. Opening hours are Monday to Sunday, 08:00–20:00. Insurance is included, there is no call-out fee, and customers pay after the job. The online estimator itemises rates, minimum time and selected extras; Hausio confirms the final quote after reviewing the job details.
 
@@ -49,8 +49,11 @@ Service: https://hausio.co.uk/handyman-london.html
 - Garden clearance: quarter load £120, half Luton £180, full load £280, shed dismantling +£60, stump grinding +£80.
 - Waste removal: single item £55, small load £100, half Luton £180, full load £280.
 - Painting and decorating: £220 per painter per day, standard room from £320, sash window side £85, external door £140; materials at cost.
+- Building works: quoted separately per project after review of the scope, access, materials and any survey or approval requirements.
+- Plumbing: quoted for the job after review of the fault, access and required parts. Gas and boiler work is only assigned to a Gas Safe registered engineer.
+- Garden maintenance: quoted from photos according to garden size, access, tasks, visit frequency and green-waste volume.
 
-Services: https://hausio.co.uk/furniture-assembly-london.html, https://hausio.co.uk/tv-mounting-london.html, https://hausio.co.uk/garden-clearance-london.html, https://hausio.co.uk/waste-removal-london.html, https://hausio.co.uk/painting-decorating-london.html
+Services: https://hausio.co.uk/furniture-assembly-london.html, https://hausio.co.uk/tv-mounting-london.html, https://hausio.co.uk/garden-clearance-london.html, https://hausio.co.uk/waste-removal-london.html, https://hausio.co.uk/painting-decorating-london.html, https://hausio.co.uk/building-works-london.html, https://hausio.co.uk/plumbing-london.html, https://hausio.co.uk/garden-maintenance-london.html
 
 ## Common charges and confirmation
 

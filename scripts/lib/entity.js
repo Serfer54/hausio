@@ -51,7 +51,6 @@ function orgNode() {
       addressRegion: 'Greater London',
       addressCountry: 'GB',
     },
-    geo: { '@type': 'GeoCoordinates', latitude: 51.50735, longitude: -0.12776 },
     areaServed: { '@type': 'AdministrativeArea', name: 'Greater London' },
     identifier: { '@type': 'PropertyValue', propertyID: 'Companies House', value: '17167561' },
     contactPoint: [{

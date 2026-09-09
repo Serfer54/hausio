@@ -17,9 +17,12 @@ const SERVICE_HUBS = [
   'cleaning-london.html',
   'man-and-van-london.html',
   'handyman-london.html',
+  'building-works-london.html',
+  'plumbing-london.html',
   'furniture-assembly-london.html',
   'tv-mounting-london.html',
   'garden-clearance-london.html',
+  'garden-maintenance-london.html',
   'waste-removal-london.html',
   'painting-decorating-london.html',
 ];
@@ -80,7 +83,7 @@ function titleOf(html) {
 const parts = [];
 parts.push('# Hausio — full content');
 parts.push('');
-parts.push('London home services: cleaning, man and van, handyman, furniture assembly, TV mounting, garden clearance, waste removal, painting & decorating. All 32 London boroughs. Hausio Ltd, company number 17167561. Phone +44 7304 330614.');
+parts.push('London home services: cleaning, man and van, handyman, building works, plumbing, garden maintenance, furniture assembly, TV mounting, garden clearance, waste removal, painting & decorating. All 32 London boroughs. Hausio Ltd, company number 17167561. Phone +44 7304 330614.');
 parts.push('');
 parts.push('This file carries the full text of the service pages, company pages and blog. The 256 local service × borough pages follow the URL pattern https://hausio.co.uk/{service}-{borough}.html and are listed in https://hausio.co.uk/llms.txt');
 parts.push('');

@@ -1,6 +1,6 @@
 # Hausio
 
-> Hausio is a London home-services company offering cleaning, man and van / removals, handyman, furniture assembly, TV mounting, garden clearance, waste removal and painting & decorating across all 32 London boroughs. Vetted, DBS-checked, £2M insured, eco-friendly, with £0 to pay until the job is done.
+> Hausio is a London home-services company offering cleaning, man and van / removals, handyman, building works, plumbing, garden maintenance, furniture assembly, TV mounting, garden clearance, waste removal and painting & decorating across Greater London. Vetted, DBS-checked, £2M insured, eco-friendly, with £0 to pay until the job is done.
 
 ## Key facts
 
@@ -21,6 +21,9 @@
 - [Cleaning in London](https://hausio.co.uk/cleaning-london.html): one-off £30/hr, regular £27/hr, deep £45/hr, end-of-tenancy £32/hr and after-builders £30/hr; 5-hour minimum per cleaner. Optional products +£15 per visit.
 - [Man and van in London](https://hausio.co.uk/man-and-van-london.html): single items to full flat/house moves from £65/hr, same-day available.
 - [Handyman in London](https://hausio.co.uk/handyman-london.html): repairs, assembly, mounting, minor plumbing and electrics — £65 first hour.
+- [Building works in London](https://hausio.co.uk/building-works-london.html): tiling, wallpapering, groundworks and foundations, exterior work and glazing — quoted per project after scope review.
+- [Plumbing in London](https://hausio.co.uk/plumbing-london.html): household leaks, taps, toilets, wastes, appliance connections and radiator work — quoted after the fault and parts are reviewed.
+- [Garden maintenance in London](https://hausio.co.uk/garden-maintenance-london.html): lawn mowing, hedge trimming, pruning, weeding and one-off or regular seasonal care — quoted for the garden.
 - [Furniture assembly in London](https://hausio.co.uk/furniture-assembly-london.html): IKEA, Made.com, Wayfair — from £45/hr or fixed price by item.
 - [TV wall mounting in London](https://hausio.co.uk/tv-mounting-london.html): plasterboard, brick, concrete, cable-conceal — from £55.
 - [Garden clearance in London](https://hausio.co.uk/garden-clearance-london.html): overgrowth, sheds, decking — from £120, registered waste carrier.

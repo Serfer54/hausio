@@ -674,8 +674,11 @@ ${SITE_JSON}
           <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
           <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
           <a href="/handyman-london.html" role="menuitem">Handyman</a>
+          <a href="/building-works-london.html" role="menuitem">Building Works</a>
+          <a href="/plumbing-london.html" role="menuitem">Plumbing</a>
           <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
           <a href="/tv-mounting-london.html" role="menuitem">TV Mounting</a>
+          <a href="/garden-maintenance-london.html" role="menuitem">Garden Maintenance</a>
           <a href="/garden-clearance-london.html" role="menuitem">Garden Clearance</a>
           <a href="/waste-removal-london.html" role="menuitem">Waste Removal</a>
           <a href="/painting-decorating-london.html" role="menuitem">Painting &amp; Decorating</a>
@@ -814,6 +817,9 @@ ${serviceFaq.map(renderFaqHtml).join('\n')}
       <ul>
         <li><a href="/man-and-van-london.html">Man and Van</a></li>
         <li><a href="/handyman-london.html">Handyman</a></li>
+        <li><a href="/building-works-london.html">Building Works</a></li>
+        <li><a href="/plumbing-london.html">Plumbing</a></li>
+        <li><a href="/garden-maintenance-london.html">Garden Maintenance</a></li>
         <li><a href="/furniture-assembly-london.html">Furniture Assembly</a></li>
         <li><a href="/tv-mounting-london.html">TV Mounting</a></li>
         <li><a href="/garden-clearance-london.html">Garden Clearance</a></li>

@@ -30,7 +30,9 @@
 
 [hidden] { display: none !important; }
 html { scroll-padding-top: 88px; }
-.nav-book { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 8px 14px; background: var(--ink); color: var(--cream); border-radius: 4px; font-size: .85rem; white-space: nowrap; flex-shrink: 0; }
+.nav-book { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; margin-left: 8px; padding: 8px 14px; background: var(--ink); color: var(--cream); border-radius: 4px; font-size: .85rem; white-space: nowrap; flex-shrink: 0; }
+.nav-book span { display: inline-flex; align-items: center; line-height: 1; transform: translateY(-1px); transition: transform .2s ease; }
+.nav-book:hover span { transform: translate(2px, -1px); }
 .nav-book:hover { background: #354237; color: #fff; }
 .nav-dropdown { max-height: min(70vh, 520px); overflow-y: auto; }
 .skip-link { position: fixed; top: 8px; left: 8px; padding: 12px 18px; background: var(--ink); color: white; z-index: 10000; transform: translateY(-150%); }
@@ -206,8 +208,8 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: flex-start;
+  gap: 18px;
   min-height: 64px;
 }
 .brand {
@@ -232,6 +234,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 .main-nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
   gap: 28px;
   font-size: .9rem;
   color: var(--ink-2);
@@ -1381,7 +1384,9 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 @media (max-width: 1100px) {
   .container { padding: 0 24px; }
   .hero-grid { gap: 40px; }
-  .main-nav { gap: 24px; }
+  .nav { gap: 14px; }
+  .main-nav { gap: 20px; }
+  .nav-book { margin-left: 0; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .price-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1415,6 +1420,7 @@ p  { margin: 0 0 1em; color: var(--ink-2); }
 
   /* Mobile nav appears */
   .main-nav { display: none; }
+  .nav-book { margin-left: auto; }
   .nav-cta .link-muted { display: none; }
   .nav-cta { gap: 8px; }
   .nav-wa { order: 1; }

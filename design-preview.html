@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RN3TRV4');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WWJDVWFL7V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-WWJDVWFL7V');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hausio — New homepage design preview</title>
+<meta name="description" content="Hausio is London's home services company. Trusted cleaning, man and van, and handyman services. Vetted staff, fully insured, book online in 60 seconds." />
+<meta name="theme-color" content="#f7f4ef" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="canonical" href="https://hausio.co.uk/" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="geo.region" content="GB-LND" />
+<meta name="geo.placename" content="London" />
+<meta name="msvalidate.01" content="54A7B31E0FE511AEACEF6C4EA7C650B3" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Hausio" />
+<meta property="og:title" content="Hausio — Cleaning, Man and Van & Handyman in London" />
+<meta property="og:description" content="Vetted professionals for cleaning, man and van, and handyman services across London. Fully insured. Book online in 60 seconds." />
+<meta property="og:url" content="https://hausio.co.uk/" />
+<meta property="og:image" content="https://hausio.co.uk/assets/hero-team-branded.jpg" />
+<meta property="og:image:alt" content="Hausio cleaner in branded uniform polishing a marble table in a London living room" />
+<meta property="og:locale" content="en_GB" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Hausio — Cleaning, Man and Van & Handyman in London" />
+<meta name="twitter:description" content="Vetted professionals for cleaning, man and van, and handyman across London. Fully insured. Book in 60 seconds." />
+<meta name="twitter:image" content="https://hausio.co.uk/assets/hero-team-branded.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css?v=20260909-moving" />
+<link rel="preload" as="image" href="assets/hero-team-branded.jpg" fetchpriority="high" />
+<style>
+  /* Enhanced "How it works" teaser — big editorial numerals */
+  .how .step-icon{display:none}
+  .how .step-num{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.9rem;font-weight:500;
+    letter-spacing:0;text-transform:none;color:var(--gold);line-height:.9;margin:0 0 10px}
+  .how .step-card{padding:34px 28px}
+  .how-cta{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .how-cta .how-more{color:var(--ink-2);font-size:.92rem;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .how-cta .how-more:hover{color:var(--gold)}
+
+  /* Section rhythm — framed highlight bands + an editorial rule above each heading */
+  .how{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why{background:var(--cream)}
+  .services .section-head,.how .section-head,.why .section-head,.faq .section-head{position:relative}
+  .services .section-head::before,
+  .how .section-head::before,
+  .why .section-head::before,
+  .faq .section-head::before{
+    content:"";display:block;width:46px;height:1px;margin:0 auto 20px;
+    background:var(--gold);opacity:.5
+  }
+
+  /* Calmer, softer hero — no perpetual motion, warmer framing, gentle load-in */
+  .hero-photo img{animation:none}                 /* stop the constant breathing zoom */
+  .hero-photo{
+    border:none;
+    border-radius:12px;
+    box-shadow:0 30px 60px -26px rgba(60,45,25,.30), 0 8px 22px -12px rgba(60,45,25,.14);
+    position:relative;z-index:1;
+  }
+  .hero-visual{position:relative}
+  .hero-visual::before{                            /* soft warm halo grounds the photo on the cream */
+    content:"";position:absolute;inset:-9% -7% -12% -7%;
+    background:radial-gradient(58% 58% at 56% 46%, rgba(164,138,90,.18), transparent 70%);
+    filter:blur(14px);z-index:0;pointer-events:none
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .hero-top{animation:hero-rise .7s cubic-bezier(.2,.7,.2,1) both}
+    .hero-bottom{animation:hero-rise .7s cubic-bezier(.2,.7,.2,1) .09s both}
+    .hero-visual{animation:hero-fade 1s ease .04s both}
+  }
+  @keyframes hero-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes hero-fade{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:none}}
+
+  /* Wide screens: pull the photo toward the text to kill the empty band between them.
+     Only ≥1200px — below that the fluid two-column layout stays graceful. */
+  @media (min-width:1200px){
+    .hero-grid{grid-template-columns:minmax(0,1fr) 580px;gap:16px 40px}
+    .hero-visual{justify-content:flex-end}
+    .hero-photo{max-width:580px}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://hausio.co.uk/#organization",
+      "name": "Hausio",
+      "legalName": "Hausio Ltd",
+      "url": "https://hausio.co.uk/",
+      "logo": "https://hausio.co.uk/assets/logo.png",
+      "image": [
+        "https://hausio.co.uk/assets/hero-team-branded.jpg",
+        "https://hausio.co.uk/assets/service-cleaning.jpg",
+        "https://hausio.co.uk/assets/service-removals.jpg",
+        "https://hausio.co.uk/assets/service-handyman.jpg"
+      ],
+      "email": "hausio.co.uk@proton.me",
+      "telephone": "+44-7304-330614",
+      "priceRange": "££",
+      "currenciesAccepted": "GBP",
+      "paymentAccepted": "Credit Card, Debit Card, Apple Pay, Google Pay",
+      "foundingDate": "2026-04-19",
+      "knowsAbout": [
+        "House cleaning",
+        "End of tenancy cleaning",
+        "Deep cleaning",
+        "After-builders cleaning",
+        "Man and van",
+        "House removals",
+        "Handyman services",
+        "Furniture assembly",
+        "TV wall mounting",
+        "Garden clearance",
+        "Waste removal",
+        "Painting and decorating"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.50735,
+        "longitude": -0.12776
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "London"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greater London"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Camden"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Islington"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hackney"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Tower Hamlets"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southwark"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lambeth"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wandsworth"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Westminster"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kensington & Chelsea"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hammersmith & Fulham"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greenwich"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lewisham"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Brent"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Haringey"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Newham"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Waltham Forest"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ealing"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Richmond upon Thames"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Merton"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Barnet"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bromley"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Croydon"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bexley"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Enfield"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Harrow"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hillingdon"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hounslow"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kingston upon Thames"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sutton"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Redbridge"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Havering"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Barking & Dagenham"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps?cid=14006212585508995202",
+        "https://find-and-update.company-information.service.gov.uk/company/17167561"
+      ],
+      "hasMap": "https://www.google.com/maps?cid=14006212585508995202",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Companies House",
+        "value": "17167561"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hausio home services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cleaning",
+              "description": "Regular, one-off, deep and end-of-tenancy cleaning by vetted professionals using eco-friendly products.",
+              "serviceType": "House cleaning"
+            },
+            "priceCurrency": "GBP",
+            "price": "30",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "30",
+              "priceCurrency": "GBP",
+              "unitCode": "HUR",
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "5",
+                "unitCode": "HUR"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Man and Van",
+              "description": "Man & van, flat moves, office relocations and single-item delivery across London.",
+              "serviceType": "Moving services"
+            },
+            "priceCurrency": "GBP",
+            "price": "65",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "65",
+              "priceCurrency": "GBP",
+              "unitCode": "HUR",
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "3",
+                "unitCode": "HUR"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Handyman",
+              "description": "Repairs, assembly, mounting, minor plumbing and electrical jobs.",
+              "serviceType": "Handyman"
+            },
+            "priceCurrency": "GBP",
+            "price": "65",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "65",
+              "priceCurrency": "GBP",
+              "unitCode": "HUR",
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "1",
+                "unitCode": "HUR"
+              }
+            }
+          }
+        ]
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+44-7304-330614",
+          "email": "hausio.co.uk@proton.me",
+          "areaServed": "GB",
+          "availableLanguage": [
+            "en-GB"
+          ],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hausio.co.uk/#website",
+      "url": "https://hausio.co.uk/",
+      "name": "Hausio",
+      "publisher": {
+        "@id": "https://hausio.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://hausio.co.uk/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do home services cost in London?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hausio London prices: cleaning from £30/hour (one-off), £27/hour (regular), £45/hour (deep; 5-hour minimum for all cleaning), £32/hour (end-of-tenancy). Man and van from £65/hour (1 man + van), £90/hour (2 men + van), with a 3-hour minimum and the same rate for every hour. Handyman £65 first hour, £50/hour after (2-hour minimum), with half-day at £215 and full-day at £395. Insurance is included. Cleaning products are optional (+£15 per visit); selected extras and larger-home supplements are itemised. Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your team members vetted and insured?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every Hausio team member is DBS-checked, interviewed in person, reference-verified, and we carry £2M public liability insurance plus £25,000 goods-in-transit cover on every job."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a same-day Hausio booking in London?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same-day bookings made before 11:00 are usually fulfilled the same afternoon in central London (Zones 1–3). A £15 same-day surcharge applies. For guaranteed availability, book at least 24 hours in advance via hausio.co.uk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I pay Hausio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "£0 at booking — you only pay once the job is complete and you're satisfied with the work. We bill the card you provide securely by Apple Pay, Google Pay or card after the visit. No upfront deposit, no cash required."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/home-refresh.css?v=20260909-moving" />
+<link rel="stylesheet" href="/css/home-warm.css?v=20260909-design1" />
+</head>
+<body class="home-page home-warm">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RN3TRV4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="Hausio home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 24 L24 8 L42 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 22 V38 H38 V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="20" y="26" width="8" height="8" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </span>
+      <span class="brand-name">HAUSIO</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <div class="nav-item has-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="/cleaning-london.html" role="menuitem">Cleaning</a>
+          <a href="/man-and-van-london.html" role="menuitem">Man and Van</a>
+          <a href="/handyman-london.html" role="menuitem">Handyman</a>
+          <a href="/furniture-assembly-london.html" role="menuitem">Furniture Assembly</a>
+          <a href="/tv-mounting-london.html" role="menuitem">TV Mounting</a>
+          <a href="/garden-clearance-london.html" role="menuitem">Garden Clearance</a>
+          <a href="/waste-removal-london.html" role="menuitem">Waste Removal</a>
+          <a href="/painting-decorating-london.html" role="menuitem">Painting &amp; Decorating</a>
+        </div>
+      </div>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/portfolio.html">Our work</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/#reviews">Reviews</a>
+    </nav>
+    <a href="/book.html" class="nav-book">Book now <span aria-hidden="true">→</span></a>
+    <a href="#" data-wa data-wa-source="nav" class="nav-wa" aria-label="WhatsApp" rel="nofollow noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-top">
+      <p class="eyebrow"><span class="availability-dot" aria-hidden="true"></span> HOME SERVICES, LONDON</p>
+      <h1>A little help.<br>A lot more <span>home.</span></h1>
+      <p class="lede">Cleaning, moving and those jobs you never get round to. Find your helping hands in London, and make room for the things you love.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="assets/hero-team-branded.jpg" alt="Five Hausio team members wearing branded shirts in a bright London home" width="1536" height="1024" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="photo-caption"><span>YOUR HOME. OUR HELPING HANDS.</span><a href="about.html">Meet Hausio ↗</a></div>
+    </div>
+    <div class="hero-bottom">
+      <p class="hero-prompt">What can we take off your list?</p>
+      <div class="hero-service-links"><a href="book.html?service=cleaning">Cleaning <span>↗</span></a><a href="book.html?service=removals">Moving <span>↗</span></a><a href="book.html?service=handyman">Handyman <span>↗</span></a></div>
+      <form class="hero-quote" action="book.html" method="get">
+        <label class="sr-only" for="postcode">Postcode</label>
+        <input id="postcode" name="postcode" type="text" placeholder="Enter your postcode" autocomplete="postal-code" />
+        <button type="submit" class="btn btn-dark">Find your help ↗</button>
+      </form>
+      <ul class="hero-proof"><li>Vetted professionals</li><li>All 32 London boroughs</li><li>Pay after the job</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Life gets busy.<br>We get things done.</h2>
+      <p class="section-lede">From a fresh kitchen to moving day, find the right help for your home. Choose a service to see your price and book.</p>
+    </header>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-photo">
+          <img src="assets/service-cleaning.jpg" alt="Hausio professional cleaning service" loading="lazy" />
+        </div>
+        <h3><a href="cleaning-london.html">Cleaning</a></h3>
+        <p>Regular, one-off, deep and end-of-tenancy cleaning by vetted professionals using eco-friendly products.</p>
+        <ul class="service-list">
+          <li>Regular weekly & fortnightly</li>
+          <li>Deep & spring cleaning</li>
+          <li>End of tenancy</li>
+          <li>After-builders clean</li>
+        </ul>
+        <p class="service-price"><b>£30</b>/hr <small>Regular £27/hr · Deep £45/hr · 5-hour minimum</small></p>
+        <a href="book.html?service=cleaning" class="btn btn-outline">Book cleaning</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-photo">
+          <img src="assets/service-removals.jpg" alt="Hausio man and van team with branded van in London" loading="lazy" />
+        </div>
+        <h3><a href="man-and-van-london.html">Man and Van</a></h3>
+        <p>Man & van, flat moves, office relocations and single-item delivery across London — careful, punctual, fully insured.</p>
+        <ul class="service-list">
+          <li>Man & van hire</li>
+          <li>Home & flat moves</li>
+          <li>Office relocations</li>
+          <li>Furniture delivery</li>
+        </ul>
+        <p class="service-price">From <b>£65</b>/hr · 3-hour minimum</p>
+        <a href="book.html?service=removals" class="btn btn-outline">Book man and van</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-photo">
+          <img src="assets/service-handyman.jpg" alt="Hausio handyman service" loading="lazy" />
+        </div>
+        <h3><a href="handyman-london.html">Handyman</a></h3>
+        <p>Repairs, assembly, mounting, small plumbing and electrical jobs — everything on your "to fix" list, handled in one visit.</p>
+        <ul class="service-list">
+          <li>Furniture assembly</li>
+          <li>TV & shelf mounting</li>
+          <li>Minor plumbing & electrics</li>
+          <li>Painting & touch-ups</li>
+        </ul>
+        <p class="service-price">From <b>£65</b> · 2-hour minimum</p>
+        <a href="book.html?service=handyman" class="btn btn-outline">Book handyman</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="more-help" aria-labelledby="more-help-title">
+  <div class="container more-help-inner"><h2 id="more-help-title">A few more things<br>we can help with.</h2>
+    <div class="more-help-links">
+      <a href="furniture-assembly-london.html">Furniture assembly <span>↗</span></a>
+      <a href="tv-mounting-london.html">TV mounting <span>↗</span></a>
+      <a href="garden-clearance-london.html">Garden clearance <span>↗</span></a>
+      <a href="waste-removal-london.html">Waste removal <span>↗</span></a>
+      <a href="painting-decorating-london.html">Painting &amp; decorating <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="cleaning-plans" aria-labelledby="cleaning-plans-title">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">A clean home, on your terms</p>
+      <h2 id="cleaning-plans-title">Fresh home.<br>Clear prices.</h2>
+      <p class="section-lede">Three simple hourly rates. A minimum of 5 hours per cleaner, with your estimate shown before you book.</p>
+    </header>
+    <div class="cleaning-plan-grid">
+      <article class="cleaning-plan">
+        <p class="plan-kicker">A fresh start</p><h3>One-off cleaning</h3>
+        <p class="plan-rate">£30<span> / hour</span></p>
+        <p class="plan-minimum">From £150 · 5 hours</p>
+        <p class="plan-description">A helping hand when you need it. Kitchens, bathrooms, floors and everyday dust, taken care of.</p>
+        <a class="btn btn-outline" href="/book.html?service=cleaning&amp;type=one-off">Book a one-off clean →</a>
+      </article>
+      <article class="cleaning-plan is-featured">
+        <p class="plan-kicker">Your weekly rhythm</p><h3>Regular cleaning</h3>
+        <p class="plan-rate">£27<span> / hour</span></p>
+        <p class="plan-minimum">From £135 · 5 hours</p>
+        <p class="plan-description">Keep your home feeling its best with weekly or fortnightly visits. The same cleaner on request.</p>
+        <a class="btn btn-outline" href="/book.html?service=cleaning&amp;type=regular">Book regular cleaning →</a>
+      </article>
+      <article class="cleaning-plan">
+        <p class="plan-kicker">Time for a thorough reset</p><h3>Deep cleaning</h3>
+        <p class="plan-rate">£45<span> / hour</span></p>
+        <p class="plan-minimum">From £225 · 5 hours</p>
+        <p class="plan-description">Extra attention for built-up grime, skirting boards and hard-to-reach areas. A more detailed clean.</p>
+        <a class="btn btn-outline" href="/book.html?service=cleaning&amp;type=deep">Book a deep clean →</a>
+      </article>
+    </div>
+    <p class="plan-note">Base labour prices for up to 2 bedrooms and 1 bathroom. Larger homes, extra tasks and optional products (+£15 per visit) cost extra. Central London access adds £18 where applicable. Your calculator shows the breakdown.</p>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>From your to-do list to done.</h2>
+    </header>
+    <ol class="steps">
+      <li class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.2"/><path d="M14 20 L18 24 L26 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="step-num">01</span>
+        <h3>Choose & book</h3>
+        <p>Tell us what you need, where you are and your preferred date.</p>
+      </li>
+      <li class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.2"/><path d="M15 16 H25 M15 20 H22 M15 24 H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <span class="step-num">02</span>
+        <h3>See your price</h3>
+        <p>See your estimate. Our team confirms the details and final quote with you.</p>
+      </li>
+      <li class="step-card">
+        <div class="step-icon">
+          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.2"/><path d="M20 12 V20 L25 23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="step-num">03</span>
+        <h3>We show up</h3>
+        <p>We take care of the job. You pay after the work is complete.</p>
+      </li>
+    </ol>
+    <div class="how-cta">
+      <a href="book.html" class="btn btn-dark">Book now →</a>
+      <a href="/how-it-works.html" class="how-more">See the full process →</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-work" aria-labelledby="home-work-title">
+  <div class="container work-layout"><div class="work-copy"><p class="eyebrow">THE LITTLE DETAILS MATTER</p><h2 id="home-work-title">Care you can<br>see for yourself.</h2><p>From the way we pack your boxes to the finishing touches on a repair. Take a closer look at our work around London.</p><a class="btn btn-dark" href="portfolio.html">Explore our work ↗</a></div><a class="work-image" href="portfolio.html"><img src="assets/work/work-03.jpg" loading="lazy" alt="Hausio handyman measuring and cutting a skirting board"/><span>On the job with Hausio <b aria-hidden="true">↗</b></span></a></div>
+</section>
+
+<section class="why" id="why">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Why Hausio</p>
+    </header>
+    <ul class="why-list why-list-centered">
+      <li>
+        <h4>Vetted & DBS-checked</h4>
+        <p>Every team member is background-checked, trained, and interviewed in person.</p>
+      </li>
+      <li>
+        <h4>Fully insured</h4>
+        <p>£2M public liability cover on every job — your home is protected from the moment we arrive.</p>
+      </li>
+      <li>
+        <h4>Flat, honest pricing</h4>
+        <p>See the price before you book. No call-out fees, no surprise add-ons.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Reviews</p>
+      <h2>What London says about Hausio</h2>
+      <p class="section-lede">Real jobs, real homes, real customers.</p>
+    </header>
+    <div class="reviews-grid" id="reviews-grid">
+      <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars"><span class="filled">★★★★★</span></div><h3 class="review-title">Fantastic moving and cleaning service</h3><p class="review-body">I genuinely couldn't be happier with the service! I recently moved from West London to Central London, and the whole process was incredibly smooth from start to finish. Everything was arranged quickly and efficiently, and the move itself was completely stress-free. I also booked their end of tenancy cleaning service, and the team did an outstanding job. The property was left absolutely spotless, and everything was completed much faster than I expected.
+
+Also wanted to add that the team was super attentive and extremely careful with my belongings. I honestly couldn’t have asked for a better experience. I would definitely recommend them to anyone looking for a reliable moving company!</p><div class="review-author"><span class="review-avatar review-avatar-initial" aria-hidden="true">M</span><span class="review-meta"><b>Mary H.</b><small>Man and Van · Chiswick</small></span></div></article>
+    </div>
+    <div class="how-cta">
+      <a href="leave-a-review.html" class="btn btn-outline">Been a customer? Leave a review →</a>
+    </div>
+  </div>
+</section>
+
+<section class="coverage" id="coverage">
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Central London</span><span>Islington</span><span>Camden</span><span>Hackney</span><span>Shoreditch</span><span>Kensington</span><span>Chelsea</span><span>Notting Hill</span><span>Clapham</span><span>Battersea</span><span>Fulham</span><span>Hammersmith</span><span>Wandsworth</span><span>Greenwich</span><span>Canary Wharf</span><span>Stratford</span><span>Wimbledon</span><span>Richmond</span><span>Ealing</span><span>Brixton</span><span>Peckham</span><span>Dulwich</span><span>Maida Vale</span><span>Paddington</span>
+      <span>Central London</span><span>Islington</span><span>Camden</span><span>Hackney</span><span>Shoreditch</span><span>Kensington</span><span>Chelsea</span><span>Notting Hill</span><span>Clapham</span><span>Battersea</span><span>Fulham</span><span>Hammersmith</span><span>Wandsworth</span><span>Greenwich</span><span>Canary Wharf</span><span>Stratford</span><span>Wimbledon</span><span>Richmond</span><span>Ealing</span><span>Brixton</span><span>Peckham</span><span>Dulwich</span><span>Maida Vale</span><span>Paddington</span>
+    </div>
+  </div>
+  <div class="container" style="margin-top:28px;">
+    <header class="section-head">
+      <p class="eyebrow">Boroughs we cover</p>
+      <p class="section-lede">Local pricing and same-day availability across all 32 London boroughs.</p>
+    </header>
+    <div class="area-links" style="display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;max-width:900px;margin:0 auto;">
+      <a href="/areas/barking-dagenham.html">Barking &amp; Dagenham</a>
+      <a href="/areas/barnet.html">Barnet</a>
+      <a href="/areas/bexley.html">Bexley</a>
+      <a href="/areas/brent.html">Brent</a>
+      <a href="/areas/bromley.html">Bromley</a>
+      <a href="/areas/camden.html">Camden</a>
+      <a href="/areas/croydon.html">Croydon</a>
+      <a href="/areas/ealing.html">Ealing</a>
+      <a href="/areas/enfield.html">Enfield</a>
+      <a href="/areas/greenwich.html">Greenwich</a>
+      <a href="/areas/hackney.html">Hackney</a>
+      <a href="/areas/hammersmith-fulham.html">Hammersmith &amp; Fulham</a>
+      <a href="/areas/haringey.html">Haringey</a>
+      <a href="/areas/harrow.html">Harrow</a>
+      <a href="/areas/havering.html">Havering</a>
+      <a href="/areas/hillingdon.html">Hillingdon</a>
+      <a href="/areas/hounslow.html">Hounslow</a>
+      <a href="/areas/islington.html">Islington</a>
+      <a href="/areas/kensington-chelsea.html">Kensington &amp; Chelsea</a>
+      <a href="/areas/kingston.html">Kingston upon Thames</a>
+      <a href="/areas/lambeth.html">Lambeth</a>
+      <a href="/areas/lewisham.html">Lewisham</a>
+      <a href="/areas/merton.html">Merton</a>
+      <a href="/areas/newham.html">Newham</a>
+      <a href="/areas/redbridge.html">Redbridge</a>
+      <a href="/areas/richmond.html">Richmond upon Thames</a>
+      <a href="/areas/southwark.html">Southwark</a>
+      <a href="/areas/sutton.html">Sutton</a>
+      <a href="/areas/tower-hamlets.html">Tower Hamlets</a>
+      <a href="/areas/waltham-forest.html">Waltham Forest</a>
+      <a href="/areas/wandsworth.html">Wandsworth</a>
+      <a href="/areas/westminster.html">Westminster</a>
+    </div>
+    <p style="text-align:center;margin-top:22px;"><a href="/areas/" class="btn btn-outline">See all areas we cover →</a></p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>Frequently asked questions</h2>
+    </header>
+    <div class="faq-list">
+      <details>
+        <summary>How much do home services cost in London?</summary>
+        <p>Hausio London prices: cleaning from £30/hr (one-off), £27/hr (regular), £45/hr (deep; 5-hour minimum for all cleaning), £32/hr (end-of-tenancy). Man and van from £65/hr (1 man + van), £90/hr (2 men + van), with a 3-hour minimum and the same rate for every hour. Handyman £65 first hour, £50/hr after (2-hour minimum), with half-day at £215 and full-day at £395. Insurance is included. Cleaning products are optional (+£15 per visit); selected extras and larger-home supplements are itemised. Bookings inside the Central London Congestion Zone (EC, WC, W1, SW1, SE1) carry a flat £18 access charge.</p>
+      </details>
+      <details>
+        <summary>Are your team members vetted and insured?</summary>
+        <p>Yes. Every Hausio team member is DBS-checked, interviewed in person, reference-verified, and we carry £2M public liability insurance plus £25,000 goods-in-transit cover on every job.</p>
+      </details>
+      <details>
+        <summary>Can I get a same-day Hausio booking in London?</summary>
+        <p>Same-day bookings made before 11:00 are usually fulfilled the same afternoon in Zones 1–3. A £15 same-day surcharge applies. For guaranteed availability, book at least 24 hours in advance.</p>
+      </details>
+      <details>
+        <summary>How do I pay Hausio?</summary>
+        <p>£0 at booking — you only pay once the job is complete and you're satisfied with the work. We bill the card you provide securely by Apple Pay, Google Pay or card after the visit. No upfront deposit, no cash required.</p>
+      </details>
+    </div>
+    <div class="how-cta" style="margin-top:26px">
+      <a href="/faq.html" class="btn btn-outline">See all FAQs →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container cta-box">
+    <h2>Your home. Sorted in one booking.</h2>
+    <p>Cleaning, man and van and handyman — all from one trusted London team.</p>
+    <a href="book.html" class="btn btn-light">Get your instant quote →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 48 44" fill="none"><path d="M6 24 L24 8 L42 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 22 V38 H38 V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="26" width="8" height="8" stroke="currentColor" stroke-width="1.5"/></svg>
+        </span>
+        <span class="brand-name">HAUSIO</span>
+      </div>
+      <p>Man and Van · Handyman · Furniture Assembly · TV Mounting · Garden Clearance · Waste Removal · Painting</p>
+      <p class="muted">Trusted home services across Greater London.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="man-and-van-london.html">Man and Van</a></li>
+        <li><a href="handyman-london.html">Handyman</a></li>
+        <li><a href="cleaning-london.html">Cleaning</a></li>
+        <li><a href="furniture-assembly-london.html">Furniture Assembly</a></li>
+        <li><a href="tv-mounting-london.html">TV Mounting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/how-it-works.html">How it works</a></li>
+        <li><a href="/portfolio.html">Our work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+447304330614" data-tel-source="footer">+44 7304 330614</a></li>
+        <li><a href="mailto:hausio.co.uk@proton.me">hausio.co.uk@proton.me</a></li>
+        <li><a href="leave-a-review.html">Leave a review</a></li>
+        <li>London, United Kingdom</li>
+        <li>Mon–Sun · 8am–8pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> Hausio Ltd. All rights reserved.</small>
+    <small>Fully insured · DBS-checked · Eco-friendly</small>
+    <small><a href="/about.html">About</a></small>
+    <small><a href="privacy.html">Privacy & Terms</a></small>
+    <small>Registered in England &amp; Wales · Company No. 17167561</small>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to analyse site usage and improve your experience. <a href="privacy.html">Learn more</a></p>
+    <div class="cookie-banner-actions">
+      <button type="button" id="cookie-reject" class="btn btn-ghost">Reject</button>
+      <button type="button" id="cookie-accept" class="btn btn-dark">Accept</button>
+    </div>
+  </div>
+</div>
+
+<!-- Netlify Forms detection — invisible to users; scanned at build time so JS-injected popup form submits successfully -->
+<form name="newsletter" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="email" name="email" />
+  <input type="text" name="source" />
+  <input name="bot-field" />
+  <input name="cf-turnstile-response" />
+</form>
+
+<script src="js/main.js?v=20260909-moving" defer></script>
+<script src="js/consent.js" defer></script>
+<script src="js/popup.js?v=20260909-moving" defer></script>
+<script src="js/reviews.js?v=1" defer></script>
+  <script src="/js/wa-obfuscate.js?v=20260909-moving" defer></script>
+</body>
+</html>

@@ -50,7 +50,7 @@ python -m http.server -d Hausio 8000
 | Man and Van (2 men + van) | £90/hr |
 | Man and Van (3 men + van) | £115/hr |
 | Handyman (1st hour)    | £65 |
-| Handyman (subsequent)  | £50/hr |
+| Handyman (subsequent)  | £60/hr |
 | Gardening              | £40/hr |
 
 All cleaning bookings have a 5-hour minimum per cleaner. Optional products cost £15 per visit; larger-home supplements and extras are calculated separately.

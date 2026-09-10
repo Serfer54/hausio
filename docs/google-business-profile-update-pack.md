@@ -32,7 +32,7 @@ Hausio provides handyman, man-and-van, cleaning and specialist home services acr
 
 Use the current website wording and keep prices aligned with `https://hausio.co.uk/pricing.html`.
 
-- Handyman — £65 first hour, then £50/hour; 2-hour minimum
+- Handyman — £65 first hour, then £60/hour; 2-hour minimum
 - Man and van, 1 mover — £65/hour; 3-hour minimum
 - Man and van, 2 movers — £90/hour; 3-hour minimum
 - Man and van, 3 movers — £115/hour; 3-hour minimum

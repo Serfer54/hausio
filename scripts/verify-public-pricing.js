@@ -28,7 +28,7 @@ const requiredPricing = [
   ['2 movers + van', '&pound;90/hour'],
   ['3 movers + van', '&pound;115/hour'],
   ['First hour', '&pound;65'],
-  ['Each additional hour', '&pound;50/hour'],
+  ['Each additional hour', '&pound;60/hour'],
 ];
 for (const [label, price] of requiredPricing) {
   check(pricing.includes(label) && pricing.includes(price), `pricing.html missing ${label} ${price}`);

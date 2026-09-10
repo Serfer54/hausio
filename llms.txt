@@ -5,7 +5,7 @@
 ## Key facts
 
 - Service area: all 32 London boroughs (Greater London).
-- Prices: cleaning £30/hr one-off, £27/hr regular, £45/hr deep (5-hour minimum per cleaner), man and van from £65/hr, handyman £65 first hour then £50/hr, furniture assembly from £45/hr, TV mounting from £55, garden clearance from £120, waste removal from £55, painting £220/painter/day.
+- Prices: cleaning £30/hr one-off, £27/hr regular, £45/hr deep (5-hour minimum per cleaner), man and van from £65/hr, handyman £65 first hour then £60/hr, furniture assembly from £45/hr, TV mounting from £55, garden clearance from £120, waste removal from £55, painting £220/painter/day.
 - Pricing: full current rates, minimum booking times and common extras at https://hausio.co.uk/pricing.html, https://hausio.co.uk/pricing.json and https://hausio.co.uk/pricing.md.
 - Booking: itemised online estimate at https://hausio.co.uk/book.html — the final quote is confirmed after review; pay £0 at booking and settle by card/Apple Pay/Google Pay after the job.
 - Hours: Monday–Sunday, 08:00–20:00.
@@ -37,7 +37,7 @@ Every one of the 8 services has a dedicated page for each of the 32 London borou
 Each local page carries that borough's postcodes, ULEZ and controlled-parking-zone position, local pricing and borough-specific FAQs. Examples:
 
 - [Cleaners in Camden](https://hausio.co.uk/cleaning-camden.html): NW1, NW3, WC1 — regular £27/hr to end of tenancy £32/hr.
-- [Handyman in Camden](https://hausio.co.uk/handyman-camden.html): £65 first hour, then £50/hr, 15–30 min response across the borough.
+- [Handyman in Camden](https://hausio.co.uk/handyman-camden.html): £65 first hour, then £60/hr, 15–30 min response across the borough.
 - [Man and van in Hackney](https://hausio.co.uk/man-and-van-hackney.html): E5, E8, E9, N1, N16 — £65/hr for 1 man + van.
 - [Cleaners in Tower Hamlets](https://hausio.co.uk/cleaning-tower-hamlets.html): E1, E2, E3, E14 including Canary Wharf.
 - [Handyman in Waltham Forest](https://hausio.co.uk/handyman-waltham-forest.html): E4, E10, E11, E17 including Blackhorse Road.

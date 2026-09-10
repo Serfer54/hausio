@@ -69,7 +69,7 @@ const SERVICE_CARDS = [
     key: 'handyman',
     title: (b) => `Handyman in ${b.name}`,
     bullets: [
-      '£65 first hour, £50/hr after',
+      '£65 first hour, £60/hr after',
       'Conservation-area-friendly fixings',
       'IKEA Pax / Malm specialists',
       'Same-week availability',

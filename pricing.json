@@ -31,7 +31,7 @@
       "minimumHours": 2,
       "rates": {
         "firstHour": 65,
-        "additionalHour": 50,
+        "additionalHour": 60,
         "halfDayFourHours": 215,
         "fullDayEightHours": 395
       }

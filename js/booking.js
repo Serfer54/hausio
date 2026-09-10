@@ -51,7 +51,7 @@
     mileage: { freeMiles: 12, perMile: 1.30, roadFactor: 1.3 },
     handyman: {
       firstHour: 65,
-      laterHour: 50,
+      laterHour: 60,
       halfDay: 215,
       fullDay: 395,
     },

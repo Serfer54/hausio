@@ -199,14 +199,14 @@ function buildSnippets(b) {
 function buildFaq(b) {
   return [
     { q: `Do you cover ${b.name}?`, a: `Yes — we cover all ${b.name} postcodes (${b.postcodes.join(', ')}) at standard hourly rates. ${b.neighborhoods.slice(0, 5).join(', ')} and the rest of the borough are all within our regular round. Same-day slots usually available outside peak Saturdays.` },
-    { q: `Are prices the same as central London?`, a: `Same hourly rates across all London boroughs — £65/hr for 1 man and van, £90/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £50 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden).` }
+    { q: `Are prices the same as central London?`, a: `Same hourly rates across all London boroughs — £65/hr for 1 man and van, £90/hr for 2 men, £115/hr for 3 men + Luton (man and van). Handyman £65 first hour, £60 after. We don't add a central-London premium except where a postcode is inside the £18 Congestion Charge zone (in which case it's shown transparently on the quote, not hidden).` }
   ];
 }
 
 function buildFraming(b) {
   return {
     'man-and-van': `Man and van work across ${b.name} ${b.headlinePostcodes} at standard hourly rates — 1 man + van £65/hr, 2 men + van £90/hr, 3 men + Luton £115/hr. ULEZ-compliant fleet on every job. Same-day slots usually available; book before 10am for an early window.`,
-    handyman: `Handyman work across ${b.name} — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £50 each additional, fully insured, DBS-checked. Same-week slots standard.`,
+    handyman: `Handyman work across ${b.name} — repairs, IKEA and flat-pack assembly, TV mounting, picture hangs, sash window restoration, minor plumbing and electrics. £65 first hour, £60 each additional, fully insured, DBS-checked. Same-week slots standard.`,
     'furniture-assembly': `Furniture assembly across ${b.name} — IKEA Pax wardrobes, Malm beds, Hemnes drawers, Kallax shelving, plus Made.com, Wayfair and Habitat flat-pack. £45/hr or fixed-price by item (Pax £85, Malm £45, Hemnes £35).`,
     'tv-mounting': `TV wall mounting across ${b.name} — plasterboard, brick or concrete walls handled. Up to 43" £55, 44–55" £75, 56–65" £95, 66–85" £150. Cable conceal +£40, soundbar mount +£25. Bracket supplied at cost if needed.`,
     'garden-clearance': `Garden clearance across ${b.name} — overgrowth, hard rubbish, shed and decking dismantle, end-of-tenancy garden recovery. Minimum £120 (quarter-load), half Luton £180, full Luton £280. We're a registered waste carrier — tip fees and transfer notes included.`,

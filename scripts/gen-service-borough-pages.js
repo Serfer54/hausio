@@ -85,7 +85,7 @@ const SERVICES = {
     leadeTpl: 'IKEA flatpacks, TV wall mounting, sash window restoration, minor plumbing and electrics, painting touch-ups. One booking, one visit, one bill — DBS-checked, fully insured, across {borough}.',
     pricingItems: [
       'First hour £65',
-      'Subsequent hours £50/hr',
+      'Subsequent hours £60/hr',
       'Half-day (4h) £215',
       'Full day (8h) £395',
     ],
@@ -96,7 +96,7 @@ const SERVICES = {
     priceHigh: '395',
     offers: [
       { name: 'First hour', price: '65' },
-      { name: 'Each additional hour', price: '50', unit: 'HUR' },
+      { name: 'Each additional hour', price: '60', unit: 'HUR' },
       { name: 'Half day (4 hours)', price: '215' },
       { name: 'Full day (8 hours)', price: '395' },
     ],
@@ -411,7 +411,7 @@ const SERVICE_FAQS = {
     { q: 'How much is end of tenancy cleaning in {borough}?', a: 'End of tenancy cleaning in {borough} is £32/hour, which usually works out at £180–£240 for a studio, £220–£300 for a 1-bed, £280–£380 for a 2-bed and £400–£520 for a 3-bed. We work against the inventory your agent will check against and give you a receipt for them.' },
   ],
   handyman: [
-    { q: 'How much does a handyman cost in {borough}?', a: 'A Hausio handyman in {borough} is £65 for the first hour, then £50/hour, with no call-out fee and nothing to pay until the job is done. A half-day (4h) is £215 and a full day (8h) £395. Most small jobs — a few shelves, a TV mount, a leaking tap — are finished within the first hour or two.' },
+    { q: 'How much does a handyman cost in {borough}?', a: 'A Hausio handyman in {borough} is £65 for the first hour, then £60/hour, with no call-out fee and nothing to pay until the job is done. A half-day (4h) is £215 and a full day (8h) £395. Most small jobs — a few shelves, a TV mount, a leaking tap — are finished within the first hour or two.' },
     { q: 'What can a handyman do without a registered electrician or plumber?', a: 'Non-notifiable work: swapping taps, washers and toilet seats, changing light fittings, sockets and switches, unblocking waste pipes, hanging TVs, shelves and blinds, and easing doors or changing locks. Anything notifiable — new circuits, gas or boiler work — we will tell you needs a registered specialist.' },
   ],
   'man-and-van': [

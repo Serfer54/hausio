@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // One-off: handyman теперь бронируется только от 2 часов.
-// Оставляем ставку £65 first hour / £50 after, но везде помечаем "2-hour minimum".
+// Оставляем ставку £65 first hour / £60 after, но везде помечаем "2-hour minimum".
 // Идемпотентно: ищем исходные строки, после первой прогонки их не остаётся.
 const fs = require('fs');
 const path = require('path');
@@ -22,36 +22,36 @@ const REPLACEMENTS = [
    '£65 first hour, then £50/hr (2-hour minimum).'],
 
   // handyman-london.html: schema Service description
-  ['£65 first hour, £50 each additional hour, fully insured.',
-   '£65 first hour, £50 each additional hour, 2-hour minimum, fully insured.'],
+  ['£65 first hour, £60 each additional hour, fully insured.',
+   '£65 first hour, £60 each additional hour, 2-hour minimum, fully insured.'],
 
   // handyman-london.html: FAQ schema answer
-  ['£65 for the first hour and £50 for each additional hour. A half-day',
-   '£65 for the first hour and £50 for each additional hour, with a 2-hour minimum booking. A half-day'],
+  ['£65 for the first hour and £60 for each additional hour. A half-day',
+   '£65 for the first hour and £60 for each additional hour, with a 2-hour minimum booking. A half-day'],
 
   // handyman-london.html: visible FAQ answer
-  ['£65 first hour, £50 each additional hour. Half-day',
-   '£65 first hour, £50 each additional hour, 2-hour minimum booking. Half-day'],
+  ['£65 first hour, £60 each additional hour. Half-day',
+   '£65 first hour, £60 each additional hour, 2-hour minimum booking. Half-day'],
 
   // areas/*.html: handyman overview paragraph
-  ['£65 first hour, £50 each additional, fully insured, DBS-checked.',
-   '£65 first hour, £50 each additional, 2-hour minimum, fully insured, DBS-checked.'],
+  ['£65 first hour, £60 each additional, fully insured, DBS-checked.',
+   '£65 first hour, £60 each additional, 2-hour minimum, fully insured, DBS-checked.'],
 
   // areas/*.html: handyman service-card list item
-  ['<li>£65 first hour, £50/hr after</li>',
-   '<li>£65 first hour, £50/hr after <small>(2-hour minimum)</small></li>'],
+  ['<li>£65 first hour, £60/hr after</li>',
+   '<li>£65 first hour, £60/hr after <small>(2-hour minimum)</small></li>'],
 
   // areas/*.html: "Are prices the same as central London?" (schema + visible)
-  ['Handyman £65 first hour, £50 after.',
-   'Handyman £65 first hour, £50 after, 2-hour minimum.'],
+  ['Handyman £65 first hour, £60 after.',
+   'Handyman £65 first hour, £60 after, 2-hour minimum.'],
 
   // index.html: pricing schema answer
-  ['Handyman £65 first hour, £50/hour after, with half-day at £215',
-   'Handyman £65 first hour, £50/hour after (2-hour minimum), with half-day at £215'],
+  ['Handyman £65 first hour, £60/hour after, with half-day at £215',
+   'Handyman £65 first hour, £60/hour after (2-hour minimum), with half-day at £215'],
 
   // index.html: visible pricing FAQ
-  ['Handyman £65 first hour, £50/hr after, with half-day at £215',
-   'Handyman £65 first hour, £50/hr after (2-hour minimum), with half-day at £215'],
+  ['Handyman £65 first hour, £60/hr after, with half-day at £215',
+   'Handyman £65 first hour, £60/hr after (2-hour minimum), with half-day at £215'],
 
   // index.html: handyman service-price card
   ['<p class="service-price">From <b>£65</b></p>',

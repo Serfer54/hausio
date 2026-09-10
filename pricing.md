@@ -34,7 +34,7 @@ Service: https://hausio.co.uk/man-and-van-london.html
 ## Handyman
 
 - First hour: £65
-- Each additional hour: £50 per hour
+- Each additional hour: £60 per hour
 - Minimum hourly booking: 2 hours
 - Half day: £215
 - Full day: £395

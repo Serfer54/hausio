@@ -39,10 +39,10 @@ const HUBS = {
   },
   'handyman-london.html': {
     h2: 'How much does a handyman cost in London?',
-    answer: 'A handyman in London costs £65 for the first hour then £50/hour with Hausio, with no call-out fee and nothing to pay until the job is done. A half-day (4 hours) is £215 and a full day (8 hours) £395. Most small jobs — a few shelves, a TV mount, a leaking tap — are finished within the first hour or two.',
+    answer: 'A handyman in London costs £65 for the first hour then £60/hour with Hausio, with no call-out fee and nothing to pay until the job is done. A half-day (4 hours) is £215 and a full day (8 hours) £395. Most small jobs — a few shelves, a TV mount, a leaking tap — are finished within the first hour or two.',
     caption: 'Hausio London handyman prices (2026)',
     head: ['Booking', 'Price'],
-    rows: [['First hour', '£65'], ['Each hour after', '£50/hr'], ['Half-day (4 hours)', '£215'], ['Full day (8 hours)', '£395']],
+    rows: [['First hour', '£65'], ['Each hour after', '£60/hr'], ['Half-day (4 hours)', '£215'], ['Full day (8 hours)', '£395']],
     note: 'No call-out fee · pay after the job is done · Congestion Zone +£18.',
   },
   'furniture-assembly-london.html': {

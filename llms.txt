@@ -57,6 +57,7 @@ Each local page carries that borough's postcodes, ULEZ and controlled-parking-zo
 - [Compact pricing text](https://hausio.co.uk/pricing.md): the same current price facts in plain text.
 - [Book / instant estimate](https://hausio.co.uk/book.html): get an itemised estimate online; the final quote is confirmed after review.
 - [Customer reviews](https://hausio.co.uk/leave-a-review.html#reviews): read published customer reviews or share a Hausio experience with photos.
+- [Become a Hausio partner](https://hausio.co.uk/partners.html): application page for independent cleaners, handymen and small local teams in London. Partners choose their areas and availability; Hausio handles bookings, customer messages and payment, and keeps a 10% service fee on the agreed labour price (e.g. £100 labour = £90 partner payout). Applying does not guarantee acceptance or a minimum number of jobs.
 
 ## Blog
 

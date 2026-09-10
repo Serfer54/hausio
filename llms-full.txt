@@ -4,7 +4,7 @@ London home services: cleaning, man and van, handyman, building works, plumbing,
 
 This file carries the full text of the service pages, company pages and blog. The 256 local service × borough pages follow the URL pattern https://hausio.co.uk/{service}-{borough}.html and are listed in https://hausio.co.uk/llms.txt
 
-Generated: 2026-09-09
+Generated: 2026-09-10
 
 ---
 
@@ -2473,6 +2473,95 @@ We use cookies to analyse site usage and improve your experience. Learn more
 
 Reject
 Accept
+
+---
+
+URL: https://hausio.co.uk/partners.html
+Title: Hausio Partners | Local Cleaning & Handyman Jobs in London
+
+Hausio Partners | Local Cleaning & Handyman Jobs in London
+
+HAUSIO PARTNERS · LONDON
+
+# Local jobs.Less travel.
+Put your skills to work closer to home. Join our network for domestic cleaning and small repairs in your part of London.
+You choose your working areas and availability. We handle customer communication, bookings and payments.
+Apply to become a partner →For independent cleaners, handymen and small local teams.
+
+CLEAR FROM THE START
+90% for your workHausio's service fee is 10% of the agreed labour price. Your payout is confirmed before you accept a job.
+Example: £100 labour price → £90 partner payout. Materials are agreed separately.
+See how it works &darr;
+
+WORK THAT FITS YOUR DAY
+
+## A local network, built around you.
+
+### Your neighbourhood
+Tell us your postcodes and travel limit so we can match you with nearby requests.
+
+### Your availability
+Accept jobs that suit your schedule. You are free to decline a request.
+
+### Less admin
+Hausio coordinates the booking and customer messages, and collects payment.
+
+FROM APPLICATION TO FIRST JOB
+
+## How it works
+
+### Tell us about yourself
+Share your services, working areas, minimum payout and availability.
+
+### Meet the team
+We review your application and references, discuss suitability and agree written terms before any customer work.
+
+### Choose a local job
+Review the scope, timing and payout. Accept only once these are agreed.
+
+### Complete the work
+Hausio checks completion, handles customer payment and pays you under the agreed payout schedule.
+
+A CLEAR WAY TO WORK TOGETHER
+
+## Partnership essentials
+
+- 10% service fee on labour. Materials and other expenses require separate approval. Any applicable tax treatment and the exact payout are clarified before you accept work.
+
+- Payments through Hausio. Customers pay Hausio for Hausio bookings. Changes to the job or price must be agreed through us.
+
+- Written terms before you start. We agree payout timing, cancellations, complaints and any rework before your first job.
+
+- Reliable, suitable partners. Be ready to provide references and discuss your experience, equipment and relevant insurance or qualifications.
+
+- Flexible opportunities. Applying does not guarantee acceptance or a minimum number of jobs. Areas are not exclusive.
+This is an application to join our network, not a signed partnership agreement.
+
+LET'S START LOCALLY
+
+## Become aHausio partner.
+Tell us where you work and what you do best. Our team will review your details and contact you about next steps.
+Please do not send identity documents, bank details or your referees' personal contact details here.
+
+Leave this empty
+
+Full name
+Email
+Phone
+ServicesSelect your serviceDomestic cleaningHandyman / small repairsCleaning and small repairs
+Base postcode or postcode district
+Minimum payout per visit (£)
+Areas you cover
+Maximum travel timeSelect travel timeUp to 15 minutesUp to 30 minutesUp to 45 minutesUp to 60 minutes
+Availability
+Experience and the jobs you take on
+Website or portfolio link (optional)
+I have read the partner application privacy information and understand Hausio will use my details to review and respond to my application.
+
+Send application →
+
+We use cookies to analyse site usage and improve your experience. Learn more
+RejectAccept
 
 ---
 

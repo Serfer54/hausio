@@ -18,7 +18,7 @@ const path = require('path');
 const entity = require('./lib/entity');
 
 const ROOT = path.resolve(__dirname, '..');
-const SKIP = new Set(['404.html']);
+const SKIP = new Set(['404.html', 'partner-thank-you.html']); // thank-you is noindex by design
 
 const LD_RE = /<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/;
 

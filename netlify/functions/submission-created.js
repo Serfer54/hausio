@@ -112,7 +112,7 @@ exports.handler = async (event) => {
 
   // Schedule a review-request email to the customer for +48h after booking.
   // Skip if Resend key missing, customer email missing, or review URLs not configured.
-  if (process.env.RESEND_API_KEY && data.email && (process.env.REVIEW_TRUSTPILOT_URL || process.env.REVIEW_GOOGLE_URL)) {
+  if (formName !== 'partner-application' && process.env.RESEND_API_KEY && data.email && (process.env.REVIEW_TRUSTPILOT_URL || process.env.REVIEW_GOOGLE_URL)) {
     tasks.push(scheduleReviewRequest(data));
     taskLabels.push('review-request');
   } else if (!data.email) {
@@ -166,7 +166,9 @@ async function sendResendEmail(formName, data, fields) {
   const replyTo = data.email || data.contact_email || undefined;
   const total = data['estimated-total'] || data.estimated_total || data.total || data.price || '';
   const service = data.service || '';
-  const subjectParts = [`New ${formName}`, service, total].filter(Boolean);
+  const subjectParts = (formName === 'partner-application'
+    ? ['[Hausio Partner]', service, data['base-postcode'], data.name]
+    : [`New ${formName}`, service, total]).filter(Boolean);
   const subject = subjectParts.join(' · ');
 
   const textLines = [

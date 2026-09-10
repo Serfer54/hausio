@@ -261,8 +261,15 @@ ${SITE_JSON}
       </div>
       <a href="/how-it-works.html">How it works</a>
       <a href="/portfolio.html">Our work</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq.html">FAQ</a>
+      <a href="/leave-a-review.html#reviews">Reviews</a>
+      <div class="nav-item has-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Company <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="/about.html" role="menuitem">About us</a>
+          <a href="/faq.html" role="menuitem">FAQ</a>
+          <a href="/blog/" role="menuitem">Blog</a>
+        </div>
+      </div>
       <a href="/partners.html">Become a partner</a>
     </nav>
     <a href="#" data-wa data-wa-source="nav" class="nav-wa" aria-label="WhatsApp" rel="nofollow noopener">

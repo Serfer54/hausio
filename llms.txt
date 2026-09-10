@@ -49,7 +49,7 @@ Each local page carries that borough's postcodes, ULEZ and controlled-parking-zo
 
 ## Company
 
-- [About Hausio](https://hausio.co.uk/about.html): who we are, vetting, insurance and how we work.
+- [About Hausio](https://hausio.co.uk/about.html): our story (started by two cleaners who built a team of trusted professionals through moving jobs), vetting, insurance, company details and how we work.
 - [How it works](https://hausio.co.uk/how-it-works.html): the booking-to-completion process in four steps.
 - [FAQ](https://hausio.co.uk/faq.html): pricing, booking, insurance, payment and access questions.
 - [Full pricing](https://hausio.co.uk/pricing.html): current rates, minimum booking times and common extras for every service.
